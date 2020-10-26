@@ -1,13 +1,14 @@
 # CNS smart contracts
 
-CNS is built on Ethereum and comprises a bundle of Solidity smart contracts. Their source code is hosted in the [dot-crypto repository](https://github.com/unstoppabledomains/dot-crypto) and maintained by the Unstoppable Domains team. This article lists all the smart contracts from the repository and gives a brief description of each of them, along with the links to the source code and deployment addresses. If you are interested in high-level details about how CNS works, see [Architecture overview](./architecture-overview.md).
+CNS is built on Ethereum and comprises a bundle of Solidity smart contracts. Their source code is hosted in the [dot-crypto repository](https://github.com/unstoppabledomains/dot-crypto) and maintained by the Unstoppable Domains team. This article lists all the smart contracts from the repository and gives a brief description of each of them, along with the links to the source code and deployment addresses. If you are interested in high-level details about how CNS works, see [Architecture overview](architecture-overview.md).
 
 This page is divided into sections, grouping contracts by the following categories:
-* [User-facing contracts](./cns-smart-contracts.md#user-facing-contracts)
-* [Registry controllers](./cns-smart-contracts.md#registry-controllers)
-* [Interfaces](./cns-smart-contracts.md#interfaces)
-* [Utility contracts](./cns-smart-contracts.md#utility-contracts)
-* [Test smart contracts](./cns-smart-contracts.md#test-smart-contracts)
+
+* [User-facing contracts](cns-smart-contracts.md#user-facing-contracts)
+* [Registry controllers](cns-smart-contracts.md#registry-controllers)
+* [Interfaces](cns-smart-contracts.md#interfaces)
+* [Utility contracts](cns-smart-contracts.md#utility-contracts)
+* [Test smart contracts](cns-smart-contracts.md#test-smart-contracts)
 
 ## User-facing contracts
 
@@ -15,7 +16,7 @@ This section lists all the smart contracts that users can directly interact with
 
 ### Registry
 
-Registry is the central smart contract, which stores all CNS domains. Implementing ERC-721 non-fungible token standard, it defines ownership rules. It stores owner and Resolver addresses. For more details, see [Architecture overview - Registry](./architecture-overview.md#registry).
+Registry is the central smart contract, which stores all CNS domains. Implementing ERC-721 non-fungible token standard, it defines ownership rules. It stores owner and Resolver addresses. For more details, see [Architecture overview - Registry](architecture-overview.md#registry).
 
 | Network | Contract address |
 | :--- | :--- |
@@ -25,21 +26,22 @@ Registry is the central smart contract, which stores all CNS domains. Implementi
 
 ### Resolver
 
-Resolver is the smart contract that stores domain records and provides methods for domain resolution. For more details, see [Architecture overview - Resolver](./architecture-overview.md#resolver).
+Resolver is the smart contract that stores domain records and provides methods for domain resolution. For more details, see [Architecture overview - Resolver](architecture-overview.md#resolver).
 
 | Network | Contract address |
 | :--- | :--- |
 | Mainnet | [0xb66DcE2DA6afAAa98F2013446dBCB0f4B0ab2842](https://etherscan.io/address/0xb66DcE2DA6afAAa98F2013446dBCB0f4B0ab2842) |
 
 **Legacy Mainnet Resolvers:**
-- [0xa1cac442be6673c49f8e74ffc7c4fd746f3cbd0d](https://etherscan.io/address/0xa1cac442be6673c49f8e74ffc7c4fd746f3cbd0d)
-- [0x878bc2f3f717766ab69c0a5f9a6144931e61aed3](https://etherscan.io/address/0x878bc2f3f717766ab69c0a5f9a6144931e61aed3)
+
+* [0xa1cac442be6673c49f8e74ffc7c4fd746f3cbd0d](https://etherscan.io/address/0xa1cac442be6673c49f8e74ffc7c4fd746f3cbd0d)
+* [0x878bc2f3f717766ab69c0a5f9a6144931e61aed3](https://etherscan.io/address/0x878bc2f3f717766ab69c0a5f9a6144931e61aed3)
 
 **Source code:** [contracts/Resolver.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/Resolver.sol)
 
 ### ProxyReader
 
-ProxyReader provides an interface, that allows users to fetch information about domains from both Registry and Resolver smart contracts in one call. For more details, see [Architecture overview - RroxyReader](./architecture-overview.md#proxyreader).
+ProxyReader provides an interface, that allows users to fetch information about domains from both Registry and Resolver smart contracts in one call. For more details, see [Architecture overview - RroxyReader](architecture-overview.md#proxyreader).
 
 | Network | Contract address |
 | :--- | :--- |
@@ -59,7 +61,7 @@ SignatureController allows any account to submit management transactions on beha
 
 ### DomainZoneController
 
-DomainZoneController provides the functionality that allows owners of a domain zone to mint subdomains, that can be managed only by domain zone owners. For more details, see [Architecture overview - Alternative ownership models](./architecture-overview.md#alternative-ownership-models).
+DomainZoneController provides the functionality that allows owners of a domain zone to mint subdomains, that can be managed only by domain zone owners. For more details, see [Architecture overview - Alternative ownership models](architecture-overview.md#alternative-ownership-models).
 
 | Network | Contract address |
 | :--- | :--- |
@@ -75,7 +77,7 @@ FreeRegistrar is a contract that can be used for allowing any user to freely min
 
 ### WhitelistedMinter
 
-WhitelistedMinter defines an interface for minting second-level domains. This smart contract is primarily used by the Unstoppable Domains team, but its interface also supports delegating minting process to other parties via [Meta transactions](../managing-domains/meta-transactions.md). All calls to WhitelistedMinter get proxied to the Registry via the [MintingController](./cns-smart-contracts.md#mintingcontroller) smart contract.
+WhitelistedMinter defines an interface for minting second-level domains. This smart contract is primarily used by the Unstoppable Domains team, but its interface also supports delegating minting process to other parties via [Meta transactions](../managing-domains/meta-transactions.md). All calls to WhitelistedMinter get proxied to the Registry via the [MintingController](cns-smart-contracts.md#mintingcontroller) smart contract.
 
 | Network | Contract address |
 | :--- | :--- |
@@ -99,7 +101,7 @@ The Unstoppable Domains team reserves the right to mint second-level domains and
 
 ### MintingController
 
-The deployed version of the Registry smart contract allows only MintingController to mint second-level domains. This smart contract is used by [WhitelistedMinter](./cns-smart-contracts.md#whitelistedminter) as a proxy.
+The deployed version of the Registry smart contract allows only MintingController to mint second-level domains. This smart contract is used by [WhitelistedMinter](cns-smart-contracts.md#whitelistedminter) as a proxy.
 
 | Network | Contract address |
 | :--- | :--- |
@@ -123,12 +125,13 @@ The following interfaces can be used as a guidance to the minimal implementation
 
 ### IRegistry
 
-IRegistry interface declares all the Registry events and methods (both read and write ones).
+IRegistry interface declares all the Registry events and methods \(both read and write ones\).
 
 **Source code:** [contracts/IRegistry.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/IRegistry.sol)
 
 **Implemented by:**
-* [Registry](./cns-smart-contracts.md#registry)
+
+* [Registry](cns-smart-contracts.md#registry)
 
 ### IRegistryReader
 
@@ -137,8 +140,9 @@ IRegistryReader interface declares only read-only Registry methods.
 **Source code:** [contracts/IRegistryReader.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/IRegistryReader.sol)
 
 **Implemented by:**
-* [Registry](./cns-smart-contracts.md#registry)
-* [ProxyReader](./cns-smart-contracts.md#proxyreader)
+
+* [Registry](cns-smart-contracts.md#registry)
+* [ProxyReader](cns-smart-contracts.md#proxyreader)
 
 ### IResolver
 
@@ -147,7 +151,8 @@ IResolver interface declares the minimal set of Resolver methods that are used f
 **Source code:** [contracts/IResolver.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/IResolver.sol)
 
 **Implemented by:**
-* [Resolver](./cns-smart-contracts.md#resolver)
+
+* [Resolver](cns-smart-contracts.md#resolver)
 
 ### IResolverReader
 
@@ -156,8 +161,9 @@ IResolverReader interface declares the set of Resolver methods that can are used
 **Source code:** [contracts/IResolverReader.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/IResolverReader.sol)
 
 **Implemented by:**
-* [Resolver](./cns-smart-contracts.md#resolver)
-* [ProxyReader](./cns-smart-contracts.md#proxyreader)
+
+* [Resolver](cns-smart-contracts.md#resolver)
+* [ProxyReader](cns-smart-contracts.md#proxyreader)
 
 ### IDataReader
 
@@ -166,7 +172,8 @@ IDataReader interface declares the methods that are unique to the ProxyReader sm
 **Source code:** [contracts/IDataReader.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/IDataReader.sol)
 
 **Implemented by:**
-* [ProxyReader](./cns-smart-contracts.md#proxyreader)
+
+* [ProxyReader](cns-smart-contracts.md#proxyreader)
 
 ### IMintingController
 
@@ -175,8 +182,9 @@ IMintingController interface declares a set of methods for minting, that both Mi
 **Source code:** [contracts/controllers/IMintingController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/IMintingController.sol)
 
 **Implemented by:**
-* [MintingController](./cns-smart-contracts.md#mintingcontroller)
-* [WhitelistedMinter](./cns-smart-contracts.md#whitelistedminter)
+
+* [MintingController](cns-smart-contracts.md#mintingcontroller)
+* [WhitelistedMinter](cns-smart-contracts.md#whitelistedminter)
 
 ### ISignatureController
 
@@ -185,7 +193,8 @@ ISignatureController interface declares the functions that are implemented by Si
 **Source code:** [contracts/controllers/ISignatureController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/ISignatureController.sol)
 
 **Implemented by:**
-* [SignatureController](./cns-smart-contracts.md#signaturecontroller)
+
+* [SignatureController](cns-smart-contracts.md#signaturecontroller)
 
 ### IURIPrefixController
 
@@ -194,7 +203,8 @@ IURIPrefixController interface declares the functions that are implemented by UR
 **Source code:** [contracts/controllers/IURIPrefixController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/IURIPrefixController.sol)
 
 **Implemented by:**
-* [URIPrefixController](./cns-smart-contracts.md#uriprefixcontroller)
+
+* [URIPrefixController](cns-smart-contracts.md#uriprefixcontroller)
 
 ### ERC677Receiver
 
@@ -203,7 +213,8 @@ ERC677Receiver interface declares an ERC-677 method for receiving smart contract
 **Source code:** [contracts/util/ERC677Receiver.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/util/ERC677Receiver.sol)
 
 **Implemented by:**
-* [TwitterValidationOperator.sol](./cns-smart-contracts.md#twittervalidationoperator)
+
+* [TwitterValidationOperator.sol](cns-smart-contracts.md#twittervalidationoperator)
 
 ## Utility contracts
 
@@ -216,7 +227,8 @@ BulkWhitelistedRole is an extension of Open Zeppelin's WhitelistedRole, that add
 **Source code:** [contracts/util/BulkWhitelistedRole.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/util/BulkWhitelistedRole.sol)
 
 **Used by:**
-* [WhitelistedMinter](./cns-smart-contracts.md#whitelistedminter)
+
+* [WhitelistedMinter](cns-smart-contracts.md#whitelistedminter)
 
 ### ControllerRole
 
@@ -225,7 +237,8 @@ The ControllerRole smart contract defines an Open Zeppelin's [Role](https://docs
 **Source code:** [contracts/util/ControllerRole.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/util/ControllerRole.sol)
 
 **Used by:**
-* [Registry](./cns-smart-contracts.md#registry)
+
+* [Registry](cns-smart-contracts.md#registry)
 
 ### MultiSend
 
@@ -240,8 +253,9 @@ SignatureUtil is a helper smart contract. Its implementation is used to extend s
 **Source code:** [contracts/util/SignatureUtil.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/util/SignatureUtil.sol)
 
 **Used by:**
-* [Resolver](./cns-smart-contracts.md#resolver)
-* [SignatureController](./cns-smart-contracts.md#signaturecontroller)
+
+* [Resolver](cns-smart-contracts.md#resolver)
+* [SignatureController](cns-smart-contracts.md#signaturecontroller)
 
 ### Migrations
 
@@ -255,7 +269,7 @@ There are several smart contracts that are used for testing purposes, without be
 
 ### LinkTokenMock
 
-The LinkTokenMock smart contract is used for testing [TwitterValidationOperator](./cns-smart-contracts.md#twittervalidationoperator).
+The LinkTokenMock smart contract is used for testing [TwitterValidationOperator](cns-smart-contracts.md#twittervalidationoperator).
 
 **Source code:** [contracts/test-helpers/LinkTokenMock.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/test-helpers/LinkTokenMock.sol)
 
@@ -270,3 +284,4 @@ RelayTest is used for testing relaying functionality for [Meta transactions](../
 The Simple smart contract is used for testing the validations that check smart contracts for being valid ERC-721 receivers.
 
 **Source code:** [contracts/test-helpers/Simple.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/test-helpers/Simple.sol)
+
