@@ -70,7 +70,7 @@ Then the browser uses new settings to make requests to Ethereum blockchain
   - If the Registry Address is not specified, it can use a default for the specified network
 ```
 
-![](../.gitbook/assets/configure_dns_gateway.png)
+![Configure DNS gateway](../.gitbook/assets/configure_dns_gateway.png)
 
 ## Hypermedia Protocol
 
@@ -121,5 +121,11 @@ A gateway is a DNS Server that resolves not just traditional domains but also `.
      * If the client requests a `TXT` record, resolve to all crypto records in JSON encoded key-value format
 4. Send resolution to client
 
-![](../.gitbook/assets/resolve_dweb_website_via_dns_gateway_and_dweb_gateway.png)
+![Resolve DWeb website](../.gitbook/assets/resolve_dweb_website_via_dns_gateway_and_dweb_gateway.png)
+
+
+
+
+
+
 

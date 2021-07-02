@@ -90,7 +90,7 @@ This section lists all the smart contracts that users can directly interact with
 
 ### WhitelistedMinter
 
-`WhitelistedMinter` defines an interface for minting second-level domains. This smart contract is primarily used by the Unstoppable Domains team, but its interface also supports delegating minting process to other parties via [Meta Transactions](). All calls to `WhitelistedMinter` are proxied to the `Registry` via the [MintingController](cns-smart-contracts.md#mintingcontroller) smart contract.
+`WhitelistedMinter` defines an interface for minting second-level domains. This smart contract is primarily used by the Unstoppable Domains team, but its interface also supports delegating minting process to other parties via [Meta Transactions](cns-smart-contracts.md). All calls to `WhitelistedMinter` are proxied to the `Registry` via the [MintingController](cns-smart-contracts.md#mintingcontroller) smart contract.
 
 | Network | Contract address |
 | :--- | :--- |
@@ -205,7 +205,7 @@ The `IMintingController` interface declares a set of methods for minting, which 
 
 ### ISignatureController
 
-The `ISignatureController` interface declares the functions that are implemented by `SignatureController` to enable [Meta transactions]() for the `Registry` smart contract.
+The `ISignatureController` interface declares the functions that are implemented by `SignatureController` to enable [Meta transactions](cns-smart-contracts.md) for the `Registry` smart contract.
 
 **Source code:** [contracts/controllers/ISignatureController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/ISignatureController.sol)
 
@@ -265,7 +265,7 @@ The `MultiSend` smart contract is used internally by the Unstoppable Domains tea
 
 ### SignatureUtil
 
-`SignatureUtil` is a helper smart contract. Its implementation is used to extend smart contracts that require [Meta Transactions]().
+`SignatureUtil` is a helper smart contract. Its implementation is used to extend smart contracts that require [Meta Transactions](cns-smart-contracts.md).
 
 **Source code:** [contracts/util/SignatureUtil.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/util/SignatureUtil.sol)
 
@@ -292,7 +292,7 @@ The `LinkTokenMock` smart contract is used for testing [TwitterValidationOperato
 
 ### RelayTest
 
-`RelayTest` is used for testing relaying functionality for [Meta Transactions]().
+`RelayTest` is used for testing relaying functionality for [Meta Transactions](cns-smart-contracts.md).
 
 **Source code:** [contracts/test-helpers/RelayTest.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/test-helpers/RelayTest.sol)
 
