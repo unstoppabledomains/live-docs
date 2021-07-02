@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "moduleResolution": "node",
+    "lib": [
+      "es6"
+    ],
+    "strict": true,
+    "noImplicitAny": true,
+    "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["node_modules/@types", "./@types"]
+  },
+}
