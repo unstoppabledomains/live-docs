@@ -38,7 +38,7 @@ Reference:
 
 * `namehash` - namehashing algorithm implementation. See [Namehashing](namehashing.md).
 
-![](../.gitbook/assets/provide_domain_records_via_proxy_reader_smart_contract%20%284%29%20%281%29%20%282%29.png)
+![](../.gitbook/assets/provide_domain_records_via_proxy_reader_smart_contract%20%284%29.png)
 
 See [Records reference](records-reference.md) for more information about the standardized records.
 
