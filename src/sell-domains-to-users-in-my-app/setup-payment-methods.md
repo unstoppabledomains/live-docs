@@ -85,5 +85,3 @@ The chargeID token is unique to each customer order, which is a secure method th
 
 To begin accepting crypto payments from your customers, Coinbase offers several methods of integrating their services into your application or website such as payment buttons, hosted pages, and shopping cart plugins. Please see the documentation for [CoinBase Commerce API](https://commerce.coinbase.com/docs/#not-a-developer) for more information.
 
-
-

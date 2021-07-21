@@ -7,7 +7,7 @@ Each of the resolution libraries supports an Ethereum provider url for configura
 To choose an alternative Ethereum provider see [Nodes as a Service guide.](https://ethereum.org/en/developers/docs/nodes-and-clients/nodes-as-a-service/)
 
 {% hint style="info" %}
-Unstoppable libraries use Infura provider by default without restrictions and rate limits for CNS \(.crypto\) resolution. Default configuration can be considered as production-ready.
+Unstoppable libraries use Infura provider by default without restrictions and rate limits for UNS  resolution. Default configuration can be considered as production-ready.
 
 For ENS \(.eth\) resolution it's recommended update Ethereum provider to use in production.
 {% endhint %}
@@ -28,7 +28,7 @@ import Resolution from "@unstoppabledomains/resolution";
 const infuraApiKey = INFURA_PROJECT_ID;
 
 const resolution = new Resolution({
-  cns: {
+  uns: {
     url: `https://mainnet.infura.io/v3/${infuraApiKey}`,
     network: "mainnet",
   },

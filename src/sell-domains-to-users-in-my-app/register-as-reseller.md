@@ -23,7 +23,7 @@ After logging in, you will have the option to submit a reseller application. Ple
 
 ![Reseller application form](../.gitbook/assets/3.png)
 
-After your application is approved, you will be given full access to the reseller dashboard to view your ResellerID and update payment information. 
+After your application is approved, you will be given full access to the reseller dashboard to view your ResellerID and update payment information.
 
 {% hint style="info" %}
 To avoid missing the email about your reseller application status, please update your email settings to approve messages from [notifications@unstoppabledomains.com](mailto:notifications@unstoppabledomains.com), so it doesn’t end up in your spam folder.

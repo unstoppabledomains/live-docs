@@ -6,7 +6,7 @@ description: >-
 
 # Error Codes for Troubleshooting
 
-Reseller API errors are in JSON format. 
+Reseller API errors are in JSON format.
 
 ```text
 { 
