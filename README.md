@@ -18,15 +18,22 @@ Unstoppable Domains Documentation is hosted by [GitBook](https://www.gitbook.com
 	1. Edit *templates/cns-smart-contracts-template.md*;
 	2. Run `render:cns-contracts`.
 
+- src/domain-registry-essentials/uns-smart-contracts.md:
+	1. Edit *templates/uns-smart-contracts-template.md*;
+	2. Run `render:uns-contracts`.
+
 ###### Auto-generated smart-contract address tables:
 
-Contract addresses are pulled from [network-config.json](https://github.com/unstoppabledomains/dot-crypto/blob/master/src/network-config/network-config.json "network-config.json") contained in [dot-crypto](https://github.com/unstoppabledomains/dot-crypto).
+Contract addresses are pulled from: 
+ - [network-config.json](https://github.com/unstoppabledomains/dot-crypto/blob/master/src/network-config/network-config.json "network-config.json") contained in [dot-crypto](https://github.com/unstoppabledomains/dot-crypto) for CNS contracts
+ - [uns-config.json](https://github.com/unstoppabledomains/uns/blob/main/src/uns-config.json "uns-config.json") contained in [uns](https://github.com/unstoppabledomains/uns) for UNS contracts
 
-- To fetch new config for existing contracts run `render:cns-contracts`. 
+- To fetch new config for existing contracts run `render:cns-contracts` or `render:uns-contracts`.
 - If you need to add a new contract:
 	1. Inside of the template insert `#include "templates/contracts/<YourContractName>.md"` where you want to add your table;
 	2. Generate tables & compile the template using:
 		- `render:cns-contracts` to render *src/domain-registry-essentials/cns-smart-contracts.md*.
+		- `render:uns-contracts` to render *src/domain-registry-essentials/uns-smart-contracts.md*.
 
 **Tips for external contributors:**
 
