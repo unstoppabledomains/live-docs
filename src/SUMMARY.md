@@ -39,7 +39,7 @@
 
 * [Register As Reseller](sell-domains-to-users-in-my-app/register-as-reseller.md)
 * [Setup Payment Methods](sell-domains-to-users-in-my-app/setup-payment-methods.md)
-* [Reseller API Endpoints](https://apidocs.unstoppabledomains.com/)
+* [Reseller API Endpoints](sell-domains-to-users-in-my-app/reseller-api-endpoints.md)
 * [Receive Your Payouts](sell-domains-to-users-in-my-app/receive-your-payouts.md)
 * [Error Codes for Troubleshooting](sell-domains-to-users-in-my-app/error-codes-for-troubleshooting.md)
 

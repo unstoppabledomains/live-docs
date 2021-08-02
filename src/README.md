@@ -37,7 +37,7 @@ Popular open-source crypto wallet, MyEtherWallet, has implemented domain managem
 
 ## I want to sell domains to users in my app
 
-If you want to resell domains, you must first [Register as A Reseller](sell-domains-to-users-in-my-app/register-as-reseller.md) with Unstoppable Domains and configure your reseller account to accept [Stripe and/or CoinBase payments](sell-domains-to-users-in-my-app/setup-payment-methods.md). You may also visit the [Buy Domain: Reseller Demo](https://unstoppabledomains.github.io/reseller-demo/#/reseller-demo) to test out the platform before integration. See the [Reseller API Endpoints](https://apidocs.unstoppabledomains.com/) for interactive guides and detailed parameters.
+If you want to resell domains, you must first [Register as A Reseller](sell-domains-to-users-in-my-app/register-as-reseller.md) with Unstoppable Domains and configure your reseller account to accept [Stripe and/or CoinBase payments](sell-domains-to-users-in-my-app/setup-payment-methods.md). You may also visit the [Buy Domain: Reseller Demo](https://unstoppabledomains.github.io/reseller-demo/#/reseller-demo) to test out the platform before integration. See the [Reseller API Endpoints](sell-domains-to-users-in-my-app/reseller-api-endpoints.md) for interactive guides and detailed parameters.
 
 ## I want to promote my UD integration
 
