@@ -92,7 +92,7 @@ On behalf of our users, our transaction processor generally handles:
 
 UNS transaction delegation does not depend on Unstoppable Domains' transaction processor. As long as the domain owner provides a valid signature, write operations can be performed by any Ethereum account.
 
- To learn more about the technical details of delegating transactions in UNS, read our [Meta Transactions](../allow-my-users-to-manage-existing-domains/meta-transactions.md) page.  
+To learn more about the technical details of delegating transactions in UNS, read our [Meta Transactions](../allow-my-users-to-manage-existing-domains/meta-transactions.md) page.  
 
 
   
