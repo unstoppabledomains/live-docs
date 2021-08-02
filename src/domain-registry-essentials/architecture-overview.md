@@ -5,7 +5,7 @@ description: >-
   ERC-721 token standard.
 ---
 
-# Architecture Overview
+# CNS Architecture
 
 This page covers the following topics:
 
