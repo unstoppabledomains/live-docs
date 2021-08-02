@@ -16,7 +16,10 @@ This section lists all the smart contracts that users can directly interact with
 
 ### UNSRegistry
 
-`Registry` is the central smart contract, which stores all UNS domains. Implementing the ERC-721 non-fungible token standard, `Registry` defines domain ownership rules. It stores owner and `Resolver` addresses. It also stores domain resolution data. For more details, see [...]().
+
+`Registry` is the most essential smart contract in UNS. This is the contract that defines ownership rules, how domains are minted, provides [ERC-721 token metadata](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721#IERC721Metadata), and stores a metadata-enriched list of all domains. This is where domain owners store their data, such as cryptocurrency addresses, chat IDs, and IPFS hashes for decentralized websites.
+
+Under the surface, Registry is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows users to store arbitrary records, even those that aren't specified by the [Records reference](records-reference.md).
 
 [comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
 <table>
@@ -37,7 +40,7 @@ This section lists all the smart contracts that users can directly interact with
 
 ### ProxyReader
 
-`ProxyReader` provides an interface that allows users to fetch information about domains from UNS or CNS smart contracts in one call. For more details, see [...]().
+`ProxyReader` provides an interface that allows users to fetch information about domains from both `UNSRegistry` and CNS smart contracts in one call. For more details, see [Architecture overview - ProxyReader](architecture-overview.md#proxyreader).
 
 [comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
 <table>
@@ -121,7 +124,7 @@ The Unstoppable Domains team reserves the right to mint second-level domains and
 
 ### MintingManager
 
-Defines the functions for distribution of Second Level Domains (SLD)s.
+`MintingManager` defines an interface for minting second-level domains. This smart contract is primarily used by the Unstoppable Domains team, but its interface also supports delegating minting process to other parties via [Meta Transactions](../managing-domains/meta-transactions.md). All calls to `MintingManager` are proxied to the `UNSRegistry` via the [MintingManager](uns-smart-contracts.md#mintingmanager) smart contract.
 
 [comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
 <table>
