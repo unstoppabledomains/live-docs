@@ -1,3 +1,9 @@
+---
+description: >-
+  This page details the Namehashing algorithm and the features of the ERC-721
+  token standard.
+---
+
 # Namehashing
 
 Namehashing is an algorithm that converts a domain name in a classical format \(like `www.example.crypto`\) to ERC-721 token id. All `.crypto` ecosystem contracts accept a domain name as a method argument in the form of an ERC-721 token. Namehashing is defined as a part of the [EIP-137](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-137.md#namehash-algorithm) standard. See the standard for a text description of the algorithm.
@@ -16,23 +22,49 @@ To verify an implementation of the namehash algorithm, use the following referen
 
 Fundamentally, namehashing is a one-way operation. It recursively hashes the labels using the SHA-256 hash function.
 
-If one possesses a precomputed table of all hashes and corresponding domains reverse lookups are possible. This table can be reconstructed using the events on the CNS Registry `NewURI` event.
+If one possesses a precomputed table of all hashes and corresponding domains reverse lookups are possible. This table can be reconstructed using the events on the CNS and UNS Registry `NewURI` event.
 
 ### JSON RPC
 
-The `.crypto` registry tracks all domain names with their corresponding namehash: [source code](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/Registry.sol#L17). That makes it possible to obtain an original domain name from a namehash via ETH RPC call to [Registry\#tokenURI](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/Registry.sol#L51).
+The UNS and CNS metadata APIs track all domain names with their corresponding namehash. That makes it possible to obtain an original domain name from token metadata which can be retrieved from the token metadata URI.
+
+The token metadata URI can be retrieved via ETH RPC call to [ProxyReader\#tokenURI](https://github.com/unstoppabledomains/uns/blob/1ee37ef421bb9539b7254b9b0add5215c94282ec/contracts/ProxyReader.sol#L38). This works for CNS and UNS.
+
+Now, the domain name along with other metadata can be retrieved by performing a simple GET request using the token metadata URI.
+
+For example:
+
+```javascript
+Javascript
+let proxyReaderContractInstance = new Contract(address, abi); // Get a proxy reader contract instance using web3 or ethers
+  
+let tokenUri = await proxyReaderContractInstance.tokenURI("0x756e4e998dbffd803c21d23b06cd855cdc7a4b57706c95964a37e24b47c10fc9"); // call the tokenURI method
+
+let metadataResponse = await fetch(tokenUri); // GET data from URI
+let metadata = await metadataResponse.json(); // Parse it as json
+  
+console.log(metadata.name); // Retrieve the domain name from metadata
+```
+
+### NewURI events
+
+When a domain is created its name and token ID are logged using a \`NewURI\` event. This event can be looked up in order to reverse the namehash of a domain. This approach also works for CNS and UNS. 
+
+For an implementation example, see the [\`unhash\` function](https://github.com/unstoppabledomains/resolution/blob/221170af1ece1d97c02c86d6d1645d4c5761005e/src/Resolution.ts#L613) of the resolution library. 
+
+Note that regardless of the way a namehash is reversed, it should always be forward-validated by hashing the retrieved domain name. In order to ensure the integrity of the retrieved domain name.
 
 ### Public API
 
 Unstoppable Domains maintains a public-facing API which can be used to obtain domain information with a namehash. To do this, call `https://unstoppabledomains.com/api/v1/{namehash}`
 
-Example request:
+**CNS** Example Request:
 
 ```bash
 $ curl https://unstoppabledomains.com/api/v1/0x0f4a10a4f46c288cea365fcf45cccf0e9d901b945b9829ccdb54c10dc3cb7a6f
 ```
 
-Example Response:
+**CNS** Example Response:
 
 ```javascript
 {
@@ -49,6 +81,39 @@ Example Response:
     "namehash": "0x0f4a10a4f46c288cea365fcf45cccf0e9d901b945b9829ccdb54c10dc3cb7a6f"
   },
   "records": {}
+}
+```
+
+**UNS** Example Request:
+
+```javascript
+$curl https://unstoppabledomains.com/api/v1/0x4cf2206dea828b317ad033d760428ba3b0624b974bd5657bbeaef92d624e7b85
+```
+
+**UNS** Example Response:
+
+```javascript
+{
+"addresses": {},
+"multicoinAddresses": {},
+"whois": {},
+"ipfs": {
+"html": "QmQ38zzQHVfqMoLWq2VeiMLHHYki9XktzXxLYTWXt8cydu"
+},
+"social": {},
+"dns": [],
+"meta": {
+"domain": "myjohnny.wallet",
+"namehash": "0x4cf2206dea828b317ad033d760428ba3b0624b974bd5657bbeaef92d624e7b85",
+"tokenId": "34803577301218677365125560751744006764397707708613262855939915661234351799173",
+"owner": "0xe7474d07fd2fa286e7e0aa23cd107f8379085037",
+"resolver": "0x049aba7510f45ba5b64ea9e658e342f904db358d",
+"type": "UNS",
+"ttl": 0
+},
+"records": {
+"ipfs.html.value": "QmQ38zzQHVfqMoLWq2VeiMLHHYki9XktzXxLYTWXt8cydu"
+}
 }
 ```
 

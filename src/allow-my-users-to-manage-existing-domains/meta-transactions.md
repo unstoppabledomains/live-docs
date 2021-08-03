@@ -1,4 +1,14 @@
+---
+description: >-
+  This page details the process for using meta-transaction support, which allows
+  users to delegate transactions to another party.
+---
+
 # Delegating Transactions
+
+{% hint style="info" %}
+`Resolver` is an entity that is related to CNS only. There is no resolver address for UNS.
+{% endhint %}
 
 Most `Registry` and `Resolver` methods have meta-transaction support, which allows you to delegate transactions to another party. Generally, meta-transactions allow users to sign messages to control their domains that are then submitted to the registry by a different party. This enables Unstoppable to submit transactions on behalf of users so that the user can still manage their domains in a self-custodial capacity without any gas.
 
@@ -8,9 +18,13 @@ Meta-transactions work by having users sign function calls along with a nonce. T
 
 For example, `resetFor` is the meta-transaction version of `reset`. This method has an additional `signature` argument as the last parameter.
 
-Note that the meta-transaction versions of `Registry` functions are implemented in the [SignatureController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/SignatureController.sol) contract, not in the registry itself.
+{% hint style="info" %}
+For CNS, the meta-transaction versions of `Registry` functions are implemented in the [SignatureController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/SignatureController.sol) contract, not in the registry itself. The source code for signature validation can be found in [SignatureUtil.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/util/SignatureUtil.sol).
+{% endhint %}
 
-The source code for signature validation can be found in [SignatureUtil.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/util/SignatureUtil.sol)
+{% hint style="info" %}
+For UNS, the meta-transaction versions of `Registry`  functions are included in the registry. The source code for signature validation can be found in [RegistryFowarder.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/metatx/RegistryForwarder.sol).
+{% endhint %}
 
 ## Token nonce
 
@@ -32,7 +46,9 @@ A meta transaction requires 2 signatures: one passed as a method argument and on
 * A [Function selector](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html#function-selector) of the original method
 * The original method parameters \(the one without signature\)
 
-Example signature generation for a `reset` method call for a domain:
+### CNS Signature Generation
+
+CNS Example for a `reset` method call for a domain:
 
 ```javascript
 const domain = 'example.crypto';
@@ -74,9 +90,51 @@ const message = generateMessageToSign(
 );
 ```
 
+### UNS Signature Generation
+
+UNS Example for a `reset` method call for a domain:
+
+```javascript
+const domain = 'example.coin';
+const methodName = 'reset';
+const methodParams = ['uint256'];
+const contractAddress = '0x049aba7510f45BA5b64ea9E658E342F904DB358D';
+// Can be different or the same as contractAddress
+const controllerContractAddress = '0x049aba7510f45BA5b64ea9E658E342F904DB358D';
+const tokenId = namehash(domain);
+function generateMessageToSign(
+  contractAddress: string,
+  signatureContract: string,
+  methodName: string,
+  methodParams: string[],
+  tokenId: string,
+  params: any[],
+) {
+  return solidityKeccak256(
+    ['bytes32', 'address', 'uint256'],
+    [
+      solidityKeccak256(
+        ['bytes'],
+        [encodeContractInterface(contractAddress, method, methodParams, params)],
+      ),
+      controllerContractAddress,
+      ethCallRpc(controllerContractAddress, 'nonceOf', tokenId),
+    ],
+  );
+}
+const message = generateMessageToSign(
+  contractAddress,
+  signatureContractAddress,
+  methodName,
+  methodParams,
+  tokenId,
+  [tokenId]
+);
+```
+
 Functions Reference:
 
-* `namehash` — [Namehashing gunction](../domain-registry-essentials/namehashing.md) algorithm implementation
+* `namehash` — [Namehashing function](../domain-registry-essentials/namehashing.md) algorithm implementation
 * `ethCallRpc` — Ethereum `eth_call` JSON RPC implementation
 * `encodeContractInterface` — [Solidity ABI](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html#argument-encoding) interface parameters encoder
 * `solidityKeccak256` — [Solidity ABI](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html#argument-encoding) parameters encoder

@@ -27,6 +27,8 @@ Each ERC-721 token can be identified by a unique number, its `tokenId`. To make 
 
  For instance, `example.wallet`'s namehash: `0xbb71ef26b78e4f38d71c609a577bf259ee5dfd9bd242928598f094c4ad1ebe70`
 
+![Big picture overview of UNS Smart Contract Architecture](../.gitbook/assets/uns-smart-contract-architecture.png)
+
 ### Registry
 
 `Registry` is the most essential smart contract in UNS. This is the contract that defines ownership rules, how domains are minted, provides[ ERC-721 token metadata](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721#IERC721Metadata), and stores a metadata-enriched list of all domains. This is where domain owners store their data, such as cryptocurrency addresses, chat IDs, and IPFS hashes for decentralized websites.
