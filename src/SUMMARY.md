@@ -46,7 +46,7 @@
 ## Domain Registry Essentials
 
 * [CNS Architecture](domain-registry-essentials/architecture-overview.md)
-* [UNS Architecture](domain-registry-essentials/uns-architecture.md)
+* [UNS Architecture](domain-registry-essentials/uns-architecture-overview.md)
 * [Namehashing](domain-registry-essentials/namehashing.md)
 * [Resolving Domain Records](domain-registry-essentials/resolving-domain-records.md)
 * [Records Reference](domain-registry-essentials/records-reference.md)
