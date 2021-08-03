@@ -51,4 +51,5 @@
 * [Resolving Domain Records](domain-registry-essentials/resolving-domain-records.md)
 * [Records Reference](domain-registry-essentials/records-reference.md)
 * [CNS Smart Contracts](domain-registry-essentials/cns-smart-contracts.md)
+* [UNS Smart Contracts](domain-registry-essentials/uns-smart-contracts.md)
 
