@@ -19,7 +19,7 @@ This section lists all the smart contracts that users can directly interact with
 
 `Registry` is the central smart contract, which stores all CNS domains. Implementing the ERC-721 non-fungible token standard, `Registry` defines domain ownership rules. It stores owner and `Resolver` addresses. For more details, see [Architecture overview - Registry](architecture-overview.md#registry).
 
-#include "templates/contracts/Registry.md"
+#include "templates/contracts/cns/Registry.md"
 
 **Source code:** [contracts/Registry.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/Registry.sol)
 
@@ -27,7 +27,7 @@ This section lists all the smart contracts that users can directly interact with
 
 `Resolver` is the smart contract that stores domain records and provides methods for domain resolution. For more details, see [Architecture overview - Resolver](architecture-overview.md#resolver).
 
-#include "templates/contracts/Resolver.md"
+#include "templates/contracts/cns/Resolver.md"
 
 **Source code:** [contracts/Resolver.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/Resolver.sol)
 
@@ -35,7 +35,7 @@ This section lists all the smart contracts that users can directly interact with
 
 `ProxyReader` provides an interface that allows users to fetch information about domains from both `Registry` and `Resolver` smart contracts in one call. For more details, see [Architecture overview - ProxyReader](architecture-overview.md#proxyreader).
 
-#include "templates/contracts/ProxyReader.md"
+#include "templates/contracts/cns/ProxyReader.md"
 
 **Source code:** [contracts/ProxyReader.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/ProxyReader.sol)
 
@@ -43,7 +43,7 @@ This section lists all the smart contracts that users can directly interact with
 
 `SignatureController` allows any account to submit management transactions on behalf of a token owner if an owner provides a signature for that call.
 
-#include "templates/contracts/SignatureController.md"
+#include "templates/contracts/cns/SignatureController.md"
 
 **Source code:** [contracts/controllers/SignatureController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/SignatureController.sol)
 
@@ -51,7 +51,7 @@ This section lists all the smart contracts that users can directly interact with
 
 `DomainZoneController` allows owners of a domain zone to mint subdomains. These subdomains can be managed only by the domain zone owners. For more details, see [Architecture Overview - Alternative Ownership Models](architecture-overview.md#alternative-ownership-models).
 
-#include "templates/contracts/DomainZoneController.md"
+#include "templates/contracts/cns/DomainZoneController.md"
 
 **Source code:** [contracts/controllers/DomainZoneController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/DomainZoneController.sol)
 
@@ -61,13 +61,13 @@ This section lists all the smart contracts that users can directly interact with
 
 **Source code:** [contracts/controllers/FreeMinter.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/util/FreeMinter.sol)  
 
-#include "templates/contracts/FreeMinter.md"
+#include "templates/contracts/cns/FreeMinter.md"
 
 ### WhitelistedMinter
 
 `WhitelistedMinter` defines an interface for minting second-level domains. This smart contract is primarily used by the Unstoppable Domains team, but its interface also supports delegating minting process to other parties via [Meta Transactions](../managing-domains/meta-transactions.md). All calls to `WhitelistedMinter` are proxied to the `Registry` via the [MintingController](cns-smart-contracts.md#mintingcontroller) smart contract.
 
-#include "templates/contracts/WhitelistedMinter.md"
+#include "templates/contracts/cns/WhitelistedMinter.md"
 
 **Source code:** [contracts/util/WhitelistedMinter.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/util/WhitelistedMinter.sol)
 
@@ -75,7 +75,7 @@ This section lists all the smart contracts that users can directly interact with
 
 `TwitterValidationOperator` is used when initiating Chainlink verification requests to link domain records with Twitter usernames.
 
-#include "templates/contracts/TwitterValidationOperator.md"
+#include "templates/contracts/cns/TwitterValidationOperator.md"
 
 **Source code:** [contracts/operators/TwitterValidationOperator.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/operators/TwitterValidationOperator.sol)
 
@@ -87,7 +87,7 @@ The Unstoppable Domains team reserves the right to mint second-level domains and
 
 The deployed version of the `Registry` smart contract only allows `MintingController` to mint second-level domains. This smart contract is used by [WhitelistedMinter](cns-smart-contracts.md#whitelistedminter) as a proxy.
 
-#include "templates/contracts/MintingController.md"
+#include "templates/contracts/cns/MintingController.md"
 
 **Source code:** [contracts/controllers/MintingController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/MintingController.sol)
 
@@ -95,7 +95,7 @@ The deployed version of the `Registry` smart contract only allows `MintingContro
 
 `URIPrefixController` enables the Unstoppable Domains team to edit the token URI prefix.
 
-#include "templates/contracts/URIPrefixController.md"
+#include "templates/contracts/cns/URIPrefixController.md"
 
 **Source code:** [contracts/controllers/URIPrefixController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/URIPrefixController.sol)
 

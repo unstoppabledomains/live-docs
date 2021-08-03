@@ -2,14 +2,19 @@ import Path from 'path';
 import Fs from 'fs';
 import Ejs from 'ejs';
 import MarkdownInclude from 'markdown-include';
-import NetworkConfigJson from 'dot-crypto/src/network-config/network-config.json';
+import CnsNetworkConfigJson from 'dot-crypto/src/network-config/network-config.json';
+import UnsNetworkConfigJson from 'uns/uns-config.json';
+
+type NamingServiceName = "cns" | "uns";
+const NamingService = process.argv[2].toLowerCase() as NamingServiceName;
+const ContractsConfig = getContractsConfigForNamingService(NamingService);
 
 const TemplatesDir = Path.join('templates');
-const ContractsDir = Path.join(TemplatesDir, 'contracts');
-const MarkdownFile = Path.join(TemplatesDir, 'markdown', 'cns-smart-contracts-markdown.json');
-const TemplateToRender = Path.join(TemplatesDir, 'cns-smart-contracts-template.md');
-const FileToRender = Path.join('src', 'domain-registry-essentials', 'cns-smart-contracts.md');
-const CotractTableTemplate = Fs.readFileSync(Path.join(ContractsDir, 'contract-table-template.ejs'), 'utf-8');
+const ContractsDir = Path.join(TemplatesDir, 'contracts', NamingService);
+const MarkdownFile = Path.join(TemplatesDir, 'markdown', NamingService + '-smart-contracts-markdown.json');
+const TemplateToRender = Path.join(TemplatesDir, NamingService + '-smart-contracts-template.md');
+const FileToRender = Path.join('src', 'domain-registry-essentials', NamingService + '-smart-contracts.md');
+const CotractTableTemplate = Fs.readFileSync(Path.join(TemplatesDir, 'contracts', 'contract-table-template.ejs'), 'utf-8');
 const Networks: Record<number, string> = {
     1: 'Mainnet',
     3: 'Ropsten',
@@ -27,6 +32,7 @@ type Row = {
 void renderContractAddresses();
 
 async function renderContractAddresses() {
+    console.log('Creating contract templates for [' + NamingService + ']')
     console.log('Rendering [' + FileToRender + ']');
     console.log('From template [' + TemplateToRender + ']');
 
@@ -39,11 +45,19 @@ async function renderContractAddresses() {
     console.log('Done');
 }
 
+function getContractsConfigForNamingService(namingService: NamingServiceName) {
+    switch (namingService) {
+        case "cns":
+            return CnsNetworkConfigJson.networks;
+        case "uns":
+            return UnsNetworkConfigJson.networks;
+    }
+}
+
 function getContracts(): Set<string> {
     let contractSet = new Set<string>();
-
-    Object.keys(NetworkConfigJson.networks).forEach(id => {
-        const networkContracts = NetworkConfigJson.networks[id as keyof typeof NetworkConfigJson.networks].contracts;
+    Object.keys(ContractsConfig).forEach(id => {
+        const networkContracts = ContractsConfig[id as keyof typeof ContractsConfig].contracts;
         Object.keys(networkContracts).forEach(contract => contractSet.add(contract));
     });
     return contractSet;
@@ -53,10 +67,10 @@ function generateContractTables(contractName: string, filesToInclude: string[]) 
     let rows: Array<Row> = [];
     let contractHasLegacyAddresses: boolean = false;
 
-    for (const id of Object.keys(NetworkConfigJson.networks)) {
-        const networkContracts = NetworkConfigJson.networks[id as keyof typeof NetworkConfigJson.networks].contracts;
+    for (const id of Object.keys(ContractsConfig)) {
+        const networkContracts = ContractsConfig[id as keyof typeof ContractsConfig].contracts;
         let contract = networkContracts[contractName as keyof typeof networkContracts];
-        if (!contract) {
+        if (!contract || !Networks[Number(id)]) {
             continue;
         }
         let legacyAddresses = contract.legacyAddresses;
