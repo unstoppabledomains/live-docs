@@ -1,6 +1,6 @@
 ---
 description: >-
-  This section provides a high-level overview of UNS — Universal Name Service.
+  This section provides a high-level overview of UNS — Unstoppable Name Service.
   Readers should have a basic understanding of Ethereum smart contracts and the
   ERC-721 token standard.
 ---
