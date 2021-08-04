@@ -1,7 +1,7 @@
 ---
 description: >-
-  This page describes the record types and administrative patterns for managing
-  domain records.
+  This page describes the record architectures for CNS and UNS, record types,
+  and administrative patterns for managing domain records.
 ---
 
 # Managing Domain Records
@@ -10,7 +10,7 @@ For CNS, domain records are managed via the default `Resolver` or through a cust
 
 ![CNS Records Architecture shows how resolvers are used to manage domain records](../.gitbook/assets/record-architecture.png)
 
-![UNS Records Architecture shows how RecordStorage is used to manage domains](../.gitbook/assets/uns-record-architecture.png)
+![UNS Records Architecture shows how RecordStorage is used to manage domain records](../.gitbook/assets/uns-record-architecture.png)
 
 ## Domain Record Types
 
