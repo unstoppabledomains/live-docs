@@ -57,7 +57,7 @@ Example crypto records setup:
 
 ### Ownership Styles
 
-The `Resolver` \(CNS\) and `RecordStorage` \(UNS\) allows users to manage all domain records for any address given a permission over domain with the [ERC721 "Transfer Mechanism"](https://eips.ethereum.org/EIPS/eip-721). This enables a subset of addresses to manage the domain on your behalf. By default, we give the permission to do this to every address that can already transfer ownership of the domain. These include:
+CNS Resolver and UNS RecordStorage allows users to manage all domain records for any address given a permission over domain with the [ERC721 "Transfer Mechanism"](https://eips.ethereum.org/EIPS/eip-721). This enables a subset of addresses to manage the domain on your behalf. By default, we give the permission to do this to every address that can already transfer ownership of the domain. These include:
 
 * Owner address of a domain
 * Approved address for a domain
