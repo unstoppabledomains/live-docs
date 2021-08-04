@@ -75,18 +75,26 @@ This enables users to interact with applications that could store keys and other
 
 ### Presets
 
-The resolver also implements a preset mechanism. The records inside the resolver are stored as a nested mapping.
+The CNS Resolver and UNS RecordStorage also implement a preset mechanism. The records inside are stored as a nested mapping.
 
 `Token ID -> Preset ID -> Key -> Value`
 
-This nested structure allows users to configure domains on the un-enumerable Ethereum mappings. Typically it is expensive and unreliable to store an enumerable data structure on Ethereum. To get around this, domains store a preset that corresponds to a record set. This means that users can change the preset on the domain to get an entirely different set of records.
+This nested structure allows users to configure domains on the un-enumerable Ethereum mappings. Typically, it is expensive and unreliable to store an enumerable data structure on Ethereum. To get around this, domains store a preset that corresponds to a record set. This means that users can change the preset on the domain to get an entirely different set of records.
 
-Currently `reset` and `reconfigure` are the only methods exposed on this version of resolver.
+Currently `reset` and `reconfigure` are the only methods which directly change the preset.
 
-* The `reset` method clears the domain's records by setting the preset on the domain to the timestamp when the transaction was mined e.g. `blockchain.timestamp`.
-* The `reconfigure` method first `reset`s the domain then configures a new set of records.
+* The `reset` method clears the domain's records by changing the preset on the domain. CNS Resolver changes it to the timestamp when the transaction was mined e.g. `blockchain.timestamp`. UNS RecordStorage changes it to the hash of the previous preset ID.
+* The `reconfigure` method first resets the domain then configures a new set of records.
+
+In addition to manually calling these methods, records are `reset` automatically when a domain is transferred or burned.
 
 ### Pre-configuring Records
 
-The default resolver allows the Unstoppable Minting EOAs to mint and preconfigure domains in one step. This `preconfigure` method only lets the Minting EOAs configure unowned domains not names already minted to the CNS Registry.
+#### CNS
+
+The default CNS Resolver allows the Unstoppable Minting EOAs to mint and preconfigure domains in one step. This `preconfigure` method only lets the Minting EOAs configure unowned domains not names already minted to the CNS Registry.
+
+#### UNS
+
+Since the UNS registry doesn't have separate resolver contracts, it has dedicated methods for minting domains with records `mintWithRecords`. It similarly allows Minting EOAs to mint and preconfigure domains.
 
