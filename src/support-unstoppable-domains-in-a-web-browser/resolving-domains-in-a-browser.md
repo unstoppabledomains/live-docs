@@ -1,6 +1,15 @@
+---
+description: >-
+  This page describes how to resolve blockchain domains using a traditional HTTP
+  Web Browser or a Dapp Browser and assumes that a reader has a basic
+  understanding of Unstoppable Domains resolution.
+---
+
 # Resolving Domains in a Browser
 
-This page describes how to resolve blockchain domains using a traditional HTTP Web Browser or a Dapp Browser and assumes that a reader has a basic understanding of Unstoppable Domains resolution. See [Resolving domain records](../domain-registry-essentials/resolving-domain-records.md).
+{% hint style="info" %}
+For more information on Unstoppable Domains Resolution, see [Resolving domain records](../domain-registry-essentials/resolving-domain-records.md).
+{% endhint %}
 
 ## General Domain Resolution Information
 
