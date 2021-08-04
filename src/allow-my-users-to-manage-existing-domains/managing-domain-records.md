@@ -1,6 +1,12 @@
+---
+description: >-
+  This page describes the record types and administrative patterns for managing
+  domain records.
+---
+
 # Managing Domain Records
 
-Domain records can be managed via the default public resolver, or one can develop a custom resolver with any management permissions defined.
+Domain records can be managed via the default `Resolver` for CNS, `RecordStorage` for UNS, or one can develop a custom contract with any management permissions defined.
 
 ![](../.gitbook/assets/Record-Architecture%20%284%29%20%284%29%20%282%29.svg)
 
