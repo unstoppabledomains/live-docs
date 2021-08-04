@@ -4,9 +4,9 @@ Domain records can be managed via the default public resolver, or one can develo
 
 ![](../.gitbook/assets/Record-Architecture%20%284%29%20%284%29%20%282%29.svg)
 
-## Resolver record types
+## Domain Record Types
 
-Records on the top-level are stored in a simple key-value pair mapping string to string. CNS \(Crypto Name Service\) doesn't prohibit a user from assigning any record to any value. However, there is a list of standard records that have a defined standard interpretation by clients. A full list of standardized records can be found in the [Records reference](../domain-registry-essentials/records-reference.md).
+Records on the top-level are stored in a simple key-value pair mapping string to string. CNS, ZNS, and UNS doesn't prohibit a user from assigning any record to any value. However, there is a list of standard records that have a defined standard interpretation by clients. A full list of standardized records can be found in the [Records reference](../domain-registry-essentials/records-reference.md).
 
 Standard record keys are split by namespaces with a `.` used as a separator.
 
@@ -45,17 +45,17 @@ Example crypto records setup:
 
 `USDT` presents on multiple chains and key format is slightly different. More details can be found in the [Records Reference section](../domain-registry-essentials/records-reference.md)
 
-## Resolver administrative patterns
+## Domain Administrative Patterns
 
-### Default Resolvers ownership style
+### Domain Ownership Style
 
-The default Unstoppable resolver allows users to manage all domain records for any address given a permission over domain with the [ERC721 "Transfer Mechanism"](https://eips.ethereum.org/EIPS/eip-721). This enables a subset of addresses to manage the domain on your behalf. By default we give the permission to do this to every address that can already transfer ownership of the domain. These include:
+The `Resolver` \(CNS\) and `RecordStorage` \(UNS\) allows users to manage all domain records for any address given a permission over domain with the [ERC721 "Transfer Mechanism"](https://eips.ethereum.org/EIPS/eip-721). This enables a subset of addresses to manage the domain on your behalf. By default, we give the permission to do this to every address that can already transfer ownership of the domain. These include:
 
 * Owner address of a domain
 * Approved address for a domain
 * Owner's operator addresses
 
-This allows users to domain management while still retaining primary ownership of their domain. These smart contracts can be programed in such a way that they only change specified records. An Oracle Integration works in this way. For example:
+This allows users to still retain primary ownership of their domain. These smart contracts can be programmed in such a way that they only change specified records. An Oracle Integration works in this way. For example:
 
 1. Users grant operator access to all of their domains to the Oracle Contract.
 2. Oracle detects an event off chain.
@@ -64,34 +64,6 @@ This allows users to domain management while still retaining primary ownership o
 See ERC-721 on how those permissions can be granted and revoked. Any records change is submitted as a [Ethereum Blockchain Transaction](https://ethereum.org/en/whitepaper/#messages-and-transactions) and record management can be done via [Resolver methods](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/IResolver.sol).
 
 This enables users to interact with applications that could store keys and other information on a domain — making the domains a metadata repository or cross application identifier.
-
-### Alternative ownership styles
-
-Resolvers can be made with custom logic. For example, users with a large amount of domains might want to deploy a custom `Owned` resolver contract. See [EIP-173](https://eips.ethereum.org/EIPS/eip-173). Where there is only one set of records, and only the owner can set them.
-
-```text
-pragma solidity ^0.7.0;
-
-import "./Owned.sol";
-
-contract CustomResolver is Owned {
-  mapping (string => string) internal _records;
-
-  function set(string memory key, string memory value) public onlyOwner {
-    _records[key] = value;
-  }
-
-  function get(string memory key, uint256 /* unused tokenId */) public returns (string memory) {
-    return _records[key];
-  }
-
-  // ...
-  // Rest of the IResolver.sol methods
-  // ...
-}
-```
-
-This smart contract will read from the same set of records every time, allowing for efficient updating of multiple domains at once. See more in [Deploying Custom Resolvers](deploying-custom-resolver.md).
 
 ### Presets
 
