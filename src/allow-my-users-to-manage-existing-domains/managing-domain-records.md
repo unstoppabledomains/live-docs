@@ -23,7 +23,7 @@ The main namespaces are:
 * `dweb.*` — Records related to distributed content network protocols
 * `browser.*` — Hint records for web browsers
 
-### Crypto payment records
+### Crypto Payment Records
 
 One essential feature of blockchain domains is the ability to specify a human-readable name instead of a destination address for your crypto payment. Cryptocurrency wallets that use this feature will resolve a domain to an underlying crypto address in the same way a browser resolves a domain to IP address.
 
@@ -51,9 +51,9 @@ Example crypto records setup:
 
 `USDT` presents on multiple chains and key format is slightly different. More details can be found in the [Records Reference section](../domain-registry-essentials/records-reference.md)
 
-## Domain Administrative Patterns
+## Domain Record Administrative Patterns
 
-### Domain Ownership Style
+### Ownership Styles
 
 The `Resolver` \(CNS\) and `RecordStorage` \(UNS\) allows users to manage all domain records for any address given a permission over domain with the [ERC721 "Transfer Mechanism"](https://eips.ethereum.org/EIPS/eip-721). This enables a subset of addresses to manage the domain on your behalf. By default, we give the permission to do this to every address that can already transfer ownership of the domain. These include:
 
