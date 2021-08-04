@@ -1,9 +1,11 @@
 # Get A Test Domain
 
-To make integrations easier, Unstoppable Domains allows developers to request a free `.crypto` domain. To distinguish these test domains from paid domains, all test domains are prefixed with `udtestdev-`. For example:
+To make integrations easier, Unstoppable Domains allows developers to request a free domain. To distinguish these test domains from paid domains, all test domains are prefixed with `udtestdev-`. For example:
 
 * `udtestdev-freedomainisawesome.crypto`
-* `udtestdev-test-wallet-integration.crypto`
+* `udtestdev-test-wallet-integration.wallet`
+
+You can use any available domain extension for your free domain \(except .zil\).
 
 To prevent abuse, we ask that developers cover the cost of minting and transferring these domains to their wallets. **Unstoppable Domains does not make any money from issuing test domains.**
 
