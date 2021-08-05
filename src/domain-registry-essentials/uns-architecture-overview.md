@@ -17,6 +17,10 @@ This page covers the following topics:
 
 UNS is built by Unstoppable Domains, which includes a new registry and set of new smart contracts. The structure is similar to CNS in that domains are owned **irrevocably**. Domains do not need to be renewed and cannot be reclaimed by Unstoppable Domains. Once claimed, users have complete control of their domains.
 
+{% hint style="info" %}
+For more information about the structural differences between CNS and UNS, see the [UNS vs CNS comparison](uns-vs-cns-comparison.md).
+{% endhint %}
+
 ## Smart Contract Architecture
 
 UNS has one single smart contract, the `Registry`. The same `Registry` contract is used for managing domain ownership and storing domain records. `Records Storage` is responsible for storing domain records.

@@ -17,6 +17,10 @@ Unstoppable Domains are built on CNS — the Crypto Name Service. CNS is a set o
 
 Every CNS domain is issued as an [ERC-721](https://eips.ethereum.org/EIPS/eip-721) token. Building on this standard makes it easier for developers to integrate with Unstoppable Domains and it lets users manage their domain ownership from any compatible wallet, exchange, or marketplace.
 
+{% hint style="info" %}
+For more information about the structural differences between CNS and UNS, see the [UNS vs CNS comparison](uns-vs-cns-comparison.md).
+{% endhint %}
+
 ## Smart contract architecture
 
 The two central components of CNS are its `Registry` and `Resolver` smart contracts. `Registry` is a _map_ \(or _dictionary_\) from domain names to an owner address and a `Resolver` address. And `Resolver` is a _map_ from domain names to the records associated with that domain \(cryptocurrency addresses, etc.\).
