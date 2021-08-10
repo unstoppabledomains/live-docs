@@ -4,7 +4,9 @@ description: >-
   other d-websites through specialized IPFS search engines.
 ---
 
-# Examples of D-Websites
+# Examples and Additional Resources
+
+## D-Website Examples
 
 We have over 35,000 live decentralized websites. Some examples you can check out include:
 
@@ -17,4 +19,10 @@ We have over 35,000 live decentralized websites. Some examples you can check out
 * brave.crypto
 
 You can view all live d-websites on [https://viewblock.io/unstoppable](https://viewblock.io/unstoppable) or search for something specific on one of these search engines: [https://bitsear.ch/](https://bitsear.ch/) or [http://blockscan.com/](http://blockscan.com/).
+
+## Resources
+
+* [Unstoppable Domains D-Web Repository](https://github.com/unstoppabledomains/decentralized-websites)
+* [Website Builder Guide](https://community.unstoppabledomains.com/t/website-builder-guide/446)
+* [Personalize Current Website Templates](https://community.unstoppabledomains.com/t/how-to-personalize-the-current-website-templates/1391)
 

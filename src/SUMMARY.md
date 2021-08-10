@@ -50,7 +50,7 @@
 * [Using a Template for Your D-Website](build-a-decentralized-website/using-a-template-for-your-d-website.md)
 * [Building a Custom D-Website](build-a-decentralized-website/building-a-custom-d-website.md)
 * [Resolving a D-Website in a Browser](build-a-decentralized-website/resolving-a-d-website-in-a-browser.md)
-* [Examples of D-Websites](build-a-decentralized-website/examples-of-d-websites.md)
+* [Examples and Additional Resources](build-a-decentralized-website/examples-of-d-websites.md)
 
 ## Domain Registry Essentials
 

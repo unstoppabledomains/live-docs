@@ -39,6 +39,10 @@ Popular open-source crypto wallet, MyEtherWallet, has implemented domain managem
 
 If you want to resell domains, you must first [Register as A Reseller](sell-domains-to-users-in-my-app/register-as-reseller.md) with Unstoppable Domains and configure your reseller account to accept [Stripe and/or CoinBase payments](sell-domains-to-users-in-my-app/setup-payment-methods.md). You may also visit the [Buy Domain: Reseller Demo](https://unstoppabledomains.github.io/reseller-demo/#/reseller-demo) to test out the platform before integration. See the [Reseller API Endpoints](sell-domains-to-users-in-my-app/reseller-api-endpoints.md) for interactive guides and detailed parameters.
 
+## I want to build a decentralized website and link it to my domain
+
+If you are new to IPFS and decentralized websites \(dweb\), we recommend that you start with the [IPFS Overview](build-a-decentralized-website/overview-of-ipfs-and-d-websites.md). After purchasing a domain from UD, you can build your d-website using a [template](build-a-decentralized-website/using-a-template-for-your-d-website.md) or [custom design](build-a-decentralized-website/building-a-custom-d-website.md). See the guide on [Resolving a D-Website in a Browser](build-a-decentralized-website/resolving-a-d-website-in-a-browser.md) to view your d-website after [connecting it to your domain](build-a-decentralized-website/connecting-your-d-website-to-your-domain.md).
+
 ## I want to promote my UD integration
 
 We offer free advertising for UD integrated apps. Once your app has a working Unstoppable Domains integration, [register it here](https://unstoppabledomains.com/app-submission). Registered apps appear on the Unstoppable Domains [homepage](https://unstoppabledomains.com/) and [Applications](https://unstoppabledomains.com/apps) page — putting your app in front of tens of thousands of potential customers per day.
