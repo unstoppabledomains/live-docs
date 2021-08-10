@@ -43,6 +43,15 @@
 * [Receive Your Payouts](sell-domains-to-users-in-my-app/receive-your-payouts.md)
 * [Error Codes for Troubleshooting](sell-domains-to-users-in-my-app/error-codes-for-troubleshooting.md)
 
+## Build A Decentralized Website
+
+* [Overview of IPFS & D-Websites](build-a-decentralized-website/overview-of-ipfs-and-d-websites.md)
+* [Connecting Your D-Website to Your Domain](build-a-decentralized-website/connecting-your-d-website-to-your-domain.md)
+* [Using a Template for Your D-Website](build-a-decentralized-website/using-a-template-for-your-d-website.md)
+* [Building a Custom D-Website](build-a-decentralized-website/building-a-custom-d-website.md)
+* [Resolving a D-Website in a Browser](build-a-decentralized-website/resolving-a-d-website-in-a-browser.md)
+* [Examples of D-Websites](build-a-decentralized-website/examples-of-d-websites.md)
+
 ## Domain Registry Essentials
 
 * [CNS Architecture](domain-registry-essentials/architecture-overview.md)
