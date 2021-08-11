@@ -6,12 +6,6 @@ description: >-
 
 # Resolve .crypto Without Libraries
 
-Blockchain domain names are domain names launched as smart contracts on public blockchains. What sets them apart from traditional domain names \(like .com\) is that blockchain domains are stored by their owners in their wallet like cryptocurrency, and no third party can change or remove them.
-
-Also, there are no renewal fees for [Unstoppable Domains](https://unstoppabledomains.com/) names, so once you own the domain, you own it for life.
-
-## How to resolve Unstoppable Domains’ names <a id="3d6b"></a>
-
 In this tutorial, we will look at resolving Unstoppable Domains, using nothing but HTML, Javascript, and the ethers.js library.
 
 {% hint style="info" %}
