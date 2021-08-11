@@ -4,7 +4,7 @@ description: >-
   website (without a template).
 ---
 
-# Building a Custom D-Website
+# Build a Custom D-Website
 
 You can build a custom decentralized website using any tool or platform, such as [Mobirise](http://mobirise.com/), [GoHugo](https://gohugo.io/), or even [convert an existing static website to IPFS](building-a-custom-d-website.md#convert-a-static-website). You can also build a custom website manually and store all HTML, CSS, and javascript files inside of the same folder. 
 

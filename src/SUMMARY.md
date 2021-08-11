@@ -14,8 +14,9 @@
 
 ## Explore Options for Resolving a Domain
 
-* [Resolve .crypto with Direct Blockchain Calls](explore-options-for-resolving-a-domain/resolve-.crypto-without-libraries.md)
-* [Resolve .zil With Direct Blockchain Calls](explore-options-for-resolving-a-domain/resolve-.zil-without-libraries.md)
+* [Direct Blockchain Calls](explore-options-for-resolving-a-domain/direct-blockchain-calls/README.md)
+  * [Resolve .zil With Direct Blockchain Calls](explore-options-for-resolving-a-domain/direct-blockchain-calls/resolve-.zil-without-libraries.md)
+  * [Resolve .crypto with Direct Blockchain Calls](explore-options-for-resolving-a-domain/direct-blockchain-calls/resolve-.crypto-without-libraries.md)
 * [Resolution Libraries](explore-options-for-resolving-a-domain/resolution-libraries.md)
 * [Resolution CLI](explore-options-for-resolving-a-domain/resolution-cli.md)
 
@@ -43,10 +44,10 @@
 ## Build A Decentralized Website
 
 * [Overview of IPFS & D-Websites](build-a-decentralized-website/overview-of-ipfs-and-d-websites.md)
-* [Connecting Your D-Website to Your Domain](build-a-decentralized-website/connecting-your-d-website-to-your-domain.md)
-* [Using a Template for Your D-Website](build-a-decentralized-website/using-a-template-for-your-d-website.md)
-* [Building a Custom D-Website](build-a-decentralized-website/building-a-custom-d-website.md)
-* [Resolving a D-Website in a Browser](build-a-decentralized-website/resolving-a-d-website-in-a-browser.md)
+* [Connect a D-Website to Your Domain](build-a-decentralized-website/connecting-your-d-website-to-your-domain.md)
+* [Modify a Template for Your D-Website](build-a-decentralized-website/using-a-template-for-your-d-website.md)
+* [Build a Custom D-Website](build-a-decentralized-website/building-a-custom-d-website.md)
+* [Resolve a D-Website in a Browser](build-a-decentralized-website/resolving-a-d-website-in-a-browser.md)
 * [Examples and Additional Resources](build-a-decentralized-website/examples-of-d-websites.md)
 
 ## Domain Registry Essentials

@@ -24,16 +24,9 @@ Allow your users of your browser to create and view decentralized websites. Indi
 
 ## I want to allow my users to manage their existing domains
 
-Your app can edit domain metadata manually with a direct connection to the appropriate blockchain. We strongly recommend prior experience with blockchain development before starting this type of integration.
+Your app can edit domain metadata manually with a direct connection to the appropriate blockchain. We strongly recommend prior experience with blockchain development before starting this type of integration, so please familiarize yourself with [CNS Smart Contracts](domain-registry-essentials/cns-smart-contracts.md) or [UNS Smart Contracts](domain-registry-essentials/uns-smart-contracts.md) along with [Managing Domain Records](allow-my-users-to-manage-existing-domains/managing-domain-records.md) and [Managing Domain Ownership](allow-my-users-to-manage-existing-domains/managing-domain-ownership.md).
 
-* [Smart Contracts Reference](domain-registry-essentials/cns-smart-contracts.md)
-* [Managing Domain Records](allow-my-users-to-manage-existing-domains/managing-domain-records.md)
-* [Managing Domain Ownership](allow-my-users-to-manage-existing-domains/managing-domain-ownership.md)
-
-Popular open-source crypto wallet, MyEtherWallet, has implemented domain management and can be used as a reference implementation.
-
-* [MyEtherWallet Code Reference](https://github.com/MyEtherWallet/MyEtherWallet/tree/master/src/dapps/Unstoppable)    
-* [MyEtherWallet Website](https://www.myetherwallet.com)
+Popular open-source crypto wallet, MyEtherWallet, has implemented domain management and can be also used as a reference for implementation: [MyEtherWallet Code Reference](https://github.com/MyEtherWallet/MyEtherWallet/tree/master/src/dapps/Unstoppable) and [MyEtherWallet Website](https://www.myetherwallet.com).
 
 ## I want to sell domains to users in my app
 
@@ -41,7 +34,7 @@ If you want to resell domains, you must first [Register as A Reseller](sell-doma
 
 ## I want to build a decentralized website and link it to my domain
 
-If you are new to IPFS and decentralized websites \(dweb\), we recommend that you start with the [IPFS Overview](build-a-decentralized-website/overview-of-ipfs-and-d-websites.md). After purchasing a domain from UD, you can build your d-website using a [template](build-a-decentralized-website/using-a-template-for-your-d-website.md) or [custom design](build-a-decentralized-website/building-a-custom-d-website.md). See the guide on [Resolving a D-Website in a Browser](build-a-decentralized-website/resolving-a-d-website-in-a-browser.md) to view your d-website after [connecting it to your domain](build-a-decentralized-website/connecting-your-d-website-to-your-domain.md).
+If you are new to IPFS and decentralized websites \(d-web\), we recommend that you start with the [IPFS Overview](build-a-decentralized-website/overview-of-ipfs-and-d-websites.md). After purchasing a domain from UD, you can build your d-website using a [template](build-a-decentralized-website/using-a-template-for-your-d-website.md) or [custom design](build-a-decentralized-website/building-a-custom-d-website.md). See the guide on [Resolving a D-Website in a Browser](build-a-decentralized-website/resolving-a-d-website-in-a-browser.md) to view your d-website after [connecting it to your domain](build-a-decentralized-website/connecting-your-d-website-to-your-domain.md).
 
 ## I want to promote my UD integration
 

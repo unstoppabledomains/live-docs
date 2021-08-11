@@ -4,7 +4,7 @@ description: >-
   your personalized domain.
 ---
 
-# Connecting Your D-Website to Your Domain
+# Connect a D-Website to Your Domain
 
 UD provides three options for connecting your decentralized website to your domain:
 
