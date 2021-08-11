@@ -5,7 +5,7 @@ description: >-
   template to the IPFS community is discussed.
 ---
 
-# Modify a Template for Your D-Website
+# Modify a Template
 
 ## Unstoppable Domains Templates
 

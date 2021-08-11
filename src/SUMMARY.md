@@ -44,10 +44,10 @@
 ## Build A Decentralized Website
 
 * [Overview of IPFS & D-Websites](build-a-decentralized-website/overview-of-ipfs-and-d-websites.md)
-* [Connect a D-Website to Your Domain](build-a-decentralized-website/connecting-your-d-website-to-your-domain.md)
-* [Modify a Template for Your D-Website](build-a-decentralized-website/using-a-template-for-your-d-website.md)
-* [Build a Custom D-Website](build-a-decentralized-website/building-a-custom-d-website.md)
-* [Resolve a D-Website in a Browser](build-a-decentralized-website/resolving-a-d-website-in-a-browser.md)
+* [Connect a D-Website to Your Domain](build-a-decentralized-website/connecting-your-d-website-to-your-domain/README.md)
+  * [Modify a Template](build-a-decentralized-website/connecting-your-d-website-to-your-domain/using-a-template-for-your-d-website.md)
+  * [Build a Custom Site](build-a-decentralized-website/connecting-your-d-website-to-your-domain/building-a-custom-d-website.md)
+* [Resolve D-Website in a Browser](build-a-decentralized-website/resolving-a-d-website-in-a-browser.md)
 * [Examples and Additional Resources](build-a-decentralized-website/examples-of-d-websites.md)
 
 ## Domain Registry Essentials

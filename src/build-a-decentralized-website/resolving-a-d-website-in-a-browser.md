@@ -4,7 +4,7 @@ description: >-
   website in a browser.
 ---
 
-# Resolve a D-Website in a Browser
+# Resolve D-Website in a Browser
 
 It will take some time for the IPFS website transaction to resolve on the blockchain after the transaction is signed with the user’s wallet. After the domain records are updated, the decentralized website will resolve in certain browsers and browser extensions.
 
