@@ -19,9 +19,9 @@ The Resolution Libraries support decentralized domains across three main zones:
 | Ethereum Name Service \(ENS\) | `.eth`, `.kred`, `.xyz`, `.luxe` |
 | Unstoppable Name Service \(UNS\) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
 
-## Possible Use Case: Retrieve a Domain Record
+## Use Case: Retrieve a Domain Record
 
-Retrieve any record of a domain. Applications sometimes set custom records for a domain to use within their application.
+Retrieve any record of a domain. Applications sometimes set custom records for a domain to use within their application. The code snippets below show how to do this for Java, JavaScript, Swift, and Golang.
 
 {% tabs %}
 {% tab title="Java" %}
@@ -59,6 +59,14 @@ resolution.record(domain: "ryan.crypto", record: "custom.record.value") { result
     print("Expected record value, but got \(error)")
 }
 }
+```
+{% endtab %}
+
+{% tab title="Golang" %}
+```
+uns, _ := resolution.NewUnsBuilder().Build()
+  ethAddress, _ := uns.Addr("brad.crypto", "ETH")
+  fmt.Println("ETH address for brad.crypto is", ethAddress)
 ```
 {% endtab %}
 {% endtabs %}
