@@ -138,9 +138,13 @@ function arrayToHex(arr) {
 }
 ```
 
-Here is the list of expected results with some inputs:
+This table shows a list of Namehash examples with different inputs:
 
-![Namehash examples with different inputs](../../.gitbook/assets/namehash-examples-diff-inputs.png)
+| Label | Namehash |
+| :--- | :--- |
+| "" | `0x88d4843af302c2093286898cd34cba7a471c3cdce4c78514fc971c3c6a53891e` |
+| crypto | `0x0f4a10a4f46c388cea365fcf45cccf0e9d901b945b9829ccdb54c10dc3cb7a6f` |
+| brad.crypto | `0x756e4e998dbffd803c21d23b06cd855cdc7a4b57706c95964a37e24b47c10fc9` |
 
 ## Configure the Ethers.js library <a id="abe0"></a>
 
@@ -220,9 +224,12 @@ Although any string can be stored as a key under the domain, Unstoppable Domains
 
 ### Record Keys Lookup
 
-For this tutorial, we will be looking up the following records:
+The following table shows record keys and a description for each:
 
-![Records keys and description for each](../../.gitbook/assets/records-keys-descriptions.png)
+| Key | Description |
+| :--- | :--- |
+| crypto.BTC.address | BTC address attached to the domain |
+| crypto.ETH.address | ETH address attached to the domain |
 
 ## Make the call to the contract <a id="2047"></a>
 
