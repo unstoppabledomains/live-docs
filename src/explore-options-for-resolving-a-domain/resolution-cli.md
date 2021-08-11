@@ -10,6 +10,31 @@ The Resolution-CLI is built and maintained by Unstoppable Domains. It is a simpl
 
 For more information on resolving domains using the Resolution CLI option, please see the [Resolution CLI Repository](https://github.com/unstoppabledomains/resolution-cli) on Github.
 
+## Use Case: Retrieve the ETH Address
+
+This will retrieve the ETH address:
+
+```text
+resolution resolve addr ETH -d brad.crypto
+"0x8aaD44321A86b170879d7A244c1e8d360c99DdA8"
+```
+
+The crypto.ETH.address can be located in the [Records Reference](../domain-registry-essentials/records-reference.md).
+
+## Use Case: Retrieve a Domain Record
+
+And this will retrieve any record from the domain, if it exists, and return the following records:
+
+```text
+resolution resolve records crypto.ETH.address crypto.BTC.address -d brad.crypto
+{
+   "records": {
+      "crypto.BTC.address": "bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y",
+      "crypto.ETH.address": "0x8aaD44321A86b170879d7A244c1e8d360c99DdA8"
+   }
+}
+```
+
 ## Supported Domains for Resolution CLI
 
 The Resolution CLI supports decentralized domains across three main zones:
