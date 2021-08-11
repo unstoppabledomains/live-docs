@@ -6,11 +6,9 @@ description: >-
 
 # Resolve .crypto with Direct Blockchain Calls
 
-In this tutorial, we will look at resolving Unstoppable Domains, using nothing but HTML, Javascript, and the ethers.js library.
+In this tutorial, we will look at resolving .crypto Unstoppable Domains, using nothing but HTML, Javascript, and the ethers.js library.
 
 {% hint style="info" %}
-Unstoppable Domains offers a total of 10 different namespaces.: .crypto, .nft, .888, .x, .blockchain, .bitcoin, .wallet, .coin, .dao
-
 The .zil namespace is located on a separate chain and requires a [different process](resolve-.zil-without-libraries.md). 
 {% endhint %}
 
