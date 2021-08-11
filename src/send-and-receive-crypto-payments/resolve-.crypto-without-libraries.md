@@ -16,7 +16,7 @@ The .zil namespace is located on a separate chain and requires different instruc
 
 Each of them can be resolved in exactly the same manner as the .crypto we are showing below.
 
-![Dynamic GIF showing the steps to resolve a domain](../.gitbook/assets/crypto-resolve.gif)
+![Dynamic GIF showing the steps to resolve a .crypto domain](../.gitbook/assets/crypto-resolve.gif)
 
 To resolve an unstoppable domain, we will need to
 

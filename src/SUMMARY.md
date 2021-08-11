@@ -12,10 +12,10 @@
 * [Library Configuration](send-and-receive-crypto-payments/library-configuration.md)
 * [Domains Configuration GUI](send-and-receive-crypto-payments/domains-configuration.md)
 * [Resolve .crypto Without Libraries](send-and-receive-crypto-payments/resolve-.crypto-without-libraries.md)
+* [Resolve .zil Without Libraries](send-and-receive-crypto-payments/resolve-.zil-without-libraries.md)
 
 ---
 
-* [Resolve .zil Without Libraries](https://medium.com/unstoppabledomains/how-to-resolve-zil-domain-names-f43da8fe37a9)
 * [JavaScript Resolution library](https://github.com/unstoppabledomains/resolution)
 * [Java Resolution library](https://github.com/unstoppabledomains/resolution-java)
 * [Swift Resolution library](https://github.com/unstoppabledomains/resolution-swift)
