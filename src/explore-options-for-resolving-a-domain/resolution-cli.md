@@ -14,23 +14,11 @@ For more information on resolving domains using the Resolution CLI option, pleas
 
 The Resolution CLI supports decentralized domains across three main zones:
 
-* Zilliqa Name Service \(ZNS\)
-  * `.zil`
-* Ethereum Name Service \(ENS\)
-  * `.eth`
-  * `.kred`
-  * `.xyz`
-  * `.luxe`
-* Unstoppable Name Service \(UNS\)
-  * `.crypto`
-  * `.nft`
-  * `.blockchain`
-  * `.bitcoin`
-  * `.coin`
-  * `.wallet`
-  * `.888`
-  * `.dao`
-  * `.x`
+| Name Service | Supported Domains |
+| :--- | :--- |
+| Zilliqa Name Service \(ZNS\) | `.zil` |
+| Ethereum Name Service \(ENS\) | `.eth`, `.kred`, `.xyz`, `.luxe` |
+| Unstoppable Name Service \(UNS\) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
 
 ## Support
 

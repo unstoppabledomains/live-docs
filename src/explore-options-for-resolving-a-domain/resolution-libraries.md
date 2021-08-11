@@ -13,23 +13,11 @@ Resolution libraries are used for interacting with blockchain domain names. They
 
 The Resolution Libraries support decentralized domains across three main zones:
 
-* Zilliqa Name Service \(ZNS\)
-  * `.zil`
-* Ethereum Name Service \(ENS\)
-  * `.eth`
-  * `.kred`
-  * `.xyz`
-  * `.luxe`
-* Unstoppable Name Service \(UNS\)
-  * `.crypto`
-  * `.nft`
-  * `.blockchain`
-  * `.bitcoin`
-  * `.coin`
-  * `.wallet`
-  * `.888`
-  * `.dao`
-  * `.x`
+| Name Service | Supported Domains |
+| :--- | :--- |
+| Zilliqa Name Service \(ZNS\) | `.zil` |
+| Ethereum Name Service \(ENS\) | `.eth`, `.kred`, `.xyz`, `.luxe` |
+| Unstoppable Name Service \(UNS\) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
 
 ## List of UD Resolution Libraries
 
