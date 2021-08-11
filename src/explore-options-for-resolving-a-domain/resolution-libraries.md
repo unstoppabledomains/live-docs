@@ -19,6 +19,50 @@ The Resolution Libraries support decentralized domains across three main zones:
 | Ethereum Name Service \(ENS\) | `.eth`, `.kred`, `.xyz`, `.luxe` |
 | Unstoppable Name Service \(UNS\) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
 
+## Possible Use Case: Retrieve a Domain Record
+
+Retrieve any record of a domain. Applications sometimes set custom records for a domain to use within their application.
+
+{% tabs %}
+{% tab title="Java" %}
+```text
+String record = resolution.getRecord("ryan.crypto", "custom.record.value");
+assertEquals("Example custom record value", record);
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```text
+const { default: Resolution } = require('@unstoppabledomains/resolution');
+const resolution = new Resolution();
+
+function resolveCustomRecord(domain, record) {
+  resolution
+    .records(domain, [record])
+    .then((value) => console.log(`Domain ${domain} ${record} is: ${value}`))
+    .catch(console.error);
+}
+
+resolveCustomRecord('homecakes.crypto', 'custom.record.value');
+```
+{% endtab %}
+
+{% tab title="Swift" %}
+```text
+// Lookup specific records
+resolution.record(domain: "ryan.crypto", record: "custom.record.value") { result in
+  switch result {
+  case .success(let returnValue):
+    // Example custom record value
+    let recordValue = returnValue
+  case .failure(let error):
+    print("Expected record value, but got \(error)")
+}
+}
+```
+{% endtab %}
+{% endtabs %}
+
 ## List of UD Resolution Libraries
 
 The following table lists the UD Resolution Libraries along with links to each respective GitHub Repository.
