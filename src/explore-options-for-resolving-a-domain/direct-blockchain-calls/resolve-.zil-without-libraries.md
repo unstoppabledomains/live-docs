@@ -155,7 +155,11 @@ function arrayToHex(arr) {
 
 The following table shows sample Namehash outputs:
 
-![](../../.gitbook/assets/namehash-outputs.png)
+| Domain | Namehash |
+| :--- | :--- |
+| "" | 0x1c9ecec90e28d2461650418635878a5c91e49f47586ecf75f2b0cbb94e897112 |
+| zil | 0x9915d0456b878862e822e2361da37232f626a2e47505c8795134a95d36138ed3 |
+| brad.zil | 0x5fc604da00f502da70bfbc618088c0ce468ec9d18d05540935ae4118e8f50787 |
 
 Here is a list of expected results with some sample inputs:
 
