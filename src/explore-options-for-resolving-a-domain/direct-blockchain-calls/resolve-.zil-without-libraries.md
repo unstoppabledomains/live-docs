@@ -6,7 +6,13 @@ description: >-
 
 # Resolve .zil With Direct Blockchain Calls
 
-In this tutorial, we’ll build a simple app to ‘resolve’ .zil domains — to read the information the domain holds. Here’s the finished product:
+In this tutorial, we’ll build a simple app to resolve .zil domains — to read the information the domain holds. 
+
+{% hint style="info" %}
+This guide only applies to `.zil` domains. For information on resolving .crypto domains, See the guide for [Resolving .crypto Domains With Direct Blockchain Calls](resolve-.crypto-without-libraries.md).
+{% endhint %}
+
+Here’s the finished product:
 
 ![Dynamic GIF showing the steps to resolve a .zil domain](../../.gitbook/assets/zil-resolve-dynamic-image.gif)
 
@@ -119,10 +125,6 @@ document.getElementById("button").addEventListener('click', () => resolve());
 ```
 
 We will revisit [error handling](resolve-.zil-without-libraries.md#4e70) later in this guide.
-
-{% hint style="info" %}
-This guide only applies to `.zil` domains. For information on resolving .crypto domains, See the guide for [Resolving .crypto Domains With Direct Blockchain Calls](resolve-.crypto-without-libraries.md).
-{% endhint %}
 
 ## Tokenize Your Domain by Namehashing <a id="d25c"></a>
 
