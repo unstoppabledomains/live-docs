@@ -11,16 +11,13 @@
 * [Crypto Payments](send-and-receive-crypto-payments/crypto-payments.md)
 * [Library Configuration](send-and-receive-crypto-payments/library-configuration.md)
 * [Domains Configuration GUI](send-and-receive-crypto-payments/domains-configuration.md)
-* [Resolve .crypto Without Libraries](send-and-receive-crypto-payments/resolve-.crypto-without-libraries.md)
-* [Resolve .zil Without Libraries](send-and-receive-crypto-payments/resolve-.zil-without-libraries.md)
 
----
+## Explore Options for Resolving a Domain
 
-* [JavaScript Resolution library](https://github.com/unstoppabledomains/resolution)
-* [Java Resolution library](https://github.com/unstoppabledomains/resolution-java)
-* [Swift Resolution library](https://github.com/unstoppabledomains/resolution-swift)
-* [Golang Resolution library](https://github.com/unstoppabledomains/resolution-go)
-* [Resolution CLI](https://github.com/unstoppabledomains/resolution-cli)
+* [Resolve .crypto with Direct Blockchain Calls](explore-options-for-resolving-a-domain/resolve-.crypto-without-libraries.md)
+* [Resolve .zil With Direct Blockchain Calls](explore-options-for-resolving-a-domain/resolve-.zil-without-libraries.md)
+* [Resolution Libraries](explore-options-for-resolving-a-domain/resolution-libraries.md)
+* [Resolution CLI](explore-options-for-resolving-a-domain/resolution-cli.md)
 
 ## Support Unstoppable Domains in a Web Browser
 
