@@ -11,7 +11,7 @@ Blockchain domain names are domain names launched as smart contracts on public b
 
 One strategy for resolving domains is to read directly from the blockchain. This is a secure method of resolving domains, but this method requires manual updates and modifications as it is not maintained by UD like the [Resolution Libraries](../resolution-libraries.md) or [Resolution CLI](../resolution-cli.md).
 
-## **Examples and Use Cases**
+## **Use Cases**
 
 * [Resolving .crypto with Direct Blockchain Calls](resolve-.crypto-without-libraries.md)
 * [Resolving .zil with Direct Blockchain Calls](resolve-.zil-without-libraries.md)
