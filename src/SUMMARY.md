@@ -15,8 +15,8 @@
 ## Explore Options for Resolving a Domain
 
 * [Direct Blockchain Calls](explore-options-for-resolving-a-domain/direct-blockchain-calls/README.md)
-  * [Resolve .zil With Direct Blockchain Calls](explore-options-for-resolving-a-domain/direct-blockchain-calls/resolve-.zil-without-libraries.md)
   * [Resolve .crypto with Direct Blockchain Calls](explore-options-for-resolving-a-domain/direct-blockchain-calls/resolve-.crypto-without-libraries.md)
+  * [Resolve .zil With Direct Blockchain Calls](explore-options-for-resolving-a-domain/direct-blockchain-calls/resolve-.zil-without-libraries.md)
 * [Resolution Libraries](explore-options-for-resolving-a-domain/resolution-libraries.md)
 * [Resolution CLI](explore-options-for-resolving-a-domain/resolution-cli.md)
 
