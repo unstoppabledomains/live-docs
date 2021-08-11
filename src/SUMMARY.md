@@ -35,10 +35,10 @@
 
 ## Sell Domains to Users in My App
 
-* [Register As Reseller](sell-domains-to-users-in-my-app/register-as-reseller.md)
-* [Setup Payment Methods](sell-domains-to-users-in-my-app/setup-payment-methods.md)
+* [Register As Reseller](sell-domains-to-users-in-my-app/register-as-reseller/README.md)
+  * [Setup Payment Methods](sell-domains-to-users-in-my-app/register-as-reseller/setup-payment-methods.md)
+  * [Receive Your Payouts](sell-domains-to-users-in-my-app/register-as-reseller/receive-your-payouts.md)
 * [Reseller API Endpoints](sell-domains-to-users-in-my-app/reseller-api-endpoints.md)
-* [Receive Your Payouts](sell-domains-to-users-in-my-app/receive-your-payouts.md)
 * [Error Codes for Troubleshooting](sell-domains-to-users-in-my-app/error-codes-for-troubleshooting.md)
 
 ## Build A Decentralized Website
@@ -52,12 +52,12 @@
 
 ## Domain Registry Essentials
 
-* [CNS Architecture](domain-registry-essentials/architecture-overview.md)
-* [UNS Architecture](domain-registry-essentials/uns-architecture-overview.md)
 * [UNS vs CNS Comparison](domain-registry-essentials/uns-vs-cns-comparison.md)
+* [CNS Architecture](domain-registry-essentials/architecture-overview/README.md)
+  * [CNS Smart Contracts](domain-registry-essentials/architecture-overview/cns-smart-contracts.md)
+* [UNS Architecture](domain-registry-essentials/uns-architecture-overview/README.md)
+  * [UNS Smart Contracts](domain-registry-essentials/uns-architecture-overview/uns-smart-contracts.md)
 * [Namehashing](domain-registry-essentials/namehashing.md)
 * [Resolving Domain Records](domain-registry-essentials/resolving-domain-records.md)
 * [Records Reference](domain-registry-essentials/records-reference.md)
-* [CNS Smart Contracts](domain-registry-essentials/cns-smart-contracts.md)
-* [UNS Smart Contracts](domain-registry-essentials/uns-smart-contracts.md)
 
