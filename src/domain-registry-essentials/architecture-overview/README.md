@@ -71,7 +71,7 @@ Domain owners can:
 * Mint a new subdomain
 * Burn a domain
 
-Domain owners can set one _Approved address_ per domain and many _Operator_ addresses. These roles can manage a domain on a user's behalf. For more details, see [Managing domain ownership](../../allow-my-users-to-manage-existing-domains/managing-domain-ownership.md).
+Domain owners can set one _Approved address_ per domain and many _Operator_ addresses. These roles can manage a domain on a user's behalf. For more details, see [Managing domain ownership](../../allow-my-users-to-manage-existing-domains/managing-domain-ownership/).
 
 ### Resolver
 

@@ -1,3 +1,9 @@
+---
+description: >-
+  This page reviews the process for sending and receiving crypto payments on
+  Ethereum, Zilliqa, and Unstoppable blockchains.
+---
+
 # Crypto Payments
 
 ## Table of contents
@@ -17,7 +23,7 @@ The most common way to integrate with Unstoppable Domains is through simple doma
 
 How does this work?
 
-At a high-level, an application retrieves a domain's records through smart contracts deployed on the Ethereum and/or Zilliqa blockchains \(`.crypto` and `.zil`, respectively\).
+At a high-level, an application retrieves a domain's records through smart contracts deployed on the Ethereum, Zilliqa, and Unstoppable blockchains \(`.crypto`, `.zil`, and `.wallet`, respectively\).
 
 In the example above, we're sending 1 `ETH` to `ryan.crypto`. The application sends those two parameters to the `Resolver` contract on the Ethereum blockchain and it returns the record stored under `crypto.ETH.address` for that domain. This address can be used to complete the `ETH` transfer to Ryan.
 
@@ -87,7 +93,7 @@ resolution.addr(domain: "ryan.crypto", ticker: "ETH") { result in
 {% endtabs %}
 
 {% hint style="info" %}
-Our libraries use Infura to interact with the Ethereum blockchain by default. To configure a custom Ethereum provider see our [Library configuration guide.](library-configuration.md)
+Our libraries use Infura to interact with the Ethereum blockchain by default. To configure a custom Ethereum provider see our [Library configuration guide.](resolution-libraries/library-configuration.md)
 {% endhint %}
 
 **Records involved**

@@ -9,16 +9,12 @@
 ## Send and Receive Crypto Payments
 
 * [Crypto Payments](send-and-receive-crypto-payments/crypto-payments.md)
-* [Library Configuration](send-and-receive-crypto-payments/library-configuration.md)
-* [Domains Configuration GUI](send-and-receive-crypto-payments/domains-configuration.md)
-
-## Explore Options for Resolving a Domain
-
-* [Direct Blockchain Calls](explore-options-for-resolving-a-domain/direct-blockchain-calls/README.md)
-  * [Resolve .crypto with Direct Blockchain Calls](explore-options-for-resolving-a-domain/direct-blockchain-calls/resolve-.crypto-without-libraries.md)
-  * [Resolve .zil With Direct Blockchain Calls](explore-options-for-resolving-a-domain/direct-blockchain-calls/resolve-.zil-without-libraries.md)
-* [Resolution Libraries](explore-options-for-resolving-a-domain/resolution-libraries.md)
-* [Resolution CLI](explore-options-for-resolving-a-domain/resolution-cli.md)
+* [Resolution Libraries](send-and-receive-crypto-payments/resolution-libraries/README.md)
+  * [Library Configuration](send-and-receive-crypto-payments/resolution-libraries/library-configuration.md)
+* [Resolve with Direct Blockchain Calls](send-and-receive-crypto-payments/direct-blockchain-calls/README.md)
+  * [Resolve .crypto with Direct Blockchain Calls](send-and-receive-crypto-payments/direct-blockchain-calls/resolve-.crypto-without-libraries.md)
+  * [Resolve .zil With Direct Blockchain Calls](send-and-receive-crypto-payments/direct-blockchain-calls/resolve-.zil-without-libraries.md)
+* [Resolution CLI](send-and-receive-crypto-payments/resolution-cli.md)
 
 ## Support Unstoppable Domains in a Web Browser
 
@@ -28,8 +24,9 @@
 
 ## Allow My Users to Manage Existing Domains
 
+* [Managing Domain Ownership](allow-my-users-to-manage-existing-domains/managing-domain-ownership/README.md)
+  * [Domains Configuration GUI](allow-my-users-to-manage-existing-domains/managing-domain-ownership/domains-configuration.md)
 * [Managing Domain Records](allow-my-users-to-manage-existing-domains/managing-domain-records.md)
-* [Managing Domain Ownership](allow-my-users-to-manage-existing-domains/managing-domain-ownership.md)
 * [Delegating Transactions](allow-my-users-to-manage-existing-domains/meta-transactions.md)
 * [Delegating Domain Management](allow-my-users-to-manage-existing-domains/deploying-custom-resolver.md)
 
