@@ -105,3 +105,20 @@ guard let resolution = try? Resolution(providerUrl: "https://mainnet.infura.io/v
 }
 ```
 
+## Golang Resolution Library
+
+Configuration for the [Golang resolution library](https://github.com/unstoppabledomains/resolution-go)
+
+### Provider URL
+
+```swift
+import (
+	"github.com/unstoppabledomains/resolution-go"
+)
+
+var infuraApiKey = INFURA_PROJECT_ID
+var providerURL = "https://mainnet.infura.io/v3/" + infuraApiKey
+var unsResolution, _ = resolution.NewUnsBuilder().SetEthereumNetwork(providerURL).Build()
+var znsResolution, _ = resolution.NewZnsBuilder().Build()
+```
+
