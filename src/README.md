@@ -34,7 +34,7 @@ If you want to resell domains, you must first [Register as A Reseller](sell-doma
 
 ## I want to build a decentralized website and link it to my domain
 
-If you are new to IPFS and decentralized websites \(d-web\), we recommend that you start with the [IPFS Overview](build-a-decentralized-website/overview-of-ipfs-and-d-websites.md). After purchasing a domain from UD, you can build your d-website using a [template](build-a-decentralized-website/connecting-your-d-website-to-your-domain/using-a-template-for-your-d-website.md) or [custom design](build-a-decentralized-website/connecting-your-d-website-to-your-domain/building-a-custom-d-website.md). See the guide on [Resolving a D-Website in a Browser](build-a-decentralized-website/resolving-a-d-website-in-a-browser.md) to view your d-website after [connecting it to your domain](build-a-decentralized-website/connecting-your-d-website-to-your-domain/).
+If you are new to IPFS and decentralized websites \(d-web\), we recommend that you start with the [IPFS Overview](build-a-decentralized-website/connecting-your-d-website-to-your-domain/#overview-of-ipfs-and-d-web). After purchasing a domain from UD, you can build your d-website using a [template](build-a-decentralized-website/connecting-your-d-website-to-your-domain/using-a-template-for-your-d-website.md) or [custom design](build-a-decentralized-website/connecting-your-d-website-to-your-domain/building-a-custom-d-website.md). See the guide on [Resolving a D-Website in a Browser](build-a-decentralized-website/resolving-a-d-website-in-a-browser.md) to view your d-website after [connecting it to your domain](build-a-decentralized-website/connecting-your-d-website-to-your-domain/).
 
 ## I want to promote my UD integration
 

@@ -6,11 +6,11 @@ description: >-
 
 # Connect a D-Website to Your Domain
 
-UD provides three options for connecting your decentralized website to your domain:
+## Overview of IPFS and D-web
 
-1. Select an UD website template to customize and deploy directly to IPFS
-2. Upload your own website files to our IPFS uploader \(limited to 20MB per domain\)
-3. Build a customized website yourself and attach your IPFS hash to your domain
+For a decentralized website \(d-web\) or decentralized application \(DApp\), you will upload website files to IPFS network instead of to github or other centralized storage network. [InterPlanetary File System \(IPFS\)](https://en.wikipedia.org/wiki/InterPlanetary_File_System) is a protocol and peer-to-peer network for storing and sharing data in a distributed file system. 
+
+IPFS allows users to not only receive but host content, in a similar manner to BitTorrent. As opposed to a centrally located server, IPFS is built around a decentralized system of user-operators who hold a portion of the overall data, creating a resilient system of file storage and sharing. Your decentralized website will have a unique hash, allowing other peers in the network to find and request that content from any node who has it using a distributed hash table \(DHT\).
 
 ## Configuring Your D-Website
 
@@ -19,9 +19,23 @@ Hosting a d-website on IPFS is slightly different from hosting it on a centraliz
 * All of the content for your website must be contained in one build folder, with an index.html file.
 * All links within your files should be relative links.
 
-These rules apply if you are building and uploading your own customized website using [Option 2 ](./#option-2-upload-your-own-website-files-to-our-ipfs-uploader)or [Option 3](./#option-3-build-a-customized-website-yourself-and-attach-your-ipfs-hash-to-your-domain) below.
+These rules apply if you are building and uploading your own customized website using connection [Option 2 ](./#option-2-upload-your-own-website-files-to-our-ipfs-uploader)or [Option 3](./#option-3-build-a-customized-website-yourself-and-attach-your-ipfs-hash-to-your-domain) below.
 
-## Option 1: Select a UD website template to customize and deploy directly to IPFS
+## Connecting Your Site 
+
+UD provides three options for connecting your decentralized website to your domain:
+
+1. Select an UD website template to customize and deploy directly to IPFS
+2. Upload your own website files to our IPFS uploader \(limited to 20MB per domain\)
+3. Build a customized website yourself and attach your IPFS hash to your domain
+
+The following flow chart outlines the process for purchasing a domain and then connecting a decentralized website to your domain.
+
+![Flow for setting up d-web site and connecting to UD domain](../../.gitbook/assets/d-web-flow%20%281%29.png)
+
+You can also view the [IPFS Youtube Video](https://youtu.be/I9vTeAtELOk) for a quick overview of building a decentralized website and attaching the IPFS hash to your domain.
+
+### Option 1: Select a UD website template to customize and deploy directly to IPFS
 
 * Select **Manage** next to the domain you want to use.
 * Select the **Website** tab
@@ -37,7 +51,7 @@ These rules apply if you are building and uploading your own customized website 
 
 ![How to edit content for your template and publish directly to IPFS](../../.gitbook/assets/customize-your-template-edited.png)
 
-## **Option 2: Upload your own website files to our IPFS Uploader**
+### **Option 2: Upload your own website files to our IPFS Uploader**
 
 * Go to **My Domains**
 * Select **Manage** next to the domain you want to use
@@ -53,7 +67,7 @@ These rules apply if you are building and uploading your own customized website 
 For websites that exceed the 20MB file limit, we recommend using a dedicated pinning service, such as [Pinata](https://pinata.cloud/) or [Temporal](https://temporal.cloud/).
 {% endhint %}
 
-## Option 3: Build a customized website yourself and attach your IPFS hash to your domain
+### Option 3: Build a customized website yourself and attach your IPFS hash to your domain
 
 * Select **My Domains**
 * Select **Manage** next to the domain you want to use
