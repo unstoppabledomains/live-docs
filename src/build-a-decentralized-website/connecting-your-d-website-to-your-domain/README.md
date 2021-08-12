@@ -6,12 +6,6 @@ description: >-
 
 # Connect a D-Website to Your Domain
 
-## Overview of IPFS and D-web
-
-For a decentralized website \(d-web\) or decentralized application \(DApp\), you will upload website files to IPFS network instead of to github or other centralized storage network. [InterPlanetary File System \(IPFS\)](https://en.wikipedia.org/wiki/InterPlanetary_File_System) is a protocol and peer-to-peer network for storing and sharing data in a distributed file system. 
-
-IPFS allows users to not only receive but host content, in a similar manner to BitTorrent. As opposed to a centrally located server, IPFS is built around a decentralized system of user-operators who hold a portion of the overall data, creating a resilient system of file storage and sharing. Your decentralized website will have a unique hash, allowing other peers in the network to find and request that content from any node who has it using a distributed hash table \(DHT\).
-
 ## Configuring Your D-Website
 
 Hosting a d-website on IPFS is slightly different from hosting it on a centralized web server, and you will need to ensure that your website is properly configured for the IPFS network. Important rules to follow:
@@ -21,7 +15,7 @@ Hosting a d-website on IPFS is slightly different from hosting it on a centraliz
 
 These rules apply if you are building and uploading your own customized website using connection [Option 2 ](./#option-2-upload-your-own-website-files-to-our-ipfs-uploader)or [Option 3](./#option-3-build-a-customized-website-yourself-and-attach-your-ipfs-hash-to-your-domain) below.
 
-## Connecting Your Site 
+## Connecting Your Site to Your Domain
 
 UD provides three options for connecting your decentralized website to your domain:
 

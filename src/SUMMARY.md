@@ -40,6 +40,7 @@
 
 ## Build A Decentralized Website
 
+* [Overview of IPFS and D-Web](build-a-decentralized-website/overview-of-ipfs-and-d-web.md)
 * [Connect a D-Website to Your Domain](build-a-decentralized-website/connecting-your-d-website-to-your-domain/README.md)
   * [Modify a Template](build-a-decentralized-website/connecting-your-d-website-to-your-domain/using-a-template-for-your-d-website.md)
   * [Build a Custom Site](build-a-decentralized-website/connecting-your-d-website-to-your-domain/building-a-custom-d-website.md)
