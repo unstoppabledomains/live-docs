@@ -16,7 +16,7 @@ To learn more about how the product works under the hood, see the [CNS Architect
 
 ## I want to add Unstoppable Domains to my app to send and receive crypto
 
-Unstoppable Domains supports 260+ cryptocurrencies. The most common way to integrate with Unstoppable Domains is through [simple domain resolution](domain-registry-essentials/resolving-domain-records.md). This process converts cryptocurrency addresses to a human-readable or user-friendly name. See the guides on [Crypto Payments](send-and-receive-crypto-payments/crypto-payments.md), [Resolution Libraries](send-and-receive-crypto-payments/resolution-libraries/), and [Library Configuration](send-and-receive-crypto-payments/resolution-libraries/library-configuration.md) for more detail on integrating UD into your app.
+Unstoppable Domains supports 260+ cryptocurrencies. The most common way to integrate with Unstoppable Domains is through [simple domain resolution](domain-registry-essentials/resolving-domain-records.md). This process converts cryptocurrency addresses to a human-readable or user-friendly name. See the guides on [Crypto Payments](send-and-receive-crypto-payments/crypto-payments.md), [Resolution Service API](send-and-receive-crypto-payments/crypto-payments.md#domain-resolution-using-resolution-service), [Resolution Libraries](send-and-receive-crypto-payments/resolution-libraries/), and [Library Configuration](send-and-receive-crypto-payments/resolution-libraries/library-configuration.md) for more detail on integrating UD into your app.
 
 ## I want to support Unstoppable Domains in my web browser
 

@@ -9,10 +9,11 @@ description: >-
 ## Table of contents
 
 * [Overview](crypto-payments.md#overview)
-* [Enabling domain resolution using libraries](crypto-payments.md#enabling-domain-resolution)
+* [Domain Resolution using Libraries](crypto-payments.md#enabling-domain-resolution)
   * [Resolving crypto records](crypto-payments.md#resolving-crypto-records)
   * [Error handling](crypto-payments.md#error-handling)
-  * [Best practices](crypto-payments.md#integration-best-practices)
+* [Domain Resolution using Resolution Service](crypto-payments.md#domain-resolution-using-resolution-service)
+* [Best practices](crypto-payments.md#integration-best-practices)
 * [Resources](crypto-payments.md#resources)
 
 ## Overview
@@ -33,7 +34,7 @@ A domain can store many records and key formats. To learn about our supported re
 
 ![Data movement for a successful payment](../.gitbook/assets/success-payment-flow.svg)
 
-## Enabling domain resolution
+## Domain Resolution with Libraries
 
 The easiest way to integrate domain resolution for crypto payments is by using the Unstoppable Domains resolution libraries. These libraries communicate with the Ethereum and Zilliqa blockchains directly so that you don't have to.
 
@@ -278,7 +279,41 @@ To see all supported error codes please check [resolution-swift readme](https://
 Always check address validity after receiving a result from the library. The user has full control over the domain and is able to set any value - even values which are invalid.
 {% endhint %}
 
-## Integration best practices
+## Domain Resolution using Resolution Service
+
+Resolution service provides an API for getting domain data and metadata regardless of that domain's location \(whether it is stored in Ethereum, Zilliqa, or any other blockchain or further scaling solutions\). The service is used to cache blockchain events in a database for easy retrieval without accessing blockchain APIs.
+
+The Github [Resolution Service Repository](https://github.com/unstoppabledomains/resolution-service)  includes a comprehensive README on how to install and run the Resolution Service on your own server.
+
+The following diagram shows the interactions between nodes for Resolution Service.
+
+![Node interactions in Unstoppable Domains&apos; Resolution Service](../.gitbook/assets/resolution-service.png)
+
+### API Endpoints
+
+For more information about the Resolution Service endpoints, see the [Resolution Service API Specification](http://resolve.unstoppabledomains.com/api-docs/). The specification uses OpenAPI format, which provides an interactive API explorer in which you can try out sample API calls. 
+
+There are four endpoints in the Resolution Service API:
+
+* `GET` domains: gets the list of domains
+* `GET` domains/domainName: gets the resolution of the specified domain
+* `GET` status: gets the synchronization status
+* `GET` api-docs: returns a Swagger documentation page
+
+### Resolution Service API Key
+
+To ensure a high quality of service for API users, the Resolution Service includes an API key. Developers can request access to the API Key by doing the following:
+
+* Email [legal@unstoppabledomains.com](mailto:legal@unstoppabledomains.com) with the request 
+* Receive a terms of service for using the Resolution Service in the same email
+* Terms of service must be accepted to access an API Key
+* Post signing off on the Terms of Service, Unstoppable Domains will send you the API key to use the service
+
+### Support
+
+For assistance with this API Specification, please join our[ Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community.
+
+## Integration Best Practices
 
 * Always display the resolved address near the domain name for additional security.
 * Don’t overwrite the input field with the cryptocurrency address.
