@@ -6,7 +6,7 @@ description: >-
 
 # Resolution CLI
 
-The Resolution-CLI is built and maintained by Unstoppable Domains. It is a simple CLI tool for resolving Unstoppable domains and interacting with blockchain domain names. It can be used to retrieve [payment addresses](crypto-payments.md), IPFS hashes for [decentralized websites](), DNS records and other [records types](../domain-registry-essentials/records-reference.md).
+The Resolution-CLI is built and maintained by Unstoppable Domains. It is a simple CLI tool for resolving Unstoppable domains and interacting with blockchain domain names. It can be used to retrieve [payment addresses](crypto-payments.md), IPFS hashes for [decentralized websites](../build-a-decentralized-website/overview-of-ipfs-and-d-web.md), DNS records and other [records types](../domain-registry-essentials/records-reference.md).
 
 For more information on resolving domains using the Resolution CLI option, please see the [Resolution CLI Repository](https://github.com/unstoppabledomains/resolution-cli) on Github.
 
