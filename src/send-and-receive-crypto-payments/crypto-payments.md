@@ -12,7 +12,7 @@ description: >-
 * [Domain Resolution using Libraries](crypto-payments.md#enabling-domain-resolution)
   * [Resolving crypto records](crypto-payments.md#resolving-crypto-records)
   * [Error handling](crypto-payments.md#error-handling)
-* [Domain Resolution using Resolution Service](crypto-payments.md#domain-resolution-using-resolution-service)
+* [Domain Resolution using Resolution Service API](crypto-payments.md#domain-resolution-using-resolution-service)
 * [Best practices](crypto-payments.md#integration-best-practices)
 * [Resources](crypto-payments.md#resources)
 
