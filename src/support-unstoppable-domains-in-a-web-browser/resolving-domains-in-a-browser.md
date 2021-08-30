@@ -22,6 +22,7 @@ To make domain resolution easier, we've written libraries for web, Android, and 
 * [JavaScript resolution library](https://github.com/unstoppabledomains/resolution)
 * [Java resolution library](https://github.com/unstoppabledomains/resolution-java)
 * [Swift resolution library](https://github.com/unstoppabledomains/resolution-swift)
+* [Golang resolution library](https://github.com/unstoppabledomains/resolution-go)
 
 ### Access Domain Metadata Directly
 
@@ -38,47 +39,32 @@ If you're familiar with blockchain development and would rather avoid an additio
 
 ### HTTP website browsing
 
-```text
-Given a blockchain domain has a DNS record configured.
-When user enters the domain name into a browser address bar.
-Then the browser resolves the domain and gets the specified DNS records.
-Then the browser requests and displays the content using DNS protocol and HTTP protocol.
-```
+Given a blockchain domain has a DNS record configured. When the user enters the domain name into a browser address bar, the browser resolves the domain and gets the specified DNS records. Then, the browser requests and displays the content using DNS protocol and HTTP protocol.
 
 ### Distributed website browsing
 
-```text
-Given a blockchain domain has a dweb content identifier record configured (e.g.: an IPFS hash).
-When a user enters the domain name into a browser address bar.
-Then the browser resolves the domain and gets the content hash of a domain.
-Then the browser retrieves the content by the hash using a related protocol and displays the content.
-```
+Given a blockchain domain has a d-web content identifier record configured \(e.g.: an IPFS hash\). When the user enters the domain name into a browser address bar, the browser resolves the domain and gets the content hash of a domain. Then, the browser retrieves the content by the hash using a related protocol and displays the content.
 
 ![](../.gitbook/assets/overview_read_dweb_website_from_ethereum_and_decentralized_network%20%284%29%20%284%29%20%283%29%20%281%29.png)
 
 ### Domain-level redirect
 
-```text
-Given a blockchain domain has both a redirect URL and IPFS hash configured, and the user's browser doesn't support IPFS protocol.
-When a user enters the domain name into a browser address bar.
-Then the browser resolves the domain and gets both the redirect URL and IPFS hash records.
-Then browser redirects the user to the redirect URL because the IPFS protocol is not supported.
-```
+Given a blockchain domain has both a redirect URL and IPFS hash configured, and the user's browser doesn't support IPFS protocol. When the user enters the domain name into a browser address bar, the browser resolves the domain and gets both the redirect URL and IPFS hash records. Then, the browser redirects the user to the redirect URL because the IPFS protocol is not supported.
 
 ### Resolution configuration
 
-```text
-Given a user wants to change ETH provider services.
-When the user goes to the browser settings crypto domains section.
-  - User changes the Ethereum node URL from default to another.
-  - User changes Registry Address for each support crypto registry.
-  - User changes network for Ethereum node.
-  - User changes DNS gateway
-  - User changes Dweb gateway
-Then the browser uses new settings to make requests to Ethereum blockchain
-  - If the network is not specified explicitly, it can be retrieved from the Ethereum node URL.
-  - If the Registry Address is not specified, it can use a default for the specified network
-```
+To change ETH provider services, the user goes to Browser Settings &gt; Crypto Domains section:
+
+* User changes the Ethereum node URL from default to another.
+* User changes Registry Address for each support crypto registry.
+* User changes network for Ethereum node.
+* User changes DNS gateway
+* User changes Dweb gateway
+
+Then, the browser uses the new settings to make requests to Ethereum blockchain:
+
+* If the network is not specified explicitly, it can be retrieved from the Ethereum node URL.
+* If the Registry Address is not specified, it can use a default for the specified network
 
 ![](../.gitbook/assets/configure_dns_gateway%20%284%29%20%284%29%20%283%29%20%283%29.png)
 

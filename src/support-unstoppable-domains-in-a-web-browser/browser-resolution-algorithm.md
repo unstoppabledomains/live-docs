@@ -1,10 +1,14 @@
+---
+description: >-
+  This section explains how different domain record configurations should be
+  interpreted by browsers.
+---
+
 # Browser Resolution Algorithm
 
-![](../.gitbook/assets/resolve_dweb_website_by_direct_reading_from_ethereum_and_decentralized_network%20%284%29%20%284%29%20%282%29%20%281%29.png)
+![Diagram shows how to Resolve DWeb by direct read from Ethereum](../.gitbook/assets/resolve_dweb_website_by_direct_reading_from_ethereum_and_decentralized_network%20%284%29%20%284%29%20%282%29%20%281%29.png)
 
-This section explains how different domain record configurations should be interpreted by browsers.
-
-A browser can select a protocol it has support for. If a domain is configured for multiple protocols, it should prioritize a protocol based on `browser.preferred_protocols` record that can be set to a list of the defined protocols.![](https://unstoppabledomains.slack.com/files/UKN3V261H/F01B42CJXJN/screen_shot_2020-09-21_at_2.34.07_pm.png)
+A browser can select the supported protocol. If a domain is configured for multiple protocols, it should prioritize a protocol based on `browser.preferred_protocols` record that can be set to a list of the defined protocols.![](https://unstoppabledomains.slack.com/files/UKN3V261H/F01B42CJXJN/screen_shot_2020-09-21_at_2.34.07_pm.png)
 
 If `browser.preferred_protocols` is not set, a browser should use the following value as a default `["bzz", "ipfs", "https", "http", "ftp"]`. If `browser.preferred_protocols` is set but is not complete, a browser should append the absent protocols in the default order specified above. A domain can have a single content identifier for each distributed protocol stored in `dweb.<protocol>.hash`. Ex: `dweb.bzz.hash` for Swarm's `bzz` protocol. See [Dweb records](browser-resolution-algorithm.md#distributed-web-records) for more information.
 
@@ -18,7 +22,7 @@ Generally, browsers automatically add `http://` prefix for any domain in the add
 
 `browser.redirect_url` and `ipfs.redirect_domain.value` contains full URL according to RFC-1738 and no additional actions required to provide redirect.
 
-![](../.gitbook/assets/browser_resolution_algorithm.svg)
+![Process diagram depicting entire browser resolution algorithm](../.gitbook/assets/browser_resolution_algorithm.svg)
 
 ## Browser resolution records
 
