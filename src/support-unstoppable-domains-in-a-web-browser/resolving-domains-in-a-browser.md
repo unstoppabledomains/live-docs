@@ -1,5 +1,5 @@
 ---
-description: This page describes the Unstoppable Domains Resolution.
+description: This page describes how to install and use the UD Resolution.
 ---
 
 # Resolving Domains in a Browser
