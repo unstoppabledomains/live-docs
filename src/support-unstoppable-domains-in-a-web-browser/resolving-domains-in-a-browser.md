@@ -1,121 +1,239 @@
 ---
 description: >-
-  This page describes how to resolve blockchain domains using a traditional HTTP
-  Web Browser or a Dapp Browser and assumes that a reader has a basic
-  understanding of Unstoppable Domains resolution.
+  This page describes the Unstoppable Domains Resolution, which is fully built
+  and maintained by Unstoppable Domains.
 ---
 
 # Resolving Domains in a Browser
 
+Resolution is a library for interacting with blockchain domain names. It can be used to retrieve [payment addresses](../send-and-receive-crypto-payments/crypto-payments.md), IPFS hashes for [decentralized websites](../build-a-decentralized-website/overview-of-ipfs-and-d-web.md), and GunDB usernames for [decentralized chat](https://unstoppabledomains.com/chat).
+
+Resolution supports decentralized domains across three main zones:
+
+| Name Service | Supported Domains |
+| :--- | :--- |
+| Zilliqa Name Service \(ZNS\) | `.zil` |
+| Ethereum Name Service \(ENS\) | `.eth`, `.kred`, `.xyz`, `.luxe` |
+| Unstoppable Name Service \(UNS\) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
+
 {% hint style="info" %}
-For more information on Unstoppable Domains Resolution, see [Resolving domain records](../domain-registry-essentials/resolving-domain-records.md).
+For more information on Unstoppable Domains Resolution, see [Resolving Domain Records](../domain-registry-essentials/resolving-domain-records.md) and the [Resolution API Reference](https://unstoppabledomains.github.io/resolution/).To make domain resolution easier, we've written libraries for web, Android, and iOS.
 {% endhint %}
 
-## General Domain Resolution Information
+## ENS Support
 
-Domain Resolution allows developers to translate a `.crypto` or `.zil` domain name into addresses for BTC, ETH, IPFS, and more. Domain Resolution can \(and we believe, should\) be used anywhere your application has a "Send to: " field.
+Ethereum Name Service requires installing additional packages to avoid errors thrown by the library when trying to resolve ENS domain.
 
-To make domain resolution easier, we've written libraries for web, Android, and iOS.
+Required packages:
 
-### Domain Resolution Libraries
+* `"bip44-constants": "^8.0.5"`
+* `"@ensdomains/address-encoder": ">= 0.1.x <= 0.2.x"`
+* `"content-hash": "^2.5.2"`
 
-* [JavaScript resolution library](https://github.com/unstoppabledomains/resolution)
-* [Java resolution library](https://github.com/unstoppabledomains/resolution-java)
-* [Swift resolution library](https://github.com/unstoppabledomains/resolution-swift)
-* [Golang resolution library](https://github.com/unstoppabledomains/resolution-go)
+## Installing Resolution
 
-### Access Domain Metadata Directly
+Resolution can be installed with either `yarn` or `npm`.
 
-If you're familiar with blockchain development and would rather avoid an additional dependency in your application, you can also read domain metadata directly.
+```text
+yarn add @unstoppabledomains/resolution
+```
 
-* [Resolve .crypto without libraries](https://medium.com/unstoppabledomains/how-to-resolve-crypto-domain-names-82046db0404a)
-* [Resolve .zil without libraries](https://medium.com/unstoppabledomains/how-to-resolve-zil-domain-names-f43da8fe37a9)
-* [Resolving domain records](../domain-registry-essentials/resolving-domain-records.md)
-* [CNS Smart Contracts reference](../domain-registry-essentials/architecture-overview/cns-smart-contracts.md)
-* [UNS Smart Contracts reference](../domain-registry-essentials/uns-architecture-overview/uns-smart-contracts.md)
-* [Records reference](../domain-registry-essentials/records-reference.md)
+```text
+npm install @unstoppabledomains/resolution --save
+```
 
-## End-User Features \(For Resolving Domains in a Browser\)
+If you're interested in resolving domains via the command line, see the  [CLI section](resolving-domains-in-a-browser.md#command-line-interface) below.
 
-### HTTP website browsing
+## Using Resolution
 
-Given a blockchain domain has a DNS record configured. When the user enters the domain name into a browser address bar, the browser resolves the domain and gets the specified DNS records. Then, the browser requests and displays the content using DNS protocol and HTTP protocol.
+Create a new project.
 
-### Distributed website browsing
+```text
+mkdir resolution && cd $_
+yarn init -y
+yarn add @unstoppabledomains/resolution
+```
 
-Given a blockchain domain has a d-web content identifier record configured \(e.g.: an IPFS hash\). When the user enters the domain name into a browser address bar, the browser resolves the domain and gets the content hash of a domain. Then, the browser retrieves the content by the hash using a related protocol and displays the content.
+### Look up a domain's crypto address
 
-![](../.gitbook/assets/overview_read_dweb_website_from_ethereum_and_decentralized_network%20%284%29%20%284%29%20%283%29%20%281%29.png)
+Create a new file in your project, `address.js`.
 
-### Domain-level redirect
+```text
+const { default: Resolution } = require('@unstoppabledomains/resolution');
+const resolution = new Resolution();
 
-Given a blockchain domain has both a redirect URL and IPFS hash configured, and the user's browser doesn't support IPFS protocol. When the user enters the domain name into a browser address bar, the browser resolves the domain and gets both the redirect URL and IPFS hash records. Then, the browser redirects the user to the redirect URL because the IPFS protocol is not supported.
+function resolve(domain, currency) {
+  resolution
+    .addr(domain, currency)
+    .then((address) => console.log(domain, 'resolves to', address))
+    .catch(console.error);
+}
 
-### Resolution configuration
+function resolveMultiChain(domain, currency, chain) {
+  resolution
+    .multiChainAddr(domain, currency, chain)
+    .then((address) => console.log(domain, 'resolves to', address, version))
+    .catch(console.error);
+}
 
-To change ETH provider services, the user goes to Browser Settings &gt; Crypto Domains section:
+resolve('brad.crypto', 'ETH');
+resolve('brad.zil', 'ZIL');
+resolveMultiChain('brad.crypto', 'USDT', 'ERC20');
+resolveMultiChain('brad.crypto', 'USDT', 'OMNI');
+```
 
-* User changes the Ethereum node URL from default to another.
-* User changes Registry Address for each support crypto registry.
-* User changes network for Ethereum node.
-* User changes DNS gateway
-* User changes Dweb gateway
+Execute the script.
 
-Then, the browser uses the new settings to make requests to Ethereum blockchain:
+```text
+$ node address.js
+brad.crypto resolves to 0x8aaD44321A86b170879d7A244c1e8d360c99DdA8
+brad.zil resolves to zil1yu5u4hegy9v3xgluweg4en54zm8f8auwxu0xxj
+```
 
-* If the network is not specified explicitly, it can be retrieved from the Ethereum node URL.
-* If the Registry Address is not specified, it can use a default for the specified network
+### Find the IPFS hash for a decentralized website
 
-![](../.gitbook/assets/configure_dns_gateway%20%284%29%20%284%29%20%283%29%20%283%29.png)
+Create a new file in your project, `ipfs_hash.js`.
 
-## Hypermedia Protocol
+```text
+const { default: Resolution } = require('@unstoppabledomains/resolution');
+const resolution = new Resolution();
 
-In addition to base browser hypermedia protocols like `http`, blockchain domains can also be configured for distributed content protocols like `ipfs`. These hypermedia protocols can be associated with a crypto domain:
+function resolveIpfsHash(domain) {
+  resolution
+    .ipfsHash(domain)
+    .then((hash) =>
+      console.log(
+        `You can access this website via a public IPFS gateway: https://gateway.ipfs.io/ipfs/${hash}`,
+      ),
+    )
+    .catch(console.error);
+}
 
-* Traditional
-  * HTTP
-  * HTTPS
-  * FTP
-* Distributed
-  * [IPFS](https://en.wikipedia.org/wiki/InterPlanetary_File_System) - `ipfs://`
-  * [Swarm](https://swarm-guide.readthedocs.io/en/stable/architecture.html#the-bzz-protocol) - `bzz://`
+resolveIpfsHash('homecakes.crypto');
+```
 
-A browser may support any subset of traditional or distributed protocols that still make crypto domain websites displayable.
+Execute the script.
 
-## Gateway to Simplify the Integration
+```text
+$ node ipfs_hash.js
+You can access this website via a public IPFS gateway: https://gateway.ipfs.io/ipfs/QmVJ26hBrwwNAPVmLavEFXDUunNDXeFSeMPmHuPxKe6dJv
+```
 
-While it is possible to resolve a domain via a call to ETH RPC and support distributed content protocols in a browser, it might be easier to make those calls via gateways using protocols already supported by all browsers: HTTP and DNS. A gateway may simplify the integration to a browser but comes at the downside of decreased decentralization \(if the gateway is hosted by a third party\) or a more complex user experience \(if the gateway is hosted by the user\).
+### Find a custom record
 
-There are 2 possible gateways for each problem:
+Create a new file in your project, `custom-resolution.js`.
 
-* Distributed content \(Dweb\) gateway
-* Resolution over DNS gateway
+```text
+const { default: Resolution } = require('@unstoppabledomains/resolution');
+const resolution = new Resolution();
 
-See a description of how they work below
+function resolveCustomRecord(domain, record) {
+  resolution
+    .records(domain, [record])
+    .then((value) => console.log(`Domain ${domain} ${record} is: ${value}`))
+    .catch(console.error);
+}
 
-![](../.gitbook/assets/overview_dweb_website_via_dns_dweb_gateways%20%284%29%20%284%29%20%283%29%20%282%29.png)
+resolveCustomRecord('homecakes.crypto', 'custom.record.value');
+```
 
-### Distributed content gateway
+### Command Line Interface
 
-A gateway is an HTTP Server that acts as a proxy between HTTP and a distributed content protocol. Basic functionality of such a gateway:
+To use resolution via the command line install the package globally.
 
-1. Receive HTTP request to a blockchain domain \(like `http://example.crypto`\)
-2. Resolve the domain into crypto records
-3. Get the content based on [Browser resolution algorithm](browser-resolution-algorithm.md)
-4. Return the content to the client via HTTP
+```text
+yarn global add @unstoppabledomains/resolution
+```
 
-### Resolution over DNS gateway
+```text
+npm install -g @unstoppabledomains/resolution
+```
 
-A gateway is a DNS Server that resolves not just traditional domains but also `.crypto` domains. Basic functionality of such a gateway:
+By default, the CLI uses Infura as its primary gateway to the Ethereum blockchain. If you'd like to override this default and set another provider you can do so using the `--ethereum-url` flag.
 
-1. Receive a domain resolution request
-2. Resolve a domain using classical DNS system if is in classical TLD \(like `.com`\)
-3. Resolve a domain using [Browser resolution algorithm](browser-resolution-algorithm.md) if it is in crypto TLD
-   * If a domain is set using DNS, transform [Crypto DNS records](browser-resolution-algorithm.md#dns-records) into classical records
-   * If a domain is set using distributed content
-     * If the client requests `A` record, resolve to [Distributed content gateway](resolving-domains-in-a-browser.md#distributed-content-gateway) IP Address
-     * If the client requests a `TXT` record, resolve to all crypto records in JSON encoded key-value format
-4. Send resolution to client
+For example:
 
-![](../.gitbook/assets/resolve_dweb_website_via_dns_gateway_and_dweb_gateway%20%284%29%20%283%29%20%281%29.png)
+```text
+resolution --ethereum-url https://mainnet.infura.io/v3/${secret} -d udtestdev-usdt.crypto -a
+```
+
+Use the `-h` or `--help` flag to see all the available CLI options.
+
+## Default Ethereum Providers
+
+Resolution provides zero-configuration experience by using built-in production-ready [Infura](http://infura.io/) endpoint by default.  
+Default Ethereum provider is free to use without restrictions and rate-limits for `CNS (.crypto domains)` resolution.  
+To resolve `ENS` domains on production it's recommended to change Ethereum provider.  
+Default provider can be changed by changing constructor options `new Resolution(options)` or by using one of the factory methods:
+
+* `Resolution.infura()`
+* `Resolution.fromWeb3Version1Provider()`
+* `Resolution.fromEthersProvider()`
+* etc.
+
+To see all constructor options and factory methods check [Unstoppable API reference](https://unstoppabledomains.github.io/resolution).
+
+## Autoconfiguration of Blockchain Network
+
+In some scenarios system might not be flexible enough to easy distinguish between various Ethereum testnets on compile time. For this case Resolution library provide a special async constructor which should be waited for `await Resolution.autonetwork(options)`. This method makes a JSON RPC "net\_version" call to the provider to get the network id.
+
+This method configures only ENS and CNS. ZNS is supported only on Zilliqa mainnet which is going to be used in any cases. You can provide a configured provider or a blockchain url as in the following example:
+
+```text
+await Resolution.autonetwork({
+  cns: {provider},
+  ens: {url}
+});
+```
+
+## Error Handling
+
+When resolution encounters an error it returns the error code instead of stopping the process. Keep an eye out for return values like `RECORD_NOT_FOUND`.
+
+## Development
+
+Use these commands to set up a local development environment \(**macOS Terminal** or **Linux shell**\).
+
+1. Install `nvm`
+
+   ```text
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+   ```
+
+2. Install concrete version of `node.js`
+
+   ```text
+   nvm install 12.12.0
+   ```
+
+3. Install `yarn`
+
+   ```text
+   npm install -g yarn
+   ```
+
+4. Clone the repository
+
+   ```text
+   git clone https://github.com/unstoppabledomains/resolution.git
+   cd resolution
+   ```
+
+5. Install dependencies
+
+   ```text
+   yarn install
+   ```
+
+### Internal Config
+
+**To update:**
+
+* Network config: `$ yarn network-config:pull`
+* Supported keys: `$ yarn supported-keys:pull`
+* Both configs: `$ yarn config:pull`
+
+## Support
+
+If you have any questions or need assistance with using UD Resolution CLI, join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from us and the community.
 
