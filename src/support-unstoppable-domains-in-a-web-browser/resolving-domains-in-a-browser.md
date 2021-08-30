@@ -1,14 +1,12 @@
 ---
-description: >-
-  This page describes the Unstoppable Domains Resolution, which is fully built
-  and maintained by Unstoppable Domains.
+description: This page describes the Unstoppable Domains Resolution.
 ---
 
 # Resolving Domains in a Browser
 
 Resolution is a library for interacting with blockchain domain names. It can be used to retrieve [payment addresses](../send-and-receive-crypto-payments/crypto-payments.md), IPFS hashes for [decentralized websites](../build-a-decentralized-website/overview-of-ipfs-and-d-web.md), and GunDB usernames for [decentralized chat](https://unstoppabledomains.com/chat).
 
-Resolution supports decentralized domains across three main zones:
+Resolution is built and maintained by Unstoppable Domains and supports decentralized domains across three main zones:
 
 | Name Service | Supported Domains |
 | :--- | :--- |
