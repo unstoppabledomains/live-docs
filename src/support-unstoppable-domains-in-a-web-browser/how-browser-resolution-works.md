@@ -1,14 +1,13 @@
 ---
 description: >-
-  This page describes how to resolve blockchain domains using a traditional HTTP
-  Web Browser or a Dapp Browser and assumes that a reader has a basic
-  understanding of Unstoppable Domains resolution.
+  This page provides a high level overview of how UD Resolution works when
+  resolving domains using a traditional HTTP Web Browser or a Dapp Browser.
 ---
 
 # How Browser Resolution Works
 
 {% hint style="info" %}
-For more information on Unstoppable Domains Resolution, see [Resolving domain records](../domain-registry-essentials/resolving-domain-records.md).
+For more information on Unstoppable Domains Resolution, see [Resolving Domain Records](../domain-registry-essentials/resolving-domain-records.md).
 {% endhint %}
 
 ## General Domain Resolution Information
