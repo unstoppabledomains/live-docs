@@ -1,3 +1,9 @@
+---
+description: >-
+  This page provides a list of the browser resolution test domains and reviews
+  the process for retrieving test records.
+---
+
 # Browser Resolution Test Domains
 
 | Domain name |

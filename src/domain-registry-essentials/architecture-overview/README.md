@@ -41,7 +41,7 @@ For instance, `example.crypto`'s namehash: `0xd584c5509c6788ad9d9491be8ba8b4422d
 
 This flow describes how the CNS `Registry` and `Resolvers` interact.
 
-![](../../.gitbook/assets/Smart-Contract-Architecture-Administration%20%284%29%20%284%29%20%282%29%20%283%29.svg)
+![Visualization of interaction between CNS Registry ad Resolvers](../../.gitbook/assets/Smart-Contract-Architecture-Administration%20%284%29%20%284%29%20%282%29%20%283%29.svg)
 
 ### Registry
 
