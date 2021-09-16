@@ -36,6 +36,10 @@ If you want to resell domains, you must first [Register as A Reseller](sell-doma
 
 If you are new to IPFS and decentralized websites \(d-web\), we recommend that you start with the [IPFS Overview](build-a-decentralized-website/overview-of-ipfs-and-d-web.md). After purchasing a domain from UD, you can build your d-website using a [template](build-a-decentralized-website/connecting-your-d-website-to-your-domain/using-a-template-for-your-d-website.md) or [custom design](build-a-decentralized-website/connecting-your-d-website-to-your-domain/building-a-custom-d-website.md). See the guide on [Resolving a D-Website in a Browser](build-a-decentralized-website/resolving-a-d-website-in-a-browser.md) to view your d-website after [connecting it to your domain](build-a-decentralized-website/connecting-your-d-website-to-your-domain/).
 
+## I want to integrate Login with Unstoppable or use the Unstoppable Authorization Server
+
+The [Login with Unstoppable](login-with-unstoppable/high-level-overview.md) feature helps you connect directly with your users through your dApp. The [Unstoppable Authorization Server](login-with-unstoppable/authorization-server/) makes it easy for users to share both public and permissioned information with your dApp, such as email, memberships, and social profiles. Login with Unstoppable is based on the OpenID Connect \(OIDC\) [authorization protocol](login-with-unstoppable/authorization-server/authorization-protocol.md) modified to be secured with a simple web3 wallet signature. See the guides on [Domain Owner Configuration](login-with-unstoppable/domain-owner-configuration.md) and [Developer Integration](login-with-unstoppable/developer-integration.md) to get started.
+
 ## I want to promote my UD integration
 
 We offer free advertising for UD integrated apps. Once your app has a working Unstoppable Domains integration, [register it here](https://unstoppabledomains.com/app-submission). Registered apps appear on the Unstoppable Domains [homepage](https://unstoppabledomains.com/) and [Applications](https://unstoppabledomains.com/apps) page — putting your app in front of tens of thousands of potential customers per day.
