@@ -1,3 +1,9 @@
+---
+description: >-
+  This page reviews the process for developer integration of the Login with
+  Unstoppable feature.
+---
+
 # Developer Integration
 
 Login with Unstoppable integration only takes four steps. dApp uses Unstoppable Domain’s [UAuth Library](https://github.com/unstoppabledomains/uauth) for the integration. Developers can use the [Spa sample application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to model their flow. 
@@ -27,7 +33,7 @@ As a reminder, the Login with Unstoppable feature has the following limitations:
 
 ![Get New Client Credentials button located at bottom of Application Page \(once approved\)](../.gitbook/assets/client-credentials-button.png)
 
-* **Enter the redirect URIs** on the Client Credentials Screen and **Retrieve the client id and secret key** for later reference \(Step 4 below\).
+* **Enter the redirect URIs** on the Client Credentials Screen and **Retrieve the client id and secret key** for later reference \([Step 4 below](developer-integration.md#step-4-modify-the-code-base-of-uauth-library)\).
 
 {% hint style="info" %}
 Enter each additional redirect URl on a separate line, if applicable. You will be able to edit the redirect urls on this screen but not the client id and secret key.
@@ -36,7 +42,7 @@ Enter each additional redirect URl on a separate line, if applicable. You will b
 ![Client Credentials Configuration Page](../.gitbook/assets/client-credentials-config-page.png)
 
 {% hint style="danger" %}
-The redirect URls entered on this page must be an exact match to the redirect URls used in the UAuth Library modification below \(See Step 4\).
+The redirect URls entered on this page must be an exact match to the redirect URls used in the UAuth Library modification below \([See Step 4](developer-integration.md#step-4-modify-the-code-base-of-uauth-library)\).
 {% endhint %}
 
 * **Save the changes** by clicking the Get New Client Credentials button again.
