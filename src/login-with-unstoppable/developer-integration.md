@@ -8,12 +8,6 @@ description: >-
 
 Login with Unstoppable integration only takes four steps. dApp uses Unstoppable Domain’s [UAuth Library](https://github.com/unstoppabledomains/uauth) for the integration. Developers can use the [Spa sample application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to model their flow. 
 
-As a reminder, the Login with Unstoppable feature has the following limitations:
-
-* Does not support .zil domains
-* Does not support ENS domains
-* The modal is written in react, which has a larger library size
-
 ## Step 1: Submit an Application to Use the Login Feature 
 
 * **Go** to the Unstoppable Domains [Application Submission](https://unstoppabledomains.com/app-submission) page.
@@ -221,4 +215,14 @@ Below are examples of how to display the domain name in the UI after a user has 
 ### Example 2
 
 ![Second UI Example for displaying authenticated user](../.gitbook/assets/ui-example2.png)
+
+## Limitations & Resources
+
+Login with Unstoppable has the following limitations:
+
+* Does not support .zil domains
+* Does not support ENS domains
+* The modal is written in react, which has a larger library size
+
+For assistance with this feature, please join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community.
 
