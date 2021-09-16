@@ -46,7 +46,15 @@
   * [Modify a Template](build-a-decentralized-website/connecting-your-d-website-to-your-domain/using-a-template-for-your-d-website.md)
   * [Build a Custom Site](build-a-decentralized-website/connecting-your-d-website-to-your-domain/building-a-custom-d-website.md)
 * [Resolve D-Website in a Browser](build-a-decentralized-website/resolving-a-d-website-in-a-browser.md)
-* [Examples and Additional Resources](build-a-decentralized-website/examples-of-d-websites.md)
+* [Examples and Resources](build-a-decentralized-website/examples-of-d-websites.md)
+
+## Login with Unstoppable
+
+* [High Level Overview](login-with-unstoppable/high-level-overview.md)
+* [Authorization Server](login-with-unstoppable/authorization-server/README.md)
+  * [Authorization Protocol](login-with-unstoppable/authorization-server/authorization-protocol.md)
+* [Domain Owner Configuration](login-with-unstoppable/domain-owner-configuration.md)
+* [Developer Integration](login-with-unstoppable/developer-integration.md)
 
 ## Domain Registry Essentials
 

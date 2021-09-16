@@ -4,7 +4,7 @@ description: >-
   other d-websites through specialized IPFS search engines.
 ---
 
-# Examples and Additional Resources
+# Examples and Resources
 
 ## D-Website Examples
 
