@@ -1,7 +1,8 @@
 ---
 description: >-
-  This page reviews the process for developer integration of the Login with
-  Unstoppable feature.
+  This page reviews the developer integration of the Login with Unstoppable
+  feature. Login with Unstoppable allows you to authenticate users and collect
+  both public and permissioned user info.
 ---
 
 # Developer Integration
