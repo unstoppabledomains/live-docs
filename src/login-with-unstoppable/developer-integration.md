@@ -1,8 +1,8 @@
 ---
 description: >-
   This page reviews the developer integration of the Login with Unstoppable
-  feature. Login with Unstoppable allows you to authenticate users and collect
-  both public and permissioned user info.
+  feature, which allows dApps to authenticate users and collect both public and
+  permissioned info shared by the user.
 ---
 
 # Developer Integration
