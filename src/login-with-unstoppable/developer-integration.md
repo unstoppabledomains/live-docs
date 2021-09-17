@@ -7,7 +7,9 @@ description: >-
 
 # Developer Integration
 
-Login with Unstoppable integration only takes four steps. dApp uses Unstoppable Domain’s [UAuth Library](https://github.com/unstoppabledomains/uauth) for the integration. Developers can use the [Spa sample application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to model their flow. 
+Login with Unstoppable integration only takes four steps. dApp uses Unstoppable Domain’s [UAuth Library](https://github.com/unstoppabledomains/uauth) for the integration. 
+
+Developers can use the working [example SPA application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to help kickstart their development.
 
 ## Step 1: Submit an Application to Use the Login Feature 
 
@@ -20,6 +22,11 @@ Login with Unstoppable integration only takes four steps. dApp uses Unstoppable 
 ## Step 2: Configure the Application
 
 * **Visit** the [App Dashboard](https://unstoppabledomains.com/app-dashboard) once your application has been created. Check your email to determine application approval or refresh the App Dashboard.
+
+{% hint style="info" %}
+You can begin dApp development right away while waiting on application approval. The application approval just allows the dApp to show up on the UD global application screen and will not affect integration.
+{% endhint %}
+
 * Click the **Edit** button next to the application you would like to configure or update.
 
 ![View Application Status and Edit an Application](../.gitbook/assets/pending-application%20%281%29.png)
