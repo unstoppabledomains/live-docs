@@ -8,7 +8,9 @@ description: >-
 
 The Login with Unstoppable feature allows the owner of an Unstoppable domain to share their contact information with the dApp without the need for a dApp team to host/maintain a CRM database of all their users. With most sign-in methods, it is difficult to track who visits your dApp and to contact users of your dApp because you may not have email or other contact methods. And, if the user is not in your Discord or following your Twitter, then users could miss important announcements or updates.
 
-Login with Unstoppable gives users the option to share their contact information using a simple wallet signature based on the OpenID Connect \(OIDC\) authorization protocol. Users will have public and permissioned information they can share such as email addresses, social profiles, community memberships, etc. This information sharing is 100% opt-in and wholly controlled by the user, which puts users back in control of their data \(BYOD, bring your own data\) through a decentralized authorization process that is secured with a simple web3 wallet signature. 
+Login with Unstoppable gives users the option to share their contact information using a simple wallet signature based on the OpenID Connect \(OIDC\) authorization protocol. Users will have **public** and **permissioned** information they can share such as email addresses, social profiles, community memberships, etc. This information sharing is 100% opt-in and wholly controlled by the user, which puts users back in control of their data \(BYOD, bring your own data\) through a decentralized authorization process that is secured with a simple web3 wallet signature. 
+
+![User flow for Unstoppable Logins feature](../.gitbook/assets/unstoppable-logins-user-flow.png)
 
 ## Benefits for dApps
 
