@@ -11,7 +11,7 @@ Integrating Login with Unstoppable is a four step process. It is highly recommen
 
 Developers can use the working [example single page application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to help kickstart their development.
 
-## Step 1: Submit an Application to Use the Login Feature 
+## Step 1: Submit an Application to Use the Login Feature
 
 * **Go** to the Unstoppable Domains [Application Submission](https://unstoppabledomains.com/app-submission) page.
 * **Complete** all fields: App Name, Description \(at least 50 characters\), App Logo, Website link, and any applicable checkboxes \(e.g., use cases, platforms, extensions\).
@@ -87,13 +87,13 @@ const uauth = new UAuth({
   // These can be copied from the bottom of your app's configuration page on unstoppabledomains.com.
   clientID: process.env.REACT_APP_CLIENT_ID,
   clientSecret: process.env.REACT_APP_CLIENT_SECRET,
- 
+
   // These are the scopes your app is requesting from the ud server.
   scope: 'openid email wallet example',
- 
+
   // This is the url that the auth server will redirect back to after every authorization attempt.
   redirectUri: 'http://localhost:5000/callback',
- 
+
   // This is the url that the auth server will redirect back to after logging out.
   postLogoutRedirectUri: 'http://localhost:5000',
 })
@@ -101,12 +101,12 @@ const uauth = new UAuth({
 {% endtab %}
 
 {% tab title="Login" %}
-```
+```text
 const Login: React.FC<RouteProps> = props => {
   const [errorMessage, setErrorMessage] = useState<string | null>(
     new URLSearchParams(props.location?.search || '').get('error'),
   )
- 
+
   const handleLoginButtonClick: React.MouseEventHandler<HTMLButtonElement> =
     e => {
       setErrorMessage(null)
@@ -115,7 +115,7 @@ const Login: React.FC<RouteProps> = props => {
         setErrorMessage('User failed to login.')
       })
     }
- 
+
   return (
     <>
       {errorMessage && <div>{errorMessage}</div>}
@@ -127,50 +127,52 @@ const Login: React.FC<RouteProps> = props => {
 {% endtab %}
 
 {% tab title="Callback" %}
-    const Callback: React.FC<RouteProps> = props => {
-      const [redirectTo, setRedirectTo] = useState<string>()
+```text
+const Callback: React.FC<RouteProps> = props => {
+  const [redirectTo, setRedirectTo] = useState<string>()
 
-      useEffect(() => {
-        // Try to exchange authorization code for access and id tokens.
-        uauth
-          .loginCallback()
-          // Successfully logged and cached user in `window.localStorage`
-          .then(response => {
-            console.log('loginCallback ->', response)
-            setRedirectTo('/profile')
-          })
-          // Failed to exchange authorization code for token.
-          .catch(error => {
-            console.error('callback error:', error)
-            setRedirectTo('/login?error=' + error.message)
-          })
-      }, [])
+  useEffect(() => {
+    // Try to exchange authorization code for access and id tokens.
+    uauth
+      .loginCallback()
+      // Successfully logged and cached user in `window.localStorage`
+      .then(response => {
+        console.log('loginCallback ->', response)
+        setRedirectTo('/profile')
+      })
+      // Failed to exchange authorization code for token.
+      .catch(error => {
+        console.error('callback error:', error)
+        setRedirectTo('/login?error=' + error.message)
+      })
+  }, [])
 
-      if (redirectTo) {
-        return <Redirect to={redirectTo} />
-      }
+  if (redirectTo) {
+    return <Redirect to={redirectTo} />
+  }
 
-      return <>Loading...</>
-    }
+  return <>Loading...</>
+}
 
-    const Profile: React.FC<RouteProps> = () => {
-      const [user, setUser] = useState<any>()
-      const [loading, setLoading] = useState(false)
-      const [redirectTo, setRedirectTo] = useState<string>()
+const Profile: React.FC<RouteProps> = () => {
+  const [user, setUser] = useState<any>()
+  const [loading, setLoading] = useState(false)
+  const [redirectTo, setRedirectTo] = useState<string>()
 
-      useEffect(() => {
-        uauth
-          .user()
-          .then(setUser)
-          .catch(error => {
-            console.error('profile error:', error)
-            setRedirectTo('/login?error=' + error.message)
-          })
-      }, [])
+  useEffect(() => {
+    uauth
+      .user()
+      .then(setUser)
+      .catch(error => {
+        console.error('profile error:', error)
+        setRedirectTo('/login?error=' + error.message)
+      })
+  }, [])
+```
 {% endtab %}
 
 {% tab title="Logout" %}
-```
+```text
 const handleLogoutButtonClick: React.MouseEventHandler<HTMLButtonElement> =
     e => {
       console.log('logging out!')
@@ -186,15 +188,15 @@ const handleLogoutButtonClick: React.MouseEventHandler<HTMLButtonElement> =
           setLoading(false)
         })
     }
- 
+
   if (redirectTo) {
     return <Redirect to={redirectTo} />
   }
- 
+
   if (!user || loading) {
     return <>Loading...</>
   }
- 
+
   return (
     <>
       <pre>{JSON.stringify(user, null, 2)}</pre>

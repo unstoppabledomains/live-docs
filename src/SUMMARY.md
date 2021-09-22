@@ -12,7 +12,7 @@
 * [Resolution Libraries](send-and-receive-crypto-payments/resolution-libraries/README.md)
   * [Library Configuration](send-and-receive-crypto-payments/resolution-libraries/library-configuration.md)
 * [Resolve with Direct Blockchain Calls](send-and-receive-crypto-payments/direct-blockchain-calls/README.md)
-  * [Resolve .crypto with Direct Blockchain Calls](send-and-receive-crypto-payments/direct-blockchain-calls/resolve-.crypto-without-libraries.md)
+  * [Resolve .crypto with Direct Blockchain Calls](send-and-receive-crypto-payments/direct-blockchain-calls/resolve-.crypto-without-libraries.md)
   * [Resolve .zil With Direct Blockchain Calls](send-and-receive-crypto-payments/direct-blockchain-calls/resolve-.zil-without-libraries.md)
 * [Resolution CLI](send-and-receive-crypto-payments/resolution-cli.md)
 
@@ -53,7 +53,6 @@
 * [High Level Overview](login-with-unstoppable/high-level-overview.md)
 * [Authorization Server](login-with-unstoppable/authorization-server/README.md)
   * [Authorization Protocol](login-with-unstoppable/authorization-server/authorization-protocol.md)
-* [Domain Owner Configuration](login-with-unstoppable/domain-owner-configuration.md)
 * [Developer Integration](login-with-unstoppable/developer-integration.md)
 
 ## Domain Registry Essentials

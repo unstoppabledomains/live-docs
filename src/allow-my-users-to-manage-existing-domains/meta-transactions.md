@@ -32,11 +32,11 @@ Meta transaction methods are bound to names via their nonce \(instead of [Accoun
 
 The example below shows how replay attacks can be used to exploit domains:
 
-![Visualization of replay attacks without nonces](../.gitbook/assets/Without-Nonces%20%284%29%20%284%29%20%282%29%20%283%29.svg)
+![Visualization of replay attacks without nonces](../.gitbook/assets/Without-Nonces%20%284%29%20%284%29%20%282%29%20%283%29%20%283%29.svg)
 
 A nonce is simply a transaction counter for each token. This prevents replay attacks where a transfer of a token from `A` to `B` can be replayed by `B` over and over to continually revert the state of the name back to a previous state. This counter increments by 1 each time a state transition happens to a token. Token-based nonces can be used to prevent misordering of transactions in a more general sense as well. This prevents front running non-fungible assets and enables secure transaction batching.
 
-![Visualization of valid and invalid transactions with nonces](../.gitbook/assets/Nonces%20%284%29%20%284%29%20%282%29%20%283%29.svg)
+![Visualization of valid and invalid transactions with nonces](../.gitbook/assets/Nonces%20%284%29%20%284%29%20%282%29%20%283%29%20%283%29.svg)
 
 ## Meta transaction signature generation
 

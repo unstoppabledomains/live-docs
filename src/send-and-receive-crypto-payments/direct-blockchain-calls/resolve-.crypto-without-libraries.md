@@ -4,7 +4,7 @@ description: >-
   blockchain calls.
 ---
 
-# Resolve .crypto with Direct Blockchain Calls
+# Resolve .crypto with Direct Blockchain Calls
 
 In this tutorial, we will look at resolving .crypto Unstoppable Domains, using nothing but HTML, Javascript, and the ethers.js library.
 

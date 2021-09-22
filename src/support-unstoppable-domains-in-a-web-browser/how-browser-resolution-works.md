@@ -44,7 +44,7 @@ Given a blockchain domain has a DNS record configured. When the user enters the 
 
 Given a blockchain domain has a d-web content identifier record configured \(e.g.: an IPFS hash\). When the user enters the domain name into a browser address bar, the browser resolves the domain and gets the content hash of a domain. Then, the browser retrieves the content by the hash using a related protocol and displays the content.
 
-![Diagram showing how to read DWeb from Ethereum](../.gitbook/assets/overview_read_dweb_website_from_ethereum_and_decentralized_network%20%284%29%20%284%29%20%283%29%20%281%29.png)
+![Diagram showing how to read DWeb from Ethereum](../.gitbook/assets/overview_read_dweb_website_from_ethereum_and_decentralized_network%20%284%29%20%284%29%20%283%29%20%284%29%20%281%29.png)
 
 ### Domain-level redirect
 
@@ -65,7 +65,7 @@ Then, the browser uses the new settings to make requests to Ethereum blockchain:
 * If the network is not specified explicitly, it can be retrieved from the Ethereum node URL.
 * If the Registry Address is not specified, it can use a default for the specified network
 
-![Diagram showing how to configure DNS Gateway](../.gitbook/assets/configure_dns_gateway%20%284%29%20%284%29%20%283%29%20%283%29.png)
+![Diagram showing how to configure DNS Gateway](../.gitbook/assets/configure_dns_gateway%20%284%29%20%284%29%20%283%29%20%284%29%20%283%29.png)
 
 ## Hypermedia Protocol
 
@@ -92,7 +92,7 @@ There are 2 possible gateways for each problem:
 
 See a description of how they work below
 
-![Visual flow of resolving DWeb via DNS and DWeb gateway](../.gitbook/assets/overview_dweb_website_via_dns_dweb_gateways%20%284%29%20%284%29%20%283%29%20%282%29.png)
+![Visual flow of resolving DWeb via DNS and DWeb gateway](../.gitbook/assets/overview_dweb_website_via_dns_dweb_gateways%20%284%29%20%284%29%20%283%29%20%284%29%20%282%29.png)
 
 ### Distributed content gateway
 

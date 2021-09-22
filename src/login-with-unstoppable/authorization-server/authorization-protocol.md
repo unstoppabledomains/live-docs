@@ -23,7 +23,7 @@ The following table identifies the major actors in the decentralized authorizati
 | :--- | :--- | :--- |
 | User | The individual or entity using the interface and agreeing to share data | End-User, Resource owner, Domain Owner |
 | User Interface | Any method used to connect the user to the authentication server | Browser, Mobile app, Desktop app, CLI, Server |
-| Client | An application that can request tokens | Server-Side Website, SPA Website, Mobile w/ Backend, Mobile w/o Backend, TV or other device, Server or Service  |
+| Client | An application that can request tokens | Server-Side Website, SPA Website, Mobile w/ Backend, Mobile w/o Backend, TV or other device, Server or Service |
 | Resource | A server that can validate incoming tokens | An API that uses tokens as API keys |
 | Authorization Server | A Server that can issue tokens | UD Login Server |
 
@@ -35,13 +35,13 @@ The table below describes the primary ways that clients ask for tokens. The firs
 
 | Token Request Type | Description | Pros | Cons |
 | :--- | :--- | :--- | :--- |
-| Authorization Code  | The Client asks for an authorization code that they can exchange for an access token. | More secure than Implicit Flow, doesn’t rely on Agents to store secrets securely. Authentication can be done on the Authorization Server. | Doesn’t work for all authorization apps, e.g. ones without a backend. Hard to establish secure back channels, making it less optimal for Unstoppable’s use cases. |
-| Implicit  | The Client asks for the token directly. | This process is simpler, Mobile-friendly. | Requires the Agent to store secrets, Relies on the front channel to work. |
-| Hybrid  | The Client asks for an authorization code and an ID or access token up front. | More flexible, works well for mobile applications with backends. Authentication can be done on the Authorization Server. | Complicated |
-| Device Code  | Designed for TVs, Clients show a user code that they type in online to authenticate, while the device polls for the special token associated with that user code \(i.e., the device code\). | Less of a chance that a malicious application redirects users to the wrong Authorization Server, unknowingly. | Authorization Server doesn’t control all authentication UX. requires users to manually navigate to their Authorization Server. |
-| Client Credentials  | Designed for trusted servers to gain access. Basically an API Key. | Simple  | Authorization Server doesn’t control authentication UX. Hard to control access to your resources from a UX perspective. |
-| Password  | Clients gain access with a username & password. | Simple | Authorization Server doesn’t control authentication UX. Less robust security. |
-| SAML  | Clients gain access using a SAML Assertion. | Works with lots of legacy authentication and authorization systems. | Authorization Server doesn’t control authentication UX. Hard to control access to your resources from a UX perspective.  |
+| Authorization Code | The Client asks for an authorization code that they can exchange for an access token. | More secure than Implicit Flow, doesn’t rely on Agents to store secrets securely. Authentication can be done on the Authorization Server. | Doesn’t work for all authorization apps, e.g. ones without a backend. Hard to establish secure back channels, making it less optimal for Unstoppable’s use cases. |
+| Implicit | The Client asks for the token directly. | This process is simpler, Mobile-friendly. | Requires the Agent to store secrets, Relies on the front channel to work. |
+| Hybrid | The Client asks for an authorization code and an ID or access token up front. | More flexible, works well for mobile applications with backends. Authentication can be done on the Authorization Server. | Complicated |
+| Device Code | Designed for TVs, Clients show a user code that they type in online to authenticate, while the device polls for the special token associated with that user code \(i.e., the device code\). | Less of a chance that a malicious application redirects users to the wrong Authorization Server, unknowingly. | Authorization Server doesn’t control all authentication UX. requires users to manually navigate to their Authorization Server. |
+| Client Credentials | Designed for trusted servers to gain access. Basically an API Key. | Simple | Authorization Server doesn’t control authentication UX. Hard to control access to your resources from a UX perspective. |
+| Password | Clients gain access with a username & password. | Simple | Authorization Server doesn’t control authentication UX. Less robust security. |
+| SAML | Clients gain access using a SAML Assertion. | Works with lots of legacy authentication and authorization systems. | Authorization Server doesn’t control authentication UX. Hard to control access to your resources from a UX perspective. |
 
 ## Authentication
 
@@ -78,7 +78,7 @@ Login with Unstoppable uses the following primary authentication methods:
 
 ## Scopes
 
-Scopes refers to information that the user will share with the dApp \(e.g., I own this wallet address; I own this email address\). Login with Unstoppable currently supports two scopes: wallet and email. 
+Scopes refers to information that the user will share with the dApp \(e.g., I own this wallet address; I own this email address\). Login with Unstoppable currently supports two scopes: wallet and email.
 
 ### Wallet Scope
 

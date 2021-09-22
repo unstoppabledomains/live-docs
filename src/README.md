@@ -38,7 +38,7 @@ If you are new to IPFS and decentralized websites \(d-web\), we recommend that y
 
 ## I want to integrate Login with Unstoppable or use the Unstoppable Authorization Server
 
-The [Login with Unstoppable](login-with-unstoppable/high-level-overview.md) feature helps you connect directly with your users through your dApp. The [Unstoppable Authorization Server](login-with-unstoppable/authorization-server/) makes it easy for users to share both public and permissioned information with your dApp, such as email, memberships, and social profiles. Login with Unstoppable is based on the OpenID Connect \(OIDC\) [authorization protocol](login-with-unstoppable/authorization-server/authorization-protocol.md) modified to be secured with a simple web3 wallet signature. See the guides on [Domain Owner Configuration](login-with-unstoppable/domain-owner-configuration.md) and [Developer Integration](login-with-unstoppable/developer-integration.md) to get started.
+The [Login with Unstoppable](login-with-unstoppable/high-level-overview.md) feature helps you connect directly with your users through your dApp. The [Unstoppable Authorization Server](login-with-unstoppable/authorization-server/) makes it easy for users to share both public and permissioned information with your dApp, such as email, memberships, and social profiles. Login with Unstoppable is based on the OpenID Connect \(OIDC\) [authorization protocol](login-with-unstoppable/authorization-server/authorization-protocol.md) modified to be secured with a simple web3 wallet signature. See the guides on [Domain Owner Configuration]() and [Developer Integration](login-with-unstoppable/developer-integration.md) to get started.
 
 ## I want to promote my UD integration
 
