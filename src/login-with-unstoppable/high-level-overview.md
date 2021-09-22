@@ -14,18 +14,18 @@ Login with Unstoppable gives users and apps a simple way to solve this problem. 
 
 ## Benefits for dApps
 
-1. Communicate with community members directly via permissioned access to their email addresses.
-2. Avoid hosting a database of user contact information by asking for permissions to access contact information only when it's needed.
-3. dApps will be web3 compliant.
+1. Communicate with community members directly via opt-in access to their email addresses.
+2. Avoid hosting a database of user contact information by asking for permissions to access that information only when it's needed.
+3. Request additional data such as social profiles to enhance your user experience even further. \(planned\)
 
 ## Benefits for Users
 
-1. Users can choose to share what information \(if any\) they want to share with an application. The information sharing is 100% opt-in and wholly controlled by the user.
+1. Users can choose what information \(if any\) they want to share with an application. The information sharing is 100% opt-in and entirely controlled by the user.
 2. No need to remember multiple unique usernames and passwords. One login for every web3 application.
-3. Gives users absolute control over their login credentials, not a corporation.
+3. Gives users absolute control over their login credentials \(private key\), not a corporation.
 
 ## Limitations
 
 * Does not support .zil domains
-* Pre-made components are only available initially in React
+* Pre-made components are only available initially in React. The modal is written in react, which has a larger library size.
 
