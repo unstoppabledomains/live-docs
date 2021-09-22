@@ -2,14 +2,14 @@
 description: >-
   This page reviews the developer integration of the Login with Unstoppable
   feature, which allows dApps to authenticate users and collect both public and
-  permissioned info shared by the user.
+  permissioned information shared by the user.
 ---
 
 # Developer Integration
 
-Login with Unstoppable integration only takes four steps. dApp uses Unstoppable Domain’s [UAuth Library](https://github.com/unstoppabledomains/uauth) for the integration. 
+Integrating Login with Unstoppable is a four step process. It is highly recommended to use Unstoppable Domain’s [UAuth Library](https://github.com/unstoppabledomains/uauth) to simplify the integration.
 
-Developers can use the working [example SPA application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to help kickstart their development.
+Developers can use the working [example single page application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to help kickstart their development.
 
 ## Step 1: Submit an Application to Use the Login Feature 
 
@@ -21,10 +21,10 @@ Developers can use the working [example SPA application](https://github.com/unst
 
 ## Step 2: Configure the Application
 
-* **Visit** the [App Dashboard](https://unstoppabledomains.com/app-dashboard) once your application has been created. Check your email to determine application approval or refresh the App Dashboard.
+* **Visit** the [App Dashboard](https://unstoppabledomains.com/app-dashboard) once your application has been created.
 
 {% hint style="info" %}
-You can begin dApp development right away while waiting on application approval. The application approval just allows the dApp to show up on the UD global application screen and will not affect integration.
+You can begin dApp development right away while waiting on application approval. The application approval only relates to your application appearing on the UD global application screen and is not a blocker to integration.
 {% endhint %}
 
 * Click the **Edit** button next to the application you would like to configure or update.
@@ -38,13 +38,13 @@ You can begin dApp development right away while waiting on application approval.
 * **Enter the redirect URIs** on the Client Credentials Screen and **Retrieve the client id and secret key** for later reference \([Step 4 below](developer-integration.md#step-4-modify-the-code-base-of-uauth-library)\).
 
 {% hint style="info" %}
-Enter each additional redirect URl on a separate line, if applicable. You will be able to edit the redirect urls on this screen but not the client id and secret key.
+Enter each additional redirect URI on a separate line, if applicable. You will be able to edit the redirect URIs on this screen but not the client id and secret key.
 {% endhint %}
 
 ![Client Credentials Configuration Page](../.gitbook/assets/client-credentials-config-page.png)
 
 {% hint style="danger" %}
-The redirect URls entered on this page must be an exact match to the redirect URls used in the UAuth Library modification below \([See Step 4](developer-integration.md#step-4-modify-the-code-base-of-uauth-library)\).
+The redirect URls entered on this page must be an exact match to the redirect URIs used in the UAuth Library modification below \([See Step 4](developer-integration.md#step-4-modify-the-code-base-of-uauth-library)\).
 {% endhint %}
 
 * **Save the changes** by clicking the Get New Client Credentials button again.
