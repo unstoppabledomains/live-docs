@@ -7,9 +7,9 @@ description: >-
 
 # Authorization Protocol
 
-Login with Unstoppable uses an extension of the OpenID Connect \(OIDC\) to obtain the user’s wallet signature. The extension allows owners of domain names to authorize access to information and resources in the same way as the OIDC specification. When combined with a blockchain based domain system, the extension enables decentralized authorization. 
+Login with Unstoppable uses a modified version of the OpenID Connect \(OIDC\) protocol to obtain a user’s wallet signature. This allows domain owners to authorize access to information and resources in the same way as the OIDC specification. This modified OIDC protocol, when with a blockchain based domain system, enables a far better decentralized authorization experience across web3 applications.
 
-A key distinguisher between traditional authorization protocols and decentralized ones is that there is no centralized resource access. Decentralized authorization requires that the Authorization Server won’t have pre-existing knowledge of the resources it’s authorizing clients to use. OAuth, OIDC, and SAML only govern the parts of the interaction between clients & authorization Servers. Decentralized authentication is between two parties because resources must provide an interface for Authorization Servers to read from.
+A key distinguisher between traditional and decentralized authorization protocols is that there is no centralized resource access. Decentralized authorization requires that the Authorization Server won’t have pre-existing knowledge of the resources it’s authorizing clients to use. OAuth, OIDC, and SAML only govern the parts of the interaction between clients & authorization Servers. Decentralized authentication is between two parties because resources must provide an interface for Authorization Servers to read from.
 
 {% hint style="info" %}
 With decentralized authorization, basic authentication information is likely stored directly on the Authorization Server, so Standard Claims will need to be separated out from Client-to-Resource authorization.
@@ -91,13 +91,13 @@ The Login with Unstoppable wallet scope is best used for retrieving metadata abo
 
 ### Email Scope
 
-The Login with Unstoppable email scope is best used for retrieving metadata about the user's preferred email address. It is based on the [OIDC Standard email scope](https://openid.net/specs/openid-connect-basic-1_0.html#Scopes).
+The Login with Unstoppable email scope can be used to retrieving metadata about the user's preferred email address. It is based on the [OIDC Standard email scope](https://openid.net/specs/openid-connect-basic-1_0.html#Scopes).
 
 ## Access Tokens
 
-It is pretty easy to standardize access\_tokens validation. There are two primary types of access tokens but only one is supported by Login with Unstoppable.
+There are two primary types of access tokens.
 
-### Opaque \(Supported\)
+### Opaque \(Currently Supported\)
 
 Opaque access tokens don’t contain any information within themselves, and in principle cannot be deciphered by a resource server. To validate opaque tokens for use with Login with Unstoppable, resource servers must use the Token Introspection API provided by the Authorization servers.
 
