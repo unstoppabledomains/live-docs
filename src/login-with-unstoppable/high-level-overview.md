@@ -18,6 +18,7 @@ Login with Unstoppable is currently configured for users to share the email addr
 
 1. Communicate with community members directly via opt-in access to their email addresses.
 2. Avoid hosting a database of user contact information by asking for permissions to access that information only when it's needed.
+3. Request additional data from users, such as social profiles, to further enhance the user experience \(future release\).
 
 ## Benefits for Users
 
