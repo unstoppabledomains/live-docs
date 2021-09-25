@@ -8,13 +8,13 @@ description: >-
 
 Login with Unstoppable allows an Unstoppable Domain owner to log in and share information with applications. This allows application developers to learn information about their users \(email, for example\) without needing to host or maintain their own CRM database. With current wallet-based sign-in methods it is difficult or impossible for application developers to contact their users. 
 
-Login with Unstoppable gives users and decentralized applications \(dApps\) a simple way to solve this problem. This protocol extends the standard OpenID Connect \(OIDC\) authorization protocol with a simple wallet signature. This decentralized authorization process enables a better user experience and a closer relationship between applications and the communities they serve.
+Login with Unstoppable gives users and applications a simple way to solve this problem. This protocol extends the standard OpenID Connect \(OIDC\) authorization protocol with a simple wallet signature. This decentralized authorization process enables a better user experience and a closer relationship between applications and the communities they serve.
 
 {% hint style="info" %}
 Login with Unstoppable is currently configured for users to share the email address associated with their UD account. Future updates will allow users to share other metadata such as social profiles and community memberships with their login, as well as receive direct requests from applications to share specialized information.
 {% endhint %}
 
-## Benefits for dApps
+## Benefits for Applications
 
 1. Communicate with community members directly via opt-in access to their email addresses.
 2. Avoid hosting a database of user contact information by asking for permissions to access that information only when it's needed.

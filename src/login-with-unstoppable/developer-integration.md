@@ -1,8 +1,8 @@
 ---
 description: >-
   This page reviews the developer integration of the Login with Unstoppable
-  feature, which allows dApps to authenticate users and collect both public and
-  permissioned information shared by the user.
+  feature, which allows applications to authenticate users and collect user
+  information.
 ---
 
 # Developer Integration
@@ -24,7 +24,7 @@ Developers can this [single page sample application](https://github.com/unstoppa
 * **Visit** the [App Dashboard](https://unstoppabledomains.com/app-dashboard) once your application has been created. \(To see the status of the application, check your email or refresh the Application Dashboard.\)
 
 {% hint style="info" %}
-You can begin dApp development right away while waiting on application approval. The application approval only relates to your application appearing on the UD global application screen and is not a blocker to integration.
+You can begin App development right away while waiting on application approval. The application approval only relates to your application appearing on the UD global application screen and is not a blocker to integration.
 {% endhint %}
 
 * Click the **Edit** button next to the application you would like to configure for Login with Unstoppable.
@@ -63,7 +63,7 @@ Login with Unstoppable button status and states can be found in the table below:
 
 ![User View of Login with Unstoppable for Connecting a Wallet](../.gitbook/assets/login-domains-modal1.png)
 
-### Example: User Enters Unstoppable Domain Address to Login to dApp
+### Example: User Enters Unstoppable Domain Address to Login to Application
 
 When a user clicks the Login with Unstoppable button, a modal is displayed which will allow that user to begin the authorization process.
 
