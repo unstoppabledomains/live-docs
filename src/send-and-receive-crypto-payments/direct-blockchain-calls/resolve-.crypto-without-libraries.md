@@ -9,12 +9,12 @@ description: >-
 In this tutorial, we will look at resolving .crypto Unstoppable Domains, using nothing but HTML, Javascript, and the ethers.js library.
 
 {% hint style="info" %}
-The .zil namespace is located on a separate chain and requires a [different process](resolve-.zil-without-libraries.md). 
+The .zil namespace is located on a separate chain and requires a [different process](resolve-.zil-without-libraries.md).&#x20;
 {% endhint %}
 
 Each of them can be resolved in exactly the same manner as the .crypto we are showing below.
 
-![Dynamic GIF showing the steps to resolve a .crypto domain](../../.gitbook/assets/crypto-resolve.gif)
+![Dynamic GIF showing the steps to resolve a .crypto domain](../../../.gitbook/assets/crypto-resolve.gif)
 
 To resolve an unstoppable domain, we will need to
 
@@ -24,11 +24,11 @@ To resolve an unstoppable domain, we will need to
 
 Let’s visualize the resolution process using some of the simplest tools a web developer has: knowledge of `HTML` and `javascript`.
 
-## Initialize the project folder <a id="e120"></a>
+## Initialize the project folder <a href="e120" id="e120"></a>
 
 The first thing we need to do is create a folder with three files inside: index.html, index.js, and ethers.js.
 
-```text
+```
 $ mkdir crypto-resolution
 $ cd crypto-resolution
 $ touch index.html index.js ethers.js
@@ -36,24 +36,24 @@ $ touch index.html index.js ethers.js
 
 Your project folder should look exactly like the following:
 
-```text
+```
 .
 ├── index.html
 ├── index.js
 ├── ethers.js
 ```
 
-### Build the Layout: Index.html <a id="f889"></a>
+### Build the Layout: Index.html <a href="f889" id="f889"></a>
 
 Let’s open the index.html file and build out the layout for our app. To create a positive UI experience for the user, we’ll need to build an input bar, a button to trigger the resolution, and a `<div>` to display our records.
 
-Next, we’ll need to connect [js-sha3](https://www.npmjs.com/package/js-sha3) \(so that we can use the keccak\_256 hash function\) and [ethers.js](https://docs.ethers.io/v5/getting-started/) to communicate with the blockchain contract.
+Next, we’ll need to connect [js-sha3](https://www.npmjs.com/package/js-sha3) (so that we can use the keccak\_256 hash function) and [ethers.js](https://docs.ethers.io/v5/getting-started/) to communicate with the blockchain contract.
 
 {% hint style="info" %}
 We will need the keccak\_256 hash function to calculate ERC-721 token ID for the **unstoppable** domain. To see a full description of this process, read our [Namehashing article](../../domain-registry-essentials/namehashing.md).
 {% endhint %}
 
-```text
+```
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -92,13 +92,13 @@ We will need the keccak\_256 hash function to calculate ERC-721 token ID for the
 </html>
 ```
 
-### Add some JavaScript: Index.js <a id="c4de"></a>
+### Add some JavaScript: Index.js <a href="c4de" id="c4de"></a>
 
-Now that we have our index.html file set up, let’s add some javascript. We can start by inputting some basic code into our index.js file to capture the text from the input field and print it onto our console. 
+Now that we have our index.html file set up, let’s add some javascript. We can start by inputting some basic code into our index.js file to capture the text from the input field and print it onto our console.&#x20;
 
 The code snippet below shows the resolve function:
 
-```text
+```
 async function resolve() {
   const userInput = document.getElementById("input").value;
   console.log({ domain: userInput });
@@ -109,7 +109,7 @@ async function resolve() {
 We can open `index.html` in a browser to make sure everything is connected and launches.
 {% endhint %}
 
-## Tokenize Your Domain by Namehashing <a id="9004"></a>
+## Tokenize Your Domain by Namehashing <a href="9004" id="9004"></a>
 
 Namehashing is an algorithm that tokenizes your domain name in a way that the .crypto smart contract can understand.
 
@@ -117,7 +117,7 @@ To tokenize our domain, we’ll need to split the domain name by the “.” cha
 
 We’ll also want to implement an `arrayToHex` function to get the result as a string, as well as a wrapper function namehash.
 
-```text
+```
 function namehash(name) {
   const hashArray = hash(name);
   return arrayToHex(hashArray);
@@ -138,13 +138,13 @@ function arrayToHex(arr) {
 
 This table shows a list of Namehash examples with different inputs:
 
-| Label | Namehash |
-| :--- | :--- |
-| "" | `0x88d4843af302c2093286898cd34cba7a471c3cdce4c78514fc971c3c6a53891e` |
-| crypto | `0x0f4a10a4f46c388cea365fcf45cccf0e9d901b945b9829ccdb54c10dc3cb7a6f` |
+| Label       | Namehash                                                             |
+| ----------- | -------------------------------------------------------------------- |
+| ""          | `0x88d4843af302c2093286898cd34cba7a471c3cdce4c78514fc971c3c6a53891e` |
+| crypto      | `0x0f4a10a4f46c388cea365fcf45cccf0e9d901b945b9829ccdb54c10dc3cb7a6f` |
 | brad.crypto | `0x756e4e998dbffd803c21d23b06cd855cdc7a4b57706c95964a37e24b47c10fc9` |
 
-## Configure the Ethers.js library <a id="abe0"></a>
+## Configure the Ethers.js library <a href="abe0" id="abe0"></a>
 
 To talk with any blockchain contract using `ethers.js`, we need to know the following:
 
@@ -154,7 +154,7 @@ To talk with any blockchain contract using `ethers.js`, we need to know the foll
 
 Let’s add the following information to our **ethers.js** file:
 
-```text
+```
 var address = '0x299974AeD8911bcbd2C61262605b89F591a53E83';
 var abi = [
   {
@@ -207,7 +207,7 @@ For the scope of this project, we will only need to use the getData function fro
 
 Next, we’ll need to create a contract instance and create a function to query our contract.
 
-```text
+```
 var contract = new ethers.Contract(address, abi, provider);
 async function fetchContractData(keys, tokenId) {
   return contract.getData(keys, tokenId);
@@ -224,16 +224,16 @@ Although any string can be stored as a key under the domain, Unstoppable Domains
 
 The following table shows record keys and a description for each:
 
-| Key | Description |
-| :--- | :--- |
+| Key                | Description                        |
+| ------------------ | ---------------------------------- |
 | crypto.BTC.address | BTC address attached to the domain |
 | crypto.ETH.address | ETH address attached to the domain |
 
-## Make the call to the contract <a id="2047"></a>
+## Make the call to the contract <a href="2047" id="2047"></a>
 
 Let’s update our resolve function to use the namehash and then look up the desired record keys from the input domain name. We’ll then want to print the result in the console to inspect in more detail.
 
-```text
+```
 async function resolve() {
   const userInput = document.getElementById("input").value;
   const tokenId = namehash(userInput);
@@ -255,7 +255,7 @@ async function resolve() {
 
 If we try to resolve the **brad.crypto** domain with the above keys, we should see the following parsed result from `fetchContractData` function:
 
-```text
+```
 {
   "ownerAddress":"0x8aaD44321A86b170879d7A244c1e8d360c99DdA8",
   "resolverAddress":"0xb66DcE2DA6afAAa98F2013446dBCB0f4B0ab2842",
@@ -267,14 +267,14 @@ If we try to resolve the **brad.crypto** domain with the above keys, we should s
 ```
 
 {% hint style="info" %}
-data\[2\] is an array containing all resolved records in the same order in which they were queried. In this case, the first argument is a BTC address and the last one is an ETH address attached to the domain.
+data\[2] is an array containing all resolved records in the same order in which they were queried. In this case, the first argument is a BTC address and the last one is an ETH address attached to the domain.
 {% endhint %}
 
-## Display the Records <a id="a0c8"></a>
+## Display the Records <a href="a0c8" id="a0c8"></a>
 
 Since this is a simple example, we won’t get too fancy. We’ll just create a span element for each record containing its key and value, its owner address, and its resolver address. We’ll also want to set the font to red if the record is not found.
 
-```text
+```
 function cleanDOM(parent) {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
@@ -304,7 +304,7 @@ function displayResolution(resolution) {
 
 Before we test it out, let’s make our lives a little easier by implementing a function to combine keys and results into one object.
 
-```text
+```
 function combineKeysWithRecords(keys, records) {
   const combined = {};
   keys.map((key, index) => {
@@ -316,7 +316,7 @@ function combineKeysWithRecords(keys, records) {
 
 Now we can easily show the records on our page:
 
-```text
+```
 fetchContractData(interestedKeys, tokenId).then(data => {
     displayResolution({
       ownerAddress: data.owner,
@@ -328,15 +328,15 @@ fetchContractData(interestedKeys, tokenId).then(data => {
 
 If we are successful, we should see the following on our page:
 
-![Example of a successful resolution](../../.gitbook/assets/example-successful-resolution.png)
+![Example of a successful resolution](../../../.gitbook/assets/example-successful-resolution.png)
 
-## Set-up Error Notifications <a id="d38b"></a>
+## Set-up Error Notifications <a href="d38b" id="d38b"></a>
 
 Now that we have made a successful call, let’s deal with all possible errors that might come up during the resolution.
 
 To do this, we’ll want to create a function to place an error in our records div. We’ll also want to add a boolean argument `cleanDom` to remove everything from the records div before we place an error for display.
 
-```text
+```
 function displayError(message, cleanDom) {
   const mainContainer = document.getElementById('records');
   if (cleanDom) {
@@ -352,15 +352,15 @@ function displayError(message, cleanDom) {
 
 We can easily identify the possible errors by playing around with the app in its current state. The following table displays possible errors and descriptions for each.
 
-| Errors | Description |
-| :--- | :--- |
-| Domain is not registered | Owner address is `0x00000000000000000000000000000000` |
-| Domain is not configured | It is possible that owner address exists but resolver address is set to `0x00000000000000000000000000000000` |
-| Record is not found | Records are queried for an address \(e.g. crypto.BTC.address\) but the domain owner hasn't set  up the records yet |
+| Errors                   | Description                                                                                                      |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| Domain is not registered | Owner address is `0x00000000000000000000000000000000`                                                            |
+| Domain is not configured | It is possible that owner address exists but resolver address is set to `0x00000000000000000000000000000000`     |
+| Record is not found      | Records are queried for an address (e.g. crypto.BTC.address) but the domain owner hasn't set  up the records yet |
 
 Once we’ve identified the errors, we will need to update the callback to the `fetchContractData` function to show the errors to the user:
 
-```text
+```
 function isEmpty(msg) {
   return !msg || msg === '0x0000000000000000000000000000000000000000';
 }
@@ -399,14 +399,13 @@ Now you can resolve any .crypto domain and display the appropriate error message
 
 For example, you can try to resolve the following domains:
 
-| Domain | Result |
-| :--- | :--- |
-| udtestdev-creek.crypto | Domain has no BTC record |
-| udtestdev-test-btc-record.coin | Resolves without any issues |
-| udtestdev-johnny-dev-domain.coin | Domain has no BTC record |
+| Domain                           | Result                      |
+| -------------------------------- | --------------------------- |
+| udtestdev-creek.crypto           | Domain has no BTC record    |
+| udtestdev-test-btc-record.coin   | Resolves without any issues |
+| udtestdev-johnny-dev-domain.coin | Domain has no BTC record    |
 
-## Resources <a id="3cd9"></a>
+## Resources <a href="3cd9" id="3cd9"></a>
 
 * [Full source code for this guide](https://github.com/unstoppable-domains-integrations/crypto-integration)
 * [Discord community for UD](https://discord.gg/b6ZVxSZ9Hn)
-

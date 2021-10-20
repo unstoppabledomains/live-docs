@@ -20,11 +20,11 @@ description: >-
 
 The most common way to integrate with Unstoppable Domains is through simple domain resolution. This process converts a human-readable name like `brad.crypto` to the cryptocurrency addresses that name stores. As long as the addresses are set, a user can send any of our 80+ supported cryptocurrencies to an Unstoppable Domain and it will end up in the right place. A user can send `BTC` to `brad.crypto` and it will go to Brad's `BTC` address. A user can send `ETH` to `brad.crypto` and will go to Brad's `ETH` address. Unstoppable Domains support 80+ cryptocurrencies and counting.
 
-![A successful domain resolution and payment](../.gitbook/assets/success-payment-example.gif)
+![A successful domain resolution and payment](../../.gitbook/assets/success-payment-example.gif)
 
 How does this work?
 
-At a high-level, an application retrieves a domain's records through smart contracts deployed on the Ethereum, Zilliqa, and Unstoppable blockchains \(`.crypto`, `.zil`, and `.wallet`, respectively\).
+At a high-level, an application retrieves a domain's records through smart contracts deployed on the Ethereum, Zilliqa, and Unstoppable blockchains (`.crypto`, `.zil`, and `.wallet`, respectively).
 
 In the example above, we're sending 1 `ETH` to `ryan.crypto`. The application sends those two parameters to the `Resolver` contract on the Ethereum blockchain and it returns the record stored under `crypto.ETH.address` for that domain. This address can be used to complete the `ETH` transfer to Ryan.
 
@@ -32,7 +32,7 @@ In the example above, we're sending 1 `ETH` to `ryan.crypto`. The application se
 A domain can store many records and key formats. To learn about our supported record types, see [Records reference guide](../domain-registry-essentials/records-reference.md).
 {% endhint %}
 
-![Data movement for a successful payment](../.gitbook/assets/success-payment-flow.svg)
+![Data movement for a successful payment](../../.gitbook/assets/success-payment-flow.svg)
 
 ## Domain Resolution with Libraries
 
@@ -164,13 +164,13 @@ See [Managing domain records](../allow-my-users-to-manage-existing-domains/manag
 
 ### Error handling
 
-![Error example](../.gitbook/assets/errors-example.gif)
+![Error example](../../.gitbook/assets/errors-example.gif)
 
 #### Common error cases to handle:
 
 * Domain is not registered
-* Crypto record is not found \(or empty\)
-* Domain is not configured \(empty resolver\)
+* Crypto record is not found (or empty)
+* Domain is not configured (empty resolver)
 * Domain is not supported
 
 {% tabs %}
@@ -281,30 +281,30 @@ Always check address validity after receiving a result from the library. The use
 
 ## Domain Resolution using Resolution Service
 
-Resolution service provides an API for getting domain data and metadata regardless of that domain's location \(whether it is stored in Ethereum, Zilliqa, or any other blockchain or further scaling solutions\). The service is used to cache blockchain events in a database for easy retrieval without accessing blockchain APIs.
+Resolution service provides an API for getting domain data and metadata regardless of that domain's location (whether it is stored in Ethereum, Zilliqa, or any other blockchain or further scaling solutions). The service is used to cache blockchain events in a database for easy retrieval without accessing blockchain APIs.
 
 The Github [Resolution Service Repository](https://github.com/unstoppabledomains/resolution-service)  includes a comprehensive README on how to install and run the Resolution Service on your own server.
 
 The following diagram shows the interactions between nodes for Resolution Service.
 
-![Node interactions in Unstoppable Domains&apos; Resolution Service](../.gitbook/assets/resolution-service.png)
+![Node interactions in Unstoppable Domains' Resolution Service](../../.gitbook/assets/resolution-service.png)
 
 ### API Endpoints
 
-For more information about the Resolution Service endpoints, see the [Resolution Service API Specification](http://resolve.unstoppabledomains.com/api-docs/). The specification uses OpenAPI format, which provides an interactive API explorer in which you can try out sample API calls. 
+For more information about the Resolution Service endpoints, see the [Resolution Service API Specification](http://resolve.unstoppabledomains.com/api-docs/). The specification uses OpenAPI format, which provides an interactive API explorer in which you can try out sample API calls.&#x20;
 
 There are four endpoints in the Resolution Service API:
 
 * `GET` domains: gets the list of domains
 * `GET` domains/domainName: gets the resolution of the specified domain
 * `GET` status: gets the synchronization status
-* `GET` api-docs: returns a Swagger documentation page
+* `GET `api-docs: returns a Swagger documentation page
 
 ### Resolution Service API Key
 
 To ensure a high quality of service for API users, the Resolution Service includes an API key. Developers can request access to the API Key by doing the following:
 
-* Email [legal@unstoppabledomains.com](mailto:legal@unstoppabledomains.com) with the request 
+* Email [legal@unstoppabledomains.com](mailto:legal@unstoppabledomains.com) with the request&#x20;
 * Receive a terms of service for using the Resolution Service in the same email
 * Terms of service must be accepted to access an API Key
 * Post signing off on the Terms of Service, Unstoppable Domains will send you the API key to use the service
@@ -320,13 +320,12 @@ For assistance with this API Specification, please join our[ Discord channel](ht
 * Always try to resolve a domain with the provided currency code.
 * Always handle resolution errors according to error type.
 
-![Best practices](../.gitbook/assets/best-practices.png)
+![Best practices](../../.gitbook/assets/best-practices.png)
 
 ## Resources
 
 * [Get a test domain](../get-test-domain.md)
 * [JavaScript Resolution library](https://github.com/unstoppabledomains/resolution)
 * [Java Resolution library](https://github.com/unstoppabledomains/resolution-java)
-* [Swift Resolution library](https://github.com/unstoppabledomains/resolution-swift)  
+* [Swift Resolution library](https://github.com/unstoppabledomains/resolution-swift) &#x20;
 * [Unstoppable Domains Developer Community](https://discord.com/invite/b6ZVxSZ9Hn) Ask questions here!
-

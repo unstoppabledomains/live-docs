@@ -25,13 +25,13 @@ For more information about the structural differences between CNS and UNS, see t
 
 UNS has one single smart contract, the `Registry`. The same `Registry` contract is used for managing domain ownership and storing domain records. `Records Storage` is responsible for storing domain records.
 
-![Registry and RecordStorage interaction](../../.gitbook/assets/uns-architecture.png)
+![Registry and RecordStorage interaction](../../../.gitbook/assets/uns-architecture.png)
 
 Each ERC-721 token can be identified by a unique number, its `tokenId`. To make domains identifiable, we use a process called [Namehashing](../namehashing.md).
 
- For instance, `example.wallet`'s namehash: `0xbb71ef26b78e4f38d71c609a577bf259ee5dfd9bd242928598f094c4ad1ebe70`
+&#x20;For instance, `example.wallet`'s namehash: `0xbb71ef26b78e4f38d71c609a577bf259ee5dfd9bd242928598f094c4ad1ebe70`
 
-![Big picture overview of UNS Smart Contract Architecture](../../.gitbook/assets/uns-smart-contract-architecture.png)
+![Big picture overview of UNS Smart Contract Architecture](../../../.gitbook/assets/uns-smart-contract-architecture.png)
 
 ### Registry
 
@@ -47,7 +47,7 @@ Under the surface, `Registry` is effectively a map of domain namehashes to key-v
 
 `Registry`'s smart contract includes a set of methods for minting new domains and managing ownership.
 
-Accounts that are allowed to mint second-level domains \(e.g.: `alice.x`\) are called whitelisted minters. Whitelisted minters are only permitted to mint new domains. They can't control domain ownership \(e.g. approve or transfer a domain to another owner\) and they can't change domain records. Whitelisted minters are operated by Unstoppable Domains.
+Accounts that are allowed to mint second-level domains (e.g.: `alice.x`) are called whitelisted minters. Whitelisted minters are only permitted to mint new domains. They can't control domain ownership (e.g. approve or transfer a domain to another owner) and they can't change domain records. Whitelisted minters are operated by Unstoppable Domains.
 
 `Registry`'s smart contract was designed without an admin. This means that no entity can manage or transfer a user's domains without their permission — even Unstoppable Domains.
 
@@ -67,7 +67,7 @@ For more information on how the resolution process works read [Resolving domain 
 
 ## Domain Hierarchy and Ownership
 
-A domain can be owned by both an external address \(one that is accessed with a private key\) or an internal address \(i.e.: a smart contract\). Managing domains with smart contracts opens up many new ways to structure ownership. For example, domain management could be governed by a multi-signature wallet or it could be equally shared among a group of administrators. These are two simple examples but there are many more possibilities.
+A domain can be owned by both an external address (one that is accessed with a private key) or an internal address (i.e.: a smart contract). Managing domains with smart contracts opens up many new ways to structure ownership. For example, domain management could be governed by a multi-signature wallet or it could be equally shared among a group of administrators. These are two simple examples but there are many more possibilities.
 
 Such an ownership model might not be suitable for every user. Someone could allow writing to their domain records, but only to a restricted set of records, without giving permission to transfer domain. This could be achieved by using an intermediate smart contract. Twitter verification works in this way, and the best example is the [TwitterValidationOperator contract](https://github.com/unstoppabledomains/uns/blob/main/contracts/operators/TwitterValidationOperator.sol).
 
@@ -83,14 +83,14 @@ External smart contracts exist for UNS. Domains can be owned by smart contracts,
 
 UNS allows users to delegate transaction execution to accounts that aren't domain owners by supporting [EIP-2771 - Secure Protocol for Native Meta Transactions](https://eips.ethereum.org/EIPS/eip-2771).
 
-`Registry` smart contracts implement methods that use [Meta Transactions](../../allow-my-users-to-manage-existing-domains/meta-transactions.md). One use-case for meta transactions is delegating \(gas-using\) blockchain calls to other accounts. This allows domain owners to keep their domains and funds on separate accounts or even have someone else pay their transaction fees.
+`Registry` smart contracts implement methods that use [Meta Transactions](../../allow-my-users-to-manage-existing-domains/meta-transactions.md). One use-case for meta transactions is delegating (gas-using) blockchain calls to other accounts. This allows domain owners to keep their domains and funds on separate accounts or even have someone else pay their transaction fees.
 
 Unstoppable Domains uses this delegation feature to operate an internal transaction processor. Our transaction processor makes it possible for users to mint and manage their domains without having to worry about their wallet's balance. Under the hood, the transaction processor is a queue-based job processor that sends transactions from Unstoppable Domains-owned accounts.
 
 On behalf of our users, our transaction processor generally handles:
 
 * Minting domains
-* Managing domains \(transferring, modifying records\)
+* Managing domains (transferring, modifying records)
 
 **Minting domains** happens when a user claims a domain from the Unstoppable Domains website. This action doesn't require a domain owner's signature, since the minting of second-level domains is controlled by Unstoppable Domains.
 
@@ -99,4 +99,3 @@ On behalf of our users, our transaction processor generally handles:
 UNS transaction delegation does not depend on Unstoppable Domains' transaction processor. As long as the domain owner provides a valid signature, write operations can be performed by any Ethereum account.
 
 To learn more about the technical details of delegating transactions in UNS, read our [Meta Transactions](../../allow-my-users-to-manage-existing-domains/meta-transactions.md) page.
-

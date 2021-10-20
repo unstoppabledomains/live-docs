@@ -8,9 +8,9 @@ description: >-
 
 For CNS, domain records are managed via the default `Resolver` or through a custom resolver with defined management permissions. For UNS, domain records are managed via `RecordStorage`.
 
-![CNS Records Architecture shows how resolvers are used to manage domain records](../.gitbook/assets/record-architecture.png)
+![CNS Records Architecture shows how resolvers are used to manage domain records](../../.gitbook/assets/record-architecture.png)
 
-![UNS Records Architecture shows how RecordStorage is used to manage domain records](../.gitbook/assets/uns-record-architecture.png)
+![UNS Records Architecture shows how RecordStorage is used to manage domain records](../../.gitbook/assets/uns-record-architecture.png)
 
 ## Domain Record Types
 
@@ -43,13 +43,13 @@ Some tickers of very popular cryptocurrencies are not yet standardized. Example:
 
 Example crypto records setup:
 
-| Key | Value |
-| :--- | :--- |
-| `crypto.ETH.address` | `0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe` |
-| `crypto.BTC.address` | `bc1qkd4um2nn2uyzmsch5y86wsa2pfh8xl445lg9nv` |
-| `crypto.ZIL.address` | `zil1yu5u4hegy9v3xgluweg4en54zm8f8auwxu0xxc` |
+| Key                                 | Value                                        |
+| ----------------------------------- | -------------------------------------------- |
+| `crypto.ETH.address`                | `0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe` |
+| `crypto.BTC.address`                | `bc1qkd4um2nn2uyzmsch5y86wsa2pfh8xl445lg9nv` |
+| `crypto.ZIL.address`                | `zil1yu5u4hegy9v3xgluweg4en54zm8f8auwxu0xxc` |
 | `crypto.USDT.version.ERC20.address` | `0x8aaD44321A86b170879d7A244c1e8d360c99DdA8` |
-| `crypto.USDT.version.TRON.address` | `THG9jVSMfKEbg4vYTYWjmLRyga3CKZdDsk` |
+| `crypto.USDT.version.TRON.address`  | `THG9jVSMfKEbg4vYTYWjmLRyga3CKZdDsk`         |
 
 `USDT` presents on multiple chains and key format is slightly different. More details can be found in the [Records Reference section](../domain-registry-essentials/records-reference.md)
 
@@ -97,4 +97,3 @@ The default CNS Resolver allows the Unstoppable Minting EOAs to mint and preconf
 #### UNS
 
 Since the UNS registry doesn't have separate resolver contracts, it has dedicated methods for minting domains with records `mintWithRecords`. It similarly allows Minting EOAs to mint and preconfigure domains.
-

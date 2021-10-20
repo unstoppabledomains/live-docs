@@ -12,7 +12,7 @@ For more information on Unstoppable Domains Resolution, see [Resolving Domain Re
 
 ## General Domain Resolution Information
 
-Domain Resolution allows developers to translate a `.crypto` or `.zil` domain name into addresses for BTC, ETH, IPFS, and more. Domain Resolution can \(and we believe, should\) be used anywhere your application has a "Send to: " field.
+Domain Resolution allows developers to translate a `.crypto` or `.zil` domain name into addresses for BTC, ETH, IPFS, and more. Domain Resolution can (and we believe, should) be used anywhere your application has a "Send to: " field.
 
 To make domain resolution easier, we've written libraries for web, Android, and iOS.
 
@@ -34,7 +34,7 @@ If you're familiar with blockchain development and would rather avoid an additio
 * [UNS Smart Contracts reference](../domain-registry-essentials/uns-architecture-overview/uns-smart-contracts.md)
 * [Records reference](../domain-registry-essentials/records-reference.md)
 
-## End-User Features \(For Resolving Domains in a Browser\)
+## End-User Features (For Resolving Domains in a Browser)
 
 ### HTTP website browsing
 
@@ -42,9 +42,9 @@ Given a blockchain domain has a DNS record configured. When the user enters the 
 
 ### Distributed website browsing
 
-Given a blockchain domain has a d-web content identifier record configured \(e.g.: an IPFS hash\). When the user enters the domain name into a browser address bar, the browser resolves the domain and gets the content hash of a domain. Then, the browser retrieves the content by the hash using a related protocol and displays the content.
+Given a blockchain domain has a d-web content identifier record configured (e.g.: an IPFS hash). When the user enters the domain name into a browser address bar, the browser resolves the domain and gets the content hash of a domain. Then, the browser retrieves the content by the hash using a related protocol and displays the content.
 
-![Diagram showing how to read DWeb from Ethereum](../.gitbook/assets/overview_read_dweb_website_from_ethereum_and_decentralized_network%20%284%29%20%284%29%20%283%29%20%284%29%20%281%29.png)
+![Diagram showing how to read DWeb from Ethereum](<../../.gitbook/assets/overview\_read\_dweb\_website\_from\_ethereum\_and\_decentralized\_network (4) (4) (3) (4) (1).png>)
 
 ### Domain-level redirect
 
@@ -52,7 +52,7 @@ Given a blockchain domain has both a redirect URL and IPFS hash configured, and 
 
 ### Resolution configuration
 
-To change ETH provider services, the user goes to Browser Settings &gt; Crypto Domains section:
+To change ETH provider services, the user goes to Browser Settings > Crypto Domains section:
 
 * User changes the Ethereum node URL from default to another.
 * User changes Registry Address for each support crypto registry.
@@ -65,7 +65,7 @@ Then, the browser uses the new settings to make requests to Ethereum blockchain:
 * If the network is not specified explicitly, it can be retrieved from the Ethereum node URL.
 * If the Registry Address is not specified, it can use a default for the specified network
 
-![Diagram showing how to configure DNS Gateway](../.gitbook/assets/configure_dns_gateway%20%284%29%20%284%29%20%283%29%20%284%29%20%283%29.png)
+![Diagram showing how to configure DNS Gateway](<../../.gitbook/assets/configure\_dns\_gateway (4) (4) (3) (4) (3).png>)
 
 ## Hypermedia Protocol
 
@@ -76,29 +76,29 @@ In addition to base browser hypermedia protocols like `http`, blockchain domains
   * HTTPS
   * FTP
 * Distributed
-  * [IPFS](https://en.wikipedia.org/wiki/InterPlanetary_File_System) - `ipfs://`
+  * [IPFS](https://en.wikipedia.org/wiki/InterPlanetary\_File\_System) - `ipfs://`
   * [Swarm](https://swarm-guide.readthedocs.io/en/stable/architecture.html#the-bzz-protocol) - `bzz://`
 
 A browser may support any subset of traditional or distributed protocols that still make crypto domain websites displayable.
 
 ## Gateway to Simplify the Integration
 
-While it is possible to resolve a domain via a call to ETH RPC and support distributed content protocols in a browser, it might be easier to make those calls via gateways using protocols already supported by all browsers: HTTP and DNS. A gateway may simplify the integration to a browser but comes at the downside of decreased decentralization \(if the gateway is hosted by a third party\) or a more complex user experience \(if the gateway is hosted by the user\).
+While it is possible to resolve a domain via a call to ETH RPC and support distributed content protocols in a browser, it might be easier to make those calls via gateways using protocols already supported by all browsers: HTTP and DNS. A gateway may simplify the integration to a browser but comes at the downside of decreased decentralization (if the gateway is hosted by a third party) or a more complex user experience (if the gateway is hosted by the user).
 
 There are 2 possible gateways for each problem:
 
-* Distributed content \(Dweb\) gateway
+* Distributed content (Dweb) gateway
 * Resolution over DNS gateway
 
 See a description of how they work below
 
-![Visual flow of resolving DWeb via DNS and DWeb gateway](../.gitbook/assets/overview_dweb_website_via_dns_dweb_gateways%20%284%29%20%284%29%20%283%29%20%284%29%20%282%29.png)
+![Visual flow of resolving DWeb via DNS and DWeb gateway](<../../.gitbook/assets/overview\_dweb\_website\_via\_dns\_dweb\_gateways (4) (4) (3) (4) (2).png>)
 
 ### Distributed content gateway
 
 A gateway is an HTTP Server that acts as a proxy between HTTP and a distributed content protocol. Basic functionality of such a gateway:
 
-1. Receive HTTP request to a blockchain domain \(like `http://example.crypto`\)
+1. Receive HTTP request to a blockchain domain (like `http://example.crypto`)
 2. Resolve the domain into crypto records
 3. Get the content based on [Browser resolution algorithm](browser-resolution-algorithm.md)
 4. Return the content to the client via HTTP
@@ -108,7 +108,7 @@ A gateway is an HTTP Server that acts as a proxy between HTTP and a distributed 
 A gateway is a DNS Server that resolves not just traditional domains but also `.crypto` domains. Basic functionality of such a gateway:
 
 1. Receive a domain resolution request
-2. Resolve a domain using classical DNS system if is in classical TLD \(like `.com`\)
+2. Resolve a domain using classical DNS system if is in classical TLD (like `.com`)
 3. Resolve a domain using [Browser resolution algorithm](browser-resolution-algorithm.md) if it is in crypto TLD
    * If a domain is set using DNS, transform [Crypto DNS records](browser-resolution-algorithm.md#dns-records) into classical records
    * If a domain is set using distributed content
@@ -116,5 +116,4 @@ A gateway is a DNS Server that resolves not just traditional domains but also `.
      * If the client requests a `TXT` record, resolve to all crypto records in JSON encoded key-value format
 4. Send resolution to client
 
-![Visualization of how to resolve DWeb via DNS and DWeb gateways](../.gitbook/assets/resolve_dweb_website_via_dns_gateway_and_dweb_gateway%20%284%29%20%283%29%20%281%29.png)
-
+![Visualization of how to resolve DWeb via DNS and DWeb gateways](<../../.gitbook/assets/resolve\_dweb\_website\_via\_dns\_gateway\_and\_dweb\_gateway (4) (3) (1).png>)

@@ -14,7 +14,7 @@ To resolve a domain, your software must have access to the Ethereum network. For
 
 The simplest way to resolve a domain with Ethereum JSON RPC is to make a read-only call to `ProxyReader` smart contract. `ProxyReader` provides an API that allows users to resolve domains making just one call by passing only keys of records and a domain namehash. Without `ProxyReader` it would require executing at least two calls: one to obtain a domain resolver address and another one to get the records themselves. With `ProxyReader` it all happens under the hood.
 
-An example in JavaScript of getting two records \(using [ethers library](https://www.npmjs.com/package/ethers)\):
+An example in JavaScript of getting two records (using [ethers library](https://www.npmjs.com/package/ethers)):
 
 ```javascript
 const proxyReaderAddress = "0xfEe4D4F0aDFF8D84c12170306507554bC7045878";
@@ -106,13 +106,13 @@ console.log({resolver: data.resolver, owner: data.owner, values: data[2]});
 
 Reference:`namehash` - namehashing algorithm implementation. See [Namehashing](namehashing.md).
 
-![Resolving domain records via proxyreader for CNS and UNS Registries](../.gitbook/assets/domain-records-via-proxy-reader-smart-contract.png)
+![Resolving domain records via proxyreader for CNS and UNS Registries](../../.gitbook/assets/domain-records-via-proxy-reader-smart-contract.png)
 
 See [Records reference](records-reference.md) for more information about the standardized records.
 
 ## Record value validation
 
-For CNS, `Resolver` doesn't have built-in record value validation when it is updated. For UNS, `RecordStorage` doesn’t have built in record value validation after an update. 
+For CNS, `Resolver` doesn't have built-in record value validation when it is updated. For UNS, `RecordStorage` doesn’t have built in record value validation after an update.&#x20;
 
 This is for two reasons:
 
@@ -133,10 +133,9 @@ Domain resolution configuration at a low level requires 3 configuration paramete
 
 Ethereum JSON RPC provider is an API implementing the Ethereum JSON RPC standard. Usually, it is given in a form of an HTTP API endpoint. However, other forms may exist if the Ethereum node is launched locally. Unstoppable Domains recommends the [Cloudflare Ethereum Gateway](https://developers.cloudflare.com/distributed-web/ethereum-gateway), an Ethereum node service provider. To learn more about providers, see [Nodes and client](https://ethereum.org/en/developers/docs/nodes-and-clients/) and [Nodes as a service](https://ethereum.org/en/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
-Ethereum CHAIN ID is an ID of the Ethereum network a node is connected to. Each RPC provider can only be connected to one network. There is only one production network with CHAIN ID equal to `1` and called `mainnet`. Other networks are only used for testing purposes. See [EIP-155](https://eips.ethereum.org/EIPS/eip-155) for more information. CHAIN ID of an Ethereum node can be determined by calling the [net version method](https://eth.wiki/json-rpc/API#net_version) on JSON RPC which should be used as a default when only JSON RPC provider is given.
+Ethereum CHAIN ID is an ID of the Ethereum network a node is connected to. Each RPC provider can only be connected to one network. There is only one production network with CHAIN ID equal to `1` and called `mainnet`. Other networks are only used for testing purposes. See [EIP-155](https://eips.ethereum.org/EIPS/eip-155) for more information. CHAIN ID of an Ethereum node can be determined by calling the [net version method](https://eth.wiki/json-rpc/API#net\_version) on JSON RPC which should be used as a default when only JSON RPC provider is given.
 
 There are two registry contract addresses, **Crypto Registry Contract Address** and **UNS Registry Contract Address**, each with its own production registry address on mainnet. The following addresses should be used as the default for production configuration:
 
 * CNS production registry address on the mainnet: [0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe](https://etherscan.io/address/0xD1E5b0FF1287aA9f9A268759062E4Ab08b9Dacbe)
 * UNS production registry address on the mainnet: [0x049aba7510f45BA5b64ea9E658E342F904DB358D](https://etherscan.io/address/0x049aba7510f45BA5b64ea9E658E342F904DB358D)
-
