@@ -1,21 +1,21 @@
 ---
 description: >-
-  This page describes how to use UD Resolution to resolve blockchain domains
-  using a traditional HTTP Web Browser or a Dapp Browser. It assumes the reader
-  has a basic understanding of UD Resolution.
+  This page describes how to use UD Resolution to resolve blockchain domains in
+  web applications. It assumes the reader has a basic understanding of UD
+  Resolution.
 ---
 
-# Resolving Domains in a Browser
+# Resolving Domains in Web Applications
 
 Resolution is a library for interacting with blockchain domain names. It can be used to retrieve [payment addresses](../send-and-receive-crypto-payments/crypto-payments.md), IPFS hashes for [decentralized websites](../build-a-decentralized-website/overview-of-ipfs-and-d-web.md), and GunDB usernames for [decentralized chat](https://unstoppabledomains.com/chat).
 
 Resolution is built and maintained by Unstoppable Domains and supports decentralized domains across three main zones:
 
-| Name Service | Supported Domains |
-| :--- | :--- |
-| Zilliqa Name Service \(ZNS\) | `.zil` |
-| Ethereum Name Service \(ENS\) | `.eth`, `.kred`, `.xyz`, `.luxe` |
-| Unstoppable Name Service \(UNS\) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
+| Name Service                   | Supported Domains                                                                      |
+| ------------------------------ | -------------------------------------------------------------------------------------- |
+| Zilliqa Name Service (ZNS)     | `.zil`                                                                                 |
+| Ethereum Name Service (ENS)    | `.eth`, `.kred`, `.xyz`, `.luxe`                                                       |
+| Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
 
 {% hint style="info" %}
 For more information on Unstoppable Domains Resolution, see [Resolving Domain Records](../domain-registry-essentials/resolving-domain-records.md) and the [Resolution API Reference](https://unstoppabledomains.github.io/resolution/).To make domain resolution easier, we've written libraries for web, Android, and iOS.
@@ -35,11 +35,11 @@ Required packages:
 
 Resolution can be installed with either `yarn` or `npm`.
 
-```text
+```
 yarn add @unstoppabledomains/resolution
 ```
 
-```text
+```
 npm install @unstoppabledomains/resolution --save
 ```
 
@@ -49,7 +49,7 @@ If you're interested in resolving domains via the command line, see the  [CLI se
 
 Create a new project.
 
-```text
+```
 mkdir resolution && cd $_
 yarn init -y
 yarn add @unstoppabledomains/resolution
@@ -59,7 +59,7 @@ yarn add @unstoppabledomains/resolution
 
 Create a new file in your project, `address.js`.
 
-```text
+```
 const { default: Resolution } = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
 
@@ -85,7 +85,7 @@ resolveMultiChain('brad.crypto', 'USDT', 'OMNI');
 
 Execute the script.
 
-```text
+```
 $ node address.js
 brad.crypto resolves to 0x8aaD44321A86b170879d7A244c1e8d360c99DdA8
 brad.zil resolves to zil1yu5u4hegy9v3xgluweg4en54zm8f8auwxu0xxj
@@ -95,7 +95,7 @@ brad.zil resolves to zil1yu5u4hegy9v3xgluweg4en54zm8f8auwxu0xxj
 
 Create a new file in your project, `ipfs_hash.js`.
 
-```text
+```
 const { default: Resolution } = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
 
@@ -115,7 +115,7 @@ resolveIpfsHash('homecakes.crypto');
 
 Execute the script.
 
-```text
+```
 $ node ipfs_hash.js
 You can access this website via a public IPFS gateway: https://gateway.ipfs.io/ipfs/QmVJ26hBrwwNAPVmLavEFXDUunNDXeFSeMPmHuPxKe6dJv
 ```
@@ -124,7 +124,7 @@ You can access this website via a public IPFS gateway: https://gateway.ipfs.io/i
 
 Create a new file in your project, `custom-resolution.js`.
 
-```text
+```
 const { default: Resolution } = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
 
@@ -142,11 +142,11 @@ resolveCustomRecord('homecakes.crypto', 'custom.record.value');
 
 To use resolution via the command line install the package globally.
 
-```text
+```
 yarn global add @unstoppabledomains/resolution
 ```
 
-```text
+```
 npm install -g @unstoppabledomains/resolution
 ```
 
@@ -154,7 +154,7 @@ By default, the CLI uses Infura as its primary gateway to the Ethereum blockchai
 
 For example:
 
-```text
+```
 resolution --ethereum-url https://mainnet.infura.io/v3/${secret} -d udtestdev-usdt.crypto -a
 ```
 
@@ -162,9 +162,9 @@ Use the `-h` or `--help` flag to see all the available CLI options.
 
 ## Default Ethereum Providers
 
-Resolution provides zero-configuration experience by using built-in production-ready [Infura](http://infura.io/) endpoint by default.  
-Default Ethereum provider is free to use without restrictions and rate-limits for `CNS (.crypto domains)` resolution.  
-To resolve `ENS` domains on production it's recommended to change Ethereum provider.  
+Resolution provides zero-configuration experience by using built-in production-ready [Infura](http://infura.io) endpoint by default.\
+Default Ethereum provider is free to use without restrictions and rate-limits for `CNS (.crypto domains)` resolution.\
+To resolve `ENS` domains on production it's recommended to change Ethereum provider.\
 Default provider can be changed by changing constructor options `new Resolution(options)` or by using one of the factory methods:
 
 * `Resolution.infura()`
@@ -180,7 +180,7 @@ In some scenarios system might not be flexible enough to easy distinguish betwee
 
 This method configures only ENS and CNS. ZNS is supported only on Zilliqa mainnet which is going to be used in any cases. You can provide a configured provider or a blockchain url as in the following example:
 
-```text
+```
 await Resolution.autonetwork({
   cns: {provider},
   ens: {url}
@@ -193,38 +193,34 @@ When resolution encounters an error it returns the error code instead of stoppin
 
 ## Development
 
-Use these commands to set up a local development environment \(**macOS Terminal** or **Linux shell**\).
+Use these commands to set up a local development environment (**macOS Terminal** or **Linux shell**).
 
-1. Install `nvm`
+1.  Install `nvm`
 
-   ```text
-   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
-   ```
+    ```
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
+    ```
+2.  Install concrete version of `node.js`
 
-2. Install concrete version of `node.js`
+    ```
+    nvm install 12.12.0
+    ```
+3.  Install `yarn`
 
-   ```text
-   nvm install 12.12.0
-   ```
+    ```
+    npm install -g yarn
+    ```
+4.  Clone the repository
 
-3. Install `yarn`
+    ```
+    git clone https://github.com/unstoppabledomains/resolution.git
+    cd resolution
+    ```
+5.  Install dependencies
 
-   ```text
-   npm install -g yarn
-   ```
-
-4. Clone the repository
-
-   ```text
-   git clone https://github.com/unstoppabledomains/resolution.git
-   cd resolution
-   ```
-
-5. Install dependencies
-
-   ```text
-   yarn install
-   ```
+    ```
+    yarn install
+    ```
 
 ### Internal Config
 
@@ -237,4 +233,3 @@ Use these commands to set up a local development environment \(**macOS Terminal*
 ## Support
 
 If you have any questions or need assistance with using UD Resolution CLI, join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from us and the community.
-

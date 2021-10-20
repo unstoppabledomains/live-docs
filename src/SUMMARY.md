@@ -1,9 +1,9 @@
 # Table of contents
 
 * [Getting Started](README.md)
+* [Get A Test Domain](get-test-domain.md)
 * [List of UD Integrated Apps](https://unstoppabledomains.com/apps)
 * [Register Your Integrated App](https://unstoppabledomains.com/app-submission)
-* [Get A Test Domain](get-test-domain.md)
 * [Discord Community Support](https://discord.com/invite/b6ZVxSZ9Hn)
 
 ## Send and Receive Crypto Payments
@@ -19,7 +19,7 @@
 ## Support Unstoppable Domains in a Web Browser
 
 * [How Browser Resolution Works](support-unstoppable-domains-in-a-web-browser/how-browser-resolution-works.md)
-* [Resolving Domains in a Browser](support-unstoppable-domains-in-a-web-browser/resolving-domains-in-a-browser.md)
+* [Resolving Domains in Web Applications](support-unstoppable-domains-in-a-web-browser/resolving-domains-in-a-browser.md)
 * [Browser Resolution Algorithm](support-unstoppable-domains-in-a-web-browser/browser-resolution-algorithm.md)
 * [Browser Resolution Test Domains](support-unstoppable-domains-in-a-web-browser/test-domains.md)
 
@@ -65,4 +65,3 @@
 * [Namehashing](domain-registry-essentials/namehashing.md)
 * [Resolving Domain Records](domain-registry-essentials/resolving-domain-records.md)
 * [Records Reference](domain-registry-essentials/records-reference.md)
-
