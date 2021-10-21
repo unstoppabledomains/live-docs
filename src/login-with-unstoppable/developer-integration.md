@@ -222,7 +222,7 @@ Once a user has successfully authenticated, the application should display that 
 
 ### Example 1
 
-![UI Example for displaying authenticated user](../../.gitbook/assets/ui-example1.png)
+![UI Example for displaying authenticated user](../.gitbook/assets/second-UI-example-login-domains.png)
 
 ### Example 2
 
