@@ -55,11 +55,11 @@ The redirect URls entered on this page must be an exact match to the redirect UR
 
 Login with Unstoppable button status and states can be found in the table below:
 
-| **Button Status** | **Small**                                   | **Large**                                     |
-| ----------------- | ------------------------------------------- | --------------------------------------------- |
-| Default           | ![](../../.gitbook/assets/default-icon.png) | ![](../../.gitbook/assets/default-button.png) |
-| Hover             | ![](../../.gitbook/assets/hover-icon.png)   | ![](../../.gitbook/assets/hover-button.png)   |
-| Pressed           | ![](../../.gitbook/assets/pressed-icon.png) | ![](../../.gitbook/assets/pressed-button.png) |
+| **Status** | **Small**                                   | **Large**                                     |
+| ---------- | ------------------------------------------- | --------------------------------------------- |
+| Default    | ![](../../.gitbook/assets/default-icon.png) | ![](../../.gitbook/assets/default-button.png) |
+| Hover      | ![](../../.gitbook/assets/hover-icon.png)   | ![](../../.gitbook/assets/hover-button.png)   |
+| Pressed    | ![](../../.gitbook/assets/pressed-icon.png) | ![](../../.gitbook/assets/pressed-button.png) |
 
 ### Example: User View of Login with Unstoppable Feature
 
