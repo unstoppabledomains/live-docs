@@ -10,4 +10,12 @@
         <td>Rinkeby</td>
         <td><a href="https://rinkeby.etherscan.io/address/0x51765307AeB3Df2E647014a2C501d5324212467c">0x51765307AeB3Df2E647014a2C501d5324212467c</a></td>
     </tr>
+    <tr>
+        <td>Polygon mainnet</td>
+        <td><a href="https://polygon mainnet.etherscan.io/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
+    </tr>
+    <tr>
+        <td>Polygon testnet (Mumbai)</td>
+        <td><a href="https://polygon testnet (mumbai).etherscan.io/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
+    </tr>
 </table>
