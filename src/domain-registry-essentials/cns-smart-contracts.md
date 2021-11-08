@@ -103,7 +103,7 @@ This section lists all the smart contracts that users can directly interact with
 
 ### WhitelistedMinter
 
-`WhitelistedMinter` defines an interface for minting second-level domains. This smart contract is primarily used by the Unstoppable Domains team, but its interface also supports delegating minting process to other parties via [Meta Transactions](../managing-domains/meta-transactions.md). All calls to `WhitelistedMinter` are proxied to the `Registry` via the [MintingController](cns-smart-contracts.md#mintingcontroller) smart contract.
+`WhitelistedMinter` defines an interface for minting second-level domains. This smart contract is primarily used by the Unstoppable Domains team, but its interface also supports delegating minting process to other parties via [Delegating Transactions](../allow-my-users-to-manage-existing-domains/meta-transactions.md). All calls to `WhitelistedMinter` are proxied to the `Registry` via the [MintingController](cns-smart-contracts.md#mintingcontroller) smart contract.
 
 | Network | Contract address                                                                                                              |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
