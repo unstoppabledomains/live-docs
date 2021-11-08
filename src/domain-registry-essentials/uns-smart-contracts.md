@@ -21,7 +21,7 @@ This section lists all the smart contracts that users can directly interact with
 
 Under the surface, Registry is effectively a map of domain namehashes to key-value dictionaries of records. This structure allows users to store arbitrary records, even those that aren't specified by the [Records reference](records-reference.md).
 
-[comment]: <> (This is an auto-generated table with UNS smart-contract addresses. See README for more info.)
+[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
 <table>
     <th>Network</th>
     <th>Contract address</th>
@@ -33,6 +33,14 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
         <td>Rinkeby</td>
         <td><a href="https://rinkeby.etherscan.io/address/0x7fb83000B8eD59D3eAD22f0D584Df3a85fBC0086">0x7fb83000B8eD59D3eAD22f0D584Df3a85fBC0086</a></td>
     </tr>
+    <tr>
+        <td>Polygon mainnet</td>
+        <td><a href="https://polygon mainnet.etherscan.io/address/0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f">0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f</a></td>
+    </tr>
+    <tr>
+        <td>Polygon testnet (Mumbai)</td>
+        <td><a href="https://polygon testnet (mumbai).etherscan.io/address/0x2a93C52E7B6E7054870758e15A1446E769EdfB93">0x2a93C52E7B6E7054870758e15A1446E769EdfB93</a></td>
+    </tr>
 </table>
 
 
@@ -40,19 +48,27 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
 
 ### ProxyReader
 
-`ProxyReader` provides an interface that allows users to fetch information about domains from both `UNSRegistry` and UNS smart contracts in one call. For more details, see [Architecture overview - ProxyReader](architecture-overview.md#proxyreader).
+`ProxyReader` provides an interface that allows users to fetch information about domains from both `UNSRegistry` and CNS smart contracts in one call. For more details, see [Architecture overview - ProxyReader](architecture-overview.md#proxyreader).
 
-[comment]: <> (This is an auto-generated table with UNS smart-contract addresses. See README for more info.)
+[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
 <table>
     <th>Network</th>
     <th>Contract address</th>
     <tr>
         <td>Mainnet</td>
-        <td><a href="https://etherscan.io/address/0xfEe4D4F0aDFF8D84c12170306507554bC7045878">0xfEe4D4F0aDFF8D84c12170306507554bC7045878</a></td>
+        <td><a href="https://etherscan.io/address/0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E">0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E</a></td>
     </tr>
     <tr>
         <td>Rinkeby</td>
-        <td><a href="https://rinkeby.etherscan.io/address/0x299974AeD8911bcbd2C61262605b89F591a53E83">0x299974AeD8911bcbd2C61262605b89F591a53E83</a></td>
+        <td><a href="https://rinkeby.etherscan.io/address/0xE6729D224D00b3dd4FC731C4Ee3274E35Da06578">0xE6729D224D00b3dd4FC731C4Ee3274E35Da06578</a></td>
+    </tr>
+    <tr>
+        <td>Polygon mainnet</td>
+        <td><a href="https://polygon mainnet.etherscan.io/address/0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00">0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00</a></td>
+    </tr>
+    <tr>
+        <td>Polygon testnet (Mumbai)</td>
+        <td><a href="https://polygon testnet (mumbai).etherscan.io/address/0x332A8191905fA8E6eeA7350B5799F225B8ed30a9">0x332A8191905fA8E6eeA7350B5799F225B8ed30a9</a></td>
     </tr>
 </table>
 </br>
@@ -62,6 +78,8 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
     <tr>
         <td>Mainnet</td>
            <td><a 
+                    href="https://etherscan.io/address/0xfEe4D4F0aDFF8D84c12170306507554bC7045878">0xfEe4D4F0aDFF8D84c12170306507554bC7045878</a>
+               <a 
                     href="https://etherscan.io/address/0xa6E7cEf2EDDEA66352Fd68E5915b60BDbb7309f5">0xa6E7cEf2EDDEA66352Fd68E5915b60BDbb7309f5</a>
                <a 
                     href="https://etherscan.io/address/0x7ea9Ee21077F84339eDa9C80048ec6db678642B1">0x7ea9Ee21077F84339eDa9C80048ec6db678642B1</a>
@@ -70,6 +88,8 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
     <tr>
         <td>Rinkeby</td>
            <td><a 
+                    href="https://rinkeby.etherscan.io/address/0x299974AeD8911bcbd2C61262605b89F591a53E83">0x299974AeD8911bcbd2C61262605b89F591a53E83</a>
+               <a 
                     href="https://rinkeby.etherscan.io/address/0x9F19473F6a98a715176291c930558E1954fd3D1e">0x9F19473F6a98a715176291c930558E1954fd3D1e</a>
                <a 
                     href="https://rinkeby.etherscan.io/address/0x3A2e74CF832cbA3d77E72708d55370119E4323a6">0x3A2e74CF832cbA3d77E72708d55370119E4323a6</a>
@@ -84,7 +104,7 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
 
 `TwitterValidationOperator` is used when initiating Chainlink verification requests to link domain records with Twitter usernames.
 
-[comment]: <> (This is an auto-generated table with UNS smart-contract addresses. See README for more info.)
+[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
 <table>
     <th>Network</th>
     <th>Contract address</th>
@@ -95,6 +115,14 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
     <tr>
         <td>Rinkeby</td>
         <td><a href="https://rinkeby.etherscan.io/address/0x9ea4A63184ebE9CBA55CD1af473D98075Aa02b4C">0x9ea4A63184ebE9CBA55CD1af473D98075Aa02b4C</a></td>
+    </tr>
+    <tr>
+        <td>Polygon mainnet</td>
+        <td><a href="https://polygon mainnet.etherscan.io/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
+    </tr>
+    <tr>
+        <td>Polygon testnet (Mumbai)</td>
+        <td><a href="https://polygon testnet (mumbai).etherscan.io/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
     </tr>
 </table>
 </br>
@@ -126,7 +154,7 @@ The Unstoppable Domains team reserves the right to mint second-level domains and
 
 `MintingManager` defines an interface for minting second-level domains. This smart contract is primarily used by the Unstoppable Domains team, but its interface also supports delegating minting process to other parties via [Meta Transactions](../managing-domains/meta-transactions.md). All calls to `MintingManager` are proxied to the `UNSRegistry` via the [MintingManager](uns-smart-contracts.md#mintingmanager) smart contract.
 
-[comment]: <> (This is an auto-generated table with UNS smart-contract addresses. See README for more info.)
+[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
 <table>
     <th>Network</th>
     <th>Contract address</th>
@@ -138,6 +166,14 @@ The Unstoppable Domains team reserves the right to mint second-level domains and
         <td>Rinkeby</td>
         <td><a href="https://rinkeby.etherscan.io/address/0xdAAf99A920D31F4f5720e4667b12b24e54A03070">0xdAAf99A920D31F4f5720e4667b12b24e54A03070</a></td>
     </tr>
+    <tr>
+        <td>Polygon mainnet</td>
+        <td><a href="https://polygon mainnet.etherscan.io/address/0x7be83293BeeDc9Eba1bd76c66A65F10F3efaeC26">0x7be83293BeeDc9Eba1bd76c66A65F10F3efaeC26</a></td>
+    </tr>
+    <tr>
+        <td>Polygon testnet (Mumbai)</td>
+        <td><a href="https://polygon testnet (mumbai).etherscan.io/address/0x428189346bb3CC52f031A1092fd47C919AC30A9f">0x428189346bb3CC52f031A1092fd47C919AC30A9f</a></td>
+    </tr>
 </table>
 
 
@@ -145,7 +181,7 @@ The Unstoppable Domains team reserves the right to mint second-level domains and
 
 ## Interfaces
 
-The following interfaces can be used as guidelines for the minimal implementation of custom smart contract versions. Also, Solidity developers can rely on them for making calls to the official UNS smart contracts.
+The following interfaces can be used as guidelines for the minimal implementation of custom smart contract versions. Also, Solidity developers can rely on them for making calls to the official CNS smart contracts.
 
 ### IDataReader
 

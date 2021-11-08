@@ -21,6 +21,8 @@ const Networks: Record<number, string> = {
     4: 'Rinkeby',
     5: 'Goerli',
     42: 'Kovan',
+    137: 'Polygon mainnet',
+    80001: 'Polygon testnet (Mumbai)',
 };
 
 type Row = {
@@ -91,7 +93,7 @@ function generateContractTables(contractName: string, filesToInclude: string[]) 
 
 function saveContractTable(contractName: string, contractTable: string, filesToInclude: string[]) {
     let filename = Path.join(ContractsDir, contractName + '.md');
-    Fs.writeFileSync(filename, contractTable, 'UTF-8');
+    Fs.writeFileSync(filename, contractTable, {encoding: 'utf-8'});
     filesToInclude.unshift(filename);
     console.log('Contract table saved: ' + filename)
 }
@@ -106,6 +108,6 @@ function saveMarkdown(files: string[]) {
         "build": FileToRender,
         "files": files,
     }
-    Fs.writeFileSync(MarkdownFile, JSON.stringify(markdown, null, 4), 'UTF-8');
+    Fs.writeFileSync(MarkdownFile, JSON.stringify(markdown, null, 4), {encoding: 'utf-8'});
     console.log('Markdown file saved: ' + MarkdownFile)
 }
