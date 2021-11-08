@@ -1,7 +1,8 @@
 ---
 description: >-
   This page reviews the process for resolving .crypto domain names with direct
-  blockchain calls.
+  blockchain calls. It has been updated to reflect changes on L2 Polygon
+  network.
 ---
 
 # Resolve .crypto with Direct Blockchain Calls
@@ -148,14 +149,18 @@ This table shows a list of Namehash examples with different inputs:
 
 To talk with any blockchain contract using `ethers.js`, we need to know the following:
 
-* Contract address
+* Ethereum contract address
+* Polygon contract address
 * Contract ABI
 * Ethereum provider
+* Polygon provider
 
 Let’s add the following information to our **ethers.js** file:
 
 ```
-var address = '0x299974AeD8911bcbd2C61262605b89F591a53E83';
+var ethAddress = '0x299974AeD8911bcbd2C61262605b89F591a53E83';
+var polygonAddress = '0x332A8191905fA8E6eeA7350B5799F225B8ed30a9';
+
 var abi = [
   {
     constant: true,
@@ -194,11 +199,12 @@ var abi = [
     type: 'function',
   }
 ];
-var provider = ethers.providers.getDefaultProvider('rinkeby');
+var polygonProvider = new ethers.providers.JsonRpcProvider("https://polygon-mumbai.infura.io/v3/ProjectID");
+var ethProvider = ethers.providers.getDefaultProvider('rinkeby');
 ```
 
 {% hint style="info" %}
-The contract address and the network is from the rinkeby testnet. If you want to configure your project for mainnet you should use the following contract address: [**0xfEe4D4F0aDFF8D84c12170306507554bC7045878**](https://etherscan.io/address/0xfee4d4f0adff8d84c12170306507554bc7045878#code) and network **mainnet** instead of **rinkeby**
+The network and contract address used above is for Rinkeby Testnet. For mainnet, use the following contract addresses: [0xfEe4D4F0aDFF8D84c12170306507554bC7045878](https://etherscan.io/address/0xfee4d4f0adff8d84c12170306507554bc7045878#code) (Ethereum) and [0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00](https://polygonscan.com/address/0xa3f32c8cd786dc089bd1fc175f2707223aee5d00#code) (Polygon). Be sure to set the network to **mainnet** instead of **rinkeby**.
 {% endhint %}
 
 For the scope of this project, we will only need to use the getData function from the [CNS Smart Contract](../../domain-registry-essentials/architecture-overview/cns-smart-contracts.md#proxyreader).
@@ -208,9 +214,11 @@ For the scope of this project, we will only need to use the getData function fro
 Next, we’ll need to create a contract instance and create a function to query our contract.
 
 ```
-var contract = new ethers.Contract(address, abi, provider);
-async function fetchContractData(keys, tokenId) {
-  return contract.getData(keys, tokenId);
+var ethContract = new ethers.Contract(ethAddress, abi, provider);
+var poligonContract = new ethers.Contract(polygonAddress, abi, polygonProvider);
+
+async function fetchContractData(contract, keys, tokenId) {
+ return contract.getData(keys, tokenId);
 }
 ```
 
@@ -231,9 +239,40 @@ The following table shows record keys and a description for each:
 
 ## Make the call to the contract <a href="2047" id="2047"></a>
 
-Let’s update our resolve function to use the namehash and then look up the desired record keys from the input domain name. We’ll then want to print the result in the console to inspect in more detail.
+Let’s update our resolve function to use the namehash and then look up the desired record keys from the input domain name. We’ll then want to print the result in the console to inspect it further.
+
+First, we will query the polygon network and check the ownership. If there is no owner for a domain on polygon network, we need to query the ethereum network.
 
 ```
+async function resolveEthNetwork(tokenId, interestedKeys) {
+ fetchContractData(ethContract, interestedKeys, tokenId).then(data => {
+   console.log({
+     ownerAddress: data.owner,
+     resolverAddress: data.resolver,
+     records: data[2]
+   });
+ });
+}
+
+async function resolveBothChains(tokenId, interestedKeys) {
+ // try to resolve the polygon network first
+ fetchContractData(poligonContract, interestedKeys, tokenId).then(data => {
+   if (isEmpty(data.owner)) {
+     // if no owner for domain found on polygon network look up the eth network
+     return resolveEthNetwork(tokenId, interestedKeys);
+   }
+
+   // proceed with polygon results
+   console.log({
+     ownerAddress: data.owner,
+     resolverAddress: data.resolver,
+     records: data[2]
+   });
+
+ });
+}
+
+
 async function resolve() {
   const userInput = document.getElementById("input").value;
   const tokenId = namehash(userInput);
@@ -243,13 +282,7 @@ async function resolve() {
     "crypto.ETH.address",
   ];
   
-  fetchContractData(interestedKeys, tokenId).then(data => {
-    console.log({
-      ownerAddress: data.owner,
-      resolverAddress: data.resolver,
-      records: data[2]
-    });
-  });
+  resolveBothChains(tokenId, interestedKeys);
 }
 ```
 
@@ -317,13 +350,32 @@ function combineKeysWithRecords(keys, records) {
 Now we can easily show the records on our page:
 
 ```
-fetchContractData(interestedKeys, tokenId).then(data => {
-    displayResolution({
-      ownerAddress: data.owner,
-      resolverAddress: data.resolver,
-      records: combineKeysWithRecords(interestedKeys, data[2])
-    });
-  });
+async function resolveEthNetwork(tokenId, interestedKeys) {
+ fetchContractData(ethContract, interestedKeys, tokenId).then(data => {
+   displayResolution({
+     ownerAddress: data.owner,
+     resolverAddress: data.resolver,
+     records: combineKeysWithRecords(interestedKeys, data[2])
+   });
+ });
+}
+
+
+async function resolveBothChains(tokenId, interestedKeys) {
+ // try to resolve the polygon network first
+ fetchContractData(poligonContract, interestedKeys, tokenId).then(data => {
+   if (isEmpty(data.owner)) {
+     // if no owner for domain found on poligon look up the eth network
+     return resolveEthNetwork(tokenId, interestedKeys);
+   }
+
+   displayResolution({
+     ownerAddress: data.owner,
+     resolverAddress: data.resolver,
+     records: combineKeysWithRecords(interestedKeys, data[2])
+   });
+ });
+}
 ```
 
 If we are successful, we should see the following on our page:
@@ -362,36 +414,50 @@ Once we’ve identified the errors, we will need to update the callback to the `
 
 ```
 function isEmpty(msg) {
-  return !msg || msg === '0x0000000000000000000000000000000000000000';
+ return !msg || msg === '0x0000000000000000000000000000000000000000';
 }
 
 
-async function resolve() {
-  const userInput = document.getElementById("input").value;
-  const tokenId = namehash(userInput);
-  
-  const interestedKeys = [
-    "crypto.BTC.address",
-    "crypto.ETH.address",
-  ];
-  
-  fetchContractData(interestedKeys, tokenId).then(data => {
-    if (isEmpty(data.owner)) {
-      displayError('Domain is not registered', true);
-      return ;
-    }
+async function resolveEthNetwork(tokenId, interestedKeys) {
+ fetchContractData(ethContract, interestedKeys, tokenId).then(data => {
+   if (isEmpty(data.owner)) {
+     displayError('Domain is not registered', true);
+     return;
+   }
 
-    if (isEmpty(data.resolver)) {
-      displayError('Domain is not configured', true);
-      return ;
-    }
+   if (isEmpty(data.resolver)) {
+     displayError('Domain is not configured', true);
+     return ;
+   }
 
-    displayResolution({
-      ownerAddress: data.owner,
-      resolverAddress: data.resolver,
-      records: combineKeysWithRecords(interestedKeys, data[2])
-    });
-  });
+   displayResolution({
+     ownerAddress: data.owner,
+     resolverAddress: data.resolver,
+     records: combineKeysWithRecords(interestedKeys, data[2])
+   });
+ });
+}
+
+
+async function resolveBothChains(tokenId, interestedKeys) {
+ // try to resolve the polygon network first
+ fetchContractData(poligonContract, interestedKeys, tokenId).then(data => {
+   if (isEmpty(data.owner)) {
+     // if no owner for domain found on polygon look up the eth network
+     return resolveEthNetwork(tokenId, interestedKeys);
+   }
+
+   if (isEmpty(data.resolver)) {
+     displayError('Domain is not configured', true);
+     return ;
+   }
+
+   displayResolution({
+     ownerAddress: data.owner,
+     resolverAddress: data.resolver,
+     records: combineKeysWithRecords(interestedKeys, data[2])
+   });
+ });
 }
 ```
 
