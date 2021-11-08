@@ -30,8 +30,8 @@ If you're familiar with blockchain development and would rather avoid an additio
 * [Resolve .crypto without libraries](https://medium.com/unstoppabledomains/how-to-resolve-crypto-domain-names-82046db0404a)
 * [Resolve .zil without libraries](https://medium.com/unstoppabledomains/how-to-resolve-zil-domain-names-f43da8fe37a9)
 * [Resolving domain records](../domain-registry-essentials/resolving-domain-records.md)
-* [CNS Smart Contracts reference](../domain-registry-essentials/architecture-overview/cns-smart-contracts.md)
-* [UNS Smart Contracts reference](../domain-registry-essentials/uns-architecture-overview/uns-smart-contracts.md)
+* [CNS Smart Contracts reference](../domain-registry-essentials/cns-smart-contracts.md)
+* [UNS Smart Contracts reference](../domain-registry-essentials/uns-smart-contracts.md)
 * [Records reference](../domain-registry-essentials/records-reference.md)
 
 ## End-User Features (For Resolving Domains in a Browser)

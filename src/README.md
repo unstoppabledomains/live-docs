@@ -12,7 +12,7 @@ Unstoppable Domains are decentralized. This makes them, in a word, unstoppable. 
 
 To learn more about the company, please browse our [general website](https://unstoppabledomains.com), watch the learning materials and videos from our [Youtube Channel](https://www.youtube.com/c/UnstoppableDomains/videos), and listen to our popular, educational [UD Podcast Channel](https://open.spotify.com/show/2ZlyOpkkprGKS5KODk1PSS).
 
-To learn more about how the product works under the hood, see the [CNS Architecture](domain-registry-essentials/architecture-overview/) and [CNS Smart Contracts](domain-registry-essentials/architecture-overview/cns-smart-contracts.md) or [UNS Architecture](domain-registry-essentials/uns-architecture-overview/) along with [UNS Smart Contracts](domain-registry-essentials/uns-architecture-overview/uns-smart-contracts.md). Also visit the [List of Integrated Apps](https://unstoppabledomains.com/apps) to draw inspiration from other apps that have successfully integrated Unstoppable Domains.
+To learn more about how the product works under the hood, see the [CNS Architecture](domain-registry-essentials/uns-vs-cns-comparison/architecture-overview.md) and [CNS Smart Contracts](domain-registry-essentials/cns-smart-contracts.md) or [UNS Architecture](domain-registry-essentials/uns-vs-cns-comparison/uns-architecture-overview.md) along with [UNS Smart Contracts](domain-registry-essentials/uns-smart-contracts.md). Also visit the [List of Integrated Apps](https://unstoppabledomains.com/apps) to draw inspiration from other apps that have successfully integrated Unstoppable Domains.
 
 ## I want to add Unstoppable Domains to my app to send and receive crypto
 
@@ -24,7 +24,7 @@ Allow your users of your browser to create and view decentralized websites. Indi
 
 ## I want to allow my users to manage their existing domains
 
-Your app can edit domain metadata manually with a direct connection to the appropriate blockchain. We strongly recommend prior experience with blockchain development before starting this type of integration, so please familiarize yourself with [CNS Smart Contracts](domain-registry-essentials/architecture-overview/cns-smart-contracts.md) or [UNS Smart Contracts](domain-registry-essentials/uns-architecture-overview/uns-smart-contracts.md) along with [Managing Domain Records](allow-my-users-to-manage-existing-domains/managing-domain-records.md) and [Managing Domain Ownership](allow-my-users-to-manage-existing-domains/managing-domain-ownership/).
+Your app can edit domain metadata manually with a direct connection to the appropriate blockchain. We strongly recommend prior experience with blockchain development before starting this type of integration, so please familiarize yourself with [CNS Smart Contracts](domain-registry-essentials/cns-smart-contracts.md) or [UNS Smart Contracts](domain-registry-essentials/uns-smart-contracts.md) along with [Managing Domain Records](allow-my-users-to-manage-existing-domains/managing-domain-records.md) and [Managing Domain Ownership](allow-my-users-to-manage-existing-domains/managing-domain-ownership/).
 
 Popular open-source crypto wallet, MyEtherWallet, has implemented domain management and can be also used as a reference for implementation: [MyEtherWallet Code Reference](https://github.com/MyEtherWallet/MyEtherWallet/tree/master/src/dapps/Unstoppable) and [MyEtherWallet Website](https://www.myetherwallet.com).
 

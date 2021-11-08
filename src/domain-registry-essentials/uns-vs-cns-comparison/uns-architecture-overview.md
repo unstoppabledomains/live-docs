@@ -11,14 +11,14 @@ Every UNS domain is issued as an[ ERC-721](https://eips.ethereum.org/EIPS/eip-72
 
 This page covers the following topics:
 
-* ​[Smart contract architecture](./#smart-contract-architecture) — An overview of the core smart contracts that make up UNS. This section explains how domains are minted and managed, what domain information is stored, and how users can interact with those domains through a blockchain.
-* ​[Domain hierarchy and ownership](./#domain-hierarchy-and-ownership) — Explains how domains can be structured, created, and managed.
-* ​[Delegating domain management](./#delegating-domain-management) — Explains the role of the transaction processor and meta transactions in minting domains and allowing users to delegate transaction costs.
+* ​[Smart contract architecture](uns-architecture-overview.md#smart-contract-architecture) — An overview of the core smart contracts that make up UNS. This section explains how domains are minted and managed, what domain information is stored, and how users can interact with those domains through a blockchain.
+* ​[Domain hierarchy and ownership](uns-architecture-overview.md#domain-hierarchy-and-ownership) — Explains how domains can be structured, created, and managed.
+* ​[Delegating domain management](uns-architecture-overview.md#delegating-domain-management) — Explains the role of the transaction processor and meta transactions in minting domains and allowing users to delegate transaction costs.
 
 UNS is built by Unstoppable Domains, which includes a new registry and set of new smart contracts. The structure is similar to CNS in that domains are owned **irrevocably**. Domains do not need to be renewed and cannot be reclaimed by Unstoppable Domains. Once claimed, users have complete control of their domains.
 
 {% hint style="info" %}
-For more information about the structural differences between CNS and UNS, see the [UNS vs CNS comparison](../uns-vs-cns-comparison.md).
+For more information about the structural differences between CNS and UNS, see the [UNS vs CNS comparison](./).
 {% endhint %}
 
 ## Smart Contract Architecture
@@ -72,7 +72,7 @@ A domain can be owned by both an external address (one that is accessed with a p
 Such an ownership model might not be suitable for every user. Someone could allow writing to their domain records, but only to a restricted set of records, without giving permission to transfer domain. This could be achieved by using an intermediate smart contract. Twitter verification works in this way, and the best example is the [TwitterValidationOperator contract](https://github.com/unstoppabledomains/uns/blob/main/contracts/operators/TwitterValidationOperator.sol).
 
 {% hint style="info" %}
-If the owner of a `.wallet` top-level domain is set to a[ burn address](https://etherscan.io/address/0x000000000000000000000000000000000000dEaD), that means that only direct owners can transfer or burn their second-level domains. To mint second-level domains we use a different mechanism, which doesn't rely on domain ownership. For more information, see the Minting  subsection of [Delegating Domain Management](./#delegating-domain-management).
+If the owner of a `.wallet` top-level domain is set to a[ burn address](https://etherscan.io/address/0x000000000000000000000000000000000000dEaD), that means that only direct owners can transfer or burn their second-level domains. To mint second-level domains we use a different mechanism, which doesn't rely on domain ownership. For more information, see the Minting  subsection of [Delegating Domain Management](uns-architecture-overview.md#delegating-domain-management).
 {% endhint %}
 
 ### Alternative Ownership Models

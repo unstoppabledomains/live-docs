@@ -57,11 +57,11 @@
 
 ## Domain Registry Essentials
 
-* [UNS vs CNS Comparison](domain-registry-essentials/uns-vs-cns-comparison.md)
-* [CNS Architecture](domain-registry-essentials/architecture-overview/README.md)
-  * [CNS Smart Contracts](domain-registry-essentials/architecture-overview/cns-smart-contracts.md)
-* [UNS Architecture](domain-registry-essentials/uns-architecture-overview/README.md)
-  * [UNS Smart Contracts](domain-registry-essentials/uns-architecture-overview/uns-smart-contracts.md)
+* [UNS vs CNS Comparison](domain-registry-essentials/uns-vs-cns-comparison/README.md)
+  * [UNS Architecture](domain-registry-essentials/uns-vs-cns-comparison/uns-architecture-overview.md)
+  * [CNS Architecture](domain-registry-essentials/uns-vs-cns-comparison/architecture-overview.md)
+* [UNS Smart Contracts](domain-registry-essentials/uns-smart-contracts.md)
+* [CNS Smart Contracts](domain-registry-essentials/cns-smart-contracts.md)
 * [Namehashing](domain-registry-essentials/namehashing.md)
 * [Resolving Domain Records](domain-registry-essentials/resolving-domain-records.md)
 * [Records Reference](domain-registry-essentials/records-reference.md)

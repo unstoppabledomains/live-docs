@@ -9,16 +9,16 @@ description: >-
 
 This page covers the following topics:
 
-* [Smart contract architecture](./#smart-contract-architecture) — An overview of the core smart contracts that make up CNS. This section explains how domains are minted and managed, what domain information is stored, and how users can interact with those domains through a blockchain.
-* [Domain hierarchy and ownership](./#domain-hierarchy-and-ownership) — All things subdomains. How they can be structured, created, and managed.
-* [Delegating domain management](./#delegating-domain-management) — Explains the role of the transaction processor and meta transactions in minting domains and allowing users to delegate transaction costs.
+* [Smart contract architecture](architecture-overview.md#smart-contract-architecture) — An overview of the core smart contracts that make up CNS. This section explains how domains are minted and managed, what domain information is stored, and how users can interact with those domains through a blockchain.
+* [Domain hierarchy and ownership](architecture-overview.md#domain-hierarchy-and-ownership) — All things subdomains. How they can be structured, created, and managed.
+* [Delegating domain management](architecture-overview.md#delegating-domain-management) — Explains the role of the transaction processor and meta transactions in minting domains and allowing users to delegate transaction costs.
 
 Unstoppable Domains are built on CNS — the Crypto Name Service. CNS is a set of smart contracts on the Ethereum blockchain that govern how domains are created and used. Although it serves a similar _purpose_ as a traditional DNS system, CNS has architectural differences that change the interaction model significantly. For example, CNS domains are owned **irrevocably**. They do not need to be renewed and cannot be reclaimed by Unstoppable Domains. Once claimed, users have complete control of their domains.
 
 Every CNS domain is issued as an [ERC-721](https://eips.ethereum.org/EIPS/eip-721) token. Building on this standard makes it easier for developers to integrate with Unstoppable Domains and it lets users manage their domain ownership from any compatible wallet, exchange, or marketplace.
 
 {% hint style="info" %}
-For more information about the structural differences between CNS and UNS, see the [UNS vs CNS comparison](../uns-vs-cns-comparison.md).
+For more information about the structural differences between CNS and UNS, see the [UNS vs CNS comparison](./).
 {% endhint %}
 
 ## Smart contract architecture
@@ -105,7 +105,7 @@ Subdomains are subject to the same set of rules as second-level domains in CNS. 
 Such an ownership model might not be suitable for every user. One may want to mint subdomains that are irrevocable and can be transferred only by a direct owner – this and other models are possible if a domain zone is owned by a smart contract. For more details on alternative ownership models, see the section below.
 
 {% hint style="info" %}
-**Note:** If the owner of a `.crypto` top-level domain is set to a [burn address](https://etherscan.io/address/0x000000000000000000000000000000000000dEaD), that means that only direct owners can transfer or burn their second-level domains. To mint second-level domains we use a different mechanism, which doesn't rely on domain ownership. For more information, see the [Minting controller](./#minting-controller) section.
+**Note:** If the owner of a `.crypto` top-level domain is set to a [burn address](https://etherscan.io/address/0x000000000000000000000000000000000000dEaD), that means that only direct owners can transfer or burn their second-level domains. To mint second-level domains we use a different mechanism, which doesn't rely on domain ownership. For more information, see the [Minting controller](architecture-overview.md#minting-controller) section.
 {% endhint %}
 
 ### Alternative ownership models

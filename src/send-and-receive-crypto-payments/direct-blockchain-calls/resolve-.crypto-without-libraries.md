@@ -207,7 +207,7 @@ var ethProvider = ethers.providers.getDefaultProvider('rinkeby');
 The network and contract address used above is for Rinkeby Testnet. For mainnet, use the following contract addresses: [0xfEe4D4F0aDFF8D84c12170306507554bC7045878](https://etherscan.io/address/0xfee4d4f0adff8d84c12170306507554bc7045878#code) (Ethereum) and [0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00](https://polygonscan.com/address/0xa3f32c8cd786dc089bd1fc175f2707223aee5d00#code) (Polygon). Be sure to set the network to **mainnet** instead of **rinkeby**.
 {% endhint %}
 
-For the scope of this project, we will only need to use the getData function from the [CNS Smart Contract](../../domain-registry-essentials/architecture-overview/cns-smart-contracts.md#proxyreader).
+For the scope of this project, we will only need to use the getData function from the [CNS Smart Contract](../../domain-registry-essentials/cns-smart-contracts.md#proxyreader).
 
 ### Create a Contract Instance
 
