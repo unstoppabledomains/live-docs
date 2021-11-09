@@ -228,11 +228,6 @@ Once a user has successfully authenticated, the application should display that 
 
 ![Second UI Example for displaying authenticated user](../.gitbook/assets/brad-crypto-UI-recommendation.png)
 
-## Limitations & Resources
-
-Login with Unstoppable has the following limitations:
-
-* Does not support .zil domains
-* Pre-made components are only available initially in React. The modal is written in react, which has a larger library size.
+## Resources
 
 For assistance with this feature, please join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community.
