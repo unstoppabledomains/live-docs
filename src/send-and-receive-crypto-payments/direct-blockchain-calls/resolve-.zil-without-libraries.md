@@ -9,7 +9,7 @@ description: >-
 In this tutorial, we’ll build a simple app to resolve .zil domains — to read the information the domain holds.&#x20;
 
 {% hint style="info" %}
-This guide only applies to `.zil` domains. For information on resolving .crypto domains, See the guide for [Resolving .crypto Domains With Direct Blockchain Calls](resolve-.crypto-without-libraries.md).
+This guide only applies to `.zil` domains. For information on resolving .crypto domains, See the guide for [Resolving .crypto Domains With Direct Blockchain Calls](resolve-unstoppable-domain-names.md).
 {% endhint %}
 
 Here’s the finished product:

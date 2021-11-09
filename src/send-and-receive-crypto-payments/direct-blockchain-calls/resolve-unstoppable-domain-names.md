@@ -1,13 +1,13 @@
 ---
 description: >-
-  This page reviews the process for resolving .crypto domain names with direct
+  This page reviews the process for resolving Unstoppable domains with direct
   blockchain calls. It has been updated to reflect changes on L2 Polygon
   network.
 ---
 
-# Resolve .crypto with Direct Blockchain Calls
+# Resolve Unstoppable Domains with Direct Blockchain Calls
 
-In this tutorial, we will look at resolving .crypto Unstoppable Domains, using nothing but HTML, Javascript, and the ethers.js library.
+In this tutorial, we will look at resolving Unstoppable Domains, using nothing but HTML, Javascript, and the ethers.js library.
 
 {% hint style="info" %}
 The .zil namespace is located on a separate chain and requires a [different process](resolve-.zil-without-libraries.md).&#x20;
@@ -199,8 +199,8 @@ var abi = [
     type: 'function',
   }
 ];
-var polygonProvider = new ethers.providers.JsonRpcProvider("https://polygon-mumbai.infura.io/v3/ProjectID");
-var ethProvider = ethers.providers.getDefaultProvider('rinkeby');
+var polygonProvider = new ethers.providers.JsonRpcProvider("https://polygon-mumbai.g.alchemy.com/v2/demo");
+var provider = new ethers.providers.JsonRpcProvider("https://eth-rinkeby.alchemyapi.io/v2/demo");
 ```
 
 {% hint style="info" %}
