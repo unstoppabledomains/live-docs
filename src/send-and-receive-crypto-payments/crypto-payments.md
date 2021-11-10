@@ -9,7 +9,7 @@ description: >-
 ## Table of contents
 
 * [Overview](crypto-payments.md#overview)
-* Domain Resolution using Libraries
+* [Domain Resolution using Libraries](crypto-payments.md#domain-resolution-using-libraries)
   * [Resolving crypto records](crypto-payments.md#resolving-crypto-records)
   * [Error handling](crypto-payments.md#error-handling)
 * [Domain Resolution using Resolution Service API](crypto-payments.md#domain-resolution-using-resolution-service)
