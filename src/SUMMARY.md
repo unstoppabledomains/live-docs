@@ -55,6 +55,11 @@
   * [Authorization Protocol](login-with-unstoppable/authorization-server/authorization-protocol.md)
 * [Developer Integration](login-with-unstoppable/developer-integration.md)
 
+## Polygon L2 Network
+
+* [High Level Overview](polygon-l2-network/high-level-overview.md)
+* [Developer Integration](polygon-l2-network/developer-integration.md)
+
 ## Domain Registry Essentials
 
 * [UNS vs CNS Comparison](domain-registry-essentials/uns-vs-cns-comparison/README.md)
