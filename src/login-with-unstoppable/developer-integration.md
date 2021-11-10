@@ -216,9 +216,9 @@ During login, the user will see the resolved address and the information being r
 
 ![Consent screen for Login with Unstoppable](../../.gitbook/assets/consent-screen.png)
 
-## UI Recommendations
+## UI Requirements
 
-Once a user has successfully authenticated, the application should display that user’s domain name in the application’s UI to confirm the authorization was successful (i.e. show the user’s domain instead of the address).
+Once a user has successfully authenticated, the application should display the user’s domain name in the application’s UI to confirm the authorization was successful. In other words, the UI must show the user’s domain instead of the address.
 
 ### Example 1
 
