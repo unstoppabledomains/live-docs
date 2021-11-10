@@ -1,7 +1,7 @@
 ---
 description: >-
   This page reviews the process for sending and receiving crypto payments on
-  Ethereum, Zilliqa, and Unstoppable blockchains.
+  Ethereum, Zilliqa, and Polygon blockchains.
 ---
 
 # Crypto Payments
