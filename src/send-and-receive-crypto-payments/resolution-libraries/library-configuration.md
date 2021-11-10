@@ -13,10 +13,10 @@ To choose an alternative Ethereum provider see [Nodes as a Service guide.](https
 {% hint style="info" %}
 Unstoppable libraries use Infura provider by default without restrictions and rate limits for UNS  resolution. Default configuration can be considered as production-ready.
 
-For ENS \(.eth\) resolution it's recommended update Ethereum provider to use in production.
+For ENS (.eth) resolution it's recommended update Ethereum provider to use in production.
 {% endhint %}
 
-* [JavaScript Resolution library](library-configuration.md#javascript-resolution-library) 
+* [JavaScript Resolution library](library-configuration.md#javascript-resolution-library)&#x20;
 * [Java Resolution library](library-configuration.md#java-resolution-library)
 * [Swift Resolution library](library-configuration.md#swift-resolution-library)
 * [Golang Resolution library](https://github.com/unstoppabledomains/resolution-go)
@@ -32,16 +32,26 @@ import Resolution from "@unstoppabledomains/resolution";
 
 const infuraApiKey = INFURA_PROJECT_ID;
 
+const infuraProviderUrl = `https://mainnet.infura.io/v3/${infuraApiKey}`;
+const poligonProviderUrl = `https://polygon-mainnet.infura.io/v3/${infuraApiKey}`;
+
 const resolution = new Resolution({
-  uns: {
-    url: `https://mainnet.infura.io/v3/${infuraApiKey}`,
-    network: "mainnet",
-  },
-});
+    sourceConfig: {
+      uns: {
+        locations: {
+          Layer1: {url: infuraProviderUrl, network: 'mainnet'},
+          Layer2: {
+            url: poligonProviderUrl,
+            network: 'polygon-mainnet',
+          },
+        },
+      },
+      ens: {url: infuraProviderUrl, network: 'mainnet')
+    },
+  });
 
-// or
 
-const resolution = Resolution.infura(infuraApiKey, "mainnet");
+const resolution = Resolution.infura(infuraApiKey);
 ```
 
 ### Web3 provider
@@ -81,10 +91,12 @@ Configuration for the [Java resolution library](https://github.com/unstoppabledo
 import com.unstoppabledomains.resolution.Resolution
 
 String infuraApiKey = INFURA_PROJECT_ID;
-String providerURL = "https://mainnet.infura.io/v3/" + infuraApiKey
+String ethProviderURL = "https://mainnet.infura.io/v3/" + infuraApiKey
+String polygonProviderURL = "https://polygon-mainnet.infura.io/v3/" + infuraApiKey
 
 DomainResolution resolution = Resolution.builder()
-                .providerUrl(NamingServiceType.CNS, providerURL)
+                .unsProviderUrl(UNSLocation.Layer1, ethProviderURL)
+                .unsProviderUrl(UNSLocation.Layer1, polygonProviderURL)
                 .build();
 ```
 
@@ -121,4 +133,3 @@ var providerURL = "https://mainnet.infura.io/v3/" + infuraApiKey
 var unsResolution, _ = resolution.NewUnsBuilder().SetEthereumNetwork(providerURL).Build()
 var znsResolution, _ = resolution.NewZnsBuilder().Build()
 ```
-

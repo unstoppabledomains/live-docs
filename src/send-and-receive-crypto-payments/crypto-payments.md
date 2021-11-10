@@ -9,11 +9,11 @@ description: >-
 ## Table of contents
 
 * [Overview](crypto-payments.md#overview)
-* [Domain Resolution using Libraries](crypto-payments.md#enabling-domain-resolution)
+* Domain Resolution using Libraries
   * [Resolving crypto records](crypto-payments.md#resolving-crypto-records)
   * [Error handling](crypto-payments.md#error-handling)
 * [Domain Resolution using Resolution Service API](crypto-payments.md#domain-resolution-using-resolution-service)
-* [Best practices](crypto-payments.md#integration-best-practices)
+* [Integration Best Practices](crypto-payments.md#integration-best-practices)
 * [Resources](crypto-payments.md#resources)
 
 ## Overview
@@ -24,7 +24,7 @@ The most common way to integrate with Unstoppable Domains is through simple doma
 
 How does this work?
 
-At a high-level, an application retrieves a domain's records through smart contracts deployed on the Ethereum, Zilliqa, and Unstoppable blockchains (`.crypto`, `.zil`, and `.wallet`, respectively).
+At a high-level, an application retrieves a domain's records through smart contracts deployed on the Ethereum, Zilliqa, and Polygon blockchains (`.crypto`, `.zil`, and `.wallet`, respectively).
 
 In the example above, we're sending 1 `ETH` to `ryan.crypto`. The application sends those two parameters to the `Resolver` contract on the Ethereum blockchain and it returns the record stored under `crypto.ETH.address` for that domain. This address can be used to complete the `ETH` transfer to Ryan.
 
@@ -34,7 +34,7 @@ A domain can store many records and key formats. To learn about our supported re
 
 ![Data movement for a successful payment](../../.gitbook/assets/success-payment-flow.svg)
 
-## Domain Resolution with Libraries
+## Domain Resolution using Libraries
 
 The easiest way to integrate domain resolution for crypto payments is by using the Unstoppable Domains resolution libraries. These libraries communicate with the Ethereum and Zilliqa blockchains directly so that you don't have to.
 
