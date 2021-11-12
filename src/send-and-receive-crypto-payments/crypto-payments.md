@@ -94,7 +94,7 @@ resolution.addr(domain: "ryan.crypto", ticker: "ETH") { result in
 {% endtabs %}
 
 {% hint style="info" %}
-Our libraries use Infura to interact with the Ethereum blockchain by default. To configure a custom Ethereum provider see our [Library configuration guide.](resolution-libraries/library-configuration.md)
+Our libraries use Alchemy to interact with the Ethereum blockchain by default. To configure a custom Ethereum provider see our [Library configuration guide.](resolution-libraries/library-configuration.md)
 {% endhint %}
 
 **Records involved**
