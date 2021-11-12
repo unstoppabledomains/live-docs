@@ -36,7 +36,7 @@ A domain can store many records and key formats. To learn about our supported re
 
 ## Domain Resolution using Libraries
 
-The easiest way to integrate domain resolution for crypto payments is by using the Unstoppable Domains resolution libraries. These libraries communicate with the Ethereum and Zilliqa blockchains directly so that you don't have to.
+The easiest way to integrate domain resolution for crypto payments is by using the Unstoppable Domains resolution libraries. These libraries communicate with the Ethereum, Polygon, and Zilliqa blockchains directly so that you don't have to.
 
 ### Resolving crypto records
 

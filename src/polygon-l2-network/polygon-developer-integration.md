@@ -4,13 +4,13 @@ description: >-
   and support Unstoppable domains on Polygon L2 network.
 ---
 
-# Developer Integration
+# Polygon Developer Integration
 
 There will be minimal changes to Unstoppable Domains’ resolution libraries and resolution service with the rollout of our Layer 2 solution on Polygon. Over 90% of the library and resolution service will be similar to what we provide for Ethereum. However, for UD developers, all of the integrated "apps" will need to update their resolution libraries or API endpoints in order to be able to read and resolve NFT domains on Polygon.
 
 ## Polygon Updates
 
-Polygon apps will resolve domains by reading smart contracts housed on Polygon.&#x20;
+Polygon apps will resolve domains by reading [UNS Smart Contracts](../domain-registry-essentials/uns-smart-contracts.md#interfaces) housed on Polygon. Developers can also go directly to the [Smart Contracts Repo](https://github.com/unstoppabledomains/uns/blob/main/Contracts.md) to help with integration.
 
 To further assist with L2, the Polygon team will be adding Unstoppable Domains resolution to their API and Matic.js library. This will make it easier, for example, for Polygon apps to use domains for payments in wallets and login with dapps.
 

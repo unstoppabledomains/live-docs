@@ -57,8 +57,8 @@
 
 ## Polygon L2 Network
 
-* [High Level Overview](polygon-l2-network/high-level-overview.md)
-* [Developer Integration](polygon-l2-network/developer-integration.md)
+* [Polygon High Level Overview](polygon-l2-network/polygon-high-level-overview.md)
+* [Polygon Developer Integration](polygon-l2-network/polygon-developer-integration.md)
 
 ## Domain Registry Essentials
 

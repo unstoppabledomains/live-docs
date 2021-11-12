@@ -13,7 +13,7 @@ One strategy for resolving domains is to read directly from the blockchain. This
 
 ## **Use Cases**
 
-* [Resolve Unstoppable Domains with Direct Blockchain Calls](resolve-unstoppable-domain-names.md#abe0)
+* [Resolve Unstoppable Domains with Direct Blockchain Calls](resolve-unstoppable-domain-names.md)
 * [Resolve .zil with Direct Blockchain Calls](resolve-.zil-without-libraries.md)
 
 ## Support

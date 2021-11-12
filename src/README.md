@@ -40,6 +40,10 @@ If you are new to IPFS and decentralized websites (d-web), we recommend that you
 
 The [Login with Unstoppable](login-with-unstoppable/high-level-overview.md) feature helps you connect directly with your users through your dApp. The [Unstoppable Authorization Server](login-with-unstoppable/authorization-server/) makes it easy for users to share both public and permissioned information with your dApp, such as email, memberships, and social profiles. Login with Unstoppable is based on the OpenID Connect (OIDC) [authorization protocol](login-with-unstoppable/authorization-server/authorization-protocol.md) modified to be secured with a simple web3 wallet signature. See the guides on [Domain Owner Configuration](broken-reference) and [Developer Integration](login-with-unstoppable/developer-integration.md) to get started.
 
+## I want to support Unstoppable domains on Polygon L2 Network
+
+Unstoppable Domains uses [Polygon](https://polygon.technology) as our Layer 2 (L2) scaling solution. This allows us to make our NFT domains free to claim and manage on L2, and UD customers will no longer have to pay claim fees, renewal fees, or [gas fees](https://youtu.be/h3rP3Ptvka4). Domain minting has already started on Polygon L2 for all Unstoppable domains with future updates planned for domain management and domain transfer (between L1 and L2 or vice versa). See the [Polygon High Level Overview](polygon-l2-network/polygon-high-level-overview.md) for more on the benefits, considerations, and planned releases for Polygon L2. For developers, we have outlined the steps needed to support Unstoppable domains on Polygon L2 in our [Developer Integration Guide](polygon-l2-network/polygon-developer-integration.md).
+
 ## I want to promote my UD integration
 
 We offer free advertising for UD integrated apps. Once your app has a working Unstoppable Domains integration, [register it here](https://unstoppabledomains.com/app-submission). Registered apps appear on the Unstoppable Domains [homepage](https://unstoppabledomains.com) and [Applications](https://unstoppabledomains.com/apps) page — putting your app in front of tens of thousands of potential customers per day.
