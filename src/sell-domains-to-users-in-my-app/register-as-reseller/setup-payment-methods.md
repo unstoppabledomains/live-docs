@@ -6,6 +6,10 @@ description: >-
 
 # Setup Payment Methods
 
+{% hint style="warning" %}
+The Reseller API feature is under development due to recent upgrades to [Polygon L2](../../polygon-l2-network/polygon-high-level-overview.md). When the Reseller feature resumes, it will only support domains and wallets on the Polygon L2 network. See the [Polygon Developer Integration Guide](../../polygon-l2-network/polygon-developer-integration.md) for next steps.
+{% endhint %}
+
 ## Locate Your Reseller ID
 
 To integrate payment methods for Stripe and Coinbase for your customers, you must know your resellerID. This information can be found in your [UD Reseller Dashboard](https://unstoppabledomains.com/resellers).

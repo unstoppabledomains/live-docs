@@ -7,6 +7,10 @@ description: >-
 
 # Receive Your Payouts
 
+{% hint style="warning" %}
+The Reseller API feature is under development due to recent upgrades to [Polygon L2](../../polygon-l2-network/polygon-high-level-overview.md). When the Reseller feature resumes, it will only support domains and wallets on the Polygon L2 network. See the [Polygon Developer Integration Guide](../../polygon-l2-network/polygon-developer-integration.md) for next steps.
+{% endhint %}
+
 ## Stripe Payouts
 
 Stripe payouts occur daily directly from Stripe and can be tracked within the reseller dashboard by clicking on the “View Test Dashboard” or “View Live Dashboard” button depending on which payouts are being tracked.

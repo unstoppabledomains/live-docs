@@ -6,6 +6,10 @@ description: >-
 
 # Reseller API Endpoints
 
+{% hint style="warning" %}
+The Reseller API feature is under development due to recent upgrades to [Polygon L2](../polygon-l2-network/polygon-high-level-overview.md). When the Reseller feature resumes, it will only support domains and wallets on the Polygon L2 network. See the [Polygon Developer Integration Guide](../polygon-l2-network/polygon-developer-integration.md) for next steps.
+{% endhint %}
+
 For details about the API endpoints, see the [Reseller API Endpoint Specification](https://apidocs.unstoppabledomains.com/#tag/reseller). These endpoints are specified in OpenAPI format, which provides an interactive API explorer in which you can try out sample API calls.
 
 There are six endpoints in the Reseller API:

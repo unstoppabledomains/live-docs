@@ -7,13 +7,11 @@ description: >-
 
 # Resolve Unstoppable Domains with Direct Blockchain Calls
 
-In this tutorial, we will look at resolving Unstoppable Domains, using nothing but HTML, Javascript, and the ethers.js library.
-
 {% hint style="info" %}
 The .zil namespace is located on a separate chain and requires a [different process](resolve-.zil-without-libraries.md).&#x20;
 {% endhint %}
 
-Each domain can be resolved in exactly the same manner as the examples shown below.
+In this tutorial, we will look at resolving Unstoppable Domains, using nothing but HTML, Javascript, and the ethers.js library. Each domain can be resolved in exactly the same manner as the examples shown below.
 
 ![Dynamic GIF showing the steps to resolve an Unstoppable domain (.crypto, .wallet, .dao, etc.)](../../.gitbook/assets/crypto-article.gif)
 
