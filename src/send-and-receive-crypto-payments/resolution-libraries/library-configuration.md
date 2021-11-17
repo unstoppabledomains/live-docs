@@ -16,6 +16,10 @@ Unstoppable libraries use Alchemy provider by default without restrictions and r
 For ENS (.eth) resolution it's recommended update Ethereum provider to use in production.
 {% endhint %}
 
+{% hint style="warning" %}
+ENS support ends on Dec 15, 2021 and will not be supported in L2 Polygon libraries. See the [Polygon Developer Integration Guide](../../polygon-l2-network/polygon-developer-integration.md) for next steps.
+{% endhint %}
+
 * [JavaScript Resolution library](library-configuration.md#javascript-resolution-library)&#x20;
 * [Java Resolution library](library-configuration.md#java-resolution-library)
 * [Swift Resolution library](library-configuration.md#swift-resolution-library)

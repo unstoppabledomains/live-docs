@@ -7,17 +7,21 @@ description: >-
 
 # Resolution Libraries
 
-Resolution libraries are used for interacting with blockchain domain names. They can be used to retrieve [payment addresses](../crypto-payments.md), IPFS hashes for [decentralized websites](../../build-a-decentralized-website/overview-of-ipfs-and-d-web.md), DNS records and other [records types](../../domain-registry-essentials/records-reference.md). Each Resolution Library is built and maintained by Unstoppable Domains, so updates happen automatically. 
+Resolution libraries are used for interacting with blockchain domain names. They can be used to retrieve [payment addresses](../crypto-payments.md), IPFS hashes for [decentralized websites](../../build-a-decentralized-website/overview-of-ipfs-and-d-web.md), DNS records and other [records types](../../domain-registry-essentials/records-reference.md). Each Resolution Library is built and maintained by Unstoppable Domains, so updates happen automatically.&#x20;
 
 ## Supported Domains for Resolution Libraries
 
 The Resolution Libraries support decentralized domains across three main zones:
 
-| Name Service | Supported Domains |
-| :--- | :--- |
-| Zilliqa Name Service \(ZNS\) | `.zil` |
-| Ethereum Name Service \(ENS\) | `.eth`, `.kred`, `.xyz`, `.luxe` |
-| Unstoppable Name Service \(UNS\) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
+| Name Service                   | Supported Domains                                                                      |
+| ------------------------------ | -------------------------------------------------------------------------------------- |
+| Zilliqa Name Service (ZNS)     | `.zil`                                                                                 |
+| Ethereum Name Service (ENS)    | `.eth`, `.kred`, `.xyz`, `.luxe`                                                       |
+| Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
+
+{% hint style="warning" %}
+ENS support ends on Dec 15, 2021 and will not be supported in L2 Polygon libraries. See the [Polygon Developer Integration Guide](../../polygon-l2-network/polygon-developer-integration.md) for next steps.
+{% endhint %}
 
 ## Use Case: Retrieve a Domain Record
 
@@ -25,14 +29,14 @@ Retrieve any record of a domain. Applications sometimes set custom records for a
 
 {% tabs %}
 {% tab title="Java" %}
-```text
+```
 String record = resolution.getRecord("ryan.crypto", "custom.record.value");
 assertEquals("Example custom record value", record);
 ```
 {% endtab %}
 
 {% tab title="JavaScript" %}
-```text
+```
 const { default: Resolution } = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
 
@@ -48,7 +52,7 @@ resolveCustomRecord('homecakes.crypto', 'custom.record.value');
 {% endtab %}
 
 {% tab title="Swift" %}
-```text
+```
 // Lookup specific records
 resolution.record(domain: "ryan.crypto", record: "custom.record.value") { result in
   switch result {
@@ -75,16 +79,14 @@ uns, _ := resolution.NewUnsBuilder().Build()
 
 The following table lists the UD Resolution Libraries along with links to each respective GitHub Repository.
 
-| Resolution Library | GitHub Repository |
-| :--- | :--- |
-| JavaScript | [https://github.com/unstoppabledomains/resolution](https://github.com/unstoppabledomains/resolution) |
-| Java | [https://github.com/unstoppabledomains/resolution-java](https://github.com/unstoppabledomains/resolution-java) |
-| Swift | [https://github.com/unstoppabledomains/resolution-swift](https://github.com/unstoppabledomains/resolution-swift) |
-| Golang | [https://github.com/unstoppabledomains/resolution-go](https://github.com/unstoppabledomains/resolution-go) |
+| Resolution Library | GitHub Repository                                                                                                |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| JavaScript         | [https://github.com/unstoppabledomains/resolution](https://github.com/unstoppabledomains/resolution)             |
+| Java               | [https://github.com/unstoppabledomains/resolution-java](https://github.com/unstoppabledomains/resolution-java)   |
+| Swift              | [https://github.com/unstoppabledomains/resolution-swift](https://github.com/unstoppabledomains/resolution-swift) |
+| Golang             | [https://github.com/unstoppabledomains/resolution-go](https://github.com/unstoppabledomains/resolution-go)       |
 
 ## Support
 
 If you have any questions or need assistance with using UD resolution libraries, join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from us and the community.
-
-
 

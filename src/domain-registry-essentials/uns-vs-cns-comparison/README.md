@@ -8,10 +8,10 @@ description: >-
 
 #### Table. High Level Differences between CNS and UNS
 
-| CNS                                                                | UNS                                                                                                             |
+| **CNS**                                                            | **UNS**                                                                                                         |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
 | Implements the ERC721 standard                                     | Implements the ERC721 standard                                                                                  |
-| Hosts a single \`.crypto\` TLD                                     | Hosts multiple TLDs                                                                                             |
+| Hosts a single .crypto TLD                                         | Hosts multiple TLDs                                                                                             |
 | Separate resolver and registry contracts                           | Single contract contains both the registry and resolution data                                                  |
 | Requires a Resolver lookup call in order to resolve domain data    | Does not require a Resolver (RecordStorage) lookup call since all domain data stored in a single smart contract |
 | Domain minting governed by MintingController and WhitelistedMinter | Domain minting governed by MintingManager                                                                       |

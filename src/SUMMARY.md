@@ -59,6 +59,7 @@
 
 * [Polygon High Level Overview](polygon-l2-network/polygon-high-level-overview.md)
 * [Polygon Developer Integration](polygon-l2-network/polygon-developer-integration.md)
+* [L1 (Ethereum) vs L2 (Polygon) Comparison](polygon-l2-network/l1-ethereum-vs-l2-polygon-comparison.md)
 
 ## Domain Registry Essentials
 
