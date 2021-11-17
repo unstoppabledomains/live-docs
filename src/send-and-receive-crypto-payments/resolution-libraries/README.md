@@ -20,7 +20,7 @@ The Resolution Libraries support decentralized domains across three main zones:
 | Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
 
 {% hint style="warning" %}
-ENS support ends on Dec 15, 2021 and will not be supported in L2 Polygon libraries. See the [Polygon Developer Integration Guide](../../polygon-l2-network/polygon-developer-integration.md) for next steps.
+ENS is not supported in the latest version of our libraries (v6), and there will be no future updates to ENS. The older (v5) version of our libraries can still be used for resolution, or developers will need to [integrate directly with ENS](https://docs.ens.domains/dapp-developer-guide/resolving-names).
 {% endhint %}
 
 ## Use Case: Retrieve a Domain Record
