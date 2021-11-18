@@ -21,6 +21,10 @@ Resolution is built and maintained by Unstoppable Domains and supports decentral
 For more information on Unstoppable Domains Resolution, see [Resolving Domain Records](../domain-registry-essentials/resolving-domain-records.md) and the [Resolution API Reference](https://unstoppabledomains.github.io/resolution/).To make domain resolution easier, we've written libraries for web, Android, and iOS.
 {% endhint %}
 
+{% hint style="warning" %}
+ENS is not supported in the latest version of our libraries, and there will be no future updates to ENS. The older version of our libraries can still be used for resolution, or developers will need to [integrate directly with ENS](https://docs.ens.domains/dapp-developer-guide/resolving-names).
+{% endhint %}
+
 ## ENS Support
 
 Ethereum Name Service requires installing additional packages to avoid errors thrown by the library when trying to resolve ENS domain.
