@@ -11,8 +11,9 @@ Resolution is a library for interacting with blockchain domain names. It can be 
 
 Resolution is built and maintained by Unstoppable Domains and supports decentralized domains across three main zones:
 
-| Zilliqa Name Service (ZNS)     | `.zil`                                                                                 |
+| Name Service                   | Supported Domains                                                                      |
 | ------------------------------ | -------------------------------------------------------------------------------------- |
+| Zilliqa Name Service (ZNS)     | `.zil`                                                                                 |
 | Ethereum Name Service (ENS)    | `.eth`, `.kred`, `.xyz`, `.luxe`                                                       |
 | Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
 
