@@ -36,35 +36,35 @@ Traditional Issuer discovery requires only the requestor resource and host to fo
 
 #### Example: WebFinger DNS Records
 
-| **Name**  | **Type** | **Value**                                  |
-| --------- | -------- | ------------------------------------------ |
-| webfinger | TXT      | BASE64 encoded Document from above example |
+| Name      | Type | Value                                      |
+| --------- | ---- | ------------------------------------------ |
+| webfinger | TXT  | BASE64 encoded Document from above example |
 
 ### **By Request**
 
 This is a method used to construct a WebFinger request. The below fields are used to construct a WebFinger request, that a Client can then resolve.
 
-| **Field** | **Description**                                                                                                                                                                                                                                          |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| user      | The OPTIONAL user of the account. If one was resolving this information on domain.tld, the webfinger resource constructed would be acct:user@domain.tld. If no user is present in the record, the account would be domain itself, i.e. acct:@domain.tld. |
-| host      | Server where a WebFinger service is hosted.                                                                                                                                                                                                              |
-| rel       | The OPTIONAL URI that identifies the type of service whose location is being requested, defaults to [http://openid.net/specs/connect/1.0/issuer](http://openid.net/specs/connect/1.0/issuer), used for Unstoppable Issuer Discovery.                     |
+| Field | Description                                                                                                                                                                                                                                              |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| user  | The OPTIONAL user of the account. If one was resolving this information on domain.tld, the webfinger resource constructed would be acct:user@domain.tld. If no user is present in the record, the account would be domain itself, i.e. acct:@domain.tld. |
+| host  | Server where a WebFinger service is hosted.                                                                                                                                                                                                              |
+| rel   | The OPTIONAL URI that identifies the type of service whose location is being requested, defaults to [http://openid.net/specs/connect/1.0/issuer](http://openid.net/specs/connect/1.0/issuer), used for Unstoppable Issuer Discovery.                     |
 
 ### By Reference
 
-| **Field** | **Description**                                                                                                                                                |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| user      | The OPTIONAL user of the account. This is interpreted in the same way as it is in the “By Request” flow.                                                       |
-| uri       | A URI specifying the location of a WebFinger JRD Document. This can be a https scheme URL, or a DID, or even a decentralized storage URL.                      |
-| rel       | The OPTIONAL URI that identifies the type of service whose location is being requested. This is interpreted in the same way as it is in the “By Request” flow. |
+| Field | Description                                                                                                                                                    |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| user  | The OPTIONAL user of the account. This is interpreted in the same way as it is in the “By Request” flow.                                                       |
+| uri   | A URI specifying the location of a WebFinger JRD Document. This can be a https scheme URL, or a DID, or even a decentralized storage URL.                      |
+| rel   | The OPTIONAL URI that identifies the type of service whose location is being requested. This is interpreted in the same way as it is in the “By Request” flow. |
 
 ### By Value
 
-| **Field** | ** Description**                                                                                                                                               |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| user      | The OPTIONAL user of the account. This is interpreted in the same way as it is in the “By Request” flow.                                                       |
-| value     | The WebFinger JRD Document in plaintext.                                                                                                                       |
-| rel       | The OPTIONAL URI that identifies the type of service whose location is being requested. This is interpreted in the same way as it is in the “By Request” flow. |
+| Field |  Description                                                                                                                                                   |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| user  | The OPTIONAL user of the account. This is interpreted in the same way as it is in the “By Request” flow.                                                       |
+| value | The WebFinger JRD Document in plaintext.                                                                                                                       |
+| rel   | The OPTIONAL URI that identifies the type of service whose location is being requested. This is interpreted in the same way as it is in the “By Request” flow. |
 
 ## Unstoppable Authentication
 
@@ -90,7 +90,7 @@ The below fields are used to specify a public key that can be used for authentic
 It’s recommended that dApps support the web3 and oob methods at a minimum.
 {% endhint %}
 
-| **Field**        | **Description**                                                                                                                                                                                                                                          |
+| Field            | Description                                                                                                                                                                                                                                              |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | user             | The OPTIONAL user of the account. If one was resolving this information on domain.tld, the webfinger resource constructed would be acct:user@domain.tld. If no user is present in the record, the account would be domain itself, i.e. acct:@domain.tld. |
 | addr             | An Ethereum address corresponding to a private key a user owns.                                                                                                                                                                                          |
@@ -98,7 +98,7 @@ It’s recommended that dApps support the web3 and oob methods at a minimum.
 
 For context, _addr\_type\_hint_ can have the following values:
 
-| **Value**     | **Description**                                                                                                                                                            |
+| Value         | Description                                                                                                                                                                |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | web3          | Signing done via Injected web3 instance                                                                                                                                    |
 | trezor        | Signing done via Trezor Wallet. This method is considered uns-hwk.                                                                                                         |
@@ -118,10 +118,10 @@ If the Ethereum account is stored using a hardware wallet, the AMR Value SHOULD 
 
 The Authentication Server should use the AMR Value of _uns-swk_.
 
-| **Field** | **Description**                                                                                                |
-| --------- | -------------------------------------------------------------------------------------------------------------- |
-| user      | The OPTIONAL user of the account. This is interpreted in the same way as it is in the “Ethereum Address” flow. |
-| jwks      | A JWKS document stored in plaintext containing the signing key(s) used to prove the identity of the End-User   |
+| Field | Description                                                                                                    |
+| ----- | -------------------------------------------------------------------------------------------------------------- |
+| user  | The OPTIONAL user of the account. This is interpreted in the same way as it is in the “Ethereum Address” flow. |
+| jwks  | A JWKS document stored in plaintext containing the signing key(s) used to prove the identity of the End-User   |
 
 ### Example: Authentication Blockchain Domain Records
 
@@ -141,10 +141,10 @@ Those records would correspond to the user alice@domain.tld.
 
 The Authentication Server should use the AMR Value of _uns-swk._
 
-| **Field** | **Description**                                                                                                |
-| --------- | -------------------------------------------------------------------------------------------------------------- |
-| user      | The OPTIONAL user of the account. This is interpreted in the same way as it is in the "Ethereum Address" flow. |
-| jwk\_uri  | URL of the JWKS document containing the signing key(s) used to prove the identity of the End-User              |
+| Field    | Description                                                                                                    |
+| -------- | -------------------------------------------------------------------------------------------------------------- |
+| user     | The OPTIONAL user of the account. This is interpreted in the same way as it is in the "Ethereum Address" flow. |
+| jwk\_uri | URL of the JWKS document containing the signing key(s) used to prove the identity of the End-User              |
 
 ## Introspective Access Token Validation
 

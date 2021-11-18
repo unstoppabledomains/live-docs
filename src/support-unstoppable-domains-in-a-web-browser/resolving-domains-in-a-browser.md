@@ -11,9 +11,8 @@ Resolution is a library for interacting with blockchain domain names. It can be 
 
 Resolution is built and maintained by Unstoppable Domains and supports decentralized domains across three main zones:
 
-| Name Service                   | Supported Domains                                                                      |
-| ------------------------------ | -------------------------------------------------------------------------------------- |
 | Zilliqa Name Service (ZNS)     | `.zil`                                                                                 |
+| ------------------------------ | -------------------------------------------------------------------------------------- |
 | Ethereum Name Service (ENS)    | `.eth`, `.kred`, `.xyz`, `.luxe`                                                       |
 | Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
 
@@ -34,6 +33,10 @@ Required packages:
 * `"bip44-constants": "^8.0.5"`
 * `"@ensdomains/address-encoder": ">= 0.1.x <= 0.2.x"`
 * `"content-hash": "^2.5.2"`
+
+{% hint style="warning" %}
+ENS is not supported in the latest version of our libraries, and there will be no future updates to ENS. The older version of our libraries can still be used for resolution, or developers will need to [integrate directly with ENS](https://docs.ens.domains/dapp-developer-guide/resolving-names).
+{% endhint %}
 
 ## Installing Resolution
 

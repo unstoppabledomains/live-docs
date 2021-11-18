@@ -8,7 +8,7 @@ description: >-
 
 #### Table. High Level Differences between CNS and UNS
 
-| **CNS**                                                            | **UNS**                                                                                                         |
+| CNS                                                                | UNS                                                                                                             |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
 | Implements the ERC721 standard                                     | Implements the ERC721 standard                                                                                  |
 | Hosts a single .crypto TLD                                         | Hosts multiple TLDs                                                                                             |
