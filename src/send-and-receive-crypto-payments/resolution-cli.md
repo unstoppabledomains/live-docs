@@ -14,7 +14,7 @@ For more information on resolving domains using the Resolution CLI option, pleas
 
 This will retrieve the ETH address:
 
-```text
+```
 resolution resolve addr ETH -d brad.crypto
 "0x8aaD44321A86b170879d7A244c1e8d360c99DdA8"
 ```
@@ -25,7 +25,7 @@ The crypto.ETH.address can be located in the [Records Reference](../domain-regis
 
 And this will retrieve any record from the domain, if it exists, and return the following records:
 
-```text
+```
 resolution resolve records crypto.ETH.address crypto.BTC.address -d brad.crypto
 {
    "records": {
@@ -39,15 +39,19 @@ resolution resolve records crypto.ETH.address crypto.BTC.address -d brad.crypto
 
 The Resolution CLI supports decentralized domains across three main zones:
 
-| Name Service | Supported Domains |
-| :--- | :--- |
-| Zilliqa Name Service \(ZNS\) | `.zil` |
-| Ethereum Name Service \(ENS\) | `.eth`, `.kred`, `.xyz`, `.luxe` |
-| Unstoppable Name Service \(UNS\) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
+| Name Service                   | Supported Domains                                                                      |
+| ------------------------------ | -------------------------------------------------------------------------------------- |
+| Zilliqa Name Service (ZNS)     | `.zil`                                                                                 |
+| Ethereum Name Service (ENS)    | `.eth`, `.kred`, `.xyz`, `.luxe`                                                       |
+| Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
+
+
+
+{% hint style="warning" %}
+ENS is not supported in the latest version of our libraries, and there will be no future updates to ENS. The older version of our libraries can still be used for resolution, or developers will need to [integrate directly with ENS](https://docs.ens.domains/dapp-developer-guide/resolving-names).
+{% endhint %}
 
 ## Support
 
 If you have any questions or need assistance with using UD Resolution CLI, join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from us and the community.
-
-
 
