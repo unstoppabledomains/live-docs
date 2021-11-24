@@ -6,9 +6,9 @@ description: >-
 
 # High Level Overview
 
-Login with Unstoppable allows an Unstoppable Domain owner to log in and share information with applications. This allows application developers to learn information about their users (email, for example) without needing to host or maintain their own CRM database. With current wallet-based sign-in methods it is difficult or impossible for application developers to contact their users.&#x20;
+Login with Unstoppable allows an Unstoppable Domain owner to log in and share information with applications, which works for Polygon and Ethereum domains. This allows application developers to learn information about their users (email, for example) without needing to host or maintain their own CRM database. With current wallet-based sign-in methods it is difficult or impossible for application developers to contact their users.&#x20;
 
-Login with Unstoppable gives users and applications a simple way to solve this problem. This protocol extends the standard OpenID Connect (OIDC) authorization protocol with a simple wallet signature. This decentralized authorization process enables a better user experience and a closer relationship between applications and the communities they serve.
+Login with Unstoppable gives users and applications a simple way to solve this problem. This protocol extends the standard OpenID Connect (OIDC) authorization protocol with a simple wallet signature. This decentralized authorization process enables a better user experience and a closer relationship between applications and the communities they serve.&#x20;
 
 {% hint style="info" %}
 Login with Unstoppable is currently configured for users to share the email address associated with their UD account. Future updates will allow users to share other metadata such as social profiles and community memberships with their login, as well as receive direct requests from applications to share specialized information.

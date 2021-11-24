@@ -1,14 +1,14 @@
 ---
 description: >-
-  This page reviews the developer integration of the Login with Unstoppable
-  feature, which allows applications to authenticate users and collect user
-  information.
+  This page reviews the Login with Unstoppable feature and integration, which
+  allows applications to authenticate users and collect user information. This
+  feature works for Polygon and Ethereum domains.
 ---
 
 # Developer Integration
 
 {% hint style="info" %}
-The [UAuth Demo Application](https://uauth-demo.uc.r.appspot.com) is deployed for developer use along with a [single page sample application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to model the flow.
+The [UAuth Demo Application](https://uauth-demo.uc.r.appspot.com) is deployed for developer use along with a [single page sample application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to model the flow. The Login feature works for Polygon and Ethereum domains.
 {% endhint %}
 
 Integrating Login with Unstoppable is a four step process. Applications can use Unstoppable Domain’s [UAuth Library](https://github.com/unstoppabledomains/uauth) to simplify the integration.
