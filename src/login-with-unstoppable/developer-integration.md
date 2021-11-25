@@ -8,10 +8,10 @@ description: >-
 # Developer Integration
 
 {% hint style="info" %}
-The [UAuth Demo Application](https://uauth-demo.uc.r.appspot.com) is deployed for developer use along with a [single page sample application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to model the flow. The Login feature works for Polygon and Ethereum domains.
+The [UAuth Demo Application](https://uauth-demo.uc.r.appspot.com) is deployed for developer use along with a [single page sample application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to model the flow.&#x20;
 {% endhint %}
 
-Integrating Login with Unstoppable is a four step process. Applications can use Unstoppable Domain’s [UAuth Library](https://github.com/unstoppabledomains/uauth) to simplify the integration.
+Integrating Login with Unstoppable is a four step process. Applications can use Unstoppable Domain’s [UAuth Library](https://github.com/unstoppabledomains/uauth) to simplify the integration.&#x20;
 
 ## Step 1: Register Your Application
 
