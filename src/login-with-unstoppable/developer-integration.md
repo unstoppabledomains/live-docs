@@ -37,18 +37,18 @@ You can begin App development right away while waiting on application approval. 
 
 ![Get New Client Credentials button located at bottom of Application Page (once approved)](../../.gitbook/assets/client-credentials-button.png)
 
-* **Enter the redirect URIs** on the Client Credentials Screen. Save **the client id and secret key** for later reference ([Step 4 below](developer-integration.md#step-4-modify-the-code-base-of-uauth-library)).
+* **Enter the redirect URIs** on the Client Credentials Screen.&#x20;
+  * [ ] The **New Redirect URIs** and **New Post Logout Redirect URIs** are both used by the server to determine where to redirect back to after logging in and logging out of the server. They are required to be supplied by the App when making an authorization request.
+  * [ ] The **New Redirect URIs** and **New Post Logout Redirect URIs** can be changed, and you may enter more than one **New Redirect URIs** or **New Post Logout Redirect URIs** in each field. Enter each additional redirect URI on a separate line, if applicable. After modifying these credentials, click the **Get New Credentials Button** again and the New URIs will be configured.
+  * [ ] Each time changes are made to the **New Redirect URIs** or **New Post Logout Redirect URIs** fields, a new secret will be generated. Be sure to save the secret for later use.
 
-{% hint style="info" %}
-Enter each additional redirect URI on a separate line, if applicable. You will be able to edit the redirect URIs on this screen but not the client id and secret key.
+{% hint style="danger" %}
+The website address saved on the applications page must match the URI's hostname, otherwise the URl's are considered invalid. Also, the redirect URls entered on this page must be an exact match to the redirect URIs used in the UAuth Library modification in[ Step 4](developer-integration.md#step-4-modify-the-code-base-of-uauth-library).&#x20;
 {% endhint %}
 
 ![Client Credentials Configuration Page](../../.gitbook/assets/client-credentials-config-page.png)
 
-{% hint style="danger" %}
-The redirect URls entered on this page must be an exact match to the redirect URIs used in the UAuth Library modification below ([See Step 4](developer-integration.md#step-4-modify-the-code-base-of-uauth-library)).
-{% endhint %}
-
+* Save **the client id and secret key** for later reference ([Step 4 below](developer-integration.md#step-4-modify-the-code-base-of-uauth-library)). You will not be able to edit the client id and secret key as these fields are automatically generated.
 * **Save the changes** by clicking the Get New Client Credentials button again.
 
 ## Step 3: Add the Login with Unstoppable Button to Your Application's UI
