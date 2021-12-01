@@ -2,7 +2,7 @@
 description: This page details the scopes currently supported by Login with Unstoppable.
 ---
 
-# Scopes
+# Scopes for Login
 
 Scopes are used to control access to user's data and includes specific information that the user is willing to share with the dApp (e.g., I own this wallet address; I own this email address). Rather than granting complete access to a user’s account, scopes give apps a way to request a more limited scope of what they are allowed to do with user data, and users are more willing to authorize an application if they know exactly what the application can and cannot do with their personal information. &#x20;
 
@@ -10,10 +10,10 @@ Login with Unstoppable is built utilizing existing standards, specifically [Open
 
 Login with Unstoppable supports the following scopes which are detailed below:&#x20;
 
-* [OpenID scope](scopes.md#openid-scope) (required)
-* [wallet scope](scopes.md#wallet-scope)
-* [email scope](scopes.md#email-scope)
-* [email:optional scope](scopes.md#email-optional-scope)
+* [OpenID scope](scopes-for-login.md#openid-scope) (required)
+* [wallet scope](scopes-for-login.md#wallet-scope)
+* [email scope](scopes-for-login.md#email-scope)
+* [email:optional scope](scopes-for-login.md#email-optional-scope)
 
 ## OpenID Scope
 

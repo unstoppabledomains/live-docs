@@ -53,8 +53,9 @@
 * [High Level Overview](login-with-unstoppable/high-level-overview.md)
 * [Authorization Server](login-with-unstoppable/authorization-server/README.md)
   * [Authorization Protocol](login-with-unstoppable/authorization-server/authorization-protocol.md)
-* [Scopes](login-with-unstoppable/scopes.md)
+* [Scopes for Login](login-with-unstoppable/scopes-for-login.md)
 * [Developer Integration](login-with-unstoppable/developer-integration.md)
+* [5 Minute Guide: Login with Unstoppable](login-with-unstoppable/5-minute-guide-login-with-unstoppable.md)
 
 ## Polygon L2 Network
 
