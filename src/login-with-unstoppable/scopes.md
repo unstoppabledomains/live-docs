@@ -24,4 +24,4 @@ The Login with Unstoppable email scope can be used to retrieving metadata about 
 
 The Login with Unstoppable **email:optional** scope is used to retrieve metadata about the user's preference for sharing their email address. Users will be able to select or deselect this option in the UI presented to them.
 
-![UI for email:optional scope](<../.gitbook/assets/email\_optional\_scope (1).png>)
+![UI for email:optional scope](../.gitbook/assets/email\_optional\_scope-small.jpg)
