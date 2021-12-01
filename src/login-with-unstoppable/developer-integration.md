@@ -37,7 +37,7 @@ You can begin App development right away while waiting on application approval. 
 
 ![Get New Client Credentials button located at bottom of Application Page (once approved)](../../.gitbook/assets/client-credentials-button.png)
 
-* **Enter the redirect URIs** on the Client Credentials Screen. Save** the client id and secret key** for later reference ([Step 4 below](developer-integration.md#step-4-modify-the-code-base-of-uauth-library)).
+* **Enter the redirect URIs** on the Client Credentials Screen. Save **the client id and secret key** for later reference ([Step 4 below](developer-integration.md#step-4-modify-the-code-base-of-uauth-library)).
 
 {% hint style="info" %}
 Enter each additional redirect URI on a separate line, if applicable. You will be able to edit the redirect URIs on this screen but not the client id and secret key.

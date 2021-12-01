@@ -41,19 +41,19 @@ You can also view the [IPFS Youtube Video](https://youtu.be/I9vTeAtELOk) for a q
 
 ![How to select the "Page Type" or type of template to install ](../../../.gitbook/assets/choose-page-template-type.png)
 
-* **Edit the Content **to customize your website (add your name, photo, content, etc.) and **Publish to IPFS** when finished
+* **Edit the Content** to customize your website (add your name, photo, content, etc.) and **Publish to IPFS** when finished
 
 ![How to edit content for your template and publish directly to IPFS](../../../.gitbook/assets/customize-your-template-edited.png)
 
 ### **Option 2: Upload your own website files to our IPFS Uploader**
 
-* Go to** My Domains**
-* Select** Manage **next to the domain you want to use
+* Go to **My Domains**
+* Select **Manage** next to the domain you want to use
 * Select the **Website** tab
 
 ![How to locate the 'Website' tab under My Domains --> Manage](../../../.gitbook/assets/website-tab-manage-domains.png)
 
-* Upload your files to the **IPFS Uploader **and** Save Changes**
+* Upload your files to the **IPFS Uploader** and **Save Changes**
 
 ![Upload files using the IPFS Uploader, limited to 20MB per domain](../../../.gitbook/assets/ipfs-file-uploader.png)
 

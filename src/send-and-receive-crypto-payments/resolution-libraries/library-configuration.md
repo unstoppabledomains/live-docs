@@ -37,7 +37,7 @@ import Resolution from "@unstoppabledomains/resolution";
 const infuraApiKey = INFURA_PROJECT_ID;
 
 const infuraProviderUrl = `https://mainnet.infura.io/v3/${infuraApiKey}`;
-const poligonProviderUrl = `https://polygon-mainnet.infura.io/v3/${infuraApiKey}`;
+const polygonProviderUrl = `https://polygon-mainnet.infura.io/v3/${infuraApiKey}`;
 
 const resolution = new Resolution({
     sourceConfig: {
@@ -140,11 +140,21 @@ Configuration for the [Golang resolution library](https://github.com/unstoppable
 
 ```swift
 import (
-	"github.com/unstoppabledomains/resolution-go"
+    "github.com/ethereum/go-ethereum/ethclient"
+	"github.com/unstoppabledomains/resolution-go/v2"
 )
 
 var infuraApiKey = INFURA_PROJECT_ID
-var providerURL = "https://mainnet.infura.io/v3/" + infuraApiKey
-var unsResolution, _ = resolution.NewUnsBuilder().SetEthereumNetwork(providerURL).Build()
+var ethereumUrl = "https://mainnet.infura.io/v3/" + infuraApiKey
+var ethereumL2Url = "https://polygon-mumbai.infura.io/v3/" + infuraApiKey
+
+var unsBuilder := resolution.NewUnsBuilder()
+var backend, _ := ethclient.Dial(ethereumUrl)
+var backendL2, _ := ethclient.Dial(ethereumL2Url)
+
+unsBuilder.SetContractBackend(backend)
+unsBuilder.SetL2ContractBackend(backendL2)
+
+var unsResolution, _ = unsBuilder.Build()
 var znsResolution, _ = resolution.NewZnsBuilder().Build()
 ```

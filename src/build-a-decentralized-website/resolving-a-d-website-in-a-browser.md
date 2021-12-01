@@ -62,7 +62,7 @@ In order to set up a redirection to a traditional domain, you will need to do a 
 
 
 
-* Replace YOUR WEBSITE HERE with your URL and YOUR WEBSITE DESCRIPTION HERE with a short description of your website and save the file as **index.html **(do not use any other name).
+* Replace YOUR WEBSITE HERE with your URL and YOUR WEBSITE DESCRIPTION HERE with a short description of your website and save the file as **index.html** (do not use any other name).
 * Open index.html from your hard drive to see if everything is working before proceeding. Right-click the file and select "**Open with**" followed by your browser of choice.&#x20;
 
 ![Right click to 'Open With' a specific or preferred browser](../../.gitbook/assets/open-with-specific-browser.png)

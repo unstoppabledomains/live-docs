@@ -14,11 +14,11 @@ For details about the API endpoints, see the [Reseller API Endpoint Specificatio
 
 There are six endpoints in the Reseller API:
 
-* `GET`** Domain Name Availability**: checks availability of domain name before purchase
-* `POST`** Buy Domain**: used for buying domains from UD
-* `GET`** Order Status**: checks blockchain transaction status to see if it is successfully “mined”
-* `GET`** User Status**: checks if user has a domain and whether they are eligible for a free domain
-* `GET`** Reverse Lookup**: retrieves all domains that are connected to certain owner
-* `GET`** Domains Variations:** provides domains variants, or similar domains, based on provided domains and labels
+* `GET` **Domain Name Availability**: checks availability of domain name before purchase
+* `POST` **Buy Domain**: used for buying domains from UD
+* `GET` **Order Status**: checks blockchain transaction status to see if it is successfully “mined”
+* `GET` **User Status**: checks if user has a domain and whether they are eligible for a free domain
+* `GET` **Reverse Lookup**: retrieves all domains that are connected to certain owner
+* `GET` **Domains Variations:** provides domains variants, or similar domains, based on provided domains and labels
 
 For assistance with this API Specification, please join our [Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community.

@@ -20,8 +20,8 @@ Our Layer 2 resolution libraries will require a few configuration changes to all
 
 ### Method Changes and Updates
 
-* **gettokensownedby **has been deprecated and is no longer supported in L2.
-* **getallrecords **has changed structurally but does not require a change to the function or method call; the external interface remains the same, but the method will not be as decentralized because it uses our resolution service instead of querying the blockchain.
+* **gettokensownedby** has been deprecated and is no longer supported in L2.
+* **getallrecords** has changed structurally but does not require a change to the function or method call; the external interface remains the same, but the method will not be as decentralized because it uses our resolution service instead of querying the blockchain.
 
 ### New Supported Method
 
@@ -98,7 +98,7 @@ Overall changes for **/status route**
 
 ### /domains and /domains/\<domain name> routes
 
-Overall changes for** /domain and /domains\<domain name> routes**
+Overall changes for **/domain and /domains\<domain name> routes**
 
 * Return [Network ID](https://chainlist.org) instead of location field
 * Add blockchain field to store data about Layer 1 and Layer 2
