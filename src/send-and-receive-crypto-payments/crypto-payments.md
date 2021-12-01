@@ -297,17 +297,12 @@ The following diagram shows the interactions between nodes for Resolution Servic
 
 For more information about the Resolution Service endpoints, see the [Resolution Service API Specification](http://resolve.unstoppabledomains.com/api-docs/). The specification uses OpenAPI format, which provides an interactive API explorer in which you can try out sample API calls.&#x20;
 
-There are nine endpoints in the Resolution Service API:
+There are four endpoints in the Resolution Service API:
 
 * **`GET`** domains: retrieves and displays the list of domains
 * **`GET`** domains/{domainName}: gets the resolution of the specified domain
 * **`GET`** status: gets the synchronization status
-* **`GET`** liveness check: checks if domain or token is alive on blockchain
-* **`GET`** readiness: checks if domain or token is ready to configured by user
-* **`GET`** deaddata/{domainortoken}: retrieves the dead data for the domain or token
 * **`GET`** metadata/{domainortoken}: retrieves the metadata for the domain or token
-* **`GET`** image/{domainortoken}: retrieves the image for the domain or token
-* **`GET`** image-src/{domainortoken}: retrieves the image source for the domain or token
 
 ### Resolution Service API Key
 
