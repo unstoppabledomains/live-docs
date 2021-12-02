@@ -40,6 +40,7 @@ npm install --save @uauth/js
 
 Build out the index.html file as follows:
 
+{% code title="index.html" %}
 ```html
 <html>
   <head>
@@ -51,11 +52,13 @@ Build out the index.html file as follows:
   </body>
 </html>
 ```
+{% endcode %}
 
 ## Step 3: Instantiate the library&#x20;
 
 Now, configure the app.js as follows:
 
+{% code title="app.js" %}
 ```javascript
 import UAuth from '@uauth/js'
 
@@ -65,11 +68,13 @@ const uauth = new UAuth({
   redirectUri: 'http://localhost:5000/callback',
 })
 ```
+{% endcode %}
 
 ## Step 4: Implement the login handler
 
 Add more code to the app.js file as follows:
 
+{% code title="app.js" %}
 ```javascript
 window.login = async () => {
   try {
@@ -81,6 +86,7 @@ window.login = async () => {
   }
 }
 ```
+{% endcode %}
 
 ## Step 5: Login with Unstoppable&#x20;
 
