@@ -2,9 +2,6 @@
 
 * [Getting Started](README.md)
 * [Get A Test Domain](get-test-domain.md)
-* [List of UD Integrated Apps](https://unstoppabledomains.com/apps)
-* [Register Your Integrated App](https://unstoppabledomains.com/app-submission)
-* [Discord Community Support](https://discord.com/invite/b6ZVxSZ9Hn)
 
 ## Send and Receive Crypto Payments
 
