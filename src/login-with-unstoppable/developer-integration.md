@@ -91,13 +91,13 @@ const uauth = new UAuth({
   clientSecret: process.env.REACT_APP_CLIENT_SECRET,
 
   // These are the scopes your app is requesting from the ud server.
-  scope: 'openid email wallet example',
+  scope: 'openid email wallet',
 
   // This is the url that the auth server will redirect back to after every authorization attempt.
-  redirectUri: 'http://localhost:5000/callback',
+  redirectUri: process.env.REACT_APP_REDIRECT_URI,
 
   // This is the url that the auth server will redirect back to after logging out.
-  postLogoutRedirectUri: 'http://localhost:5000',
+  postLogoutRedirectUri: process.env.REACT_APP_POST_LOGOUT_REDIRECT_URI,
 })
 ```
 {% endtab %}
