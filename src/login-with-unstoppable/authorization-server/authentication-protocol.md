@@ -1,11 +1,11 @@
 ---
 description: >-
-  This page describes the authorization protocol used in the Login with
+  This page describes the authentication protocol used in the Login with
   Unstoppable feature. The user's wallet signature is obtained using an
   extension of OIDC described below.
 ---
 
-# Authorization Protocol
+# Authentication Protocol
 
 Login with Unstoppable uses a modified version of the OpenID Connect (OIDC) protocol to obtain a user’s wallet signature. This allows domain owners to authorize access to information and resources in the same way as the OIDC specification. This modified OIDC protocol, when with a blockchain based domain system, enables a far better decentralized authorization experience across web3 applications.
 
