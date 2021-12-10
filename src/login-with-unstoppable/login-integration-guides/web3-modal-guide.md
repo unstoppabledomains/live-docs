@@ -102,7 +102,9 @@ const provider = await web3modal.connect()
 ```
 {% endcode %}
 
+{% hint style="success" %}
 **Congratulations!** You just implemented Login with Unstoppable.
+{% endhint %}
 
 ## Reference
 

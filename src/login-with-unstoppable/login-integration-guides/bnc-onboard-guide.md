@@ -117,7 +117,9 @@ await onboard.walletCheck()
 ```
 {% endcode %}
 
+{% hint style="success" %}
 **Congratulations!** You just implemented Login with Unstoppable.
+{% endhint %}
 
 ## Reference
 

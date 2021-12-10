@@ -164,4 +164,6 @@ const Profile: React.FC<RouteProps> = () => {
 }
 ```
 
+{% hint style="success" %}
 **Congratulations!** You just implemented Login with Unstoppable.
+{% endhint %}

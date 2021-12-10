@@ -100,4 +100,6 @@ The following command will run the app. Keep in mind that the credentials will o
 yarn parcel --port 5000 --open index.html
 ```
 
+{% hint style="success" %}
 **Congratulations!** You just implemented Login with Unstoppable.
+{% endhint %}

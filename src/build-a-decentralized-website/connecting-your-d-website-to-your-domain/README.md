@@ -72,3 +72,7 @@ For websites that exceed the 20MB file limit, we recommend using a dedicated pin
 * Add your **IPFS hash** to the respective field
 
 ![How to update IPFS hash field for your domain](../../../.gitbook/assets/add-ipfs-hash-mydomains.png)
+
+{% hint style="success" %}
+**Congratulations!** You just connected your d-website to your Unstoppable Domain.
+{% endhint %}

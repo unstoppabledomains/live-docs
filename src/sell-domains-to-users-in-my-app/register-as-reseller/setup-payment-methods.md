@@ -88,3 +88,7 @@ To track whether the customer’s payment was processed successfully, the develo
 The chargeID token is unique to each customer order, which is a secure method that allows UD to easily track your customer’s payments through the ‘Buy a Domain’ API endpoint. Please see the documentation for [Crypto Payments using CoinBase](https://commerce.coinbase.com/docs/#cryptocurrency-payments) for more information.
 
 To begin accepting crypto payments from your customers, Coinbase offers several methods of integrating their services into your application or website such as payment buttons, hosted pages, and shopping cart plugins. Please see the documentation for [CoinBase Commerce API](https://commerce.coinbase.com/docs/#not-a-developer) for more information.
+
+{% hint style="success" %}
+**Congratulations!** You just configured your Reseller account with Unstoppable Domains.
+{% endhint %}

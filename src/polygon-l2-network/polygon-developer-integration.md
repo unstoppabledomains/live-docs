@@ -142,3 +142,6 @@ Overall changes for **/domain and /domains\<domain name> routes**
 {% endtab %}
 {% endtabs %}
 
+{% hint style="success" %}
+**Congratulations!** You just implemented Polygon Layer2 Network.
+{% endhint %}
