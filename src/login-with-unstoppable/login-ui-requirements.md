@@ -8,7 +8,7 @@ description: This page details the UI requirements for Login with Unstoppable.
 
 During login, the user will see the resolved address and the information being requested by the application.
 
-![Consent screen for Login with Unstoppable](../../.gitbook/assets/consent-screen.png)
+![Consent screen for Login with Unstoppable](../.gitbook/assets/consent-screen-v2.png)
 
 ## UI Requirements
 
@@ -42,6 +42,6 @@ When a user clicks the Login with Unstoppable button, a modal is displayed which
 
 
 
-![User Enters Unstoppable Domain Address to Login to dApp](../../.gitbook/assets/login-domains-modal2.png)
+![User Enters Unstoppable Domain Address to Login to dApp](../.gitbook/assets/login-domains-modal2-v2.png)
 
 ##

@@ -18,7 +18,7 @@ An example scope configuration:
 
 The scopes requested by an application varies depending on the type of user data needed by the application. The scopes requested by the application will be presented to the user in a list.
 
-![Example scope list presented to UD users](../.gitbook/assets/consent-screen-marked.png)
+![Example scope list presented to UD users](../.gitbook/assets/consent-screen-marked-v2.png)
 
 Login with Unstoppable supports the following scopes which are detailed below:&#x20;
 
