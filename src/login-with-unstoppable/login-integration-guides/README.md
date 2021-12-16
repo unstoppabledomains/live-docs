@@ -10,24 +10,30 @@ Login with Unstoppable is a versatile feature with several integration pathways 
 
 ## Step 1: Get Login Credentials
 
-Before beginning the integration process for Login with Unstoppable, you must obtain client credentials and configure your application. Please see the [Getting Login Credentials Guide](../getting-login-credentials.md) for more details.
+Before beginning the integration process for Login with Unstoppable, you must obtain client credentials and configure your application. Please see the [**Getting Login Credentials Guide**](../getting-login-credentials.md) **** for more details.
 
 ## Step 2: Choose Your Integration Path
 
 There are several ways to integrate with Login with Unstoppable, which is detailed in the chart below.
 
-| Short Description                          | Pathway or Features                                                                                                                   | Integration Guides                                                                                                                                                                                                                                        |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| No Ethereum Provider with Popup Feature    | generic @uauth/js integration, no ethereum provider, with callback, with popup feature                                                | <ol><li><a href="../getting-login-credentials.md">Getting Login Credentials</a></li><li><a href="login-with-popup.md">Login with Unstoppable Guide with Popup</a></li><li><a href="../login-ui-requirements.md">Login UI Requirements</a></li></ol>       |
-| No Ethereum Provider with Popup Feature    | generic @uauth/js integration, no ethereum provider, with callback, no popup feature                                                  | <ol><li><a href="../getting-login-credentials.md">Getting Login Credentials</a></li><li><a href="login-without-popup.md">Login with Unstoppable Guide without Popup</a></li><li><a href="../login-ui-requirements.md">Login UI Requirements</a></li></ol> |
-| Ethereum Provider with Web3 React Library  | custom @uauth/js integration, with ethereum provider, web3-react library                                                              | <ol><li><a href="../getting-login-credentials.md">Getting Login Credentials</a></li><li><a href="web3-react-guide.md">Web3 React Guide</a></li><li><a href="../login-ui-requirements.md">Login UI Requirements</a></li></ol>                              |
-| Ethereum Provider with Web3 Modal Library  | custom @uauth/js integration, with ethereum provider, web3modal library                                                               | <ol><li><a href="../getting-login-credentials.md">Getting Login Credentials</a></li><li><a href="web3-modal-guide.md">Web3 Modal Guide</a></li><li><a href="../login-ui-requirements.md">Login UI Requirements</a></li></ol>                              |
-| Ethereum Provider with BNC Onboard Library | custom @uauth/js integration, with ethereum provider, bnc-onboard library                                                             | <ol><li><a href="../getting-login-credentials.md">Getting Login Credentials</a></li><li><a href="bnc-onboard-guide.md">BNC Onboard Guide</a></li><li><a href="../login-ui-requirements.md">Login UI Requirements</a></li></ol>                            |
-| Custom uAuth Node without Frontend UI      | custom @uauth/node integration for server-side applications, without frontend UI, DOM UI package recommended to help with frontend UI | <ol><li><a href="../getting-login-credentials.md">Getting Login Credentials</a></li><li><a href="node-js-server-guide.md">Node.js Server Guide</a></li><li><a href="../login-ui-requirements.md">Login UI Requirements</a></li></ol>                      |
+| Short Description                          | Pathway or Features                                                                                                                   | Integration Guides                                                   |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| No Ethereum Provider with Popup Feature    | generic @uauth/js integration, no ethereum provider, with callback, with popup feature                                                | [Login with Unstoppable Guide with Popup](login-with-popup.md)       |
+| No Ethereum Provider with Popup Feature    | generic @uauth/js integration, no ethereum provider, with callback, no popup feature                                                  | [Login with Unstoppable Guide without Popup](login-without-popup.md) |
+| Ethereum Provider with Web3 React Library  | custom @uauth/js integration, with ethereum provider, web3-react library                                                              | [Web3 React Guide](web3-react-guide.md)                              |
+| Ethereum Provider with Web3 Modal Library  | custom @uauth/js integration, with ethereum provider, web3modal library                                                               | [Web3 Modal Guide](web3-modal-guide.md)                              |
+| Ethereum Provider with BNC Onboard Library | custom @uauth/js integration, with ethereum provider, bnc-onboard library                                                             | [BNC Onboard Guide](bnc-onboard-guide.md)                            |
+| Custom uAuth Node without Frontend UI      | custom @uauth/node integration for server-side applications, without frontend UI, DOM UI package recommended to help with frontend UI | [Node.js Server Guide](node-js-server-guide.md)                      |
 
 {% hint style="info" %}
 The [UAuth Demo Application](https://uauth-demo.uc.r.appspot.com) is available for developer use along with a [single page sample application](https://github.com/unstoppabledomains/uauth/tree/main/examples/spa/src) to model the flow. Applications can also use Unstoppable Domain’s [UAuth Library](https://github.com/unstoppabledomains/uauth) to simplify the integration.&#x20;
 {% endhint %}
+
+## Step 3: Add Login UI Requirements
+
+Login with Unstoppable has UI requirements for the UD buttons, user modals, and authenticated user icons. For example, once a user has successfully authenticated, the application's UI should display the user’s domain name (instead of address) to confirm the authorization was successful.&#x20;
+
+Please follow the instructions in the [**Login UI Requirements Guide**](../login-ui-requirements.md) to complete this final step in the integration process.
 
 ## Resources
 

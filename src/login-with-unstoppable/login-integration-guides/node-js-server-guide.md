@@ -124,7 +124,7 @@ Developers can also create their own login system using a different session syst
 
 There are two UI options for when you create a server-side integration.
 
-### Option 1: Create a custom UI
+### Option 1: Create a Custom UI
 
 1. The form must call the endpoint where the [`login` handler](node-js-server-guide.md#step-3a-a-login-method) is called and it must correspond with the parameters to that function. See this example corresponding with the `login` handler configured above in [Step 3D](node-js-server-guide.md#step-3d-putting-it-all-together).
 
