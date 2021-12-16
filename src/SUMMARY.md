@@ -56,10 +56,10 @@
   * [Web3 Modal Guide: Login with Unstoppable](login-with-unstoppable/login-integration-guides/web3-modal-guide.md)
   * [BNC Onboard Guide: Login with Unstoppable](login-with-unstoppable/login-integration-guides/bnc-onboard-guide.md)
   * [Node.js Server Guide: Login with Unstoppable](login-with-unstoppable/login-integration-guides/node-js-server-guide.md)
+* [Login UI Requirements](login-with-unstoppable/login-ui-requirements.md)
+* [Scopes for Login](login-with-unstoppable/scopes-for-login.md)
 * [Authorization Server](login-with-unstoppable/authorization-server/README.md)
   * [Authentication Protocol](login-with-unstoppable/authorization-server/authentication-protocol.md)
-* [Scopes for Login](login-with-unstoppable/scopes-for-login.md)
-* [Login UI Requirements](login-with-unstoppable/login-ui-requirements.md)
 
 ## Polygon L2 Network
 
