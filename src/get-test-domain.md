@@ -33,8 +33,9 @@ Free test domains are available via three different methods:&#x20;
 ### Step 1: Gather Requirements for the Website Faucet
 
 * A web3 compatible wallet
-* [Configure your wallet for Rinkeby Testnet](get-test-domain.md#step-1-gather-requirements-for-etherscan) or [Configure your wallet for Polygon/Mumbai](get-test-domain.md#step-1.-configure-your-metamask-wallet)
-* [Get free Ether from Rinkeby faucet](get-test-domain.md#step-2.-get-matic-tokens-though-the-faucet) or [Get free MATIC tokens from Polygon faucet](get-test-domain.md#step-2.-get-matic-tokens-though-the-faucet-1) to cover transaction fees (only for domains minted on testnet)
+* Configure your wallet for [Rinkeby Testnet](get-test-domain.md#step-1-gather-requirements-for-etherscan) or [Polygon/Mumbai](get-test-domain.md#step-1.-configure-your-metamask-wallet)
+* Get[ free Ether from Rinkeby faucet](get-test-domain.md#step-2.-get-matic-tokens-though-the-faucet) or [free MATIC tokens from Polygon faucet](get-test-domain.md#step-2.-get-matic-tokens-though-the-faucet-1) to cover transaction fees (only for Rinkeby and Mumbai Testnet)
+* Ensure you have funds in your wallet to pay transaction fees (only for Polygon Mainnet)
 
 {% hint style="info" %}
 Domains on Polygon Mainnet can be purchased for free through Unstoppable Website Faucet, but users will need to cover their own gas fees to mint the domain.
@@ -52,7 +53,7 @@ Domains on Polygon Mainnet can be purchased for free through Unstoppable Website
   * **custom records**: add optional key and value pairs
 
 {% hint style="warning" %}
-**Important:** For [Login with Unstoppable Integrations](login-with-unstoppable/login-integration-guides/), users must select **Polygon Mainnet** as the domain network.
+**Important:** For [Login with Unstoppable integrations](login-with-unstoppable/login-integration-guides/), users must select **Polygon Mainnet** as the domain network.
 {% endhint %}
 
 ![Configure options on Unstoppable website faucet](.gitbook/assets/website-faucet-options.png)
@@ -72,10 +73,10 @@ Congratulations! You're the new proud owner of a test domain on your preferred n
 
 ## Get a domain using Etherscan
 
-### Step 1: Configure your MetaMask wallet for Etherscan
+### Step 1: Check Wallet Compatibility for Etherscan
 
-* Configure [MetaMask](https://metamask.io) or any wallet with [WalletConnect](https://walletconnect.org/wallets) support.
-* Ensure you have Ether on your Ethereum wallet to pay transaction fees.
+* Check that you have a wallet compatible with [WalletConnect](https://walletconnect.org/wallets) (e.g. [Trust Wallet](https://trustwallet.com), [MetaMask](https://metamask.io)).
+* Ensure you have enough Ether on your Ethereum wallet to pay transaction fees, if you are not planning to use Rinkeby Testnet.
 
 {% hint style="info" %}
 To calculate the transaction fee you'd like to target you can use services like [ETH Gas Station](https://ethgasstation.info/calculatorTxV.php). The average transaction gas usage to mint and transfer a new domains is around 180,000 gas.
@@ -89,8 +90,6 @@ To calculate the transaction fee you'd like to target you can use services like 
 * Click the **Give Me Ether** button.
 
 ![Retrieve free Ether through the faucet to cover gas fees for domains on Rinkeby testnet (Layer 1)](.gitbook/assets/rinkeby-faucet-free-ether.png)
-
-
 
 ### Step 3: Open the Etherscan Smart Contract Request
 
