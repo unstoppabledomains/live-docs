@@ -16,7 +16,7 @@
 ## Support Unstoppable Domains in a Web Browser
 
 * [How Browser Resolution Works](support-unstoppable-domains-in-a-web-browser/how-browser-resolution-works.md)
-* [Resolving Domains in Web Applications](support-unstoppable-domains-in-a-web-browser/resolving-domains-in-a-browser.md)
+* [Resolving Domains in Web Applications](support-unstoppable-domains-in-a-web-browser/resolving-domains-in-web-applications.md)
 * [Browser Resolution Algorithm](support-unstoppable-domains-in-a-web-browser/browser-resolution-algorithm.md)
 * [Browser Resolution Test Domains](support-unstoppable-domains-in-a-web-browser/test-domains.md)
 

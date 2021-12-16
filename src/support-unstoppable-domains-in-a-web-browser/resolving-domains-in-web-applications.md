@@ -32,7 +32,7 @@ yarn add @unstoppabledomains/resolution
 npm install @unstoppabledomains/resolution --save
 ```
 
-If you're interested in resolving domains via the command line, see the  [CLI section](resolving-domains-in-a-browser.md#command-line-interface) below.
+If you're interested in resolving domains via the command line, see the  [CLI section](resolving-domains-in-web-applications.md#command-line-interface) below.
 
 ## Using Resolution
 
@@ -166,15 +166,23 @@ To see all constructor options and factory methods check [Unstoppable API refere
 
 ## Autoconfiguration of Blockchain Network
 
-In some scenarios system might not be flexible enough to easy distinguish between various Ethereum testnets on compile time. For this case Resolution library provide a special async constructor which should be waited for `await Resolution.autonetwork(options)`. This method makes a JSON RPC "net\_version" call to the provider to get the network id.
+In some scenarios, the system might not be flexible enough to easily distinguish between various Ethereum testnets on compile time. For such cases, the resolution library provides a special async constructor which should be waited for `await Resolution.autonetwork(options)`. This method makes a JSON RPC "net\_version" call to the provider to get the network id.
 
-This method configures only ENS and CNS. ZNS is supported only on Zilliqa mainnet which is going to be used in any cases. You can provide a configured provider or a blockchain url as in the following example:
+This method configures CNS and UNS. ZNS is supported only on Zilliqa mainnet. You can provide a configured provider or a blockchain url as in the following example:
 
-```
-await Resolution.autonetwork({
-  cns: {provider},
-  ens: {url}
-});
+```json
+Resolution.autoNetwork({
+    uns: {
+        locations: {
+            Layer1: {
+                url: 'http://alchemy.com/ethereum/api-key'
+            },
+            Layer2: {
+                url: 'http://alchemy.com/polygon/api-key'
+            }
+        }
+    }
+})
 ```
 
 ## Error Handling

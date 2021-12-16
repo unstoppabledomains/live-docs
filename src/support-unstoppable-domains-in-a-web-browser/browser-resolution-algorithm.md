@@ -47,7 +47,7 @@ This serialization is the only data transformation required when converting a tr
 
 CNS records do not have a domain name associated with them. That is why there is no feature for storing your subdomain records inside a parent domain. Example: `www.example.com` record can only be set inside a resolver of `www.example.com` but never inside `example.com`.
 
-A recommended way to display content in a browser for crypto domains is explained in [Resolving domains in a browser](resolving-domains-in-a-browser.md).
+A recommended way to display content in a browser for crypto domains is explained in [Resolving domains in a browser](resolving-domains-in-web-applications.md).
 
 #### TTL records
 
@@ -86,7 +86,7 @@ Distributed Web (Dweb) records allow configuring a domain for distributed websit
 
 Record structure can be different based on the protocol. However, all protocols have a common `.hash` record used to reference content in the distributed network. Example: `dweb.ipfs.hash` for IPFS protocol.
 
-See [Resolving domains in a browser](resolving-domains-in-a-browser.md) for information on how to interpret those records.
+See [Resolving domains in a browser](resolving-domains-in-web-applications.md) for information on how to interpret those records.
 
 ### Legacy records support
 
