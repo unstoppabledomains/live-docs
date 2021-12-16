@@ -105,7 +105,9 @@ To calculate the transaction fee you'd like to target you can use services like 
 
 * Sign the transaction.
 
-![Etherscan wallet signature page](.gitbook/assets/step-4-etherscan-claim-domain.png) ![Etherscan error for insufficient funds](.gitbook/assets/step-4-1-etherscan-claim-domain.png)
+![Etherscan wallet signature page](.gitbook/assets/step-4-etherscan-claim-domain-small.png)
+
+![Etherscan error for insufficient funds](.gitbook/assets/step-4-1-etherscan-claim-domain-small.png)
 
 {% hint style="danger" %}
 If a transaction takes more gas than expected (more than 200,000 gas to call the claim method) or fails, that domain name may be already claimed. Double check that it's available and [contact us](https://discord.gg/b6ZVxSZ9Hn) if you continue to have problems.&#x20;
@@ -185,9 +187,9 @@ For example, the API response for .dao TLD 4amehash is `0xb5f2bbf81da581299d4ff7
 
 ### Step 4: Write the Polygonscan Smart Contract Request
 
-* Go to [Polygonscan/Mumbai](https://mumbai.polygonscan.com/address/0x428189346bb3CC52f031A1092fd47C919AC30A9f#writeProxyContract) Smart Contract Page
-* Choose **Write as Proxy** tab
-* Connect your wallet (Rinkeby)
+* Go to [Polygonscan/Mumbai](https://mumbai.polygonscan.com/address/0x428189346bb3CC52f031A1092fd47C919AC30A9f#writeProxyContract) Smart Contract Page.
+* Choose **Write as Proxy** tab.
+* Connect your wallet (Rinkeby).
 * Choose `claimToWithRecords` method and fill properties with needed values: receiver wallet address, TLD namehash, and test domain suffix.
 
 ![Enter data for 'claim to records' for Polygonscan domain (Layer2)](.gitbook/assets/polygonscan-claim-to-records.png)
