@@ -284,7 +284,7 @@ Always check address validity after receiving a result from the library. The use
 Resolution service provides an API for getting domain data and metadata regardless of that domain's location (whether it is stored in Ethereum, Zilliqa, or any other blockchain or further scaling solutions). The service is used to cache blockchain events in a database for easy retrieval without accessing blockchain APIs.
 
 {% hint style="warning" %}
-We will stop supporting ENS resolution for our website API on Dec 31, 2021. Developers can [integrate directly with ENS](https://docs.ens.domains/dapp-developer-guide/resolving-names) for continued support. In the future, our API resolution service will be hosted by Alchemy and Polygon as part of our [Layer 2 solution](../polygon-l2-network/polygon-high-level-overview.md).&#x20;
+We no longer support ENS resolution, but developers can [integrate directly with ENS](https://docs.ens.domains/dapp-developer-guide/resolving-names) for continued support. Our API resolution service is hosted by Alchemy and Polygon as part of our [Layer 2 solution](../polygon-l2-network/polygon-high-level-overview.md).&#x20;
 {% endhint %}
 
 The Github [Resolution Service Repository](https://github.com/unstoppabledomains/resolution-service) includes a comprehensive README on how to install and run the Resolution Service on your own server.

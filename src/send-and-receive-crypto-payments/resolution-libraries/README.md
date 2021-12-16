@@ -11,17 +11,12 @@ Resolution libraries are used for interacting with blockchain domain names. They
 
 ## Supported Domains for Resolution Libraries
 
-The Resolution Libraries support decentralized domains across three main zones:
+The Resolution Libraries support decentralized domains across two main zones:
 
 | Name Service                   | Supported Domains                                                                      |
 | ------------------------------ | -------------------------------------------------------------------------------------- |
 | Zilliqa Name Service (ZNS)     | `.zil`                                                                                 |
-| Ethereum Name Service (ENS)    | `.eth`, `.kred`, `.xyz`, `.luxe`                                                       |
 | Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
-
-{% hint style="warning" %}
-ENS is not supported in the latest version of our libraries, and there will be no future updates to ENS. The older version of our libraries can still be used for resolution, or developers will need to [integrate directly with ENS](https://docs.ens.domains/dapp-developer-guide/resolving-names).
-{% endhint %}
 
 ## Use Case: Retrieve a Domain Record
 

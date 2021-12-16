@@ -57,10 +57,18 @@ In order to set up a redirection to a traditional domain, you will need to do a 
 
 * On your computer, open a text editing software (for example: Notepad for Windows or TextEdit for Mac) and paste the following code.
 
-| <p>&#x3C;!DOCTYPE html></p><p>&#x3C;html></p><p>&#x3C;head></p><p>&#x3C;title>HTML Meta Tag&#x3C;/title></p><p>&#x3C;meta http-equiv = "refresh" content = "1; url = YOUR WEBSITE URL HERE" /></p><p>&#x3C;/head></p><p>&#x3C;body></p><p>&#x3C;p>YOUR WEBSITE DESCRIPTION HERE &#x3C;/p></p><p>&#x3C;/body></p><p>&#x3C;/html></p> |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-
-
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Meta Tag</title>
+<meta http-equiv = "refresh" content = "1; url = YOUR WEBSITE URL HERE" />
+</head>
+<body>
+<p>YOUR WEBSITE DESCRIPTION HERE </p>
+</body>
+</html>
+```
 
 * Replace YOUR WEBSITE HERE with your URL and YOUR WEBSITE DESCRIPTION HERE with a short description of your website and save the file as **index.html** (do not use any other name).
 * Open index.html from your hard drive to see if everything is working before proceeding. Right-click the file and select "**Open with**" followed by your browser of choice.&#x20;

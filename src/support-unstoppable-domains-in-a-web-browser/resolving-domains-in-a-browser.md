@@ -9,34 +9,15 @@ description: >-
 
 Resolution is a library for interacting with blockchain domain names. It can be used to retrieve [payment addresses](../send-and-receive-crypto-payments/crypto-payments.md), IPFS hashes for [decentralized websites](../build-a-decentralized-website/overview-of-ipfs-and-d-web.md), and GunDB usernames for [decentralized chat](https://unstoppabledomains.com/chat).
 
-Resolution is built and maintained by Unstoppable Domains and supports decentralized domains across three main zones:
+Resolution is built and maintained by Unstoppable Domains and supports decentralized domains across two main zones:
 
 | Name Service                   | Supported Domains                                                                      |
 | ------------------------------ | -------------------------------------------------------------------------------------- |
 | Zilliqa Name Service (ZNS)     | `.zil`                                                                                 |
-| Ethereum Name Service (ENS)    | `.eth`, `.kred`, `.xyz`, `.luxe`                                                       |
 | Unstoppable Name Service (UNS) | `.crypto`, `.nft`, `.blockchain`, `.bitcoin`, `.coin`, `.wallet,` `.888`, `.dao`, `.x` |
 
 {% hint style="info" %}
 For more information on Unstoppable Domains Resolution, see [Resolving Domain Records](../domain-registry-essentials/resolving-domain-records.md) and the [Resolution API Reference](https://unstoppabledomains.github.io/resolution/).To make domain resolution easier, we've written libraries for web, Android, and iOS.
-{% endhint %}
-
-{% hint style="warning" %}
-ENS is not supported in the latest version of our libraries, and there will be no future updates to ENS. The older version of our libraries can still be used for resolution, or developers will need to [integrate directly with ENS](https://docs.ens.domains/dapp-developer-guide/resolving-names).
-{% endhint %}
-
-## ENS Support
-
-Ethereum Name Service requires installing additional packages to avoid errors thrown by the library when trying to resolve ENS domain.
-
-Required packages:
-
-* `"bip44-constants": "^8.0.5"`
-* `"@ensdomains/address-encoder": ">= 0.1.x <= 0.2.x"`
-* `"content-hash": "^2.5.2"`
-
-{% hint style="warning" %}
-ENS is not supported in the latest version of our libraries, and there will be no future updates to ENS. The older version of our libraries can still be used for resolution, or developers will need to [integrate directly with ENS](https://docs.ens.domains/dapp-developer-guide/resolving-names).
 {% endhint %}
 
 ## Installing Resolution
@@ -67,7 +48,7 @@ yarn add @unstoppabledomains/resolution
 
 Create a new file in your project, `address.js`.
 
-```
+```javascript
 const { default: Resolution } = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
 
@@ -93,7 +74,7 @@ resolveMultiChain('brad.crypto', 'USDT', 'OMNI');
 
 Execute the script.
 
-```
+```javascript
 $ node address.js
 brad.crypto resolves to 0x8aaD44321A86b170879d7A244c1e8d360c99DdA8
 brad.zil resolves to zil1yu5u4hegy9v3xgluweg4en54zm8f8auwxu0xxj
@@ -103,7 +84,7 @@ brad.zil resolves to zil1yu5u4hegy9v3xgluweg4en54zm8f8auwxu0xxj
 
 Create a new file in your project, `ipfs_hash.js`.
 
-```
+```javascript
 const { default: Resolution } = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
 
@@ -132,7 +113,7 @@ You can access this website via a public IPFS gateway: https://gateway.ipfs.io/i
 
 Create a new file in your project, `custom-resolution.js`.
 
-```
+```javascript
 const { default: Resolution } = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
 
@@ -170,8 +151,9 @@ Use the `-h` or `--help` flag to see all the available CLI options.
 
 ## Default Ethereum Providers
 
-Resolution provides zero-configuration experience by using built-in production-ready [Infura](http://infura.io) endpoint by default.\
-Default Ethereum provider is free to use without restrictions and rate-limits for `CNS (.crypto domains)` resolution.\
+Resolution provides zero-configuration experience by using built-in production-ready [Infura](http://infura.io) endpoint by default. Default Ethereum provider is free to use without restrictions and rate-limits for `CNS (.crypto domains)` resolution.
+
+\
 To resolve `ENS` domains on production it's recommended to change Ethereum provider.\
 Default provider can be changed by changing constructor options `new Resolution(options)` or by using one of the factory methods:
 
