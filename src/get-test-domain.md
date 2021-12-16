@@ -51,6 +51,10 @@ Domains on Polygon Mainnet can be purchased for free through Unstoppable Website
   * **cryptocurrency records**: add optional cryptocurrency addresses, such as bitcoin or litecoin
   * **custom records**: add optional key and value pairs
 
+{% hint style="warning" %}
+**Important:** For [Login with Unstoppable Integrations](login-with-unstoppable/login-integration-guides/), users must select **Polygon Mainnet** as the domain network.
+{% endhint %}
+
 ![Configure options on Unstoppable website faucet](.gitbook/assets/website-faucet-options.png)
 
 {% hint style="info" %}
