@@ -17,7 +17,7 @@ To distinguish these test domains from paid domains, all test domains are prefix
 To prevent abuse, we ask that developers cover the cost of minting and transferring these domains to their wallets. **Unstoppable Domains does not make any money from issuing test domains.**
 
 {% hint style="info" %}
-[Rinkeby faucet](https://faucet.rinkeby.io) and [Polygon faucet](https://faucet.polygon.technology) both offer free money - Ether and matic tokens -  for domains minted on Rinkeby Testnet and Polygon Testnet, respectively.&#x20;
+[Rinkeby faucet](https://faucet.rinkeby.io) and [Polygon faucet](https://faucet.polygon.technology) both offer free money - Ether and matic tokens -  for domains minted on Rinkeby Testnet and Polygon Testnet, respectively. Please see the guides below for more information on this process.
 {% endhint %}
 
 ## Test Domain Options
