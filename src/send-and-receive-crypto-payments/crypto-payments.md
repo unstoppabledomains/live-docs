@@ -90,6 +90,24 @@ resolution.addr(domain: "ryan.crypto", ticker: "ETH") { result in
 }
 ```
 {% endtab %}
+
+{% tab title="resolution-go" %}
+```go
+package main
+
+import (
+    "fmt"
+
+    "github.com/unstoppabledomains/resolution-go"
+)
+
+func main() {
+    uns, _ := resolution.NewUnsBuilder().Build()
+    ethAddress, _ := uns.Addr("ryan.crypto", "ETH")
+    fmt.Println("ETH address for ryan.crypto is", ethAddress)
+}
+```
+{% endtab %}
 {% endtabs %}
 
 {% hint style="info" %}
@@ -148,6 +166,24 @@ resolution.multiChainAddress(domain: "udtestdev-usdt.crypto", ticker: "USDT", ch
   case .failure(let error):
      print("Expected USDT-ETC20 Address, but got \(error)")
   }
+
+```
+{% endtab %}
+
+{% tab title="resolution-go" %}
+```go
+package main
+
+import (
+    "fmt"
+
+    "github.com/unstoppabledomains/resolution-go"
+)
+
+func main() {
+    uns, _ := resolution.NewUnsBuilder().Build()
+    usdtAddress, _ := uns.AddrVersion("udtestdev-usdt.crypto", "USDT", "ERC20")
+    fmt.Println("USDT-ERC20 address for udtestdev-usdt.crypto is", usdtAddress)
 }
 ```
 {% endtab %}
@@ -272,6 +308,56 @@ resolution.addr(domain: "domain-with-error.crypto", ticker: "ETH") { result in
 To see all supported error codes please check [resolution-swift readme](https://github.com/unstoppabledomains/resolution-swift#possible-errors)
 {% endhint %}
 {% endtab %}
+
+{% tab title="resolution-go" %}
+```go
+package main
+
+import (
+    "fmt"
+
+    "github.com/unstoppabledomains/resolution-go"
+)
+
+func main() {
+    uns, err := resolution.NewUnsBuilder().Build()
+
+    if err != nil {
+        switch err.(type) {
+        // UnsConfigurationError Error when UNS resolution service is configured incorrectly
+        case *resolution.UnsConfigurationError:
+            fmt.Println("Uns configuration error:", err.Error())
+        default:
+            fmt.Println("Unknown error")
+        }
+    }
+
+    address, err := uns.Addr("domain-with-error.crypto", "ETH")
+
+    if err != nil {
+        switch err.(type) {
+        // DomainNotRegisteredError Error when domain is missing an owner
+        case *resolution.DomainNotRegisteredError:
+            fmt.Println("DomainNotRegisteredError:", err.Error())
+        // DomainNotConfiguredError Error when domain does not have a resolver set
+        case *resolution.DomainNotConfiguredError:
+            fmt.Println("DomainNotConfiguredError:", err.Error())
+        // DomainNotSupportedError Error when domain is not supported by the naming service
+        case *resolution.DomainNotSupportedError:
+            fmt.Println("DomainNotSupportedError:", err.Error())
+        // MethodIsNotSupportedError Error when naming services does not support called method
+        case *resolution.MethodIsNotSupportedError:
+            fmt.Println("MethodIsNotSupportedError:", err.Error())
+        // InvalidDomainNameReturnedError Error when ERC721 metadata provides returns incorrect domain name
+        case *resolution.InvalidDomainNameReturnedError:
+            fmt.Println("InvalidDomainNameReturnedError:", err.Error())
+        default:
+            fmt.Println("Unknown error")
+        }
+    }
+}
+```
+{% endtab %}
 {% endtabs %}
 
 {% hint style="danger" %}
@@ -295,4 +381,5 @@ Always check address validity after receiving a result from the library. The use
 * [JavaScript Resolution library](https://github.com/unstoppabledomains/resolution)
 * [Java Resolution library](https://github.com/unstoppabledomains/resolution-java)
 * [Swift Resolution library](https://github.com/unstoppabledomains/resolution-swift) &#x20;
+* [Golang Resolution library](https://github.com/unstoppabledomains/resolution-go)
 * [Unstoppable Domains Developer Community](https://discord.com/invite/b6ZVxSZ9Hn) Ask questions here!
