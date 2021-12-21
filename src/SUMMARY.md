@@ -11,6 +11,7 @@
 * [Resolve with Direct Blockchain Calls](send-and-receive-crypto-payments/direct-blockchain-calls/README.md)
   * [Resolve Unstoppable Domains with Direct Blockchain Calls](send-and-receive-crypto-payments/direct-blockchain-calls/resolve-unstoppable-domain-names.md)
   * [Resolve .zil With Direct Blockchain Calls](send-and-receive-crypto-payments/direct-blockchain-calls/resolve-.zil-without-libraries.md)
+* [Resolution Service API](send-and-receive-crypto-payments/resolution-service-api.md)
 * [Resolution CLI](send-and-receive-crypto-payments/resolution-cli.md)
 
 ## Support Unstoppable Domains in a Web Browser
