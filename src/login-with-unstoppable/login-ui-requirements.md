@@ -32,4 +32,4 @@ Once a user has successfully authenticated, the application should display the u
 
 ### Examples
 
-![UI Example for displaying authenticated user](../.gitbook/assets/second-UI-example-login-domains.png) ![Second UI Example for displaying authenticated user](../.gitbook/assets/brad-crypto-UI-recommendation.png)
+![UI Example for displaying authenticated user](<../.gitbook/assets/second-UI-example-login-domains (1).png>) ![Second UI Example for displaying authenticated user](../.gitbook/assets/brad-crypto-UI-recommendation.png)
