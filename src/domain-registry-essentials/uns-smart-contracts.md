@@ -30,8 +30,8 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Mainnet                  | [0x049aba7510f45BA5b64ea9E658E342F904DB358D](https://etherscan.io/address/0x049aba7510f45BA5b64ea9E658E342F904DB358D)                                |
 | Rinkeby                  | [0x7fb83000B8eD59D3eAD22f0D584Df3a85fBC0086](https://rinkeby.etherscan.io/address/0x7fb83000B8eD59D3eAD22f0D584Df3a85fBC0086)                        |
-| Polygon mainnet          | [0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f](https:/polygon%20mainnet.etherscan.io/address/0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f/)              |
-| Polygon testnet (Mumbai) | [0x2a93C52E7B6E7054870758e15A1446E769EdfB93](https:/polygon%20testnet%20\(mumbai\).etherscan.io/address/0x2a93C52E7B6E7054870758e15A1446E769EdfB93/) |
+| Polygon mainnet          | [0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f](https://polygonscan.com/address/0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f/)              |
+| Polygon testnet (Mumbai) | [0x2a93C52E7B6E7054870758e15A1446E769EdfB93](https://mumbai.polygonscan.com/address/0x2a93C52E7B6E7054870758e15A1446E769EdfB93/) |
 
 **Source code:** [contracts/UnsRegistry.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/UNSRegistry.sol)
 
@@ -43,8 +43,8 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Mainnet                  | [0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E](https://etherscan.io/address/0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E)                                |
 | Rinkeby                  | [0xE6729D224D00b3dd4FC731C4Ee3274E35Da06578](https://rinkeby.etherscan.io/address/0xE6729D224D00b3dd4FC731C4Ee3274E35Da06578)                        |
-| Polygon mainnet          | [0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00](https:/polygon%20mainnet.etherscan.io/address/0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00/)              |
-| Polygon testnet (Mumbai) | [0x332A8191905fA8E6eeA7350B5799F225B8ed30a9](https:/polygon%20testnet%20\(mumbai\).etherscan.io/address/0x332A8191905fA8E6eeA7350B5799F225B8ed30a9/) |
+| Polygon mainnet          | [0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00](https://polygonscan.com/address/0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00/)              |
+| Polygon testnet (Mumbai) | [0x332A8191905fA8E6eeA7350B5799F225B8ed30a9](https://mumbai.polygonscan.com/address/0x332A8191905fA8E6eeA7350B5799F225B8ed30a9/) |
 
 \
 
@@ -64,8 +64,8 @@ Under the surface, Registry is effectively a map of domain namehashes to key-val
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Mainnet                  | [0x2F659766E3D08561CA3408FbAba7C0749ab2c402](https://etherscan.io/address/0x2F659766E3D08561CA3408FbAba7C0749ab2c402)                                |
 | Rinkeby                  | [0x9ea4A63184ebE9CBA55CD1af473D98075Aa02b4C](https://rinkeby.etherscan.io/address/0x9ea4A63184ebE9CBA55CD1af473D98075Aa02b4C)                        |
-| Polygon mainnet          | [0x0000000000000000000000000000000000000000](https:/polygon%20mainnet.etherscan.io/address/0x0000000000000000000000000000000000000000/)              |
-| Polygon testnet (Mumbai) | [0x0000000000000000000000000000000000000000](https:/polygon%20testnet%20\(mumbai\).etherscan.io/address/0x0000000000000000000000000000000000000000/) |
+| Polygon mainnet          | [0x0000000000000000000000000000000000000000](https://polygonscan.com/address/0x0000000000000000000000000000000000000000/)              |
+| Polygon testnet (Mumbai) | [0x0000000000000000000000000000000000000000](https://mumbai.polygonscan.com/address/0x0000000000000000000000000000000000000000/) |
 
 \
 
@@ -89,8 +89,8 @@ The Unstoppable Domains team reserves the right to mint second-level domains and
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Mainnet                  | [0x2a7084870bB724175a3C96Da8FaA55128fa3E19D](https://etherscan.io/address/0x2a7084870bB724175a3C96Da8FaA55128fa3E19D)                                |
 | Rinkeby                  | [0xdAAf99A920D31F4f5720e4667b12b24e54A03070](https://rinkeby.etherscan.io/address/0xdAAf99A920D31F4f5720e4667b12b24e54A03070)                        |
-| Polygon mainnet          | [0x7be83293BeeDc9Eba1bd76c66A65F10F3efaeC26](https:/polygon%20mainnet.etherscan.io/address/0x7be83293BeeDc9Eba1bd76c66A65F10F3efaeC26/)              |
-| Polygon testnet (Mumbai) | [0x428189346bb3CC52f031A1092fd47C919AC30A9f](https:/polygon%20testnet%20\(mumbai\).etherscan.io/address/0x428189346bb3CC52f031A1092fd47C919AC30A9f/) |
+| Polygon mainnet          | [0x7be83293BeeDc9Eba1bd76c66A65F10F3efaeC26](https://polygonscan.com/address/0x7be83293BeeDc9Eba1bd76c66A65F10F3efaeC26/)              |
+| Polygon testnet (Mumbai) | [0x428189346bb3CC52f031A1092fd47C919AC30A9f](https://mumbai.polygonscan.com/address/0x428189346bb3CC52f031A1092fd47C919AC30A9f/) |
 
 **Source code:** [contracts/MintingManager.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/MintingManager.sol)
 
