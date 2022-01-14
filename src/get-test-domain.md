@@ -43,7 +43,7 @@ Domains on Polygon Mainnet can be purchased for free through Unstoppable Website
 
 ### Step 2: Configure the Test Domain
 
-* Go to the [Unstoppable Website Faucet](https://unstoppabledomains.com/developers) page for developers.
+* Go to the [Unstoppable Website Faucet](https://unstoppabledomains.com/developers/testdomain) page for developers.
 * Select the network for the domain: **Rinkeby Testnet**, **Polygon Mainnet,** or **Mumbai Testnet**.
 * Configure the domain options:
   * **domain extension**: .888, .crypto, .x, .coin, .wallet, .bitcoin, .nft, .dao
