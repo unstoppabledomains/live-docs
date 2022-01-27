@@ -7,6 +7,10 @@ description: >-
 
 # Getting Login Credentials
 
+{% hint style="info" %}
+You can begin App development right away while waiting on application approval. The application approval only relates to your application appearing on the UD global application screen and is not a blocker to integration.
+{% endhint %}
+
 ## Step 1: Register Your Application
 
 * **Go** to the Unstoppable Domains [Application Submission](https://unstoppabledomains.com/app-submission) page.
@@ -18,11 +22,6 @@ description: >-
 ## Step 2: Configure the Application
 
 * **Visit** the [App Dashboard](https://unstoppabledomains.com/app-dashboard) once your application has been created. (To see the status of the application, check your email or refresh the Application Dashboard.)
-
-{% hint style="info" %}
-You can begin App development right away while waiting on application approval. The application approval only relates to your application appearing on the UD global application screen and is not a blocker to integration.
-{% endhint %}
-
 * Click the **Edit** button next to the application you would like to configure for Login with Unstoppable.
 
 ![View Application Status and Edit an Application](<../../.gitbook/assets/pending-application (1).png>)
