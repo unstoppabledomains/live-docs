@@ -36,7 +36,7 @@ Input parameters:
 
 In order to use it, you need to add one step to main.yml:
 
-```
+```yaml
 - uses: aquiladev/ipfs-action@v0.1.1
   id: upload
   with:
@@ -53,7 +53,7 @@ The same GitHub Action allows you to upload a D-website to [Pinata](https://pina
 
 In order to use it, you need to add one step to main.yml:
 
-```
+```yaml
 - uses: aquiladev/ipfs-action@v0.1.3
   id: pinata
   with:

@@ -60,7 +60,7 @@ Overall changes for **/status route**
 
 {% tabs %}
 {% tab title="NEW Response" %}
-```
+```javascript
 {
    "blockchain":{
       "ETH":{
@@ -79,7 +79,7 @@ Overall changes for **/status route**
 {% endtab %}
 
 {% tab title="OLD response" %}
-```
+```javascript
 {
    "ETH":{
       "latestNetworkBlock":13230550,
@@ -105,7 +105,7 @@ Overall changes for **/domain and /domains\<domain name> routes**
 
 {% tabs %}
 {% tab title="NEW response" %}
-```
+```javascript
 {
   "records": {
     "crypto.BTC.address": "bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y",
@@ -124,7 +124,7 @@ Overall changes for **/domain and /domains\<domain name> routes**
 {% endtab %}
 
 {% tab title="OLD Response" %}
-```
+```javascript
 {
   "records": {
     "crypto.BTC.address": "bc1q359khn0phg58xgezyqsuuaha28zkwx047c0c3y",

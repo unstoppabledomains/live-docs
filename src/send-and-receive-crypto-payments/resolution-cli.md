@@ -14,7 +14,7 @@ For more information on resolving domains using the Resolution CLI option, pleas
 
 This will retrieve the ETH address:
 
-```
+```shell
 resolution resolve addr ETH -d brad.crypto
 "0x8aaD44321A86b170879d7A244c1e8d360c99DdA8"
 ```
@@ -25,7 +25,7 @@ The crypto.ETH.address can be located in the [Records Reference](../domain-regis
 
 And this will retrieve any record from the domain, if it exists, and return the following records:
 
-```
+```shell
 resolution resolve records crypto.ETH.address crypto.BTC.address -d brad.crypto
 {
    "records": {

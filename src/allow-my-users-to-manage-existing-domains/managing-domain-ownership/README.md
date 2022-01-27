@@ -12,7 +12,7 @@ Entities that can control domains are defined by the ERC-721 standard:
 
 * **Owner.** This is a direct owner of a domain, which has full control in managing domain ownership and records.
 * **Operator.** Operators can control all domains owned by a user. There can be multiple operators per user.
-* **Approved address.** A domain owner can set an approved address that can control one particular domain. ERC-721 allows only one approved address per token \(i.e.: domain\).
+* **Approved address.** A domain owner can set an approved address that can control one particular domain. ERC-721 allows only one approved address per token (i.e.: domain).
 
 There are five basic operations that affect domain ownership:
 
@@ -32,7 +32,7 @@ Methods that change a direct owner of a domain can be called by either a domain 
 
 The `Registry` smart contract supports the following ERC-721 functions for transferring:
 
-```text
+```
 transferFrom(address from, address to, uint256 tokenId)
 
 safeTransferFrom(address from, address to, uint256 tokenId)
@@ -42,7 +42,7 @@ safeTransferFrom(address from, address to, uint256 tokenId, bytes _data)
 
 The `Registry` smart contract also implements the `setOwner` function, which is not a part of the ERC-721 standard:
 
-```text
+```
 setOwner(address to, uint256 tokenId)
 ```
 
@@ -72,7 +72,7 @@ For UNS, `setOwner` keeps domain records and resets an approved operator. All re
 
 Any Ethereum address can set multiple operators, allowing them to manage domains that a caller owns directly. This is an operation defined by ERC-721:
 
-```text
+```
 setApprovalForAll(address to, bool approved)
 ```
 
@@ -80,7 +80,7 @@ setApprovalForAll(address to, bool approved)
 
 An approved address can be set by either a domain owner or an operator. This method is defined by ERC-721 as well:
 
-```text
+```
 approve(address to, uint256 tokenId)
 ```
 
@@ -88,9 +88,8 @@ Approved addresses have equal rights as domain owners and operators, being able 
 
 ## Burning
 
-The `Registry` smart contract supports "burning" operations. After burning, a domain becomes available for minting again.
+The `Registry` smart contract supports "burning" operations. After burning, a domain is no longer available -- for purchase or re-minting.
 
-```text
+```
 burn(tokenId)
 ```
-

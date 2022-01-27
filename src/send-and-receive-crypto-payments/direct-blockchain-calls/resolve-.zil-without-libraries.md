@@ -34,7 +34,7 @@ Your folder structure should look like this:
 
 Next, let’s open our HTML page and add some boilerplate code. We are going to use the [js-sha256](https://cdnjs.com/libraries/js-sha256) CDN for encoding the domain.
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
     
@@ -72,7 +72,7 @@ Next, let’s open our HTML page and add some boilerplate code. We are going to 
 
 This is a simple HTML document with a main container in the body. It contains an input field for our user, a button to resolve the domain, and another div where we’ll display the results.
 
-## Add javascript to activate the button and layout <a href="516b" id="516b"></a>
+## Add javascript to activate the button and layout <a href="#516b" id="516b"></a>
 
 Now that we have our index.html file set up, let’s add some javascript. We can start by opening our index.js file and defining two constants:
 
@@ -83,7 +83,7 @@ Now that we have our index.html file set up, let’s add some javascript. We can
 
 We’ll discuss the registry contract address later in this guide.
 
-```
+```javascript
 const ZILLIQA_API = “https://api.zilliqa.com/";
 const UD_REGISTRY_CONTRACT_ADDRESS = “9611c53BE6d1b32058b2747bdeCECed7e1216793”;
 ```
@@ -92,7 +92,7 @@ Next, we’ll need to define and attach the function `resolve` to our HTML butto
 
 We can start writing this function by taking our input from the text field and preparing to handle an incorrect domain. The following code snippet shows the start of the resolve function:
 
-```
+```javascript
 const ZILLIQA_API = "https://api.zilliqa.com/";
 const UD_REGISTRY_CONTRACT_ADDRESS = "9611c53BE6d1b32058b2747bdeCECed7e1216793";
 
@@ -109,7 +109,7 @@ document.getElementById("button").addEventListener('click', () => resolve());
 
 We will revisit [error handling](resolve-.zil-without-libraries.md#4e70) later in this guide.
 
-## Tokenize Your Domain by Namehashing <a href="d25c" id="d25c"></a>
+## Tokenize Your Domain by Namehashing <a href="#d25c" id="d25c"></a>
 
 Namehashing is an algorithm that tokenizes your domain name in a way that a Zilliqa smart contract can understand.
 
@@ -117,7 +117,7 @@ To tokenize our domain, we’ll need to split the domain by the “.” characte
 
 We’ll also want to implement an `arrayToHex` function to get the result as a string, as well as a wrapper function `namehash`.
 
-```
+```javascript
 function namehash(name) {
   const hashArray = hash(name);
   return arrayToHex(hashArray);
@@ -154,7 +154,7 @@ It is essential to know the difference between Zilliqa namehashing and [EIP-137]
 
 Let’s use this function to take a namehash of our userInput in index.js:
 
-```
+```javascript
 async function resolve() {
   const userInput = (document.getElementById("input")).value;
   if (!userInput.endsWith(".zil")) {
@@ -166,7 +166,7 @@ async function resolve() {
 }
 ```
 
-## Get the resolver address <a href="8eeb" id="8eeb"></a>
+## Get the resolver address <a href="#8eeb" id="8eeb"></a>
 
 Our next step is to fetch two very important addresses attached to every Unstoppable domain: the **owner address** and the **resolver contract address**. We can get them by querying the Unstoppable Domains [ZNS Registry Contract](https://viewblock.io/zilliqa/address/zil1jcgu2wlx6xejqk9jw3aaankw6lsjzeunx2j0jz).
 
@@ -183,7 +183,7 @@ In order to get the BTC address from a domain, we will need two queries: one to 
 
 Let’s write a function to make a JSON-RPC POST API request to the Zilliqa blockchain using their gateway. This function will take an array of parameters that we want to send and make a POST call to the Zilliqa API. The following code snippet shows the `FetchZilliqa` function:
 
-```
+```javascript
 async function fetchZilliqa(params) {
   const body = {
     method: "GetSmartContractSubState",
@@ -210,7 +210,7 @@ The parameters we need to send are:
 
 Let’s update our resolve function and use the **fetchZilliqa** function:
 
-```
+```javascript
 async function resolve() {
   const userInput = document.getElementById("input").value;
   if (!userInput.endsWith(".zil")) {
@@ -244,7 +244,7 @@ async function resolve() {
 
 Now if we query for “**brad.zil**” we should get a response as below:
 
-```
+```javascript
 {
   "id": "1",
   "jsonrpc": "2.0",
@@ -272,13 +272,13 @@ ownerAddress:“0x2d418942dce1afa02d0733a2000c71b371a6ac07”,
 resolverAddress: “0xdac22230adfe4601f00631eae92df6d77f054891”
 ```
 
-## Fetch the records <a href="4324" id="4324"></a>
+## Fetch the records <a href="#4324" id="4324"></a>
 
 After we verify that a domain has an owner address, we can query its resolver contract address for its records.
 
 We can use our `fetchZilliqa` function again, only this time change the parameters to contain the **resolver address**. For the state keys, we can pass an empty array. This code snippet shows how to fetch  records with `fetchZilliqa` function:
 
-```
+```javascript
 const recordResponse = await fetchZilliqa([
   resolverAddress.replace("0x", ""),
   "records",
@@ -308,11 +308,11 @@ We should get an object printed on our console with all the keys registered unde
 }
 ```
 
-## Display the resolution <a href="d7a9" id="d7a9"></a>
+## Display the resolution <a href="#d7a9" id="d7a9"></a>
 
 Since this is a simple example, we won’t get too fancy. We’ll just create a span element for each record containing its key and value, its owner address, and its resolver address.
 
-```
+```javascript
 function cleanDOM(parent) {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
@@ -347,7 +347,7 @@ function displayResolution(resolution) {
 
 Let’s also call this function right after we get the records. Here's the usage of `displayResolution` inside resolve function:
 
-```
+```javascript
 const recordResponse = await fetchZilliqa([
     resolverAddress.replace("0x", ""),
     "records",
@@ -363,7 +363,7 @@ We should see something like the following on successful resolution:
 
 ![Example of a successful domain resolution](../../../.gitbook/assets/zil-successful-domain-resolution.png)
 
-## Set up error notifications <a href="4e70" id="4e70"></a>
+## Set up error notifications <a href="#4e70" id="4e70"></a>
 
 Now that we have made a successful call, let’s deal with all possible errors that might come up during the resolution. We can easily distinguish some of the use cases for our errors:
 
@@ -376,7 +376,7 @@ Now that we have made a successful call, let’s deal with all possible errors t
 
 For our purposes, we’ll want to create a function to place an error in our records div. We’ll also want to add a boolean argument `cleanDom` to remove everything from the records div before we place an error for display.
 
-```
+```javascript
 function displayError(message, cleanDom) {
   const mainContainer = document.getElementById('records');
   if (cleanDom) {
@@ -398,7 +398,7 @@ We will need to display errors in two functions: `resolve` and `displayResolutio
 
 ### Final resolve function
 
-```
+```javascript
 async function resolve() {
   const userInput = document.getElementById("input").value;
   if (!userInput.endsWith(".zil")) {
@@ -439,7 +439,7 @@ async function resolve() {
 
 ### Final displayResolution function
 
-```
+```javascript
 function displayResolution(resolution) {
   const {
     ownerAddress,
@@ -481,7 +481,7 @@ The following table displays some domains to test for resolution:
 | unregistered.zil | domain is not registered    |
 | paulalcock.zil   | domain is not configured    |
 
-## Resources <a href="8b90" id="8b90"></a>
+## Resources <a href="#8b90" id="8b90"></a>
 
 * [Full source code for this guide](https://github.com/unstoppable-domains-integrations/zil-Integration)
 * [UD Discord Community](https://discord.gg/b6ZVxSZ9Hn)

@@ -23,15 +23,8 @@ The Resolution Libraries support decentralized domains across two main zones:
 Retrieve any record of a domain. Applications sometimes set custom records for a domain to use within their application. The code snippets below show how to do this for Java, JavaScript, Swift, and Golang.
 
 {% tabs %}
-{% tab title="Java" %}
-```
-String record = resolution.getRecord("ryan.crypto", "custom.record.value");
-assertEquals("Example custom record value", record);
-```
-{% endtab %}
-
 {% tab title="JavaScript" %}
-```
+```javascript
 const { default: Resolution } = require('@unstoppabledomains/resolution');
 const resolution = new Resolution();
 
@@ -46,8 +39,15 @@ resolveCustomRecord('homecakes.crypto', 'custom.record.value');
 ```
 {% endtab %}
 
-{% tab title="Swift" %}
+{% tab title="Java" %}
+```java
+String record = resolution.getRecord("ryan.crypto", "custom.record.value");
+assertEquals("Example custom record value", record);
 ```
+{% endtab %}
+
+{% tab title="Swift" %}
+```swift
 // Lookup specific records
 resolution.record(domain: "ryan.crypto", record: "custom.record.value") { result in
   switch result {
@@ -62,7 +62,7 @@ resolution.record(domain: "ryan.crypto", record: "custom.record.value") { result
 {% endtab %}
 
 {% tab title="Golang" %}
-```
+```go
 uns, _ := resolution.NewUnsBuilder().Build()
   ethAddress, _ := uns.Addr("brad.crypto", "ETH")
   fmt.Println("ETH address for brad.crypto is", ethAddress)
