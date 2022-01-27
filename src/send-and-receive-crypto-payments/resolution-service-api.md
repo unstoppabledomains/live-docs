@@ -31,4 +31,4 @@ There are four endpoints in the Resolution Service API:
 
 ## Support
 
-For assistance with this API Specification, please join our[ Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community.
+For assistance with this API feature, please join our[ Discord channel](https://discord.gg/b6ZVxSZ9Hn) for real-time support from UD and the community.
