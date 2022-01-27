@@ -16,9 +16,9 @@ For Alchemy API documentation, endpoints, and support videos, visit Alchemy's de
 
 ## Unstoppable Domains Hosted API
 
-Unstoppable Domains will continue to run and support its own hosted API. This ensures continuity for our existing API service customers, but new customers interested in Resolution Service API will be encouraged to signup for Alchemy-hosted API service.
+Unstoppable Domains will continue to run and support its own hosted API. This ensures continuity for our existing API service customers, but new customers interested in Resolution Service API will be encouraged to signup for [Alchemy-hosted API service](resolution-service-api.md#alchemy-hosted-api).
 
-[Unstoppable Domains hosted API](https://github.com/unstoppabledomains/resolution-service) requires developers to accept Terms of Service before accessing the API key (email bd@unstoppabledomains.com to sign or review TOS). For more on the UD Hosted API endpoints, see the [Unstoppable Domains Hosted API Specification](http://resolve.unstoppabledomains.com/api-docs/).&#x20;
+[Unstoppable Domains hosted API](https://github.com/unstoppabledomains/resolution-service) requires developers to accept Terms of Service before accessing the API key (email mailto:bd@unstoppabledomains.com to sign or review TOS). For more on the UD Hosted API endpoints, see the [Unstoppable Domains Hosted API Specification](http://resolve.unstoppabledomains.com/api-docs/).&#x20;
 
 ### UD Hosted API Endpoints
 
