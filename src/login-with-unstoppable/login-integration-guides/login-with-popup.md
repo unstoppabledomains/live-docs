@@ -120,9 +120,7 @@ Here are some of the most common error messages and how to fix them.&#x20;
 
 ### **Error: Port "5000" could not be used**
 
-MacOS Monterey (version 12) is already using Port 5000 for the Airplay Receiver, which is the default port used for local development.&#x20;
-
-If you see the following error message on MacOS, you need to turn off AirPlay Receiver in the Sharing preferences or use a different port for local development.
+If you see the following error message on MacOS, you need to turn off AirPlay Receiver in the Sharing preferences or use a different port for local development. MacOS Monterey (version 12) is already using Port 5000 for the Airplay Receiver, which is the default port used for local development.&#x20;
 
 ```
 lisa@Unstoppable-Lisa login % yarn parcel --port 5000 --open index.html
