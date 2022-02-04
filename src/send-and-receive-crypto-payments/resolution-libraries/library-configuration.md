@@ -15,7 +15,7 @@ Unstoppable libraries use Alchemy provider by default without restrictions and r
 {% endhint %}
 
 {% hint style="warning" %}
-ENS is not supported in the latest version of our libraries, and there will be no future updates to ENS. The older version of our libraries can still be used for resolution, or developers will need to [integrate directly with ENS](https://docs.ens.domains/dapp-developer-guide/resolving-names).
+Make sure to allow [mainnet.infura.io](http://mainnet.infura.io) and [polygon-mainnet.infura.io](http://polygon-mainnet.infura.io) or simply “https://\*.[infura.io](http://infura.io)” (if using the default) as a connect-src in your Content Security Policy to allow these requests through.
 {% endhint %}
 
 * [JavaScript Resolution library](library-configuration.md#javascript-resolution-library)&#x20;
