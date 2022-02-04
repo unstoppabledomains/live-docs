@@ -11,11 +11,11 @@ Each of the resolution libraries supports an Ethereum provider url for configura
 To choose an alternative Ethereum provider see [Nodes as a Service guide.](https://ethereum.org/en/developers/docs/nodes-and-clients/nodes-as-a-service/)
 
 {% hint style="info" %}
-Unstoppable libraries use Alchemy provider by default without restrictions and rate limits for UNS resolution. Default configuration can be considered as production-ready.
+Unstoppable libraries use Infura provider by default without restrictions and rate limits for UNS resolution. Default configuration can be considered as production-ready.
 {% endhint %}
 
 {% hint style="warning" %}
-Make sure to allow [mainnet.infura.io](http://mainnet.infura.io) and [polygon-mainnet.infura.io](http://polygon-mainnet.infura.io) or simply “https://\*.[infura.io](http://infura.io)” (if using the default) as a connect-src in your Content Security Policy to allow these requests through.
+Make sure to allow [mainnet.infura.io](http://mainnet.infura.io) and [polygon-mainnet.infura.io](http://polygon-mainnet.infura.io) or simply “https://\*.[infura.io](http://infura.io)” (if using the default configuration) as a connect-src in your Content Security Policy to allow these requests through.
 {% endhint %}
 
 * [JavaScript Resolution library](library-configuration.md#javascript-resolution-library)&#x20;
