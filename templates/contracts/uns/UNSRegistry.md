@@ -12,10 +12,10 @@
     </tr>
     <tr>
         <td>Polygon mainnet</td>
-        <td><a href="https://polygon mainnet.etherscan.io/address/0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f">0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f</a></td>
+        <td><a href="https://polygonscan.com/address/0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f">0xa9a6A3626993D487d2Dbda3173cf58cA1a9D9e9f</a></td>
     </tr>
     <tr>
         <td>Polygon testnet (Mumbai)</td>
-        <td><a href="https://polygon testnet (mumbai).etherscan.io/address/0x2a93C52E7B6E7054870758e15A1446E769EdfB93">0x2a93C52E7B6E7054870758e15A1446E769EdfB93</a></td>
+        <td><a href="https://mumbai.polygonscan.com/address/0x2a93C52E7B6E7054870758e15A1446E769EdfB93">0x2a93C52E7B6E7054870758e15A1446E769EdfB93</a></td>
     </tr>
 </table>
