@@ -15,18 +15,38 @@ const MarkdownFile = Path.join(TemplatesDir, 'markdown', NamingService + '-smart
 const TemplateToRender = Path.join(TemplatesDir, NamingService + '-smart-contracts-template.md');
 const FileToRender = Path.join('src', 'domain-registry-essentials', NamingService + '-smart-contracts.md');
 const CotractTableTemplate = Fs.readFileSync(Path.join(TemplatesDir, 'contracts', 'contract-table-template.ejs'), 'utf-8');
+enum NetworkIds {
+    Mainnet = 1,
+    Ropsten = 3,
+    Rinkeby = 4,
+    Goerli = 5,
+    Kovan = 42,
+    PolygonMainnet = 137,
+    PolygonTestnet = 80001
+}
 const Networks: Record<number, string> = {
-    1: 'Mainnet',
-    3: 'Ropsten',
-    4: 'Rinkeby',
-    5: 'Goerli',
-    42: 'Kovan',
-    137: 'Polygon mainnet',
-    80001: 'Polygon testnet (Mumbai)',
+    [NetworkIds.Mainnet]: 'Mainnet',
+    [NetworkIds.Ropsten]: 'Ropsten',
+    [NetworkIds.Rinkeby]: 'Rinkeby',
+    [NetworkIds.Goerli]: 'Goerli',
+    [NetworkIds.Kovan]: 'Kovan',
+    [NetworkIds.PolygonMainnet]: 'Polygon mainnet',
+    [NetworkIds.PolygonTestnet]: 'Polygon testnet (Mumbai)',
 };
+
+const BlockchainExplorerURLs: Record<number, string> = {
+    [NetworkIds.Mainnet]: 'https://etherscan.io',
+    [NetworkIds.Ropsten]: 'https://ropsten.etherscan.io',
+    [NetworkIds.Rinkeby]: 'https://rinkeby.etherscan.io',
+    [NetworkIds.Goerli]: 'https://goerli.etherscan.io',
+    [NetworkIds.Kovan]: 'https://kovan.etherscan.io',
+    [NetworkIds.PolygonMainnet]: 'https://polygonscan.com',
+    [NetworkIds.PolygonTestnet]: 'https://mumbai.polygonscan.com',
+}
 
 type Row = {
     network: string,
+    blockchainExplorerURL: string,
     address: string,
     legacyAddresses: string[],
 }
@@ -80,6 +100,7 @@ function generateContractTables(contractName: string, filesToInclude: string[]) 
 
         rows.push({
             network: Networks[Number(id)],
+            blockchainExplorerURL: BlockchainExplorerURLs[Number(id)],
             address: contract.address,
             legacyAddresses: contract.legacyAddresses,
         });

@@ -12,10 +12,10 @@
     </tr>
     <tr>
         <td>Polygon mainnet</td>
-        <td><a href="https://polygon mainnet.etherscan.io/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
+        <td><a href="https://polygonscan.com/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
     </tr>
     <tr>
         <td>Polygon testnet (Mumbai)</td>
-        <td><a href="https://polygon testnet (mumbai).etherscan.io/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
+        <td><a href="https://mumbai.polygonscan.com/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
     </tr>
 </table>

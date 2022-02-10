@@ -11,13 +11,13 @@
         <td><a href="https://rinkeby.etherscan.io/address/0x3A2e74CF832cbA3d77E72708d55370119E4323a6">0x3A2e74CF832cbA3d77E72708d55370119E4323a6</a></td>
     </tr>
 </table>
-</br>
+<br>
 <table>
     <th>Network</th>
     <th>Legacy addresses</th>
     <tr>
         <td>Mainnet</td>
-           <td><a 
+           <td><a
                     href="https://etherscan.io/address/0x7ea9Ee21077F84339eDa9C80048ec6db678642B1">0x7ea9Ee21077F84339eDa9C80048ec6db678642B1</a>
             </td>
     </tr>
