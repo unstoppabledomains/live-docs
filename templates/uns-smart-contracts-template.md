@@ -152,16 +152,6 @@ Utility contracts are generally used to share common functionality between other
 
 - [UNSRegistry](uns-smart-contracts.md#unsregistry)
 
-### BulkWhitelistedRole
-
-`BulkWhitelistedRole` is an extension of Open Zeppelin's `WhitelistedRole` that adds bulk operations for adding and removing whitelisted accounts.
-
-**Source code:** [contracts/roles/BulkWhitelistedRole.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/roles/BulkWhitelistedRole.sol)
-
-**Used by:**
-
-- [WhitelistedMinter](uns-smart-contracts.md#whitelistedminter)
-
 ### CapperRole
 
 `CapperRole` is an extension of Open Zeppelin's `AccessControlUpgradeable` that adds operations for adding and removing capper accounts.
@@ -190,7 +180,6 @@ Utility contracts are generally used to share common functionality between other
 
 **Used by:**
 
-- [BulkWhitelistedRole.sol](uns-smart-contracts.md#bulkwhitelistedrole)
 - [TwitterValidationOperator.sol](uns-smart-contracts.md#twittervalidationoperator)
 
 ### MultiSend

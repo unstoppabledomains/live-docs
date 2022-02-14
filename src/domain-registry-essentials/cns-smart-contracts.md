@@ -144,48 +144,6 @@ This section lists all the smart contracts that users can directly interact with
 
 **Source code:** [contracts/controllers/DomainZoneController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/DomainZoneController.sol)
 
-### FreeMinter
-
-`FreeMinter` is a contract that can be used for allowing any user to freely mint a test domain with `udtestdev-` prefix.
-
-**Source code:** [contracts/controllers/FreeMinter.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/util/FreeMinter.sol)  
-
-[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
-<table>
-    <th>Network</th>
-    <th>Contract address</th>
-    <tr>
-        <td>Mainnet</td>
-        <td><a href="https://etherscan.io/address/0x1fC985cAc641ED5846b631f96F35d9b48Bc3b834">0x1fC985cAc641ED5846b631f96F35d9b48Bc3b834</a></td>
-    </tr>
-    <tr>
-        <td>Rinkeby</td>
-        <td><a href="https://rinkeby.etherscan.io/address/0x84214215904cDEbA9044ECf95F3eBF009185AAf4">0x84214215904cDEbA9044ECf95F3eBF009185AAf4</a></td>
-    </tr>
-</table>
-
-
-### WhitelistedMinter
-
-`WhitelistedMinter` defines an interface for minting second-level domains. This smart contract is primarily used by the Unstoppable Domains team, but its interface also supports delegating minting process to other parties via [Meta Transactions](../managing-domains/meta-transactions.md). All calls to `WhitelistedMinter` are proxied to the `Registry` via the [MintingController](cns-smart-contracts.md#mintingcontroller) smart contract.
-
-[comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
-<table>
-    <th>Network</th>
-    <th>Contract address</th>
-    <tr>
-        <td>Mainnet</td>
-        <td><a href="https://etherscan.io/address/0xd3fF3377b0ceade1303dAF9Db04068ef8a650757">0xd3fF3377b0ceade1303dAF9Db04068ef8a650757</a></td>
-    </tr>
-    <tr>
-        <td>Rinkeby</td>
-        <td><a href="https://rinkeby.etherscan.io/address/0xbcB32f13f90978a9e059E8Cb40FaA9e6619d98e7">0xbcB32f13f90978a9e059E8Cb40FaA9e6619d98e7</a></td>
-    </tr>
-</table>
-
-
-**Source code:** [contracts/util/WhitelistedMinter.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/util/WhitelistedMinter.sol)
-
 ### TwitterValidationOperator
 
 `TwitterValidationOperator` is used when initiating Chainlink verification requests to link domain records with Twitter usernames.
@@ -213,7 +171,7 @@ The Unstoppable Domains team reserves the right to mint second-level domains and
 
 ### MintingController
 
-The deployed version of the `Registry` smart contract only allows `MintingController` to mint second-level domains. This smart contract is used by [WhitelistedMinter](cns-smart-contracts.md#whitelistedminter) as a proxy.
+The deployed version of the `Registry` smart contract only allows `MintingController` to mint second-level domains.
 
 [comment]: <> (This is an auto-generated table with CNS smart-contract addresses. See README for more info.)
 <table>
@@ -311,14 +269,13 @@ The `IDataReader` interface declares the methods that are unique to the `ProxyRe
 
 ### IMintingController
 
-The `IMintingController` interface declares a set of methods for minting, which both `MintingController` and `WhitelistedMinter` implement.
+The `IMintingController` interface declares a set of methods for minting, which both `MintingController` implement.
 
 **Source code:** [contracts/controllers/IMintingController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/IMintingController.sol)
 
 **Implemented by:**
 
 - [MintingController](cns-smart-contracts.md#mintingcontroller)
-- [WhitelistedMinter](cns-smart-contracts.md#whitelistedminter)
 
 ### ISignatureController
 
@@ -353,16 +310,6 @@ The `ERC677Receiver` interface declares an ERC-677 method for receiving smart co
 ## Utility contracts
 
 Utility contracts are generally used to share common functionality between other smart contracts. This list also includes some contracts that are used internally by the Unstoppable Domains team.
-
-### BulkWhitelistedRole
-
-`BulkWhitelistedRole` is an extension of Open Zeppelin's `WhitelistedRole` that adds bulk operations for adding and removing whitelisted accounts.
-
-**Source code:** [contracts/util/BulkWhitelistedRole.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/util/BulkWhitelistedRole.sol)
-
-**Used by:**
-
-- [WhitelistedMinter](cns-smart-contracts.md#whitelistedminter)
 
 ### ControllerRole
 

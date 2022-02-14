@@ -19,11 +19,7 @@ Meta-transactions work by having users sign function calls along with a nonce. T
 For example, `resetFor` is the meta-transaction version of `reset`. This method has an additional `signature` argument as the last parameter.
 
 {% hint style="info" %}
-For CNS, the meta-transaction versions of `Registry` functions are implemented in the [SignatureController.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/controllers/SignatureController.sol) contract, not in the registry itself. The source code for signature validation can be found in [SignatureUtil.sol](https://github.com/unstoppabledomains/dot-crypto/blob/master/contracts/util/SignatureUtil.sol).
-{% endhint %}
-
-{% hint style="info" %}
-For UNS, the meta-transaction versions of `Registry`  functions are included in the registry. The source code for signature validation can be found in [RegistryFowarder.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/metatx/RegistryForwarder.sol).
+For UNS and CNS, the meta-transaction versions of `Registry`  functions are included in the registry. The source code for signature validation can be found in [RegistryFowarder.sol](https://github.com/unstoppabledomains/uns/blob/main/contracts/metatx/RegistryForwarder.sol).
 {% endhint %}
 
 ## Token nonce
@@ -46,51 +42,7 @@ A meta transaction requires 2 signatures: one passed as a method argument and on
 * A [Function selector](https://solidity.readthedocs.io/en/v0.7.0/abi-spec.html#function-selector) of the original method
 * The original method parameters (the one without signature)
 
-### CNS Signature Generation
-
-CNS Example for a `reset` method call for a domain:
-
-```javascript
-const domain = 'example.crypto';
-const methodName = 'reset';
-const methodParams = ['uint256'];
-const contractAddress = '0xb66DcE2DA6afAAa98F2013446dBCB0f4B0ab2842';
-// Can be different or the same as contractAddress
-const controllerContractAddress = '0xb66DcE2DA6afAAa98F2013446dBCB0f4B0ab2842';
-const tokenId = namehash(domain);
-
-function generateMessageToSign(
-  contractAddress: string,
-  signatureContract: string,
-  methodName: string,
-  methodParams: string[],
-  tokenId: string,
-  params: any[],
-) {
-  return solidityKeccak256(
-    ['bytes32', 'address', 'uint256'],
-    [
-      solidityKeccak256(
-        ['bytes'],
-        [encodeContractInterface(contractAddress, method, methodParams, params)],
-      ),
-      controllerContractAddress,
-      ethCallRpc(controllerContractAddress, 'nonceOf', tokenId),
-    ],
-  );
-}
-
-const message = generateMessageToSign(
-  contractAddress,
-  signatureContractAddress,
-  methodName,
-  methodParams,
-  tokenId,
-  [tokenId]
-);
-```
-
-### UNS Signature Generation
+### UNS and CNS Signature Generation
 
 UNS Example for a `reset` method call for a domain:
 
