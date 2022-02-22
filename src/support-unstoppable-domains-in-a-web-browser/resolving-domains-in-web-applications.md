@@ -151,16 +151,20 @@ Use the `-h` or `--help` flag to see all the available CLI options.
 
 ## Default Ethereum Providers
 
-Resolution provides zero-configuration experience by using built-in production-ready [Infura](http://infura.io) endpoint by default. Default Ethereum provider is free to use without restrictions and rate-limits for `CNS (.crypto domains)` resolution.
+Resolution provides zero-configuration experience by using built-in production-ready [Infura](http://infura.io) endpoint by default. Default Ethereum provider is free to use without restrictions and rate-limits for `CNS (.crypto domains)` resolution and can be used for most integrations.
 
-\
-To resolve `ENS` domains on production it's recommended to change Ethereum provider.\
-Default provider can be changed by changing constructor options `new Resolution(options)` or by using one of the factory methods:
+The Ethereum provider should be changed when resolving ENS domains in production. The default provider can be changed by changing constructor options `new Resolution(options)` or by using one of the factory methods:
 
 * `Resolution.infura()`
 * `Resolution.fromWeb3Version1Provider()`
 * `Resolution.fromEthersProvider()`
 * etc.
+
+To use a private Infura account, users can specify it in the `Resolution` constructor or use the special builder function for infura. For example:&#x20;
+
+```
+const resolution = Resolution.infura("custom-infura-project-id");
+```
 
 To see all constructor options and factory methods check [Unstoppable API reference](https://unstoppabledomains.github.io/resolution).
 
