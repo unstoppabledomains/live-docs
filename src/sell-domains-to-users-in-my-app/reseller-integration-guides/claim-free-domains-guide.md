@@ -14,7 +14,7 @@ The following diagram shows the general process that takes place between the Res
 
 ## Step 1: Retrieve the Secret Key for Authentication
 
-A secret key is required when a domain is purchased using the **Payback** or **Free** payment type. The secret key should be saved and can only be used on the server-side. This process hasn't been automated yet, so resellers must email bd@unstoppabledomains.com to request the secret key.
+A secret key is required when a domain is purchased using the **Payback** or **Free** payment type. The secret key should be saved and can only be used on the server-side. This process hasn't been automated yet, so resellers must email [bd@unstoppabledomains.com](mailto:bd@unstoppabledomains.com) to request the secret key.
 
 ## Step 2: Setup Criteria for Free Domains
 
