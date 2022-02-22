@@ -31,9 +31,12 @@
 
 ## Sell Domains to Users in My App
 
-* [Register As Reseller](sell-domains-to-users-in-my-app/register-as-reseller/README.md)
-  * [Setup Payment Methods](sell-domains-to-users-in-my-app/register-as-reseller/setup-payment-methods.md)
-  * [Receive Your Payouts](sell-domains-to-users-in-my-app/register-as-reseller/receive-your-payouts.md)
+* [Register As Reseller](sell-domains-to-users-in-my-app/register-as-reseller.md)
+* [Reseller Integration Guides](sell-domains-to-users-in-my-app/reseller-integration-guides/README.md)
+  * [Claim Free Domains Guide](sell-domains-to-users-in-my-app/reseller-integration-guides/claim-free-domains-guide.md)
+  * [Stripe Payments Guide](sell-domains-to-users-in-my-app/reseller-integration-guides/stripe-payments-guide.md)
+  * [Coinbase Payments Guide](sell-domains-to-users-in-my-app/reseller-integration-guides/coinbase-payments-guide.md)
+  * [Redirect URL Payments Guide](sell-domains-to-users-in-my-app/reseller-integration-guides/redirect-url-payments-guide.md)
 * [Reseller API Endpoints](sell-domains-to-users-in-my-app/reseller-api-endpoints.md)
 * [Error Codes for Troubleshooting](sell-domains-to-users-in-my-app/error-codes-for-troubleshooting.md)
 
