@@ -24,7 +24,7 @@ To integrate free domain claiming or paid domain claiming (via Stripe, Coinbase,
 
 ## Step 3: Choose Your Integration Path
 
-There are several ways to integrate with Unstoppable's Reseller feature, which is detailed in the chart below.&#x20;
+There are several ways to integrate with Unstoppable's Reseller feature, which is detailed in the chart below. Resellers are encouraged to integrate more than one pathway.
 
 | Pathway                    | Short Description                                                                                                    | Integration Guides                                            |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
@@ -33,8 +33,8 @@ There are several ways to integrate with Unstoppable's Reseller feature, which i
 | Paid domains: Coinbase     | configure Coinbase to process paid domains via Bitcoin, Litecoin, and other cryptocurrencies                         | [Coinbase Payments Guide](coinbase-payments-guide.md)         |
 | Paid domains: Redirect URL | generate a URL to redirect payments to Unstoppable Domains to be processed, does not require native paid domain flow | [Redirect URL Payments Guide](redirect-url-payments-guide.md) |
 
-{% hint style="info" %}
-Resellers are encouraged to integrate more than one pathway.
+{% hint style="warning" %}
+Stripe and Coinbase payment methods are currently unavailable. Resellers will be notified directly when these features have resumed.
 {% endhint %}
 
 ## Resources

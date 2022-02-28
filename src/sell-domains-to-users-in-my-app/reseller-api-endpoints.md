@@ -15,6 +15,11 @@ The Reseller API endpoints are as follows:
 * `GET` **Domains Suggestions Free:** provides free domain suggestions based on entered information if Reseller is eligible to offer free domains
 * `POST` **Orders**: used to buy domains or claim free domains from Unstoppable Domains
 * `GET` **Order Number**: checks blockchain transaction status to see if domain is successfully “minted”
+
+### Upcoming Features
+
+This new API endpoint will be added in the next update:
+
 * `GET` **Reserve Free Domain**: reserves a free and available domain for 7 days; the domain is unlocked automatically if it is not claimed within 7 days
 
 {% hint style="info" %}
