@@ -12,7 +12,25 @@ Unstoppable Domains are decentralized. This makes them, in a word, unstoppable. 
 
 To learn more about the company, please browse our [general website](https://unstoppabledomains.com), watch the learning materials and videos from our [Youtube Channel](https://www.youtube.com/c/UnstoppableDomains/videos), and listen to our popular, educational [UD Podcast Channel](https://open.spotify.com/show/2ZlyOpkkprGKS5KODk1PSS).
 
-To learn more about how the product works under the hood, see the [CNS Architecture](domain-registry-essentials/uns-vs-cns-comparison/architecture-overview.md) and [CNS Smart Contracts](domain-registry-essentials/cns-smart-contracts.md) or [UNS Architecture](domain-registry-essentials/uns-vs-cns-comparison/uns-architecture-overview.md) along with [UNS Smart Contracts](domain-registry-essentials/uns-smart-contracts.md). Also visit the [List of Integrated Apps](https://unstoppabledomains.com/apps) to draw inspiration from other apps that have successfully integrated Unstoppable Domains.
+To learn more about how our product works under the hood, see the following pages:
+
+{% content-ref url="domain-registry-essentials/cns-smart-contracts.md" %}
+[cns-smart-contracts.md](domain-registry-essentials/cns-smart-contracts.md)
+{% endcontent-ref %}
+
+{% content-ref url="domain-registry-essentials/uns-vs-cns-comparison/architecture-overview.md" %}
+[architecture-overview.md](domain-registry-essentials/uns-vs-cns-comparison/architecture-overview.md)
+{% endcontent-ref %}
+
+{% content-ref url="domain-registry-essentials/uns-smart-contracts.md" %}
+[uns-smart-contracts.md](domain-registry-essentials/uns-smart-contracts.md)
+{% endcontent-ref %}
+
+{% content-ref url="domain-registry-essentials/uns-vs-cns-comparison/uns-architecture-overview.md" %}
+[uns-architecture-overview.md](domain-registry-essentials/uns-vs-cns-comparison/uns-architecture-overview.md)
+{% endcontent-ref %}
+
+Also, visit the [List of Integrated Apps](https://unstoppabledomains.com/apps) to draw inspiration from other apps that have successfully integrated Unstoppable Domains.
 
 ## I want to add Unstoppable Domains to my app to send and receive crypto
 
