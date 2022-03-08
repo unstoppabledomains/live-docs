@@ -51,8 +51,11 @@
 
 ## Login with Unstoppable
 
-* [High Level Overview](login-with-unstoppable/high-level-overview.md)
-* [Getting Login Credentials](login-with-unstoppable/getting-login-credentials.md)
+* [High Level Overview](login-with-unstoppable/high-level-overview/README.md)
+  * [Authorization Server](login-with-unstoppable/high-level-overview/authorization-server.md)
+  * [Authentication Protocol](login-with-unstoppable/high-level-overview/authentication-protocol.md)
+* [Register Your Application](login-with-unstoppable/register-your-application.md)
+* [Login Client Configuration](login-with-unstoppable/login-client-configuration.md)
 * [Login Integration Guides](login-with-unstoppable/login-integration-guides/README.md)
   * [5 Minute Guide: Login with Unstoppable with Popup](login-with-unstoppable/login-integration-guides/login-with-popup.md)
   * [10 Minute Guide: Login with Unstoppable without Popup](login-with-unstoppable/login-integration-guides/login-without-popup.md)
@@ -60,10 +63,11 @@
   * [Web3 Modal Guide: Login with Unstoppable](login-with-unstoppable/login-integration-guides/web3-modal-guide.md)
   * [BNC Onboard Guide: Login with Unstoppable](login-with-unstoppable/login-integration-guides/bnc-onboard-guide.md)
   * [Node.js Server Guide: Login with Unstoppable](login-with-unstoppable/login-integration-guides/node-js-server-guide.md)
-* [Login UI Requirements](login-with-unstoppable/login-ui-requirements.md)
+* [Login UI Configuration](login-with-unstoppable/login-ui-configuration.md)
+* [Humanity Check for Login](login-with-unstoppable/humanity-check-for-login.md)
 * [Scopes for Login](login-with-unstoppable/scopes-for-login.md)
-* [Authorization Server](login-with-unstoppable/authorization-server/README.md)
-  * [Authentication Protocol](login-with-unstoppable/authorization-server/authentication-protocol.md)
+* [Troubleshooting Guide](login-with-unstoppable/troubleshooting-guide.md)
+* [Login Error Codes](login-with-unstoppable/login-error-codes.md)
 
 ## Polygon L2 Network
 
