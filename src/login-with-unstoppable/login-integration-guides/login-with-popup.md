@@ -111,35 +111,3 @@ Login with Unstoppable has UI requirements that must be configured to properly d
 {% hint style="success" %}
 **Congratulations!** You just implemented Login with Unstoppable.
 {% endhint %}
-
-## Common Error Messages
-
-Here are some of the most common error messages and how to fix them.&#x20;
-
-### **Error: Port "5000" could not be used**
-
-If you see the following error message on MacOS, you need to turn off AirPlay Receiver in the Sharing preferences or use a different port for local development. MacOS Monterey (version 12) is already using Port 5000 for the Airplay Receiver, which is the default port used for local development.&#x20;
-
-```
-lisa@Unstoppable-Lisa login % yarn parcel --port 5000 --open index.html
-yarn run v1.22.17
-$ /Users/username/workspaces/login/node_modules/.bin/parcel --port 5000 --open index.html
-Error: Port "5000" could not be used
-    at normalizeOptions (/Users/username/workspaces/login/node_modules/parcel/lib/cli.js:463:15)
-    at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at async run (/Users/username/workspaces/login/node_modules/parcel/lib/cli.js:264:17)
-error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-```
-
-### **Error: Please Unlock or Install MetaMask**
-
-If you get an error message to “Please unlock or install MetaMask,” it means you need to install MetaMask within your browser. Alternatively, you can use the browser extension for WalletConnect (or whichever is your preferred wallet).
-
-{% embed url="https://metamask.io/download" %}
-Grab the MetaMask Chrome Extension
-{% endembed %}
-
-![Error Message presented to user if MetaMask is not installed](../../.gitbook/assets/MetaMaskError.png)
-
-****
