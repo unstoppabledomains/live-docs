@@ -41,12 +41,12 @@ const resolution = new Resolution({
         locations: {
           Layer1: {url: infuraProviderUrl, network: 'mainnet'},
           Layer2: {
-            url: poligonProviderUrl,
+            url: polygonProviderUrl,
             network: 'polygon-mainnet',
           },
         },
       },
-      ens: {url: infuraProviderUrl, network: 'mainnet')
+      ens: {url: infuraProviderUrl, network: 'mainnet'}
     },
   });
 
