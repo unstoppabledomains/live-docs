@@ -106,7 +106,7 @@ console.log({resolver: data.resolver, owner: data.owner, values: data[2]});
 
 Reference:`namehash` - namehashing algorithm implementation. See [Namehashing](namehashing.md).
 
-![Resolving domain records via proxyreader for CNS and UNS Registries](../../.gitbook/assets/domain-records-via-proxy-reader-smart-contract.png)
+![Resolving domain records via proxyreader for CNS and UNS Registries](../.gitbook/assets/domain-records-via-proxy-reader-smart-contract.png)
 
 See [Records reference](records-reference.md) for more information about the standardized records.
 

@@ -16,11 +16,11 @@ You can begin App development right away while waiting on application approval. 
 
 * Click the **Edit** button next to the application you would like to configure for Login with Unstoppable.
 
-![View Application Status and Edit an Application](<../../.gitbook/assets/pending-application (2).png>)
+![View Application Status and Edit an Application](<../.gitbook/assets/pending-application (2).png>)
 
 * Scroll down and click the **Get New Client Credentials** button. This will allow you to add additional configuration options to the Login Client.&#x20;
 
-![Get New Client Credentials button located at bottom of Application Page](../../.gitbook/assets/client-credentials-button.png)
+![Get New Client Credentials button located at bottom of Application Page](../.gitbook/assets/client-credentials-button.png)
 
 ## Step 2: Enter the Redirect URIs
 

@@ -44,7 +44,7 @@ Given a blockchain domain has a DNS record configured. When the user enters the 
 
 Given a blockchain domain has a d-web content identifier record configured (e.g.: an IPFS hash). When the user enters the domain name into a browser address bar, the browser resolves the domain and gets the content hash of a domain. Then, the browser retrieves the content by the hash using a related protocol and displays the content.
 
-![Diagram showing how to read DWeb from Ethereum](<../../.gitbook/assets/overview\_read\_dweb\_website\_from\_ethereum\_and\_decentralized\_network (4) (4) (3) (4) (1).png>)
+![Diagram showing how to read DWeb from Ethereum](<../../.gitbook/assets/overview\_read\_dweb\_website\_from\_ethereum\_and\_decentralized\_network (4) (4) (3) (4) (2).png>)
 
 ### Domain-level redirect
 
@@ -65,7 +65,7 @@ Then, the browser uses the new settings to make requests to Ethereum blockchain:
 * If the network is not specified explicitly, it can be retrieved from the Ethereum node URL.
 * If the Registry Address is not specified, it can use a default for the specified network
 
-![Diagram showing how to configure DNS Gateway](<../../.gitbook/assets/configure\_dns\_gateway (4) (4) (3) (4) (3).png>)
+![Diagram showing how to configure DNS Gateway](<../../.gitbook/assets/configure\_dns\_gateway (4) (4) (3) (4) (1) (3).png>)
 
 ## Hypermedia Protocol
 
@@ -92,7 +92,7 @@ There are 2 possible gateways for each problem:
 
 See a description of how they work below
 
-![Visual flow of resolving DWeb via DNS and DWeb gateway](<../../.gitbook/assets/overview\_dweb\_website\_via\_dns\_dweb\_gateways (4) (4) (3) (4) (2).png>)
+![Visual flow of resolving DWeb via DNS and DWeb gateway](<../../.gitbook/assets/overview\_dweb\_website\_via\_dns\_dweb\_gateways (4) (4) (3) (4) (1) (3).png>)
 
 ### Distributed content gateway
 
@@ -116,4 +116,4 @@ A gateway is a DNS Server that resolves not just traditional domains but also `.
      * If the client requests a `TXT` record, resolve to all crypto records in JSON encoded key-value format
 4. Send resolution to client
 
-![Visualization of how to resolve DWeb via DNS and DWeb gateways](<../../.gitbook/assets/resolve\_dweb\_website\_via\_dns\_gateway\_and\_dweb\_gateway (4) (3) (1).png>)
+![Visualization of how to resolve DWeb via DNS and DWeb gateways](<../../.gitbook/assets/resolve\_dweb\_website\_via\_dns\_gateway\_and\_dweb\_gateway (4) (3) (2).png>)

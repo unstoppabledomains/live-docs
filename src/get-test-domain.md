@@ -104,7 +104,7 @@ To calculate the transaction fee you'd like to target you can use services like 
 * Enter the **suffix** for the domain in the claim -> label (string) field.
 * &#x20;Press the **Write** button to start the transaction.
 
-![Select the suffix for the domain and click "Write" button to start the transaction](../.gitbook/assets/step-3.png)
+![Select the suffix for the domain and click "Write" button to start the transaction](.gitbook/assets/step-3.png)
 
 * Sign the transaction.
 

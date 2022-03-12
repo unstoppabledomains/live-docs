@@ -62,7 +62,7 @@ The Login with Unstoppable **email:optional** scope is used to retrieve metadata
 
 ## humanity\_check Scope <mark style="color:red;">`BETA`</mark>
 
-The Login with Unstoppable **humanity\_check** scope must be added to the library for existing apps that want to integrate the Humanity Check feature using [Persona](https://withpersona.com).&#x20;
+The Login with Unstoppable **humanity\_check** scope must be added to the library for existing apps that want to integrate the Humanity Check feature.&#x20;
 
 After the user authenticates and proves their identity with the Persona authorization system, the application will receive a humanity\_id, which is a unique identifier for each user to serve as that user's "[humanity check](humanity-check-for-login.md#persona)."
 
@@ -72,6 +72,6 @@ See the [Humanity Check for Login](humanity-check-for-login.md) for more informa
 
 ## humanity\_check:optional Scope <mark style="color:red;">`BETA`</mark>
 
-The Login with Unstoppable **humanity\_check:optional** scope is used to retrieve metadata about the user's preference for sharing their Humanity Check unique identifier from [Persona](https://withpersona.com). Users will be able to select or deselect this option in the UI presented to them. If the user consents to sharing their Humanity Check information, the unique humanity\_check\_id associated with the **humanity\_check:optional** scope will be returned.&#x20;
+The Login with Unstoppable **humanity\_check:optional** scope is used to retrieve metadata about the user's preference for sharing their Humanity Check unique identifier. Users will be able to select or deselect this option in the UI presented to them. If the user consents to sharing their Humanity Check information, the unique humanity\_check\_id associated with the **humanity\_check:optional** scope will be returned.&#x20;
 
 See the [Humanity Check for Login](humanity-check-for-login.md) for more information on identity providers, humanity check, and plans for future releases.

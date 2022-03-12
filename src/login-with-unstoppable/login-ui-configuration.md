@@ -93,7 +93,7 @@ Before launching your application, you should verify the login flow that users w
 You must adjust the configuration in the [Login Client](login-client-configuration.md#scopes) to add or remove scopes, such as [humanity\_check](scopes-for-login.md#humanity\_check-scope).
 {% endhint %}
 
-![1) User Clicks Login with Unstoppable button to get started](../../.gitbook/assets/login-domains-modal1.png) ![2) User Enters Unstoppable Domain Address to Login to dApp](../.gitbook/assets/login-domains-modal2-v2.png) ![3) User Consent screen details the scopes being requested by dApp](../.gitbook/assets/consent-screen-marked-v2.png)
+![1) User Clicks Login with Unstoppable button to get started](../.gitbook/assets/login-domains-modal1.png) ![2) User Enters Unstoppable Domain Address to Login to dApp](../.gitbook/assets/login-domains-modal2-v2.png) ![3) User Consent screen details the scopes being requested by dApp](../.gitbook/assets/consent-screen-marked-v2.png)
 
 The modals are further described below:
 
@@ -105,11 +105,11 @@ The modals are further described below:
 
 For Node.js integrations, the UI or modals being built will require official UD buttons. The table below provides Login with Unstoppable button status and states, which can be downloaded for use in custom Node.js integrations.
 
-| Status  | Small                                       | Large                                         |
-| ------- | ------------------------------------------- | --------------------------------------------- |
-| Default | ![](../../.gitbook/assets/default-icon.png) | ![](../../.gitbook/assets/default-button.png) |
-| Hover   | ![](../../.gitbook/assets/hover-icon.png)   | ![](../../.gitbook/assets/hover-button.png)   |
-| Pressed | ![](../../.gitbook/assets/pressed-icon.png) | ![](../../.gitbook/assets/pressed-button.png) |
+| Status  | Small                                    | Large                                      |
+| ------- | ---------------------------------------- | ------------------------------------------ |
+| Default | ![](../.gitbook/assets/default-icon.png) | ![](../.gitbook/assets/default-button.png) |
+| Hover   | ![](../.gitbook/assets/hover-icon.png)   | ![](../.gitbook/assets/hover-button.png)   |
+| Pressed | ![](../.gitbook/assets/pressed-icon.png) | ![](../.gitbook/assets/pressed-button.png) |
 
 {% hint style="success" %}
 **Congratulations!** You just configured the Login with Unstoppable UI.

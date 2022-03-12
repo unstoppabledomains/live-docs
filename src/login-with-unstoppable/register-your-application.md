@@ -18,7 +18,7 @@ You can begin App development right away while waiting on application approval. 
 * **Go** to **** the Unstoppable Domains [Application Submission](https://unstoppabledomains.com/app-submission) page.
 * **Review** the page and **Gather** all the necessary information before beginning the application process (application description, logo, website URL, etc.).
 
-![Application Submission Page](../../.gitbook/assets/submit-your-application.png)
+![Application Submission Page](../.gitbook/assets/submit-your-application.png)
 
 ## Step 2: Complete & Submit the Application
 
