@@ -378,7 +378,7 @@ async function resolveBothChains(tokenId, interestedKeys) {
 
 If we are successful, we should see the following on our page:
 
-![Example of a successful resolution](../../.gitbook/assets/example-successful-resolution.png)
+![Example of a successful resolution](../../../.gitbook/assets/example-successful-resolution.png)
 
 ## Set-up Error Notifications <a href="#d38b" id="d38b"></a>
 

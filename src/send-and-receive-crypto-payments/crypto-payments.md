@@ -19,7 +19,7 @@ description: >-
 
 The most common way to integrate with Unstoppable Domains is through simple domain resolution. This process converts a human-readable name like `brad.crypto` to the cryptocurrency addresses that name stores. As long as the addresses are set, a user can send any of our 80+ supported cryptocurrencies to an Unstoppable Domain and it will end up in the right place. A user can send `BTC` to `brad.crypto` and it will go to Brad's `BTC` address. A user can send `ETH` to `brad.crypto` and will go to Brad's `ETH` address. Unstoppable Domains support 80+ cryptocurrencies and counting.
 
-![A successful domain resolution and payment](../.gitbook/assets/success-payment-example.gif)
+![A successful domain resolution and payment](../../.gitbook/assets/success-payment-example.gif)
 
 How does this work?
 
@@ -199,7 +199,7 @@ See [Managing domain records](../allow-my-users-to-manage-existing-domains/manag
 
 ### Error handling
 
-![Error example](../.gitbook/assets/errors-example.gif)
+![Error example](../../.gitbook/assets/errors-example.gif)
 
 #### Common error cases to handle:
 
@@ -373,7 +373,7 @@ Always check address validity after receiving a result from the library. The use
 * Always try to resolve a domain with the provided currency code.
 * Always handle resolution errors according to error type.
 
-![Best practices](../.gitbook/assets/best-practices.png)
+![Best practices](../../.gitbook/assets/best-practices.png)
 
 ## Resources
 

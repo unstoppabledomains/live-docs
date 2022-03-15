@@ -6,7 +6,7 @@ description: >-
 
 # Browser Resolution Algorithm
 
-![Diagram shows how to Resolve DWeb by direct read from Ethereum](<../../.gitbook/assets/resolve\_dweb\_website\_by\_direct\_reading\_from\_ethereum\_and\_decentralized\_network (4) (4) (2) (2).png>)
+![Diagram shows how to Resolve DWeb by direct read from Ethereum](<../../.gitbook/assets/resolve\_dweb\_website\_by\_direct\_reading\_from\_ethereum\_and\_decentralized\_network (4) (4) (2) (1) (1) (3).png>)
 
 A browser can select the supported protocol. If a domain is configured for multiple protocols, it should prioritize a protocol based on `browser.preferred_protocols` record that can be set to a list of the defined protocols.![](https://unstoppabledomains.slack.com/files/UKN3V261H/F01B42CJXJN/screen\_shot\_2020-09-21\_at\_2.34.07\_pm.png)
 
@@ -22,7 +22,7 @@ Generally, browsers automatically add `http://` prefix for any domain in the add
 
 `browser.redirect_url` and `ipfs.redirect_domain.value` contains full URL according to RFC-1738 and no additional actions required to provide redirect.
 
-![Process diagram depicting entire browser resolution algorithm](../.gitbook/assets/browser\_resolution\_algorithm.svg)
+![Process diagram depicting entire browser resolution algorithm](../../.gitbook/assets/browser\_resolution\_algorithm.svg)
 
 ## Browser resolution records
 
