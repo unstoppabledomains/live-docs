@@ -95,7 +95,7 @@ You need a domain in order to use the Login with Unstoppable feature. If you don
 {% endhint %}
 
 {% hint style="warning" %}
-**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Rinkeby Testnet will not work with the Login feature.
+**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
 {% endhint %}
 
 The following command will run the app. Keep in mind that the credentials will only work if you are on the correct port.
