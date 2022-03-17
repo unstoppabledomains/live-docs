@@ -90,7 +90,7 @@ Because popups are a more integration friendly approach, the `@uauth/web3modal` 
 Once configured, the `web3modal` library can be used normally.
 
 {% hint style="warning" %}
-**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Rinkeby Testnet will not work with the Login feature.
+**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
 {% endhint %}
 
 {% code title="login-page.ts" %}

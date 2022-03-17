@@ -7,8 +7,8 @@
         <td><a href="https://etherscan.io/address/0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E">0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E</a></td>
     </tr>
     <tr>
-        <td>Rinkeby</td>
-        <td><a href="https://rinkeby.etherscan.io/address/0xE6729D224D00b3dd4FC731C4Ee3274E35Da06578">0xE6729D224D00b3dd4FC731C4Ee3274E35Da06578</a></td>
+        <td>Goerli</td>
+        <td><a href="https://goerli.etherscan.io/address/0x9A70ff906D422C2FD0F7B94244D6b36DB62Ee982">0x9A70ff906D422C2FD0F7B94244D6b36DB62Ee982</a></td>
     </tr>
     <tr>
         <td>Polygon mainnet</td>
@@ -34,13 +34,9 @@
             </td>
     </tr>
     <tr>
-        <td>Rinkeby</td>
+        <td>Goerli</td>
            <td><a
-                    href="https://rinkeby.etherscan.io/address/0x299974AeD8911bcbd2C61262605b89F591a53E83">0x299974AeD8911bcbd2C61262605b89F591a53E83</a>
-               <a
-                    href="https://rinkeby.etherscan.io/address/0x9F19473F6a98a715176291c930558E1954fd3D1e">0x9F19473F6a98a715176291c930558E1954fd3D1e</a>
-               <a
-                    href="https://rinkeby.etherscan.io/address/0x3A2e74CF832cbA3d77E72708d55370119E4323a6">0x3A2e74CF832cbA3d77E72708d55370119E4323a6</a>
+                    href="https://goerli.etherscan.io/address/0xFc5f608149f4D9e2Ed0733efFe9DD57ee24BCF68">0xFc5f608149f4D9e2Ed0733efFe9DD57ee24BCF68</a>
             </td>
     </tr>
 </table>

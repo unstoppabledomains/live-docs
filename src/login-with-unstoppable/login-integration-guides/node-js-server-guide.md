@@ -13,7 +13,7 @@ For a completed example of a server integration using `@uauth/node` library, you
 {% endhint %}
 
 {% hint style="warning" %}
-**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Rinkeby Testnet will not work with the Login feature.
+**Important:** For Login with Unstoppable integrations, users must use **Polygon Mainnet** or **Ethereum Mainnet** as the network for the domain. Domains minted on Goerli Testnet will not work with the Login feature.
 {% endhint %}
 
 ## Step 1: Install the @uauth/node Library
