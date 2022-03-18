@@ -7,8 +7,8 @@
         <td><a href="https://etherscan.io/address/0xb66DcE2DA6afAAa98F2013446dBCB0f4B0ab2842">0xb66DcE2DA6afAAa98F2013446dBCB0f4B0ab2842</a></td>
     </tr>
     <tr>
-        <td>Goerli</td>
-        <td><a href="https://goerli.etherscan.io/address/0x0555344A5F440Bd1d8cb6B42db46c5e5D4070437">0x0555344A5F440Bd1d8cb6B42db46c5e5D4070437</a></td>
+        <td>Rinkeby</td>
+        <td><a href="https://rinkeby.etherscan.io/address/0x95AE1515367aa64C462c71e87157771165B1287A">0x95AE1515367aa64C462c71e87157771165B1287A</a></td>
     </tr>
 </table>
 <br>
