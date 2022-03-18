@@ -89,7 +89,7 @@ To calculate the transaction fee you'd like to target you can use services like 
 * Copy/paste the URL of the post to Goerli faucet to verify your identity.
 * Click the **Give Me Ether** button.
 
-![Retrieve free Ether through the faucet to cover gas fees for domains on Goerli testnet (Layer 1)](.gitbook/assets/rinkeby-faucet-free-ether.png)
+![Retrieve free Ether through the faucet to cover gas fees for domains on Goerli testnet (Layer 1)](.gitbook/assets/goerli-faucet-free-ether.png)
 
 ### Step 3: Open the Etherscan Smart Contract Request
 
