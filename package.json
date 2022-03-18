@@ -11,11 +11,11 @@
     "@types/ejs": "^3.0.5",
     "@types/node": "^14.14.6",
     "dot-crypto": "https://github.com/unstoppabledomains/dot-crypto.git",
-    "uns": "https://github.com/unstoppabledomains/uns.git",
     "ejs": "^3.1.5",
     "markdown-include": "^0.4.3",
     "markdown-link-check": "^3.8.1",
     "ts-node": "^9.0.0",
-    "typescript": "^4.0.5"
+    "typescript": "^4.0.5",
+    "uns": "https://github.com/unstoppabledomains/uns#v0.2.3"
   }
 }
