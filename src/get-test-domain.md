@@ -17,7 +17,7 @@ To distinguish these test domains from paid domains, all test domains are prefix
 To prevent abuse, we ask that developers cover the cost of minting and transferring these domains to their wallets. **Unstoppable Domains does not make any money from issuing test domains.**
 
 {% hint style="info" %}
-[Rinkeby faucet](https://faucet.rinkeby.io) and [Polygon faucet](https://faucet.polygon.technology) both offer free money - Ether and matic tokens -  for domains minted on Rinkeby Testnet and Polygon Testnet, respectively. Please see the guides below for more detailed information.
+[Goerli faucet](https://goerli-faucet.slock.it/) and [Polygon faucet](https://faucet.polygon.technology) both offer free money - Ether and matic tokens - for domains minted on Goerli Testnet and Polygon Testnet, respectively. Please see the guides below for more detailed information.
 {% endhint %}
 
 ## Test Domain Options
@@ -33,8 +33,8 @@ Free test domains are available via three different methods:&#x20;
 ### Step 1: Gather Requirements for the Website Faucet
 
 * A web3 compatible wallet
-* Configure your wallet for [Rinkeby Testnet](get-test-domain.md#step-1-gather-requirements-for-etherscan) or [Polygon/Mumbai](get-test-domain.md#step-1.-configure-your-metamask-wallet)
-* Get[ free Ether from Rinkeby faucet](get-test-domain.md#step-2.-get-matic-tokens-though-the-faucet) or [free MATIC tokens from Polygon faucet](get-test-domain.md#step-2.-get-matic-tokens-though-the-faucet-1) to cover transaction fees (only for Rinkeby and Mumbai Testnet)
+* Configure your wallet for [Goerli Testnet](get-test-domain.md#step-1-gather-requirements-for-etherscan) or [Polygon/Mumbai](get-test-domain.md#step-1.-configure-your-metamask-wallet)
+* Get[ free Ether from Goerli faucet](get-test-domain.md#step-2.-get-matic-tokens-though-the-faucet) or [free MATIC tokens from Polygon faucet](get-test-domain.md#step-2.-get-matic-tokens-though-the-faucet-1) to cover transaction fees (only for Goerli and Mumbai Testnet)
 * Ensure you have funds in your wallet to pay transaction fees (only for Polygon Mainnet)
 
 {% hint style="info" %}
@@ -44,7 +44,7 @@ Domains on Polygon Mainnet can be purchased for free through Unstoppable Website
 ### Step 2: Configure the Test Domain
 
 * Go to the [Unstoppable Website Faucet](https://unstoppabledomains.com/developers/testdomain) page for developers.
-* Select the network for the domain: **Rinkeby Testnet**, **Polygon Mainnet,** or **Mumbai Testnet**.
+* Select the network for the domain: **Goerli Testnet**, **Polygon Mainnet,** or **Mumbai Testnet**.
 * Configure the domain options:
   * **domain extension**: .888, .crypto, .x, .coin, .wallet, .bitcoin, .nft, .dao
   * **domain suffix**: the part of the domain the follows `udtestdev-`
@@ -76,20 +76,20 @@ Congratulations! You're the new proud owner of a test domain on your preferred n
 ### Step 1: Check Wallet Compatibility for Etherscan
 
 * Check that you have a wallet compatible with [WalletConnect](https://walletconnect.org/wallets) (e.g. [Trust Wallet](https://trustwallet.com), [MetaMask](https://metamask.io)).
-* Ensure you have enough Ether on your Ethereum wallet to pay transaction fees, if you are not planning to use Rinkeby Testnet.
+* Ensure you have enough Ether on your Ethereum wallet to pay transaction fees, if you are not planning to use Goerli Testnet.
 
 {% hint style="info" %}
 To calculate the transaction fee you'd like to target you can use services like [ETH Gas Station](https://ethgasstation.info/calculatorTxV.php). The average transaction gas usage to mint and transfer a new domains is around 180,000 gas.
 {% endhint %}
 
-### Step 2. Get free Ether from Rinkeby Faucet
+### Step 2. Get free Ether from Goerli Faucet
 
-* Go to Faucet Page: [https://faucet.rinkeby.io/](https://faucet.rinkeby.io).
+* Go to Faucet Page: [https://goerli-faucet.mudit.blog](https://goerli-faucet.mudit.blog).
 * Make a Twitter or Facebook post with your Ethereum address pasted anywhere in the contents of the post.
-* Copy/paste the URL of the post to Rinkeby faucet to verify your identity.
+* Copy/paste the URL of the post to Goerli faucet to verify your identity.
 * Click the **Give Me Ether** button.
 
-![Retrieve free Ether through the faucet to cover gas fees for domains on Rinkeby testnet (Layer 1)](.gitbook/assets/rinkeby-faucet-free-ether.png)
+![Retrieve free Ether through the faucet to cover gas fees for domains on Goerli testnet (Layer 1)](.gitbook/assets/goerli-faucet-free-ether.png)
 
 ### Step 3: Open the Etherscan Smart Contract Request
 
@@ -192,7 +192,7 @@ For example, the API response for .dao TLD 4amehash is `0xb5f2bbf81da581299d4ff7
 
 * Go to [Polygonscan/Mumbai](https://mumbai.polygonscan.com/address/0x428189346bb3CC52f031A1092fd47C919AC30A9f#writeProxyContract) Smart Contract Page.
 * Choose **Write as Proxy** tab.
-* Connect your wallet (Rinkeby).
+* Connect your wallet (Goerli).
 * Choose `claimToWithRecords` method and fill properties with needed values: receiver wallet address, TLD namehash, and test domain suffix.
 
 ![Enter data for 'claim to records' for Polygonscan domain (Layer2)](.gitbook/assets/polygonscan-claim-to-records.png)

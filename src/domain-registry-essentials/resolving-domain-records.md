@@ -82,7 +82,7 @@ var abi = [
     type: 'function',
   }
 ];
-var provider = ethers.providers.getDefaultProvider('rinkeby');
+var provider = ethers.providers.getDefaultProvider('goerli');
 var contract = new ethers.Contract(address, abi, provider);
 async function fetchContractData(keys, tokenId) {
   return contract.getData(keys, tokenId);

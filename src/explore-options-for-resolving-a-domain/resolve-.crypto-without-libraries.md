@@ -192,11 +192,11 @@ var abi = [
     type: 'function',
   }
 ];
-var provider = ethers.providers.getDefaultProvider('rinkeby');
+var provider = ethers.providers.getDefaultProvider('goerli');
 ```
 
 {% hint style="info" %}
-The contract address and the network is from the rinkeby testnet. If you want to configure your project for mainnet you should use the following contract address: [**0xfEe4D4F0aDFF8D84c12170306507554bC7045878**](https://etherscan.io/address/0xfee4d4f0adff8d84c12170306507554bc7045878#code) and network **mainnet** instead of **rinkeby**
+The contract address and the network is from the goerli testnet. If you want to configure your project for mainnet you should use the following contract address: [**0xfEe4D4F0aDFF8D84c12170306507554bC7045878**](https://etherscan.io/address/0xfee4d4f0adff8d84c12170306507554bc7045878#code) and network **mainnet** instead of **goerli**
 {% endhint %}
 
 For the scope of this project, we will only need to use the getData function from the [CNS Smart Contract](../domain-registry-essentials/cns-smart-contracts.md#proxyreader).

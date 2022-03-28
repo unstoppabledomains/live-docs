@@ -4,11 +4,11 @@
     <th>Contract address</th>
     <tr>
         <td>Mainnet</td>
-        <td><a href="https://etherscan.io/address/0x2F659766E3D08561CA3408FbAba7C0749ab2c402">0x2F659766E3D08561CA3408FbAba7C0749ab2c402</a></td>
+        <td><a href="https://etherscan.io/address/0x932532aA4c0174b8453839A6E44eE09Cc615F2b7">0x932532aA4c0174b8453839A6E44eE09Cc615F2b7</a></td>
     </tr>
     <tr>
         <td>Goerli</td>
-        <td><a href="https://goerli.etherscan.io/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
+        <td><a href="https://goerli.etherscan.io/address/0x56E14C4C1748a818a5564D33cF774c59EB3eDF59">0x56E14C4C1748a818a5564D33cF774c59EB3eDF59</a></td>
     </tr>
     <tr>
         <td>Polygon mainnet</td>
@@ -17,16 +17,5 @@
     <tr>
         <td>Polygon testnet (Mumbai)</td>
         <td><a href="https://mumbai.polygonscan.com/address/0x0000000000000000000000000000000000000000">0x0000000000000000000000000000000000000000</a></td>
-    </tr>
-</table>
-<br>
-<table>
-    <th>Network</th>
-    <th>Legacy addresses</th>
-    <tr>
-        <td>Mainnet</td>
-           <td><a
-                    href="https://etherscan.io/address/0xbb486C6E9cF1faA86a6E3eAAFE2e5665C0507855">0xbb486C6E9cF1faA86a6E3eAAFE2e5665C0507855</a>
-            </td>
     </tr>
 </table>

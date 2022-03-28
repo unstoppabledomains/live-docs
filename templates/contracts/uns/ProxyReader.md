@@ -4,19 +4,19 @@
     <th>Contract address</th>
     <tr>
         <td>Mainnet</td>
-        <td><a href="https://etherscan.io/address/0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E">0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E</a></td>
+        <td><a href="https://etherscan.io/address/0x58034A288D2E56B661c9056A0C27273E5460B63c">0x58034A288D2E56B661c9056A0C27273E5460B63c</a></td>
     </tr>
     <tr>
-        <td>Rinkeby</td>
-        <td><a href="https://rinkeby.etherscan.io/address/0xE6729D224D00b3dd4FC731C4Ee3274E35Da06578">0xE6729D224D00b3dd4FC731C4Ee3274E35Da06578</a></td>
+        <td>Goerli</td>
+        <td><a href="https://goerli.etherscan.io/address/0x9A70ff906D422C2FD0F7B94244D6b36DB62Ee982">0x9A70ff906D422C2FD0F7B94244D6b36DB62Ee982</a></td>
     </tr>
     <tr>
         <td>Polygon mainnet</td>
-        <td><a href="https://polygonscan.com/address/0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00">0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00</a></td>
+        <td><a href="https://polygonscan.com/address/0x423F2531bd5d3C3D4EF7C318c2D1d9BEDE67c680">0x423F2531bd5d3C3D4EF7C318c2D1d9BEDE67c680</a></td>
     </tr>
     <tr>
         <td>Polygon testnet (Mumbai)</td>
-        <td><a href="https://mumbai.polygonscan.com/address/0x332A8191905fA8E6eeA7350B5799F225B8ed30a9">0x332A8191905fA8E6eeA7350B5799F225B8ed30a9</a></td>
+        <td><a href="https://mumbai.polygonscan.com/address/0xbd9e01F6513E7C05f71Bf21d419a3bDF1EA9104b">0xbd9e01F6513E7C05f71Bf21d419a3bDF1EA9104b</a></td>
     </tr>
 </table>
 <br>
@@ -26,6 +26,8 @@
     <tr>
         <td>Mainnet</td>
            <td><a
+                    href="https://etherscan.io/address/0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E">0xc3C2BAB5e3e52DBF311b2aAcEf2e40344f19494E</a>
+               <a
                     href="https://etherscan.io/address/0xfEe4D4F0aDFF8D84c12170306507554bC7045878">0xfEe4D4F0aDFF8D84c12170306507554bC7045878</a>
                <a
                     href="https://etherscan.io/address/0xa6E7cEf2EDDEA66352Fd68E5915b60BDbb7309f5">0xa6E7cEf2EDDEA66352Fd68E5915b60BDbb7309f5</a>
@@ -34,13 +36,21 @@
             </td>
     </tr>
     <tr>
-        <td>Rinkeby</td>
+        <td>Goerli</td>
            <td><a
-                    href="https://rinkeby.etherscan.io/address/0x299974AeD8911bcbd2C61262605b89F591a53E83">0x299974AeD8911bcbd2C61262605b89F591a53E83</a>
-               <a
-                    href="https://rinkeby.etherscan.io/address/0x9F19473F6a98a715176291c930558E1954fd3D1e">0x9F19473F6a98a715176291c930558E1954fd3D1e</a>
-               <a
-                    href="https://rinkeby.etherscan.io/address/0x3A2e74CF832cbA3d77E72708d55370119E4323a6">0x3A2e74CF832cbA3d77E72708d55370119E4323a6</a>
+                    href="https://goerli.etherscan.io/address/0xFc5f608149f4D9e2Ed0733efFe9DD57ee24BCF68">0xFc5f608149f4D9e2Ed0733efFe9DD57ee24BCF68</a>
+            </td>
+    </tr>
+    <tr>
+        <td>Polygon mainnet</td>
+           <td><a
+                    href="https://polygonscan.com/address/0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00">0xA3f32c8cd786dc089Bd1fC175F2707223aeE5d00</a>
+            </td>
+    </tr>
+    <tr>
+        <td>Polygon testnet (Mumbai)</td>
+           <td><a
+                    href="https://mumbai.polygonscan.com/address/0x332A8191905fA8E6eeA7350B5799F225B8ed30a9">0x332A8191905fA8E6eeA7350B5799F225B8ed30a9</a>
             </td>
     </tr>
 </table>
